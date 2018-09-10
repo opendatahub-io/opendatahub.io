@@ -1,38 +1,10 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
+<footer class="footer">
+  <div class="container-fluid social-icons">
+      <a href="{{ site.repo }}" target="_blank" data-toggle="tooltip" title="GitLab Repo"><i class="fab fa-gitlab"></i></a>
+      <a href="{{ site.youtube }}" target="_blank" data-toggle="tooltip" title="YouTube Channel"><i class="fab fa-youtube-square fa-fw"></i></a>
+      <a href="{{ site.twitter }}" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter-square fa-fw"></i></a>
+      <a href="{{ site.trello }}" target="_blank" data-toggle="tooltip" title="Trello Board"><i class="fab fa-trello fa-fw"></i></a>
+      <a href="{{ site.blog }}" target="_blank" data-toggle="tooltip" title="Blog Posts"><i class="fab fa-wordpress fa-fw"></i></a>
+      <a href="{{ site.email_list }}" target="_blank" data-toggle="tooltip" title="Mailing List"><i class="fas fa-envelope-square fa-fw"></i></a>
   </div>
-
 </footer>

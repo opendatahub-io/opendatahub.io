@@ -1,0 +1,26 @@
+---
+---
+
+@import "variables";
+
+.jumbotron {
+  background-color: $jumbotron-background-color;
+}
+
+.jumbotron-container {
+  text-align: center;
+
+  .jumbotron-title {
+    color: $jumbotron-font-color;
+    margin-bottom: 20px;
+  }
+}
+
+.dh-info {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.dh-info-img-container {
+  text-align: center;
+}

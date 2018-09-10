@@ -1,0 +1,76 @@
+---
+---
+
+@import "variables";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: $navbar-height;
+  margin-bottom: $footer-height;
+}
+
+.navbar {
+  background-color: $navbar-background-color;
+  min-height: $navbar-height;
+
+  .nav-item {
+    margin-right: 20px;
+  }
+
+  .navbar-brand {
+    img {
+      height: $navbar-height - 20px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  line-height: $footer-height;
+
+  font-size: 36px;
+  text-align: center;
+
+  background-color: #000000;
+
+  a {
+    color: rgba(255,255,255,.5);
+  }
+
+  a:hover {
+    color: rgba(255,255,255,.75);
+  }
+}
+
+.btn.btn-primary {
+  &:hover{
+    color: $datahub-primary-color;
+    background-color: white;
+    border-color: $datahub-primary-color;
+  }
+  background-color: $datahub-primary-color;
+  border-color: $datahub-primary-color;
+  color: white
+}
+
+.btn.btn-primary-inverse {
+  &:hover{
+    background-color: $datahub-primary-color;
+    color: white;
+    border-color: white;
+  }
+  color: $datahub-primary-color;
+  background-color: white;
+  border-color: $datahub-primary-color;
+}

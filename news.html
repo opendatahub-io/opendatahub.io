@@ -1,0 +1,19 @@
+---
+layout: news
+title: News
+---
+
+<main role="main">
+    <div class="container">
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% for post in site.posts %}
+        <div class="row">
+            <div class="news-section col-lg-8">
+                <h3 class="news-title">{{ post.title }}</h3>
+                <h5 class="news-date">{{ post.date | date_to_string }}</h5>
+                <p class="news-content">{{post.content}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
