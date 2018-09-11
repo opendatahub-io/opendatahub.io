@@ -18,6 +18,7 @@ repo: https://gitlab.com/opendatahub
 
 # Build settings
 markdown: kramdown
+permalink: /news/:year-:month-:day/:title:output_ext
 
 plugins:
 - jekyll-feed

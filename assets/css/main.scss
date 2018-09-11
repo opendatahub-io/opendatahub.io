@@ -53,6 +53,10 @@ body {
   }
 }
 
+.container.main-content {
+  margin-bottom: 10rem;
+}
+
 .btn.btn-primary {
   &:hover{
     color: $datahub-primary-color;
