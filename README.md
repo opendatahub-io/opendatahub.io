@@ -1,121 +1,76 @@
-![Build Status](https://gitlab.com/pages/jekyll/badges/master/build.svg)
+![Build Status](https://gitlab.com/opendatahub/opendatahub.io/badges/master/build.svg)
 ![Jekyll Version](https://img.shields.io/gem/v/jekyll.svg)
 
 ---
 
-Placeholder for the OpenDataHub.io site.
+# OpenDataHub.io Website
 
-Example [Jekyll] website using GitLab Pages.  View it live at https://pages.gitlab.io/jekyll
+## Creating an Inline Announcement
 
-[Learn more about GitLab Pages](https://pages.gitlab.io) or read the the [official GitLab Pages documentation](https://docs.gitlab.com/ce/user/project/pages/).
+All announcements are located in the `_posts` directory.  They are written in Markdown (`.md`). Files should be named `YYYY-MM-DD-unique-title`.
 
+Announcements will display all content on the news page.  Unlike blog posts, be sure to omit `layout` and `preview` fields.
+
+
+```jekyll
+---
+author: yourusername
+title:  Sample Announcement
+date: 2018-09-09
+categories: announcement
 ---
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Getting Started](#getting-started)
-  - [Start by forking this repository](#start-by-forking-this-repository)
-  - [Start from a local Jekyll project](#start-from-a-local-jekyll-project)
-- [GitLab CI](#gitlab-ci)
-- [Using Jekyll locally](#using-jekyll-locally)
-- [GitLab User or Group Pages](#gitlab-user-or-group-pages)
-- [Did you fork this project?](#did-you-fork-this-project)
-- [Other examples](#other-examples)
-- [Troubleshooting](#troubleshooting)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Getting Started
-
-You can get started with GitLab Pages using Jekyll easily by either forking this repository or by uploading a new/existing Jekyll project.
-
-Remember you need to wait for your site to build before you will be able to see your changes.  You can track the build on the **Pipelines** tab.
-
-### Start by forking this repository
-
-1. Fork this repository.
-1. **IMPORTANT:** Remove the fork relationship.
-Go to **Settings (⚙)** > **Edit Project** and click the **"Remove fork relationship"** button.
-1. Enable Shared Runners.
-Go to **Settings (⚙)** > **Pipelines** and click the **"Enable shared Runners"** button.
-1. Rename the repository to match the name you want for your site.
-1. Edit your website through GitLab or clone the repository and push your changes.
-
-### Start from a local Jekyll project
-
-1. [Install][] Jekyll.
-1. Use `jekyll new` to create a new Jekyll Project.
-1. Add [this `.gitlab-ci.yml`](.gitlab-ci.yml) to the root of your project.
-1. Push your repository and changes to GitLab.
-
-## GitLab CI
-
-This project's static Pages are built by [GitLab CI][ci], following the steps
-defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
-
-```
-image: ruby:2.3
-
-variables:
-  JEKYLL_ENV: production
-
-pages:
-  script:
-  - bundle install
-  - bundle exec jekyll build -d public
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+Content goes here and will be shown directly on the news list.
 ```
 
-## Using Jekyll locally
+## Creating a Blog Post
 
-To work locally with this project, you'll have to follow the steps below:
+All blog posts are located in the `/_posts` directory. Each file is a Markdown (`.md`) file, just like announcements.  Files should be named `YYYY-MM-DD-unique-title`.
 
-1. Fork, clone or download this project
-1. [Install][] Jekyll
-1. Download dependencies: `bundle`
-1. Build and preview: `bundle exec jekyll serve`
-1. Add content
+Instead of showing all content on the news list, they will have a preview field which is shown.  Content will be shown on the blog post detail page.  The `preview` page is required or else the entire content of the blog post will be displayed on the news list.  The `layout` is required to display properly when clicked.
 
-The above commands should be executed from the root directory of this project.
+```jekyll
+---
+layout: blog
+author: yourusername
+title:  Sample Blog Post
+preview: Preview text is required.  It is shown on the news list instead of the full content.
+date: 2018-09-10
+categories: blog
+---
+# Content goes here
 
-Read more at Jekyll's [documentation][].
+This content is NOT shown on the news list, but will be shown on the detail page.  To reach the detail page, the user will click on the "Read more..." link which is automatically generated.
 
-## GitLab User or Group Pages
+## More stuff...
 
-To use this project as your user/group website, you will need one additional
-step: just rename your project to `namespace.gitlab.io`, where `namespace` is
-your `username` or `groupname`. This can be done by navigating to your
-project's **Settings**.
+```
 
-Read more about [user/group Pages][userpages] and [project Pages][projpages].
+## Create a Page
 
-## Did you fork this project?
+To keep things organized, pages are located in the `pages` directory, with a directory structure mirroring the site. Configure the metadata:
 
-If you forked this project for your own use, please go to your project's
-**Settings** and remove the forking relationship, which won't be necessary
-unless you want to contribute back to the upstream project.
+```jekyll
+---
+layout: default
+title: My Page
+permalink: /my-page/
+---
+```
 
-## Other examples
+If you add a new page and want it to appear in the sidebar of that section (such as the sidebar under **Docs**), then you also need to update the `yaml` file associated with that group. These are located under `_data/`. For **Docs**, you would update `docs_toc.yml`, following the structure that currently exists within that file.
 
-* [jekyll-branched](https://gitlab.com/pages/jekyll-branched) demonstrates how you can keep your GitLab Pages site in one branch and your project's source code in another.
-* The [jekyll-themes](https://gitlab.com/groups/jekyll-themes) group contains a collection of example projects you can fork (like this one) having different visual styles.
 
-## Troubleshooting
+## Links
 
-1. CSS is missing! That means two things:
-    * Either that you have wrongly set up the CSS URL in your templates, or
-    * your static generator has a configuration option that needs to be explicitly
-    set in order to serve static assets under a relative URL.
+Links should include `{{ site.baseurl }}` before the location. e.g.:
 
-[ci]: https://about.gitlab.com/gitlab-ci/
-[Jekyll]: http://jekyllrb.com/
-[install]: https://jekyllrb.com/docs/installation/
-[documentation]: https://jekyllrb.com/docs/home/
-[userpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#user-or-group-pages
-[projpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#project-pages
+```jekyll
+<link href="{{ site.baseurl }}/assets/css/home.css" rel="stylesheet">
+<img src="{{ site.baseurl }}/assets/img/datahub_logo_black.png">
+<a class="nav-link" href="{{ site.baseurl }}/news/">NEWS</a>
+```
+
+## Local testing
+
+You can run the site just like any other Jekyll site as [documented](https://jekyllrb.com/docs/) or using a [jekyll container](https://store.docker.com/community/images/jekyll/jekyll).
