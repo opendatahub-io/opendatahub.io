@@ -3,17 +3,19 @@
 
 @import "variables";
 
-.page-title {
-  font-size: 3.5rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
+.news {
+  .page-title {
+    font-size: 3.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 
-.news-section {
-  margin-bottom: 2rem;
-}
+  .news-section {
+    margin-bottom: 2rem;
+  }
 
-.news-title {
-  color: $datahub-primary-color;
-  margin-bottom: 1rem;
+  .news-title {
+    color: $datahub-primary-color;
+    margin-bottom: 1rem;
+  }
 }

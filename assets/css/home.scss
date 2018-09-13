@@ -3,24 +3,31 @@
 
 @import "variables";
 
-.jumbotron {
-  background-color: $jumbotron-background-color;
-}
+.home {
 
-.jumbotron-container {
-  text-align: center;
-
-  .jumbotron-title {
-    color: $jumbotron-font-color;
-    margin-bottom: 20px;
+  .jumbotron {
+    background-color: $jumbotron-background-color;
   }
-}
 
-.dh-info, .dh-more-info {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
+  .jumbotron-container {
+    text-align: center;
 
-.dh-info-img-container {
-  text-align: center;
+    .jumbotron-title {
+      color: $jumbotron-font-color;
+      margin-bottom: 20px;
+    }
+  }
+
+  .dh-info, .dh-more-info {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .dh-info-img-container {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 1.2rem;
+  }
 }
