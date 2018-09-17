@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include header.html %}
+  <link href="{{ site.baseurl }}/assets/css/docs.css" rel="stylesheet">
+</head>
+<body>
+{% include navbar.html %}
+
+
+<main role="main" class="main docs">
+    <div class="container main-content">
+        <div class="col-lg-9 offset-lg-3">
+            <h1 class="page-title">{{ page.title }}</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 docs-sidebar">
+                {% include docs-sidebar.html %}
+            </div>
+            <div class="docs-section col-lg-9">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% include footer.html %}
+{% include scripts.html %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% if site.data.docs_toc.toc[0] %}
+  {% for doc_item in site.data.docs_toc.toc %}
+    <h3 class="docs-nav-item">
+        <a href="{{ site.baseurl }}{{ doc_item.url }}">{{ doc_item.title }}</a>
+    </h3>
+    {% if doc_item.children[0] %}
+      {% for child_doc_item in doc_item.children %}
+        <h4 class="docs-nav-sub-item">
+          <a href="{{ site.baseurl }}{{ child_doc_item.url }}">
+            {{ child_doc_item.title }}
+          </a>
+        </h4>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,16 @@
+toc:
+  - title: Introduction
+    url: /docs
+  - title: Deployment
+    url: /docs/deployment
+  - title: Architecture
+    url: /docs/architecture
+    children:
+      - title: Sub Item 1
+        url: /docs/architecture/sub-item-1
+      - title: Sub Item 2
+        url: /docs/architecture/sub-item-2
+  - title: API
+    url: /docs/api.html
+  - title: Other
+    url: /docs/other.html
