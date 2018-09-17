@@ -11,6 +11,6 @@ toc:
       - title: Sub Item 2
         url: /docs/architecture/sub-item-2
   - title: API
-    url: /docs/api.html
+    url: /docs/api
   - title: Other
-    url: /docs/other.html
+    url: /docs/other
