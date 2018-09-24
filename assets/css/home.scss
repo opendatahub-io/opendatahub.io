@@ -4,7 +4,6 @@
 @import "variables";
 
 .home {
-
   .jumbotron {
     background-color: $jumbotron-background-color;
   }
@@ -29,5 +28,21 @@
 
   h2 {
     margin-bottom: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    .jumbotron-container {
+      display: flex;
+      text-align: left;
+
+      .jumbotron-title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+    }
   }
 }

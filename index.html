@@ -5,13 +5,18 @@ layout: home
 <main role="main" class="main home">
     <div class="jumbotron">
         <div class="container jumbotron-container">
-            <div class="jumbotron-title">
-                <h1>OPEN DATA HUB</h1>
+            <img src="{{ site.baseurl }}/assets/img/datahub_icon.png" alt="DATA HUB ICON">
+            <div class="jumbotron-title-container">
+                <div class="jumbotron-title">
+                    <h1>A Data & AI Platform for the Hybrid Cloud</h1>
+                </div>
+                <div>
+                    <a class="btn btn-lg btn-primary btn-getting-started" target="_blank"
+                       href="https://gitlab.com/opendatahub"
+                       role="button">Get started &raquo;
+                    </a>
+                </div>
             </div>
-            <a class="btn btn-lg btn-primary btn-getting-started" target="_blank"
-               href="https://gitlab.com/opendatahub"
-               role="button">Get started &raquo;
-            </a>
         </div>
     </div>
 
@@ -20,7 +25,12 @@ layout: home
             <div class="dh-info-text-container col-md-8">
                 <h2 class="dh-info-title">What is Open Data Hub?</h2>
                 <p>
-                    The Open Data Hub is a machine-learning-as-a-service platform built on <a href="https://www.openshift.com/">OpenShift&reg;</a> and <a href="https://kubernetes.io/">Kubernetes</a> using a collection of open source products.  Data scientists can create models using Jupyter notebooks, and select from popular tools such as <a href="https://www.tensorflow.org/">TensorFlow&trade;</a>, <a href="http://scikit-learn.org/stable/index.html">scikit-learn</a>, <a href="http://spark.apache.org/">Apache Spark&trade;</a> and more for developing models.  Teams can spend more time solving critical business needs and less on installing and maintaining infrastructure with the Open Data Hub.
+                    The Open Data Hub is a machine-learning-as-a-service platform built on <a href="https://www.openshift.com/">OpenShift&reg;</a>
+                    and <a href="https://kubernetes.io/">Kubernetes</a> using a collection of open source products.
+                    Data scientists can create models using Jupyter notebooks, and select from popular tools such as
+                    <a href="https://www.tensorflow.org/">TensorFlow&trade;</a>, <a href="http://scikit-learn.org/stable/index.html">scikit-learn</a>,
+                    <a href="http://spark.apache.org/">Apache Spark&trade;</a> and more for developing models.
+                    Teams can spend more time solving critical business needs and less on installing and maintaining infrastructure with the Open Data Hub.
                 </p>
                 <p>
                     Open Data Hub is a meta-project that integrates open source projects into a practical solution.
@@ -39,11 +49,13 @@ layout: home
             <div class="col-md-4">
                 <h2>Getting Started</h2>
                 <p>
-                    All you need to get started with the Open Data Hub is a running <a href="https://www.openshift.com/">OpenShift&reg;</a> cluster.  For storing data and models, we strongly recommend using a S3 object store such as <a href="https://ceph.com/ceph-storage/object-storage/">Ceph<a/>.
+                    All you need to get started with the Open Data Hub is a running <a href="https://www.openshift.com/">OpenShift&reg;</a> cluster.
+                    For storing data and models, we strongly recommend using a S3 object store such as <a href="https://ceph.com/ceph-storage/object-storage/">Ceph</a>.
                 </p>
-		<p>
-		    Once your OpenShift and Ceph installations are running, deploy the Open Data Hub components using our <a href="https://www.ansible.com/">Ansible</a> playbooks and OpenShift&reg; deployment templates.
-		</p>
+                <p>
+                    Once your OpenShift and Ceph installations are running, deploy the Open Data Hub components using
+                    our <a href="https://www.ansible.com/">Ansible</a> playbooks and OpenShift&reg; deployment templates.
+                </p>
                 <p>
                     <a class="btn btn-primary-inverse" role="button" target="_blank"
                        href="https://gitlab.com/opendatahub">
