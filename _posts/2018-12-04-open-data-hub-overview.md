@@ -11,7 +11,7 @@ categories: architecture
 What is the Open Data Hub?
 ------
 
-![alt text](../../assets/img/Open_Data_Hub_Deployment.png "Open Data Hub")
+![alt text](../../assets/img/posts/2018-12-04-open-data-hub-overview/Open_Data_Hub_Deployment.png "Open Data Hub")
 
 Built on OpenShift, Open Data Hub uses the leading Kubernetes platform to deliver a meta-project that integrates Open Source components into a practical service-oriented AI and ML solution.  Organizations and IT departments can deploy Open Data Hub as a centralized self-service solution for analytic and data science workloads.
 
@@ -23,7 +23,7 @@ Open Data Hub deploys with a set of pre-defined AI models available for use.  Tr
 Data Science and ETL Tools
 ------
 
-![alt text](../../assets/img/ds_tools.png "Open Data Hub - Data Science")
+![alt text](../../assets/img/posts/2018-12-04-open-data-hub-overview/ds_tools.png "Open Data Hub - Data Science")
 
 Data scientists can use familiar tools such as Jupyter notebooks for developing complex algorithms and models.  Frameworks such as numpy, scikit-learn, Tensorflow and more are available for use.
 
@@ -32,14 +32,14 @@ For data engineers who need to query or process their data, Spark from radanalyt
 Streaming and Enriching Data
 ------
 
-![alt text](../../assets/img/streaming_tools.png "Open Data Hub - Streaming and Enrichment")
+![alt text](../../assets/img/posts/2018-12-04-open-data-hub-overview/streaming_tools.png "Open Data Hub - Streaming and Enrichment")
 
 Open Data Hub offers numerous services for ingesting data, including Kafka, Logstash, Fluentd and rsyslog.  At the heart of it all is the strimzi.io Kafka streaming platform, which allows data to be ingested and processed at scale.  Kafka applications and logstash micro-services can be used to enrich your inbound data before it lands in storage.
 
 Storing Data
 ------
 
-![alt text](../../assets/img/storage_tools.png "Open Data Hub - Storage")
+![alt text](../../assets/img/posts/2018-12-04-open-data-hub-overview/storage_tools.png "Open Data Hub - Storage")
 
 Data is the foundational piece of AI, and Red Hat Ceph Object Store is ideal for building your lake of unstructured data.  Ceph’s S3 API makes integration with popular big data tools simple and easy.
 
@@ -48,14 +48,14 @@ If log analysis is more what you need, Open Data Hub provides a deployment of El
 Managing Data
 ------
 
-![alt text](../../assets/img/dm_tools.png "Open Data Hub - Manage Data")
+![alt text](../../assets/img/posts/2018-12-04-open-data-hub-overview/dm_tools.png "Open Data Hub - Manage Data")
 
 Design your data pipelines the Kubernetes way using Argo.  Jobs can be created to train models or transform data.
 
 Monitoring Infrastructure
 ------
 
-![alt text](../../assets/img/monitor_tools.png "Open Data Hub - Monitor")
+![alt text](../../assets/img/posts/2018-12-04-open-data-hub-overview/monitor_tools.png "Open Data Hub - Monitor")
 
 Open Data Hub comes standard with Prometheus and Grafana for monitoring the components.  DevOps teams have predefined dashboards to help manage the infrastructure.
 
