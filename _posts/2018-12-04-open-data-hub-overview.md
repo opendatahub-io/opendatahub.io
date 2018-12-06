@@ -70,6 +70,7 @@ Tools
 <b>Available in Open Data Hub</b>
 * AI Library
 * [Ceph Object Storage](https://ceph.com/ceph-storage/object-storage/)
+* [Spark](https://spark.apache.org/)
 * [JuypyterHub](http://jupyter.org/hub)
 * [Jupyter Notebooks](https://jupyter.org/)
 * [Tensorflow](https://www.tensorflow.org/)
