@@ -4,18 +4,13 @@
 @import "variables";
 
 .news {
-  .page-title {
-    font-size: 3.5rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-
   .news-section {
     margin-bottom: 2rem;
   }
 
   .news-title {
     //color: $datahub-primary-color;
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 }
