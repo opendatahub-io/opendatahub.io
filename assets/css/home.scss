@@ -5,7 +5,9 @@
 
 .home {
   .jumbotron {
-    background-color: $jumbotron-background-color;
+    background-image: url("/assets/img/jumbotron-background.svg");
+    background-size: cover;
+    background-color: #0a5c86;
   }
 
   .jumbotron-container {
