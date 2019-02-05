@@ -15,7 +15,7 @@
    version="1.1"
    id="svg1507"
    inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="datahub-d_final-sheet_preconversion.svg">
+   sodipodi:docname="datahub-d_final-sheet_paths.svg">
   <defs
      id="defs1501" />
   <sodipodi:namedview
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.45640207"
-     inkscape:cx="764.27695"
-     inkscape:cy="886.36274"
+     inkscape:cx="1695.4734"
+     inkscape:cy="185.22657"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -5260,5 +5260,270 @@
          x="-62.210606"
          id="tspan4969"
          sodipodi:role="line">color</tspan></text>
+    <g
+       transform="translate(228.54041)"
+       id="g82059">
+      <path
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#a586f3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.15563917;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         d="m -47.422096,44.468683 c -0.596795,0.008 -1.073079,0.50032 -1.062425,1.09706 v 20.316888 c -0.0538,0.62942 0.442264,1.17021 1.073972,1.17021 0.631733,0 1.171601,-0.54077 1.117519,-1.17021 v -4.787507 l 0.02602,-0.37829 c 0,-3.397267 2.723212,-6.132027 6.120478,-6.132027 3.39726,0 6.132025,2.73476 6.132025,6.132027 6.15e-4,0.0112 9.22e-4,0.0225 0.0017,0.0337 -0.0016,0.0272 -0.0022,0.0544 -0.0017,0.0815 v 6.774867 c 0,0.59632 0.483415,1.079737 1.079737,1.079737 0.596334,0 1.079749,-0.483407 1.079749,-1.079737 v -6.774867 c 0,-0.0201 -7.4e-4,-0.0402 -0.0019,-0.0599 0.0011,-0.0183 0.0018,-0.0373 0.0019,-0.0556 5e-6,-4.562257 -3.729254,-8.279957 -8.291511,-8.279957 -2.458522,0 -4.671362,1.07999 -6.189762,2.78958 v -9.660674 c 0.01064,-0.60577 -0.479689,-1.10143 -1.085519,-1.09707 z"
+         id="path82047"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccscccscccsssccccccc" />
+      <path
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#5ed3ee;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.15563917;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         d="m -50.373419,44.526303 c -0.0023,3e-5 -0.0047,0 -0.0071,0 -0.596792,0.008 -1.073077,0.50031 -1.062422,1.09707 v 15.093431 c 0,2.582657 -1.60233,4.882037 -4.030276,5.762487 -2.427945,0.88045 -5.146397,0.14622 -6.801811,-1.83614 -1.655408,-1.982357 -1.888211,-4.777627 -0.588952,-7.009674 1.299266,-2.23205 3.844811,-3.40528 6.386081,-2.94476 0.586168,0.10715 1.14842,-0.28052 1.256695,-0.86648 0.108275,-0.58596 -0.278305,-1.14896 -0.86406,-1.25836 -3.426567,-0.620947 -6.88606,0.97446 -8.637954,3.98408 -1.751894,3.009617 -1.43528,6.808004 0.796816,9.480954 2.232103,2.672947 5.906944,3.658457 9.180713,2.471287 2.757168,-0.999827 4.744168,-3.366367 5.302731,-6.168584 0,0 0.122022,-0.2937 0.159505,-0.56393 0.03748,-0.27024 0,-1.05088 0,-1.05088 V 45.623493 c 0.01089,-0.60758 -0.482327,-1.10408 -1.089971,-1.09719 z"
+         id="path82049"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccsssccscsccczccc" />
+      <g
+         style="stroke:#4d5258"
+         id="g82057"
+         transform="matrix(5.9126081,0,0,5.9126081,-528.6668,56.376298)">
+        <circle
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#a6d03f;stroke-width:0.36458334;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="circle82051"
+           cx="79.677254"
+           cy="0.71328706"
+           r="0.64509356" />
+        <path
+           sodipodi:open="true"
+           d="m 80.808656,2.1246589 a 1.8088735,1.8088735 0 0 1 -2.309183,-0.038478 1.8088735,1.8088735 0 0 1 -0.389241,-2.2764655 1.8088735,1.8088735 0 0 1 2.165211,-0.80353224"
+           sodipodi:end="5.0494266"
+           sodipodi:start="0.89506385"
+           sodipodi:ry="1.8088735"
+           sodipodi:rx="1.8088735"
+           sodipodi:cy="0.71328706"
+           sodipodi:cx="79.677261"
+           sodipodi:type="arc"
+           id="path82053"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#536a1c;stroke-width:0.36458334;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           sodipodi:open="true"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#2e3e05;stroke-width:0.36458337;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path82055"
+           sodipodi:type="arc"
+           sodipodi:cx="79.797989"
+           sodipodi:cy="0.71337765"
+           sodipodi:rx="2.455857"
+           sodipodi:ry="2.4425189"
+           sodipodi:start="0.17514985"
+           sodipodi:end="4.4231027"
+           d="m 82.216272,1.1390005 a 2.455857,2.4425189 0 0 1 -2.468226,2.016391 2.455857,2.4425189 0 0 1 -2.383743,-2.114547 2.455857,2.4425189 0 0 1 1.733108,-2.6684936" />
+      </g>
+    </g>
+  </g>
+  <g
+     style="display:none"
+     transform="translate(-0.26459003,-0.4460633)"
+     inkscape:label="Export Frames"
+     id="g82036"
+     inkscape:groupmode="layer">
+    <rect
+       ry="0.73365033"
+       y="108.57138"
+       x="-427.60052"
+       height="53.974998"
+       width="148.16667"
+       id="rect81998"
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_color_hrz-wht-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82000"
+       width="148.16667"
+       height="53.974998"
+       x="-581.05896"
+       y="108.57138"
+       ry="0.73365033"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_gryscl_hrz-wht-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="0.73365033"
+       y="108.57138"
+       x="-734.51788"
+       height="53.974998"
+       width="148.16667"
+       id="rect82002"
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_1color_hrz-wht-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82004"
+       width="148.16667"
+       height="53.974998"
+       x="-427.60052"
+       y="50.363052"
+       ry="0.73365033"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_color_hrz-blk-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="0.73365033"
+       y="-8.9036379"
+       x="-427.60052"
+       height="53.974998"
+       width="148.16667"
+       id="rect82006"
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_color_hrz-gry-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="0.73365033"
+       y="50.363052"
+       x="-581.05896"
+       height="53.974998"
+       width="148.16667"
+       id="rect82008"
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_gryscl_hrz-blk-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82010"
+       width="148.16667"
+       height="53.974998"
+       x="-581.32416"
+       y="-8.9036179"
+       ry="0.73365033"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_gryscl_hrz-gry-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82012"
+       width="148.16667"
+       height="53.974998"
+       x="-734.51788"
+       y="50.363052"
+       ry="0.73365033"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_1color_hrz-blk-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="0.73365033"
+       y="-8.9036179"
+       x="-734.51788"
+       height="53.974998"
+       width="148.16667"
+       id="rect82014"
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.58469117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="translate(740.07414,62.795515)"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_1color_hrz-gry-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.52862096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82016"
+       width="85.195831"
+       height="76.729164"
+       x="648.22925"
+       y="175.07106"
+       ry="1.0429343"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_color_vert-wht-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="1.0429343"
+       y="175.07106"
+       x="558.27087"
+       height="76.729164"
+       width="85.195831"
+       id="rect82018"
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.52862096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_gryscl_vert-wht-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.5286209;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82020"
+       width="85.195831"
+       height="76.729164"
+       x="468.31247"
+       y="175.07106"
+       ry="1.0429343"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_1color_vert-wht-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.52862096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82022"
+       width="85.195831"
+       height="76.729164"
+       x="648.22925"
+       y="90.404404"
+       ry="1.0429343"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_color_vert-blk-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="1.0429343"
+       y="90.404404"
+       x="558.27087"
+       height="76.729164"
+       width="85.195831"
+       id="rect82024"
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.52862096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_gryscl_vert-blk-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.5286209;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82026"
+       width="85.195831"
+       height="76.729164"
+       x="468.31247"
+       y="90.404404"
+       ry="1.0429343"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_1color_vert-blk-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="1.0429343"
+       y="5.737731"
+       x="648.22925"
+       height="76.729164"
+       width="85.195831"
+       id="rect82028"
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.52862096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_color_vert-gry-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.52862096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect82030"
+       width="85.195831"
+       height="76.729164"
+       x="558.27087"
+       y="5.737731"
+       ry="1.0429343"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_gryscl_vert-gry-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       ry="1.0429343"
+       y="5.737731"
+       x="468.31247"
+       height="76.729164"
+       width="85.195831"
+       id="rect82032"
+       style="opacity:1;fill:#72767b;fill-opacity:1;stroke:none;stroke-width:0.5286209;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/home/duffy/Documents/Projects/Favors/Open Data Hub Logo/datahub-logo_final/PNG/datahub_1color_vert-gry-bg.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
   </g>
 </svg>
