@@ -74,3 +74,20 @@ Links should include `{{ site.baseurl }}` before the location. e.g.:
 ## Local testing
 
 You can run the site just like any other Jekyll site as [documented](https://jekyllrb.com/docs/) or using a [jekyll container](https://store.docker.com/community/images/jekyll/jekyll).
+
+### Running a jekyll container on linux using docker
+You can view the local changes to your clone of the opendatahub.io in realtime by running the jekyll server in a docker container. You'll be running the container with a volume mounted to the root of your opendatahub.io repository.
+From the root of your cloned opendatahub.io repository:
+
+```bash
+# To prevent SELinux from denying docker from mounting your repository folder as a volume You'll need to change the selinux context for the root of the opendatahub.io repository directory
+chcon -Rt svirt_sandbox_file_t $PWD
+
+# Set an environment variable for the version of the jekyll container
+export JEKYLL_VERSION=3.8
+
+# Run the jekyll container, map the container port 4000 to the host port 4000 and set the environment variable JEKYLL_UID to your user ID to prevent any permission issues with adding or modifying files
+# If you're concerned about the container user running with the same user ID, you can modify the permission of the repo folder to allow read/write access to other
+docker run --rm --volume="/home/llasmith/projects/data-hub/opendatahub.io:/srv/jekyll" -it -p 4000:4000 -e JEKYLL_UID=$(id -u) jekyll/jekyll:$JEKYLL_VERSION jekyll serve
+
+```
