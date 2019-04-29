@@ -26,7 +26,7 @@ February 2019
 | [Ceph-nano](https://github.com/ceph/cn) | Latest master | OpenShift 3.1x, Minishift 1.3x | Storage |
 {:class="table table-bordered table-striped"}
 
-The [initial launch of ODH](https://gitlab.com/opendatahub/jupyterhub-ansible) includes an object store, an analytics engine for big data and a platform for spinning up data science notebook.  This provides everything you need to get started with machine learning on OpenShift.
+The [initial launch of ODH](https://gitlab.com/opendatahub/jupyterhub-ansible) includes an object store, an analytics engine for big data and a platform for spinning up data science notebooks.  This provides everything you need to get started with machine learning on OpenShift.
 
 May 2019
 ------
