@@ -13,7 +13,7 @@ What's Next?
 
 ![alt text](../../assets/img/posts/2019-04-29-project-road-map-for-2019/roadmap_2019.png "Open Data Hub Road Map - 2019")
 
-The Open Data Hub community has some exciting new features planned for 2019.  Driven by the release of OpenShift 4, we have officially moved to operators.  This will make deployment and management of the services easier for administrators.  Other key highlights on the road map for this year include added support for monitoring services with Prometheus and Grafana, as well as improved machine learning model lifecycle management with tools such as MLFlow and Seldon-core.
+The Open Data Hub community has some exciting new features planned for 2019.  Driven by the release of OpenShift 4, we have officially moved to operators.  This will make deployment and management of the services easier for administrators.  Other key highlights on the road map for this year include added support for monitoring services with Prometheus and Grafana, as well as improved machine learning model lifecycle management with tools such as mlflow and Seldon-core.
 
 February 2019
 ------
@@ -65,7 +65,7 @@ August 2019
 | [Seldon-core](https://www.seldon.io/open-source/) | 0.2.6+ | OpenShift 3.1x and 4.x | Model serving |
 {:class="table table-bordered table-striped"}
 
-Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
+Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts to query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
 
 For machine learning model lifecycles, mlflow is being added to allow model experimentation while Seldon-core will provide model-serving and model-monitoring capabilities.
 
