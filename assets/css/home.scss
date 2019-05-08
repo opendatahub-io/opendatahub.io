@@ -5,17 +5,11 @@
 
 .home {
   .jumbotron {
-    //min-height: 50rem;
-    //background-image: url("/assets/img/jumbotron_background.png");
-    //background-size: cover;
     background-color: $navbar-background-color;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 8rem;
 
-    //.jumbotron-container {
-    //  display: flex;
-    //  flex-direction: column;
-    //  justify-content: center;
     div {
       text-align: center;
     }
