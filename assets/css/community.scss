@@ -4,37 +4,14 @@
 @import "variables";
 
 .community {
-  .page-title {
-    text-align: center;
-  }
+  margin-bottom: 10rem;
+    .community-section {
+      margin-bottom: 6rem;
 
-  .community-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .community-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    text-align: center;
-    box-shadow: 5px 5px 2px #bfbfbf;
-    background-color: #175C83;
-    margin: 2rem;
-    padding: 2rem 3rem 2rem 3rem;
-    color: white;
-    width: 400px;
-    height: 300px;
-
-    .btn-primary {
-      width: 160px;
-      height: 60px;
-      border-radius: 0;
-      line-height: 42px;
-      font-size: 1.5rem;
+      img {
+        width: 100%;
+        max-width: 600px;
+        box-shadow: 0.4rem 0.4rem 0.5em #F2F2F2;
+      }
     }
-  }
 }

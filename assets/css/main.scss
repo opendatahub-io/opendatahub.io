@@ -11,25 +11,40 @@ html {
 body {
   padding-top: $navbar-height;
   margin-bottom: $footer-height;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Overpass", regular;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Nunito, sans-serif;
+    font-family: "Overpass-Bold", sans-serif;
     font-weight: 600;
 }
 
 .navbar {
   background-color: $navbar-background-color;
+  //color: $navbar-text-color;
   min-height: $navbar-height;
+  padding-top: 0;
+  padding-bottom: 0;
 
-  .nav-item {
-    margin-right: 20px;
+  .navbar-nav {
+    .nav-item {
+      margin-right: 1.5em;
+      .nav-link {
+        color: $navbar-text-color;
+        font-weight: 400;
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
   }
 
   .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
     img {
-      height: $navbar-height - 20px;
+      height: $navbar-height;
     }
   }
 }
@@ -45,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   height: $footer-height;
   line-height: $footer-height;
 
-  font-size: 36px;
+  font-size: 2rem;
   text-align: center;
 
   background-color: $navbar-background-color;
@@ -59,34 +74,50 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.container.main-content {
+.container.getting-started {
   margin-bottom: 10rem;
+}
+
+.full-width-image {
+  text-align: center;
+  background-color: #F0F6FA;
+  img {
+    width: 100%;
+    max-width: 100rem;
+  }
+}
+
+.btn {
+  min-width: 12rem;
+  line-height: 1.25;
+  font-size: 1.25rem;
+  padding: .9rem .7rem .7rem .7rem;
+
+  &:hover{
+    color: $button-color-default;
+    background-color: white;
+    border-color: $button-color-default;
+  }
+  background-color: $button-color-default;
+  border-color: $button-color-default;
+  color: white;
+  border-radius: 0.1rem;
 }
 
 .btn.btn-primary {
   &:hover{
-    color: $datahub-primary-color;
+    color: $button-color-default;
     background-color: white;
-    border-color: $datahub-primary-color;
+    border-color: $button-color-default;
   }
-  background-color: $datahub-primary-color;
-  border-color: $datahub-primary-color;
-  color: white
+  background-color: $button-color-primary;
+  border-color: $button-color-primary;
+  color: white;
 }
 
-.btn.btn-primary-inverse {
-  &:hover{
-    background-color: $datahub-primary-color;
-    color: white;
-    border-color: white;
-  }
-  color: $datahub-primary-color;
-  background-color: white;
-  border-color: $datahub-primary-color;
-}
 
 .page-title {
-  font-size: 3.5rem;
+  //font-size: 3rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
 }

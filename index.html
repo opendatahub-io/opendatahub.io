@@ -4,25 +4,25 @@ layout: home
 
 <main role="main" class="main home">
     <div class="jumbotron">
-        <div class="container jumbotron-container">
-            <img src="{{ site.baseurl }}/assets/img/logos/datahub_color_vert-gry-bg.png" alt="DATA HUB ICON">
-            <div class="jumbotron-title-container">
-                <div class="jumbotron-title">
-                    <h1>A Data & AI Platform for the Hybrid Cloud</h1>
-                </div>
-                <div>
-                    <a class="btn btn-lg btn-primary btn-getting-started" target="_blank"
-                       href="{{ site.repo }}"
-                       role="button">Get started &raquo;
-                    </a>
-                </div>
+<!--        <div class="container jumbotron-container">-->
+            <div class="image-container">
+                <img  class="jumbotron-img" src="{{ site.baseurl }}/assets/img/logos/datahub_color_vert-gry-bg.png" alt="DATA HUB ICON">
             </div>
-        </div>
+            <div class="title-text-container">
+                <h1>A Data & AI Platform for the Hybrid Cloud</h1>
+            </div>
+            <div class="button-container">
+                <a class="btn btn-lg btn-primary btn-getting-started" target="_blank"
+                   href="{{ site.repo }}"
+                   role="button">Get started
+                </a>
+            </div>
+<!--        </div>-->
     </div>
 
-    <div class="container main-content">
+    <div class="container what-is">
         <div class="row dh-info">
-            <div class="dh-info-text-container col-md-8">
+            <div class="dh-info-text-container offset-md-1 col-md-10">
                 <div class="dh-info-section">
                     <h2 class="dh-info-title">What is Open Data Hub?</h2>
                     <p>
@@ -44,88 +44,42 @@ layout: home
                         experiment and develop <strong>intelligent applications</strong> without incurring high costs and
                         having to master the complexity of modern machine learning and artificial intelligence software stacks.
                     </p>
-                </div>
-                <div class="dh-info-section">
-                    <h2 class="dh-info-title">Getting Started</h2>
-                    <p>
-                        For additional information about the Open Data Hub, <a href="{{ site.baseurl }}/news.html">read our blogs</a>.
-                    </p>
-                    <p>
-                        To set up the Open Data Hub, all you need is a running <a href="https://www.openshift.com/">OpenShift&reg;</a> cluster.
-                        For storing data and models, we recommend using a S3 object store such as <a href="https://ceph.com/ceph-storage/object-storage/">Ceph</a>.
-                    </p>
-                    <p>
-                        Once your OpenShift and Ceph installations are running, deploy the Open Data Hub components using
-                        our <a href="https://www.ansible.com/">Ansible</a> playbooks and OpenShift&reg; deployment templates.
-                    </p>
-                    <p>
-                        <a class="btn btn-primary" role="button" target="_blank" href="{{ site.repo }}">
-                        Installation &raquo;
-                        </a>
-                    </p>
-                </div>
-                <div class="dh-info-section">
-                    <h2 class="dh-info-title">Coming Up Next</h2>
                     <p>
                         Read about the new features coming to Open Data Hub in our <a href="https://opendatahub.io/news/2019-04-29/project-road-map-for-2019.html">Project Road Map</a>.
                     </p>
                 </div>
             </div>
-            <div class="col-md-4 dh-info-img-container">
-                <img src="{{ site.baseurl }}/assets/img/datahub_flow.png" alt="Data Hub Parts">
+        </div>
+    </div>
+    <div class="full-width-image">
+        <img src="{{ site.baseurl }}/assets/img/datahub_flow.png" alt="Data Hub Parts">
+    </div>
+    <div class="container getting-started">
+        <div class="row dh-info">
+            <div class="dh-info-text-container offset-md-1 col-md-10">
+                <div class="dh-info-section">
+                    <h2 class="dh-info-title">Getting Started</h2>
+                    <p>
+                        For additional information about the Open Data Hub, <a href="{{ site.baseurl }}/news.html">read
+                        our blogs</a>.
+                    </p>
+                    <p>
+                        To set up the Open Data Hub, all you need is a running <a href="https://www.openshift.com/">OpenShift&reg;</a>
+                        cluster. For storing data and models, we recommend using a S3 object store such as
+                        <a href="https://ceph.com/ceph-storage/object-storage/">Ceph</a>.
+                        Once your OpenShift and Ceph installations are running, deploy the Open Data Hub components
+                        using our <a href="https://www.ansible.com/">Ansible</a> playbooks and OpenShift&reg; deployment
+                        templates.
+                    </p>
+                </div>
+                <div class="dh-info-section">
+                    <p>
+                        <a class="btn" role="button" target="_blank" href="{{ site.repo }}">
+                            Installation
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
-
-        <!--<div class="row dh-more-info">-->
-            <!--<div class="col-md-4">-->
-                <!--<h2>Getting Started</h2>-->
-                <!--<p>-->
-                    <!--All you need to get started with the Open Data Hub is a running <a href="https://www.openshift.com/">OpenShift&reg;</a> cluster.-->
-                    <!--For storing data and models, we strongly recommend using a S3 object store such as <a href="https://ceph.com/ceph-storage/object-storage/">Ceph</a>.-->
-                <!--</p>-->
-                <!--<p>-->
-                    <!--Once your OpenShift and Ceph installations are running, deploy the Open Data Hub components using-->
-                    <!--our <a href="https://www.ansible.com/">Ansible</a> playbooks and OpenShift&reg; deployment templates.-->
-                <!--</p>-->
-                <!--<p>-->
-                    <!--<a class="btn btn-primary-inverse" role="button" target="_blank"-->
-                       <!--href="https://gitlab.com/opendatahub">-->
-                        <!--Installation &raquo;-->
-                    <!--</a>-->
-                <!--</p>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-                <!--<h2>Documentation</h2>-->
-                <!--<p>-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore-->
-                    <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
-                    <!--aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
-                    <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in-->
-                    <!--culpa qui officia deserunt mollit anim id est laborum.-->
-                <!--</p>-->
-                <!--<p>-->
-                    <!--<a class="btn btn-primary-inverse" role="button" target="_blank"-->
-                       <!--href="https://gitlab.com/opendatahub">-->
-                        <!--Docs &raquo;-->
-                    <!--</a>-->
-                <!--</p>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-                <!--<h2>Contributing</h2>-->
-                <!--<p>-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore-->
-                    <!--et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
-                    <!--aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
-                    <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in-->
-                    <!--culpa qui officia deserunt mollit anim id est laborum.-->
-                <!--</p>-->
-                <!--<p>-->
-                    <!--<a class="btn btn-primary-inverse" role="button" target="_blank"-->
-                       <!--href="https://gitlab.com/opendatahub">-->
-                        <!--Source &raquo;-->
-                    <!--</a>-->
-                <!--</p>-->
-            <!--</div>-->
-        <!--</div>-->
     </div>
 </main>

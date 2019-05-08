@@ -7,30 +7,30 @@ permalink: /community
 <main role="main" class="main community">
     <div class="container main-content">
         <h1 class="page-title">{{ page.title }}</h1>
-        <div class="row community-row">
-            <div class="col-sm community-col">
-                <div class="community-section">
+        <div class="row community-row community-section">
+            <div class="col-md-4">
                     <h3 class="title">Source Code</h3>
                     <p class="content">
                         Browse the source code for various projects that form the Open Data Hub.
                     </p>
-                    <a class="btn btn-lg btn-primary" role="button" target="_blank"
-                       href="{{ site.repo }}">
-                        <i class="fab fa-gitlab"></i> GitLab
+                    <a target="_blank" href="{{ site.repo }}">Visit GitLab Now
                     </a>
-                </div>
             </div>
-            <div class="col-sm community-col">
-                <div class="community-section">
-                    <h3 class="title">Mailing List</h3>
-                    <p class="content">
-                        Stay up to date with the latest announcements and discussion about the Open Data Hub.
-                    </p>
-                    <a class="btn btn-lg btn-primary" role="button" target="_blank"
-                       href="{{ site.email_list }}">
-                        <i class="far fa-envelope"></i> Sign Up
-                    </a>
-                </div>
+            <div class="col-md-8">
+                <img src="{{ site.baseurl }}/assets/img/community_gitlab.png" alt="source code">
             </div>
         </div>
+        <div class="row community-row community-section">
+            <div class="col-md-4">
+                <h3 class="title">Mailing List</h3>
+                <p class="content">
+                    Stay up to date with the latest announcements and discussion about the Open Data Hub.
+                </p>
+                <a target="_blank" href="{{ site.email_list }}"> Subscribe to the Mailing List</a>
+            </div>
+            <div class="col-md-8">
+                <img src="{{ site.baseurl }}/assets/img/community_mailing_list.png" alt="mailing list">
+            </div>
+        </div>
+    </div>
 </main>
