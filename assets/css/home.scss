@@ -5,9 +5,9 @@
 
 .home {
   .jumbotron {
-    min-height: 50rem;
-    background-image: url("/assets/img/jumbotron_background.png");
-    background-size: cover;
+    //min-height: 50rem;
+    //background-image: url("/assets/img/jumbotron_background.png");
+    //background-size: cover;
     background-color: $navbar-background-color;
     padding-left: 0;
     padding-right: 0;
@@ -28,14 +28,16 @@
       display: flex;
       justify-content: center;
       padding-top: 2rem;
+      padding-bottom: 2rem;
     }
 
-    //.jumbotron-title {
     color: $jumbotron-font-color;
-    //  margin-bottom: 1rem;
-    //  max-width: 25rem;
-    //}
-    //}
+
+    div.particles {
+      background-image: url("/assets/img/jumbotron_background.png");
+      background-size: cover;
+      min-height: 20rem;
+    }
   }
 
   .dh-info {
