@@ -4,14 +4,24 @@
 @import "variables";
 
 .docs {
-  .docs-sidebar{
-    .docs-nav-item a{
+  .docs-sidebar {
+    .docs-nav-item a {
       color: #1e1e1e;
+      font-weight: 400;
+      line-height: 2.5rem;
     }
 
     .docs-nav-sub-item a {
       color: #1e1e1e;
+      font-weight: 400;
       padding-left: 3rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .docs-nav-item.active a,
+    .docs-nav-sub-item.active a {
+      color: #298CFF;
     }
   }
 }

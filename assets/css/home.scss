@@ -8,6 +8,7 @@
     background-color: $navbar-background-color;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
     margin-bottom: 8rem;
 
     div {
@@ -22,14 +23,11 @@
       display: flex;
       justify-content: center;
       padding-top: 2rem;
-      padding-bottom: 2rem;
     }
 
     color: $jumbotron-font-color;
 
     div.particles {
-      background-image: url("/assets/img/jumbotron_background.png");
-      background-size: cover;
       min-height: 20rem;
     }
   }
