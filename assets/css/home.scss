@@ -3,13 +3,106 @@
 
 @import "variables";
 
+nav.navbar {
+  background-color: transparent;
+}
+
+nav.navbar.scrolled {
+  background-color: $navbar-background-color;
+}
+
+@media only screen and (max-width : 30rem) {
+  body {
+    padding-top: $navbar-height;
+  }
+
+  nav.navbar {
+    background-color: $navbar-background-color;
+  }
+
+  .home .jumbotron {
+    &.small {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &.particles {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 30rem) and (max-width: 52rem) {
+  body {
+    padding-top: 0;
+  }
+
+  nav.navbar {
+    background-color: transparent;
+  }
+
+  .home {
+    .jumbotron {
+      &.small {
+        display: none;
+      }
+
+      &.particles {
+        display: block;
+
+        .title-panel {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background-color: transparent;
+          height: 30rem;
+          width: 28rem;
+          margin-left: -14rem;
+          margin-top: -15rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 52rem) {
+  body {
+    padding-top: 0;
+  }
+
+  nav.navbar {
+    background-color: transparent;
+  }
+
+  .home {
+    .jumbotron {
+      &.small {
+        display: none;
+      }
+
+      &.particles {
+        display: block;
+
+        .title-panel {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background-color: transparent;
+          height: 30rem;
+          width: 50rem;
+          margin-left: -25rem;
+          margin-top: -15rem;
+        }
+      }
+    }
+  }
+}
+
 .home {
   .jumbotron {
-    background-color: $navbar-background-color;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    margin-bottom: 8rem;
+    background-color: $jumbotron-background-color;
+    color: $jumbotron-font-color;
 
     div {
       text-align: center;
@@ -25,12 +118,31 @@
       padding-top: 2rem;
     }
 
-    color: $jumbotron-font-color;
+    &.particles {
+      padding: 0;
+      margin-bottom: 8rem;
+      height: 50rem;
+      position: relative;
 
-    div.particles {
-      min-height: 20rem;
+      .title-panel {
+        div {
+          text-align: center;
+        }
+
+        div.image-container img {
+          max-width: 15rem;
+        }
+
+        div.button-container {
+          display: flex;
+          justify-content: center;
+          padding-top: 2rem;
+        }
+
+      }
     }
   }
+
 
   .dh-info {
     text-align: center;

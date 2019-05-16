@@ -3,7 +3,25 @@ layout: home
 ---
 
 <main role="main" class="main home">
-    <div class="jumbotron">
+    <div id="particles" class="jumbotron particles">
+        <div class="title-panel">
+            <div class="image-container">
+                <img class="jumbotron-img" src="{{ site.baseurl }}/assets/img/logos/datahub_color_vert-gry-bg.png"
+                     alt="DATA HUB ICON">
+            </div>
+            <div class="title-text-container">
+                <h1>A Data & AI Platform for the Hybrid Cloud</h1>
+            </div>
+            <div class="button-container">
+                <a class="btn btn-lg btn-primary btn-getting-started" target="_blank"
+                   href="{{ site.repo }}"
+                   role="button">Get started
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron small">
         <div class="image-container">
             <img class="jumbotron-img" src="{{ site.baseurl }}/assets/img/logos/datahub_color_vert-gry-bg.png"
                  alt="DATA HUB ICON">
@@ -17,7 +35,6 @@ layout: home
                role="button">Get started
             </a>
         </div>
-        <div id="particles" class="particles"></div>
     </div>
 
     <div class="container what-is">
