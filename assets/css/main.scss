@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   width: 100%;
   height: $footer-height;
-  line-height: $footer-height;
+  line-height: 2rem;
 
   font-size: 2rem;
   text-align: center;
@@ -78,10 +78,6 @@ h1, h2, h3, h4, h5, h6 {
   a:hover {
     color: rgba(255,255,255,.75);
   }
-}
-
-.container.getting-started {
-  margin-bottom: 10rem;
 }
 
 .full-width-image {

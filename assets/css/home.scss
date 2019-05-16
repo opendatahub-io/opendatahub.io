@@ -22,9 +22,7 @@ nav.navbar.scrolled {
 
   .home .jumbotron {
     &.small {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
+      display: block;
     }
 
     &.particles {
@@ -51,15 +49,31 @@ nav.navbar.scrolled {
       &.particles {
         display: block;
 
-        .title-panel {
-          position: absolute;
-          top: 50%;
+        div.image-container {
+          top: 37%;
           left: 50%;
-          background-color: transparent;
-          height: 30rem;
+          height: 15rem;
+          width: 15rem;
+          margin-top: -7.5rem;
+          margin-left: -7.5rem;
+        }
+
+        div.title-text-container {
+          top: 55%;
+          left: 50%;
+          height: 6rem;
           width: 28rem;
+          margin-top: -3rem;
           margin-left: -14rem;
-          margin-top: -15rem;
+        }
+
+        div.button-container {
+          top: 70%;
+          left: 50%;
+          height: 3rem;
+          width: 12rem;
+          margin-top: -1.5rem;
+          margin-left: -6rem;
         }
       }
     }
@@ -83,17 +97,40 @@ nav.navbar.scrolled {
 
       &.particles {
         display: block;
-        user-select: none;
 
-        .title-panel {
+        div {
           position: absolute;
           top: 50%;
           left: 50%;
           background-color: transparent;
-          height: 30rem;
+          text-align: center;
+        }
+
+        div.image-container {
+          top: 40%;
+          left: 50%;
+          height: 15rem;
+          width: 15rem;
+          margin-top: -7.5rem;
+          margin-left: -7.5rem;
+        }
+
+        div.title-text-container {
+          top: 55%;
+          left: 50%;
+          height: 4rem;
           width: 50rem;
+          margin-top: -2rem;
           margin-left: -25rem;
-          margin-top: -15rem;
+        }
+
+        div.button-container {
+          top: 65%;
+          left: 50%;
+          height: 3rem;
+          width: 12rem;
+          margin-top: -1.5rem;
+          margin-left: -6rem;
         }
       }
     }
@@ -105,45 +142,39 @@ nav.navbar.scrolled {
     background-color: $jumbotron-background-color;
     color: $jumbotron-font-color;
 
-    div {
-      text-align: center;
-    }
+
 
     div.image-container img {
       max-width: 15rem;
     }
 
-    div.button-container {
-      display: flex;
-      justify-content: center;
-      padding-top: 2rem;
+    &.small {
+      text-align: center;
+
+      div.button-container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
     }
 
-    &.particles {
+
+      &.particles {
       padding: 0;
       margin-bottom: 8rem;
       height: 50rem;
       position: relative;
+      user-select: none;
 
-      .title-panel {
-        div {
-          text-align: center;
-        }
-
-        div.image-container img {
-          max-width: 15rem;
-        }
-
-        div.button-container {
-          display: flex;
-          justify-content: center;
-          padding-top: 2rem;
-        }
-
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: transparent;
+        display: block;
+        text-align: center;
       }
     }
   }
-
 
   .dh-info {
     text-align: center;
@@ -165,5 +196,9 @@ nav.navbar.scrolled {
 
   h2 {
     margin-bottom: 1.2rem;
+  }
+
+  .container.getting-started {
+    margin-top: 10rem;
   }
 }
