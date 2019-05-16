@@ -83,6 +83,7 @@ nav.navbar.scrolled {
 
       &.particles {
         display: block;
+        user-select: none;
 
         .title-panel {
           position: absolute;
