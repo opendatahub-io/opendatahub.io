@@ -1,23 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  {% include header.html %}
-  <link href="{{ site.baseurl }}/assets/css/docs.css" rel="stylesheet">
+    {% include header.html %}
+    <link href="{{ site.baseurl }}/assets/css/arch.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/codestyle.css" rel="stylesheet">
 </head>
 <body>
-{% include navbar-dev.html %}
+{% include navbar-empty.html %}
 
-
-<main role="main" class="main docs">
+<main role="main" class="main arch">
     <div class="container main-content">
         <div class="col-lg-9 offset-lg-3">
             <h1 class="page-title">{{ page.title }}</h1>
         </div>
         <div class="row">
-            <div class="col-lg-3 docs-sidebar">
-                {% include docs-sidebar.html %}
+            <div class="col-lg-3 arch-sidebar">
+                {% include arch-sidebar.html %}
             </div>
-            <div class="docs-section offset-lg-3 col-lg-9">
+            <div class="arch-section offset-lg-3 col-lg-9">
                 {{ content }}
             </div>
         </div>

@@ -4,7 +4,35 @@
 @import "variables";
 
 .docs {
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .container.main-content {
+    margin-bottom: 5rem;
+  }
+
+  @media (min-width: 992px) {
+    .docs-sidebar {
+      position: fixed;
+    }
+  }
+
   .docs-sidebar {
+    margin-bottom: 3rem;
+
     .docs-nav-item a {
       color: #1e1e1e;
       font-weight: 400;

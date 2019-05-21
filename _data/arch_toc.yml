@@ -1,0 +1,32 @@
+toc:
+  - title: Abstract
+    url: /arch
+  - title: Comments and Feedback
+    url: /arch/comments
+  - title: Executive Summary
+    url: /arch/executive
+  - title: High Level Architecture
+    url: /arch/hla
+  - title: Open Data Hub Platform
+    url: /arch/platform
+    children:
+      - title: Components and Considerations
+        url: /arch/platform/components/e2e
+        phony: true
+        children:
+          - title: End to End Considerations
+            url: /arch/platform/components/e2e
+          - title: Included Components
+            url: /arch/platform/components/included
+      - title: Roadmap
+        url: /arch/platform/roadmap
+      - title: Community
+        url: /arch/platform/community
+  - title: Deploying
+    url: /arch/deploying/prerequisites
+    phony: true
+    children:
+      - title: Pre-requisites
+        url: /arch/deploying/prerequisites
+      - title: Installation
+        url: /arch/deploying/installation
