@@ -8,25 +8,18 @@
 <body>
 {% include navbar-arch.html %}
 
-<main role="main" class="main arch">
-    <div class="container main-content">
-        <div class="row">
-            <div class="col-lg-9 offset-lg-3">
-                <h1 class="page-title">{{ page.title }}</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 arch-sidebar">
-                {% include arch-sidebar.html %}
-            </div>
-            <div class="arch-section offset-lg-3 col-lg-9">
-                {{ content }}
-            </div>
-        </div>
-    </div>
-</main>
+<div class="arch arch-container">
+    <nav class="sidebar">
+        {% include arch-sidebar.html %}
+    </nav>
 
-{% include footer.html %}
+    <main role="main" class="main-content">
+            <h1 class="page-title">{{ page.title }}</h1>
+            {{ content }}
+    </main>
+    {% include footer.html %}
+</div>
+
 {% include scripts.html %}
 </body>
 </html>

@@ -5,7 +5,7 @@
     {% else %}
       <h4 class="docs-nav-item">
     {% endif %}
-        <a href="{{ site.baseurl }}{{ item.url }}.html">{{ item.title }}</a>
+        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
       </h4>
 
     {% if item.children[0] %}
@@ -15,7 +15,7 @@
         {% else %}
           <h5 class="docs-nav-sub-item">
         {% endif %}
-            <a href="{{ site.baseurl }}{{ child_item.url }}.html">
+            <a href="{{ site.baseurl }}{{ child_item.url }}">
               {{ child_item.title }}
             </a>
           </h5>
