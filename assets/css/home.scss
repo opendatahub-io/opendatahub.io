@@ -31,7 +31,7 @@ nav.navbar.scrolled {
   }
 }
 
-@media only screen and (min-width: 30rem) and (max-width: 52rem) {
+@media only screen and (min-width: 30rem) and (max-width: 60rem) {
   body {
     padding-top: 0;
   }
@@ -62,9 +62,9 @@ nav.navbar.scrolled {
           top: 55%;
           left: 50%;
           height: 6rem;
-          width: 28rem;
+          width: 30rem;
           margin-top: -3rem;
-          margin-left: -14rem;
+          margin-left: -15rem;
         }
 
         div.button-container {
@@ -80,7 +80,7 @@ nav.navbar.scrolled {
   }
 }
 
-@media only screen and (min-width: 52rem) {
+@media only screen and (min-width: 60rem) {
   body {
     padding-top: 0;
   }
@@ -119,9 +119,9 @@ nav.navbar.scrolled {
           top: 55%;
           left: 50%;
           height: 4rem;
-          width: 50rem;
+          width: 60rem;
           margin-top: -2rem;
-          margin-left: -25rem;
+          margin-left: -30rem;
         }
 
         div.button-container {
