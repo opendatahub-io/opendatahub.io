@@ -17,7 +17,7 @@
 
   nav.sidebar {
     grid-area: nav;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 4rem 1rem 4rem 1rem;
   }
 
   main.main-content {
@@ -44,7 +44,7 @@
 
 .arch {
   .main-content {
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 2rem 4rem 2rem;
     overflow-y: auto;
 
     h2::before,
