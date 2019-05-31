@@ -11,7 +11,7 @@ email: opendatahub@redhat.com
 description: >
   OpenDataHub
 #baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://opendatahub.io" # the base hostname & protocol for your site
+url: "https://opendatahub.io" # the base hostname & protocol for your site
 repo: https://gitlab.com/opendatahub
 email_list: https://lists.opendatahub.io/admin/lists/
 #twitter_username: aicoe
