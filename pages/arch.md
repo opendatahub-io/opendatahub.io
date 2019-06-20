@@ -5,11 +5,11 @@ permalink: /arch
 ---
 ## Abstract
 
-The purpose of this document is to provide guidelines and considerations for installing and managing AI services using Open Data Hub on Openshift Container Platform.Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on Openshift Container Platform
+The purpose of this document is to provide guidelines and considerations for installing and managing AI services using Open Data Hub on Openshift Container Platform.Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on Openshift Container Platform. 
 
 ## Comments and Feedback
 
-In the spirit of open source, we invite anyone to provide feedback, comments and contribution to this content. Feedback on the papers can be provided by emailing contributors@lists.opendatahub.io. Please refer to the title within the email. Contribution to content can also be made using [opendatahub gitlab](https://gitlab.com/opendatahub/opendatahub.io) and providing merge requests.
+This is the first iteration of this reference architectute. In the spirit of open source, we invite anyone to provide feedback, comments and contribution to this content. Feedback on the papers can be provided by emailing contributors@lists.opendatahub.io. Please refer to the title within the email. Contribution to content can also be made using [opendatahub gitlab](https://gitlab.com/opendatahub/opendatahub.io) and providing merge requests.
 
 ## Executive Summary
 
