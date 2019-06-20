@@ -50,7 +50,7 @@ ODH project’s main goal is to provide an open source end-to-end AI platform on
 
   
 
-All the tools and components listed below are currently being used as part of Red Hat’s internal ODH platform cluster. This internal cluster is utilized by multiple internal teams of data scientists running AI/ML workloads for functions such as Anomaly Detection and Natural Language Processing. A subset of these components and tools are included in the ODH release available today and the rest are scheduled to be integrated in future releases as described in the roadmap section below. Support for each component is provided by the providing entity, for example Red Hat supports Red Hat components such as Openshift Container Platform and Ceph while open source communities support Seldon, Jupyterhub, Prometheus and so on.
+All the tools and components listed below are currently being used as part of Red Hat’s internal ODH platform cluster. This internal cluster is utilized by multiple internal teams of data scientists running AI/ML workloads for functions such as Anomaly Detection and Natural Language Processing. A subset of these components and tools are included in the ODH release available today and the rest are scheduled to be integrated in future releases as described in the roadmap section below. Support for each component is provided by the source entity, for example Red Hat supports Red Hat components such as Openshift Container Platform and Ceph while open source communities support Seldon, Jupyterhub, Prometheus and so on.
 
 **Figure 2: End-to-End Reference AI Architecture on Openshift**
 ![alt text](../assets/img/pages/arch/figure-2.png "End-to-End Reference AI Architecture on Openshift")
