@@ -130,8 +130,8 @@ ODH release schedule is displayed in the roadmap figure. ODH version 0.1 was rel
 
 Open Data Hub project portal is available at [https://opendatahub.io/](https://opendatahub.io/). All source code is available on gitlab at [https://gitlab.com/opendatahub](https://gitlab.com/opendatahub). To join the community sign up for mailing lists at [https://lists.opendatahub.io/admin/lists/](https://lists.opendatahub.io/admin/lists/).
 To contribute to the project knowledge of operators and operator development is important. To get started on operator development please visit the [operator sdk github link](https://github.com/operator-framework/operator-sdk). We also provide the following two development guides for beginners:
-1. Contributing to Open Data Hub [Guide](https://gitlab.com/opendatahub/opendatahub-operator/blob/master/CONTRIBUTING.md)
-2. How to run Open [Data Hub Operator Remotely](https://gitlab.com/opendatahub/opendatahub-operator/blob/master/docs/run-operator-remotely.adoc)
+1. Contributing to [Open Data Hub Guide](https://gitlab.com/opendatahub/opendatahub-operator/blob/master/CONTRIBUTING.md)
+2. How to run [Open Data Hub Operator Remotely](https://gitlab.com/opendatahub/opendatahub-operator/blob/master/docs/run-operator-remotely.adoc)
 
 ## Deploying Open Data Hub Core Components
 
