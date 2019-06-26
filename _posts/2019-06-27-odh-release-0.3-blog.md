@@ -13,9 +13,9 @@ What is included?
 Open Data Hub 0.3 includes many new tools that are essential to a comprehensive AI/ML end-to-end platform. Open Data Hub is a meta-operator that can be installed on Openshift Container Platform 3.11 and 4. The following is a list of tools included in this release:
 
 | Technology | Version | Category |
-|--|--|--|--|
+|--|--|--|
 | Open Data Hub Operator | 0.3 | Meta Operator Application management |
-| [Seldon](https://seldon.io) | 0.2.7 | Model Serving and Metrics Tool ||
+| [Seldon](https://seldon.io) | 0.2.7 | Model Serving and Metrics Tool |
 | [JupyterHub](https://jupyter.org/hub) with GPU Support | 3.0.7 | Data science tools |
 | [Apache Spark](http://spark.apache.org/) | 2.2.3 | Query & ETL frameworks |
 | TwoSigma [BeakerX](http://beakerx.com/) Integration | 1.4.0 |  Data science tools |
