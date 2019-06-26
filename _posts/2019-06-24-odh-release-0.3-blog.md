@@ -12,7 +12,7 @@ What is included?
 ------
 Open Data Hub 0.3 includes many new tools that are essential to a comprehensive AI/ML end-to-end platform. Open Data Hub is a meta-operator that can be installed on Openshift Container Platform 3.11 and 4. The following is a list of tools included in this release:
 
-| Technology | Version  Category |
+| Technology | Version | Category |
 |--|--|--|--|
 | Open Data Hub Operator | 0.3 | Meta Operator Application management |
 | [Seldon](https://seldon.io) | 0.2.7 | Model Serving and Metrics Tool ||
@@ -43,7 +43,8 @@ To learn more about how to use BeakerX as part of Open Data Hub 0.3 please visit
 
 Prometheus and Grafana
 ------
-Prometheus and Grafana are widely used open source tools for monitoring clusters and applications on Kubernetes and Openshift. Prometheus provides monitoring and alerting tools, it scrapes metrics from all components that expose a REST interface supporting prometheus metrics. Grafana is a visualization tool that is the leader in time series analytics. Users can create Grafana dashboards that display metrics gathered by Prometheus into plots and graphs for analysis. Out of the box, Promotheus will scrap Apache Spark metrics withing Open Data Hub namespace.
+Prometheus and Grafana are widely used open source tools for monitoring clusters and applications on Kubernetes and Openshift. 
+Prometheus provides monitoring and alerting tools, it scrapes metrics from all components that expose a REST interface supporting prometheus metrics. Grafana is a visualization tool that is the leader in time series analytics. Users can create Grafana dashboards that display metrics gathered by Prometheus into plots and graphs for analysis. Out of the box, Promotheus will scrap Apache Spark metrics withing Open Data Hub namespace.
 To learn more about how to use Prometheus and Grafana as part of Open Data Hub 0.3 please visit
 [link](https://gitlab.com/opendatahub/opendatahub-operator/blob/master/docs/deploying-monitoring.adoc)
 
