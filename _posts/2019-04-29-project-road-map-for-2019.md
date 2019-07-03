@@ -43,7 +43,7 @@ May 2019
 | [Grafana](https://grafana.com/) | 4.7 | OpenShift 3.1x and 4.x | System monitoring tools |
 {:class="table table-bordered table-striped"}
 
-The May release of ODH brings a re-design of the deployment to take advantage of [Kubernetes operators](https://blog.openshift.com/introducing-the-operator-framework/)!  Ceph-nano is being replaced by Ceph Rook, the best way to deploy and manage Ceph Storage on OpenShift.  In order to better understand system usage and workloads, Prometheus and Grafana are also being targeted with pre-configured metrics and dashboards to monitor ODH.
+The May release of ODH brings a re-design of the deployment to take advantage of [Kubernetes operators](https://blog.openshift.com/introducing-the-operator-framework/)!   Seldon-core will provide model-serving and model-monitoring capabilities. In order to better understand system usage and workloads, Prometheus and Grafana are also being targeted with pre-configured metrics and dashboards to monitor ODH.
 
 Also, JupyterHub will be improved to allow GPUs installed in OpenShift 3.1x to be usable within Jupyter notebooks.  When a user selects a notebook and specifies GPU workloads, the tasks will automatically run on a node that is GPU-enabled and available.
 
@@ -64,9 +64,9 @@ August 2019
 | Open Data Hub AI Library | 0.1 | OpenShift 3.1x and 4.x | Data science tools |
 {:class="table table-bordered table-striped"}
 
-Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts to query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
+Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  Ceph-nano is being replaced by Ceph Rook, the best way to deploy and manage Ceph Storage on OpenShift. For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts to query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
 
-For machine learning model lifecycles, mlflow is being added to allow model experimentation while Seldon-core will provide model-serving and model-monitoring capabilities.
+For machine learning model lifecycles, mlflow is being added to allow model experimentation.
 
 November 2019
 ------
