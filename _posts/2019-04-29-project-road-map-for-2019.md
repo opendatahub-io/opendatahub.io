@@ -35,10 +35,9 @@ May 2019
 | Technology | Version | Container Platform Version | Category |
 |--|--|--|--|
 | Open Data Hub Operator | 0.2 | OpenShift 3.1x and 4.x | Application management |
-| Open Data Hub AI Library | 0.1 | OpenShift 3.1x and 4.x | Data science tools |
+| [Seldon-core](https://www.seldon.io/open-source/) | 0.2.6+ | OpenShift 3.1x and 4.x | Model Serving |
 | [JupyterHub](https://jupyter.org/hub) with GPU Support | 0.9.4 | OpenShift 3.1x | Data science tools |
 | [Apache Spark](http://spark.apache.org/) | 2.2.3 | OpenShift 3.1x and 4.x | Query & ETL frameworks |
-| [Ceph Rook](https://rook.io/docs/rook/v0.8/ceph-quickstart.html) Operator Integration | 0.9.3 | OpenShift 3.1x and 4.x | Storage |
 | TwoSigma [BeakerX](http://beakerx.com/) Integration | 1.3.0 | OpenShift 3.1x and 4.x | Data science tools |
 | [Prometheus](https://prometheus.io/) | 2.3 | OpenShift 3.1x and 4.x | System monitoring tools |
 | [Grafana](https://grafana.com/) | 4.7 | OpenShift 3.1x and 4.x | System monitoring tools |
@@ -61,8 +60,8 @@ August 2019
 | [Spark SQL Thrift Server](https://spark.apache.org/docs/latest/sql-distributed-sql-engine.html#running-the-thrift-jdbcodbc-server) | 2.2.3+ | OpenShift 3.1x and 4.x | Query & ETL frameworks |
 | Hive Metastore | 1.2.1+ | OpenShift 3.1x and 4.x | Metadata cataloging |
 | [Cloudera Hue](http://gethue.com/) | 4.4+ | OpenShift 3.1x and 4.x | Data exploration |
-| [KubeFlow integration](https://www.kubeflow.org/) | 0.5.0+ | OpenShift 3.1x and 4.x | Orchestration platforms |
-| [Seldon-core](https://www.seldon.io/open-source/) | 0.2.6+ | OpenShift 3.1x and 4.x | Model serving |
+| [Ceph Rook](https://rook.io/docs/rook/v0.8/ceph-quickstart.html) Operator Integration | 0.9.3 | OpenShift 3.1x and 4.x | Storage |
+| Open Data Hub AI Library | 0.1 | OpenShift 3.1x and 4.x | Data science tools |
 {:class="table table-bordered table-striped"}
 
 Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts to query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
