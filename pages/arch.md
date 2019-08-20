@@ -300,15 +300,15 @@ spark-operator-7c67cb6f8f-6xpvs 1/1 Running 0 2m7s
 
 #### Option 2: ODH Installation via the Operator Lifecycle Manager (OLM) Catalog
 
-In the coming weeks the ODH operator will become available in the community-operators section on [operatorhub.io](https://operatorhub.io/) . Once it is available follow these instructions to install it from the OLM catalogue.
+Open Data Hub is available as an OpenShift OperatorHub community-operators section on [operatorhub.io](https://operatorhub.io/). You can install it from the OpenShift webui by following the steps below:
 
 1.  From the Openshift console, navigate to the newly created namespace
     
-2.  Select Operator Catalogue from the left menu bar
+2.  Select Catalog -> OperatorHub from the left menu bar
     
 3.  Under Other, search for Open Data Hub
     
-4.  In the list of community-operators, you can create a subscription to the Open Data Hub operator catalog. This subscription will allow you to stay current with the latest version the operator as it’s released.
+4.  In the list of community-operators, you can select `Open Data Hub`  and click `Install` to deploy the Open Data Hub operator pod into your namespace. 
     
 5.  Follow the installation instructions to install ODH operator.
     
