@@ -23,4 +23,15 @@
       margin-top: 2rem;
     }
   }
+
+  h2::before,
+  h3::before,
+  h4::before {
+    display: block;
+    content: "";
+    margin-top: - 100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
