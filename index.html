@@ -13,7 +13,7 @@ layout: home
         </div>
         <div class="button-container">
             <a class="btn btn-lg btn-primary btn-getting-started" target="_blank"
-               href="{{ site.repo }}"
+               href="{{ site.baseurl }}/docs.html"
                role="button">Get started
             </a>
         </div>
@@ -60,7 +60,7 @@ layout: home
                         having to master the complexity of modern machine learning and artificial intelligence software stacks.
                     </p>
                     <p>
-                        Read about the new features coming to Open Data Hub in our <a href="https://opendatahub.io/news/2019-04-29/project-road-map-for-2019.html">Project Road Map</a>.
+                        Read about the new features coming to Open Data Hub in our <a href="{{ '/docs/roadmap/future.html' | prepend: site.baseurl }}">Project Road Map</a>.
                     </p>
                 </div>
             </div>
@@ -76,7 +76,7 @@ layout: home
                     <h2 class="dh-info-title">Getting Started</h2>
                     <p>
                         For additional information about the Open Data Hub, <a href="{{ site.baseurl }}/news.html">read
-                        our blogs</a> and our <a href="{{ site.baseurl }}/arch.html">reference architecture</a>.
+                        our blogs</a> and our <a href="{{ '/arch.html' | prepend: site.baseurl }}">reference architecture</a>.
                     </p>
                     <p>
                         To set up the Open Data Hub, all you need is a running <a href="https://www.openshift.com/">OpenShift&reg;</a>
@@ -89,7 +89,7 @@ layout: home
                 </div>
                 <div class="dh-info-section">
                     <p>
-                        <a class="btn" role="button" target="_blank" href="{{ site.repo }}">
+                        <a class="btn" role="button" target="_blank" href="{{ '/docs/getting-started/quick-installation.html' | prepend: site.baseurl }}">
                             Installation
                         </a>
                     </p>

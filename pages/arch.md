@@ -1,11 +1,11 @@
 ---
 layout: arch
-title: Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on Openshift Container Platform
+title: Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on OpenShift Container Platform
 permalink: /arch
 ---
 ## Abstract
 
-The purpose of this document is to provide guidelines and considerations for installing and managing AI services using Open Data Hub on Openshift Container Platform.Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on Openshift Container Platform. 
+The purpose of this document is to provide guidelines and considerations for installing and managing AI services using Open Data Hub on OpenShift Container Platform.Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on OpenShift Container Platform. 
 
 ## Comments and Feedback
 
@@ -13,50 +13,50 @@ This is the first iteration of this reference architecture. In the spirit of ope
 
 ## Executive Summary
 
-This reference architecture describes the architecture, deployment and management of Artificial Intelligence (AI) services on Openshift Container Platform. The reference architecture is built mainly with open source tools providing services for each step of the AI end-to-end workflow. Target audience for this reference architecture includes but is not limited to Architects, Developers, Data Engineers, Data Scientists and DevOps individuals working in the AI realm.
+This reference architecture describes the architecture, deployment and management of Artificial Intelligence (AI) services on OpenShift Container Platform. The reference architecture is built mainly with open source tools providing services for each step of the AI end-to-end workflow. Target audience for this reference architecture includes but is not limited to Architects, Developers, Data Engineers, Data Scientists and DevOps individuals working in the AI realm.
 
-[Open Data Hub (ODH)](https://opendatahub.io/) is an open source project originally initiated by Red Hat AI Center of Excellence team as an effort to provide open source AI tools for running large and distributed AI workloads on Openshift Container platform. Currently, Open Data Hub project provides open source tools for data storage, distributed AI and Machine Learning(ML) workflows and Notebook development environment. The Open Data Hub project roadmap also includes tools specifically for monitoring and managing AI services.
+[Open Data Hub (ODH)](https://opendatahub.io/) is an open source project originally initiated by Red Hat AI Center of Excellence team as an effort to provide open source AI tools for running large and distributed AI workloads on OpenShift Container platform. Currently, Open Data Hub project provides open source tools for data storage, distributed AI and Machine Learning(ML) workflows and Notebook development environment. The Open Data Hub project roadmap also includes tools specifically for monitoring and managing AI services.
 
-[AI Library](https://gitlab.com/opendatahub/ai-library) is also an open source project initiated by Red Hat AI Center of Excellence team as an effort to provide ML models as a service on Openshift Container Platform. The development of these models as services is a community driven open source project to make AI/ML models more accessible.
+[AI Library](https://gitlab.com/opendatahub/ai-library) is also an open source project initiated by Red Hat AI Center of Excellence team as an effort to provide ML models as a service on OpenShift Container Platform. The development of these models as services is a community driven open source project to make AI/ML models more accessible.
 
-This reference architecture serves as a potential blueprint for deploying and managing open source AI services from the Open Data Hub and AI Library projects to provide an end-to-end platform for running large and distributed AI workloads as well as serving and monitoring ML models on Openshift Container Platform.
+This reference architecture serves as a potential blueprint for deploying and managing open source AI services from the Open Data Hub and AI Library projects to provide an end-to-end platform for running large and distributed AI workloads as well as serving and monitoring ML models on OpenShift Container Platform.
 
 ## AI as Service High Level Architecture
 
 A complete end-to-end AI platform requires services for each step of the AI workflow. In general, an AI workflow includes most of the steps shown in Figure 1  and is used by multiple AI engineering personas such as Data Engineers, Data Scientists and DevOps.
 
 **Figure 1: AI Workflow**
-![alt text](../../assets/img/pages/arch/figure-1.png "AI Workflow")
+![alt text](../assets/img/pages/arch/figure-1.png "AI Workflow")
 
 
 The first phase of an AI workflow is initiated by Data Engineers that acquire the data from different sources and perform the required transformations. Data Engineers are also responsible to store and provide access to the transformed data to Data Scientist or Data Analysts that work on the second phase in the AI workflow. In the second phase, Data Scientists perform analysis on the transformed data and create the appropriate ML models. Once the models are trained and validated accordingly, they are ready to be served on the production platform in the last phase of the AI end-to-end workflow. In the production phase, ML models are served as services on the cluster and DevOps engineers are tasked with constantly monitoring and optimizing the services. The process does not end at this last step, Data Scientists should monitor and keep validating models based on incoming and trained data sets.
 
 **Red Hat® OpenShift®  Container Platform**  is the leading Kubernetes based container platform providing multiple functionalities for successfully running distributed AI workloads. Functionalities such as high availability and self-healing, scaling, security, resource management and operator framework are essential to successfully providing AI/ML services. OpenShift also also supports specialized hardware such as GPUs.
 
-**Open Data Hub**(ODH) currently provides services on Openshift for AI data services such as data storage and ingestion/transformation. For data storage and availability, ODH provides [Ceph](https://ceph.com/), with multi protocol support including block, file and S3 object API support, both for persistent storage within the containers and as a scalable object storage data lake that AI applications can store and access data from . Rook operator can be used to easily deploy and integrate Ceph into the OpenShift and ODH ecosystem
+**Open Data Hub**(ODH) currently provides services on OpenShift for AI data services such as data storage and ingestion/transformation. For data storage and availability, ODH provides [Ceph](https://ceph.com/), with multi protocol support including block, file and S3 object API support, both for persistent storage within the containers and as a scalable object storage data lake that AI applications can store and access data from . Rook operator can be used to easily deploy and integrate Ceph into the OpenShift and ODH ecosystem
 
-Open Data Hub also provides services for model creation, training and validation. Apache Spark™([https://spark.apache.org/](https://spark.apache.org/)) operator is provided as part of ODH installation for distributed data ingestion, transformation and model functionalities running natively on Openshift. For the Data Scientist development environment, ODH provides Jupyter Hub and Jupyter Notebook images running natively distributed on Openshift. ODH roadmap includes tools for monitoring services as discussed in the section below. These tools will include the ability for natively monitoring AI services and served models on Openshift using Prometheus and Grafana.
+Open Data Hub also provides services for model creation, training and validation. Apache Spark™([https://spark.apache.org/](https://spark.apache.org/)) operator is provided as part of ODH installation for distributed data ingestion, transformation and model functionalities running natively on OpenShift. For the Data Scientist development environment, ODH provides Jupyter Hub and Jupyter Notebook images running natively distributed on OpenShift. ODH roadmap includes tools for monitoring services as discussed in the section below. These tools will include the ability for natively monitoring AI services and served models on OpenShift using Prometheus and Grafana.
 
 **AI Library** provides REST interface access to pre-trained and validated served models for Sentiment Analysis, Flake Analysis and Duplicate Bug Detection.
 
 ## Open Data Hub Platform
 
-Open Data Hub platform is a centralized self-service solution for analytic and data science distributed workloads. It is a collection of open source tools and services natively running on Openshift.
+Open Data Hub platform is a centralized self-service solution for analytic and data science distributed workloads. It is a collection of open source tools and services natively running on OpenShift.
 ### Components and Considerations
 
 #### End-to-End Considerations
 
-ODH project’s main goal is to provide an open source end-to-end AI platform on Openshift Container Platform that is equipped to run large AI/ML distributed workloads. As discussed earlier an end-to-end AI platform includes all phases of AI processing starting from data ingestion all the way to production AI/ML hosting and monitoring. There are multiple user personas for this platform that work on different phases. Figure 2  displays a high level architecture diagram of ODH as an end-to-end AI platform running on Openshift Container platform.
+ODH project’s main goal is to provide an open source end-to-end AI platform on OpenShift Container Platform that is equipped to run large AI/ML distributed workloads. As discussed earlier an end-to-end AI platform includes all phases of AI processing starting from data ingestion all the way to production AI/ML hosting and monitoring. There are multiple user personas for this platform that work on different phases. Figure 2  displays a high level architecture diagram of ODH as an end-to-end AI platform running on OpenShift Container platform.
 
   
 
-All the tools and components listed below are currently being used as part of Red Hat’s internal ODH platform cluster. This internal cluster is utilized by multiple internal teams of data scientists running AI/ML workloads for functions such as Anomaly Detection and Natural Language Processing. A subset of these components and tools are included in the ODH release available today and the rest are scheduled to be integrated in future releases as described in the roadmap section below. Support for each component is provided by the source entity, for example Red Hat supports Red Hat components such as Openshift Container Platform and Ceph while open source communities support Seldon, Jupyterhub, Prometheus and so on.
+All the tools and components listed below are currently being used as part of Red Hat’s internal ODH platform cluster. This internal cluster is utilized by multiple internal teams of data scientists running AI/ML workloads for functions such as Anomaly Detection and Natural Language Processing. A subset of these components and tools are included in the ODH release available today and the rest are scheduled to be integrated in future releases as described in the roadmap section below. Support for each component is provided by the source entity, for example Red Hat supports Red Hat components such as OpenShift Container Platform and Ceph while open source communities support Seldon, Jupyterhub, Prometheus and so on.
 
-**Figure 2: End-to-End Reference AI Architecture on Openshift**
-![alt text](../assets/img/pages/arch/figure-2.png "End-to-End Reference AI Architecture on Openshift")
+**Figure 2: End-to-End Reference AI Architecture on OpenShift**
+![alt text](../assets/img/pages/arch/figure-2.png "End-to-End Reference AI Architecture on OpenShift")
   
 
-**Data in Motion** is essential in today's enterprise backend networks where data resides in multiple locations, especially to support data stored in legacy systems. Hybrid Cloud architectures also require sharing data between different cloud systems. Tools such as Red Hat AMQ Streams, Kafka and Logstash provide robust and scalable data transfer capabilities native to the Openshift platform. Data Engineers can use these tools to transfer required data from multiple sources.
+**Data in Motion** is essential in today's enterprise backend networks where data resides in multiple locations, especially to support data stored in legacy systems. Hybrid Cloud architectures also require sharing data between different cloud systems. Tools such as Red Hat AMQ Streams, Kafka and Logstash provide robust and scalable data transfer capabilities native to the OpenShift platform. Data Engineers can use these tools to transfer required data from multiple sources.
 
   
 
@@ -75,7 +75,7 @@ All the tools and components listed below are currently being used as part of Re
 
   
 
-**Data Analysis: Streaming** tools such as Kafka and Elasticsearch allow for distributed and scalable message distribution native to Openshift.
+**Data Analysis: Streaming** tools such as Kafka and Elasticsearch allow for distributed and scalable message distribution native to OpenShift.
 
   
 
@@ -94,21 +94,21 @@ All the tools and components listed below are currently being used as part of Re
 **Artificial Intelligence and Machine Learning: Business Intelligence** tools such as [Apache Superset](https://superset.incubator.apache.org/) provide a rich set of data visualization tools and come enterprise-ready with authentication, multi-user and security integrated.  
   
 
-**Security and Governance** include tools for providing services, data and API security and governance. Data in storage and in motion require security for both access and encryption. The Ceph Object Gateway provides encryption of uploaded objects and options for the management of encryption keys. The Ceph Object Gateway stores that data in the Ceph Storage Cluster in encrypted form. Red Hat Single Sign-On ([Keycloak](https://www.keycloak.org/)) and Openshift provide user authentication while Red Hat 3Scale provides an API gateway for REST Interfaces.
+**Security and Governance** include tools for providing services, data and API security and governance. Data in storage and in motion require security for both access and encryption. The Ceph Object Gateway provides encryption of uploaded objects and options for the management of encryption keys. The Ceph Object Gateway stores that data in the Ceph Storage Cluster in encrypted form. Red Hat Single Sign-On ([Keycloak](https://www.keycloak.org/)) and OpenShift provide user authentication while Red Hat 3Scale provides an API gateway for REST Interfaces.
 
   
-**Monitoring and Orchestration** provide tools for monitoring all aspects of the end-to-end AI platform. This includes but is not limited to data, messaging, API, resources availability and utilization, etc. Prometheus and Grafana offer an interface for collecting and displaying metrics. For orchestration tools we included Jenkins and Argo Workflows that provide the functionality to create and manage workflows for build and release automation. Argo is Openshift native workflow tools that can run pods in a directed acyclic graph (DAG) workflow.
+**Monitoring and Orchestration** provide tools for monitoring all aspects of the end-to-end AI platform. This includes but is not limited to data, messaging, API, resources availability and utilization, etc. Prometheus and Grafana offer an interface for collecting and displaying metrics. For orchestration tools we included Jenkins and Argo Workflows that provide the functionality to create and manage workflows for build and release automation. Argo is OpenShift native workflow tools that can run pods in a directed acyclic graph (DAG) workflow.
 
 
 #### Current Included Components
 
-The ODH platform is installed on Openshift as a native operator and is available on the OperatorHub.io. The operator framework ([https://operatorhub.io/getting-started](https://operatorhub.io/getting-started)) is an open source toolkit that provides effective, scalable and automated native application management. Operators manage custom resources that provide specific cluster wide functionalities. The ODH operator manages the ODH platform AI/ML services cluster-wide. Some of the components within the ODH platform are also operators such as Apache Spark™. Currently ,when installing the ODH operator it includes the following components: Ceph, Apache Spark, Jupyterhub, Prometheus and Grafana.
+The ODH platform is installed on OpenShift as a native operator and is available on the OperatorHub.io. The operator framework ([https://operatorhub.io/getting-started](https://operatorhub.io/getting-started)) is an open source toolkit that provides effective, scalable and automated native application management. Operators manage custom resources that provide specific cluster wide functionalities. The ODH operator manages the ODH platform AI/ML services cluster-wide. Some of the components within the ODH platform are also operators such as Apache Spark™. Currently ,when installing the ODH operator it includes the following components: Ceph, Apache Spark, Jupyterhub, Prometheus and Grafana.
   
 
-**Ceph** is an open source object store that is massively scalable. It can run natively in OpenShift or as a standalone cluster for optimized performance. Ceph provides a scalable Ceph Storage Cluster native to Openshift, allowing the distributed storage of massive data sets as typical of AI/ML workflows. Ceph is ideal for storing unstructured data from multiple sources which is also ideal for large AI/ML dataset ingestions. Ceph provides S3 RESTful API that is widely supported and is simple to use, making AI/ML data that is stored and transformed easily accessible. Ceph is deployed on OpenShift via Rook ([https://rook.io](https://rook.io/)), a storage operator that provides a user friendly way for deployment and integration of Ceph into the OpenShift ecosystem.
+**Ceph** is an open source object store that is massively scalable. It can run natively in OpenShift or as a standalone cluster for optimized performance. Ceph provides a scalable Ceph Storage Cluster native to OpenShift, allowing the distributed storage of massive data sets as typical of AI/ML workflows. Ceph is ideal for storing unstructured data from multiple sources which is also ideal for large AI/ML dataset ingestions. Ceph provides S3 RESTful API that is widely supported and is simple to use, making AI/ML data that is stored and transformed easily accessible. Ceph is deployed on OpenShift via Rook ([https://rook.io](https://rook.io/)), a storage operator that provides a user friendly way for deployment and integration of Ceph into the OpenShift ecosystem.
 
   
-**Apache Spark™** operator is an open source operator implementation of Apache Spark™. It is developed as part of the Radanalytics community ([https://radanalytics.io/](https://radanalytics.io/)) to provide distributed Spark cluster workloads on Openshift. This implementation creates a Spark cluster with master and worker/executor processes. Applications send tasks to executors using the SparkContext and these executors run the tasks on the cluster nodes they are assigned to. Distributed parallel execution as provided by Spark clusters are typical and essential for the success of AI/ML workloads.
+**Apache Spark™** operator is an open source operator implementation of Apache Spark™. It is developed as part of the Radanalytics community ([https://radanalytics.io/](https://radanalytics.io/)) to provide distributed Spark cluster workloads on OpenShift. This implementation creates a Spark cluster with master and worker/executor processes. Applications send tasks to executors using the SparkContext and these executors run the tasks on the cluster nodes they are assigned to. Distributed parallel execution as provided by Spark clusters are typical and essential for the success of AI/ML workloads.
   
 
 **JupyterHub** ([https://jupyter.org/hub](https://jupyter.org/hub)) is an open source multi-user notebook platform that ODH provides with multiple notebook image streams that incorporate embedded features such as Spark libraries and connectors. JupyterHub provides many features such as multi-user experience for data scientists allowing them to run notebooks in their own workspaces. Authentication can also be customized as a pluggable component to support authentication protocols such as OAuth. Data scientists can use familiar tools such as Jupyter notebooks for developing complex algorithms and models. Frameworks such as numpy, scikit-learn, Tensorflow and more are available for use.
@@ -137,13 +137,13 @@ To contribute to the project knowledge of operators and operator development is 
 
 ### Pre-requisites
 
-Installing ODH requires Openshift 3.11 or 4.0 Cluster. If this is not available, users can request a developer preview cluster with Openshift 4.0 installed here t[ry.openshift.com](https://try.openshift.com/). Official Openshift production documentation for OpenShift 4.1 ([https://docs.openshift.com/container-platform/4.1/welcome/index.html](https://docs.openshift.com/container-platform/4.1/welcome/index.html)) and OCP 3.11 ([https://docs.openshift.com/container-platform/3.11/welcome/index.html](https://docs.openshift.com/container-platform/3.11/welcome/index.html)). OCP 4.0 can also be installed on Amazon Web Services (AWS) following this tutorial ([https://github.com/openshift/training](https://github.com/openshift/training)).
+Installing ODH requires OpenShift 3.11 or 4.0 Cluster. If this is not available, users can request a developer preview cluster with OpenShift 4.0 installed here [try.openshift.com](https://try.openshift.com/). Official OpenShift production documentation for OpenShift 4.1 ([https://docs.openshift.com/container-platform/4.1/welcome/index.html](https://docs.openshift.com/container-platform/4.1/welcome/index.html)) and OCP 3.11 ([https://docs.openshift.com/container-platform/3.11/welcome/index.html](https://docs.openshift.com/container-platform/3.11/welcome/index.html)). OCP 4.0 can also be installed on Amazon Web Services (AWS) following this tutorial ([https://github.com/openshift/training](https://github.com/openshift/training)).
 
 Ansible is also required for installing monitoring tools and AI Library. Please follow installation instructions here: [https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 ### Installation
 
-The Open Data Hub operator deploys and manages various components using the [Operator SDK](https://github.com/operator-framework/operator-sdk) in the Operator Framework. There are two options to deploy ODH operator: Manual and using Operator Lifecycle Manager (OLM). Both require Openshift 3.11 or 4.0 and an installation of Ceph using Rook operator.
+The Open Data Hub operator deploys and manages various components using the [Operator SDK](https://github.com/operator-framework/operator-sdk) in the Operator Framework. There are two options to deploy ODH operator: Manual and using Operator Lifecycle Manager (OLM). Both require OpenShift 3.11 or 4.0 and an installation of Ceph using Rook operator.
 
   
 
@@ -240,7 +240,7 @@ To install Ceph with the Rook operator, please follow these instructions (this d
     oc get secrets -n rook-ceph rook-ceph-object-user-my-store-my-user -o json
     ```    
 
-1.  From the Openshift console, create a route to the rook service, `rook-ceph-rgw-my-store`, in the `rook-ceph` namespace to expose the endpoint. This endpoint url will be used to access the S3 interface from the example notebooks.
+1.  From the OpenShift console, create a route to the rook service, `rook-ceph-rgw-my-store`, in the `rook-ceph` namespace to expose the endpoint. This endpoint url will be used to access the S3 interface from the example notebooks.
     
 
 #### Option 1: ODH Manual Installation
@@ -302,7 +302,7 @@ spark-operator-7c67cb6f8f-6xpvs 1/1 Running 0 2m7s
 
 Open Data Hub is available as an OpenShift OperatorHub community-operators section on [operatorhub.io](https://operatorhub.io/). You can install it from the OpenShift webui by following the steps below:
 
-1.  From the Openshift console, navigate to the newly created namespace
+1.  From the OpenShift console, navigate to the newly created namespace
     
 2.  Select Catalog -> OperatorHub from the left menu bar
     
@@ -322,7 +322,7 @@ Open Data Hub is available as an OpenShift OperatorHub community-operators secti
 In the Open Data Hub operator repository, there are tutorials and jupyter notebooks to help you learn about the different Big Data & AI/ML tools and components that are a part of the ODH community. In the ODH operator repository there is a tutorials folder that you can learn about many of the components deployed by the ODH operator.
 After a successful installation of ODH, please follow these steps to run a jupyter notebook.
 
-1. From the Openshift console, navigate to the namespace where ODH was installed. Figure 5 shows the main project status showing all installed ODH components.
+1. From the OpenShift console, navigate to the namespace where ODH was installed. Figure 5 shows the main project status showing all installed ODH components.
 **Figure 5: Installed ODH components**
 ![alt text](../../assets/img/pages/arch/figure-5.png "Installed ODH components")
 
@@ -434,7 +434,7 @@ For detailed information on parameters for individual models, please refer [http
 
 
 ## Conclusion
-This reference architecture describes in detail an end-to-end AI platform on Openshift Container Platform built using open source tools and applications. Description of the different personas and layers of an AI platform are discussed with suggestions of available tools.
+This reference architecture describes in detail an end-to-end AI platform on OpenShift Container Platform built using open source tools and applications. Description of the different personas and layers of an AI platform are discussed with suggestions of available tools.
 
 Open Data Hub components, features and releases are provided. AI Library summary and model descriptions were also provided. Detailed installation steps for both Open Data Hub and AI Library are listed. For contribution to these project please visit opendatahub.io. 
 

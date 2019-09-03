@@ -202,4 +202,33 @@ nav.navbar.scrolled {
     margin-top: 10rem;
     margin-bottom: 10rem;
   }
+
+  .btn {
+    min-width: 12rem;
+    line-height: 1.25;
+    font-size: 1.25rem;
+    padding: .9rem .7rem .7rem .7rem;
+
+    &:hover{
+      color: $button-color-default;
+      background-color: white;
+      border-color: $button-color-default;
+    }
+    background-color: $button-color-default;
+    border-color: $button-color-default;
+    color: white;
+    border-radius: 0.1rem;
+  }
+
+  .btn.btn-primary {
+    &:hover{
+      color: $button-color-default;
+      background-color: white;
+      border-color: $button-color-default;
+    }
+    background-color: $button-color-primary;
+    border-color: $button-color-primary;
+    color: white;
+  }
+
 }

@@ -3,52 +3,147 @@
 
 @import "variables";
 
+@media (max-width: 992px) {
+  .docs nav.sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    margin-bottom: 0;
+  }
+
+  nav.sidebar {
+    grid-area: nav;
+    padding: 4rem 1rem 4rem 1rem;
+  }
+
+  main.main-content {
+    grid-area: main;
+  }
+
+  footer.footer {
+    grid-area: footer;
+    position: static;
+  }
+
+  .docs.docs-container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas: "nav" "main" "footer";
+    height: calc(100vh - 5rem);
+    grid-template:
+            "nav main"      1fr
+            "footer footer" 3rem
+                / 20rem 1fr;
+
+  }
+}
+
 .docs {
-  h2 {
-    margin-bottom: 2rem;
-  }
+  .main-content {
+    padding: 0 2rem 4rem 2rem;
+    overflow-y: auto;
 
-  h3 {
-    margin-bottom: 1rem;
-  }
+    .docs-article {
 
-  p {
-    margin-bottom: 2rem;
-  }
+      max-width: 1100px;
 
-  img {
-    max-width: 100%;
-  }
+      h2::before,
+      h3::before,
+      h4::before {
+        display: block;
+        content: "";
+        margin-top: - 2rem;
+        height: 2rem;
+        visibility: hidden;
+        pointer-events: none;
+      }
 
-  .container.main-content {
-    margin-bottom: 5rem;
-  }
+      h2, h3, h4 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+      }
 
-  @media (min-width: 992px) {
-    .docs-sidebar {
-      position: fixed;
+      h2 {
+        a {
+          color: $text-color;
+        }
+      }
+
+      li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .next-link {
+        margin-top: 3rem;
+      }
+
+      &.quick-installation,
+      &.basic-tutorial {
+        ol > li {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        > ol > li {
+          margin-bottom: 3rem;
+        }
+      }
+
+      &.release-notes {
+        .table th {
+          color: #495057;
+          background-color: #e9ecef;
+          border-color: #dee2e6;
+        }
+      }
     }
   }
 
-  .docs-sidebar {
-    margin-bottom: 3rem;
+  .sidebar {
+    overflow-y: auto;
 
     .docs-nav-item a {
       color: #1e1e1e;
       font-weight: 400;
-      line-height: 2.5rem;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
     }
 
     .docs-nav-sub-item a {
       color: #1e1e1e;
       font-weight: 400;
-      padding-left: 3rem;
+      padding-left: 1rem;
       margin-top: 1rem;
       margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+
+    .docs-nav-sub3-item a {
+      color: #1e1e1e;
+      font-weight: 400;
+      padding-left: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: .85rem;
+      line-height: .85rem;
     }
 
     .docs-nav-item.active a,
-    .docs-nav-sub-item.active a {
+    .docs-nav-sub-item.active a,
+    .docs-nav-sub3-item.active a {
       color: #298CFF;
     }
   }

@@ -1,16 +1,88 @@
 toc:
   - title: Introduction
     url: /docs.html
-  - title: Deployment
-    url: /docs/deployment.html
+  - title: Getting Started
+    url: /docs/getting-started/quick-installation.html
+    phony: true
+    children:
+      - title: Quick Installation
+        url: /docs/getting-started/quick-installation.html
+      - title: Basic Tutorial
+        url: /docs/getting-started/basic-tutorial.html
+#  - title: Advanced Tutorials
+#    url: /docs/advanced-tutorials/jupyterhub.html
+#    phony: true
+#    children:
+#      - title: JupyterHub
+#        url: /docs/advanced-tutorials/jupyterhub.html
+#      - title: HDFS Data
+#        url: /docs/advanced-tutorials/hdfs.html
+#      - title: Data Warehouses
+#        url: /docs/advanced-tutorials/warehouse.html
+#      - title: Ceph
+#        url: /docs/advanced-tutorials/ceph.html
+#      - title: Spark
+#        url: /docs/advanced-tutorials/spark.html
+#      - title: Seldon
+#        url: /docs/advanced-tutorials/seldon.html
+#      - title: Argo
+#        url: /docs/advanced-tutorials/argo.html
+#      - title: Data Exploration
+#        url: /docs/advanced-tutorials/data-exploration.html
+#      - title: Kafka
+#        url: /docs/advanced-tutorials/kafka.html
+#      - title: Combined
+#        url: /docs/advanced-tutorials/combined.html
+#  - title: AI Library
+#    url: /docs/ai-library/installation.html
+#    phony: true
+#    children:
+#      - title: Installation
+#        url: /docs/ai-library/installation.html
+#      - title: Consuming Services
+#        url: /docs/ai-library/consuming.html
+#      - title: Custom Models
+#        url: /docs/ai-library/custom-models.html
+#      - title: API
+#        url: /docs/ai-library/api.html
+  - title: Administration
+    url: /docs/administration/advanced-installation/object-storage.html
+    phony: true
+    children:
+      - title: Advanced Installation
+        url: /docs/administration/advanced-installation/object-storage.html
+        phony: true
+        children:
+          - title: Object Storage
+            url: /docs/administration/advanced-installation/object-storage.html
+          - title: GPU Enablement
+            url: /docs/administration/advanced-installation/gpu.html
+#      - title: Upgrading
+#        url: /docs/administration/upgrading.html
+#      - title: Monitoring
+#        url: /docs/administration/monitoring.html
+#      - title: Security
+#        url: /docs/administration/security.html
+#      - title: Troubleshooting
+#        url: /docs/administration/troubleshooting.html
   - title: Architecture
     url: /docs/architecture.html
+  - title: Roadmap
+    url: /docs/roadmap/future.html
+    phony: true
     children:
-      - title: Sub Item 1
-        url: /docs/architecture/sub-item-1.html
-      - title: Sub Item 2
-        url: /docs/architecture/sub-item-2.html
-  - title: API
-    url: /docs/api.html
-  - title: Other
-    url: /docs/other.html
+      - title: Future
+        url: /docs/roadmap/future.html
+      - title: Release Notes
+        url: /docs/roadmap/release-notes.html
+  - title: Additional Resources
+    url: /docs/additional.html
+    children:
+      - title: Community
+        url: /docs/additional.html#community
+      - title: Videos
+        url: /docs/additional.html#videos
+      - title: Audio
+        url: /docs/additional.html#audio
+#  - title: FAQ
+#    url: /docs/faq.html

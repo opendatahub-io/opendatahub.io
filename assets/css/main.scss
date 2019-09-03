@@ -90,37 +90,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.btn {
-  min-width: 12rem;
-  line-height: 1.25;
-  font-size: 1.25rem;
-  padding: .9rem .7rem .7rem .7rem;
-
-  &:hover{
-    color: $button-color-default;
-    background-color: white;
-    border-color: $button-color-default;
-  }
-  background-color: $button-color-default;
-  border-color: $button-color-default;
-  color: white;
-  border-radius: 0.1rem;
-}
-
-.btn.btn-primary {
-  &:hover{
-    color: $button-color-default;
-    background-color: white;
-    border-color: $button-color-default;
-  }
-  background-color: $button-color-primary;
-  border-color: $button-color-primary;
-  color: white;
-}
-
-
 .page-title {
   //font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.next-link {
+  .btn.btn-light {
+    background-color: #f1f1f1;
+  };
 }
