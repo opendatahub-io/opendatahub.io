@@ -13,7 +13,7 @@ What's Next?
 
 ![alt text](../../assets/img/posts/2019-04-29-project-road-map-for-2019/roadmap_2019.png "Open Data Hub Road Map - 2019")
 
-The Open Data Hub community has some exciting new features planned for 2019.  Driven by the release of OpenShift 4, we have officially moved to operators.  This will make deployment and management of the services easier for administrators.  Other key highlights on the road map for this year include added support for monitoring services with Prometheus and Grafana, as well as improved machine learning model lifecycle management with tools such as mlflow and Seldon-core.
+The Open Data Hub community has some exciting new features planned for 2019.  Driven by the release of OpenShift 4, we have officially moved to operators.  This will make deployment and management of the services easier for administrators.  Other key highlights on the road map for this year include added support for monitoring services with Prometheus and Grafana, as well as improved machine learning model lifecycle management with tools such as MLflow and Seldon-core.
 
 February 2019
 ------
@@ -55,7 +55,7 @@ August 2019
 |--|--|--|--|
 | Open Data Hub Operator | 0.3 | OpenShift 3.1x and 4.x | Application management |
 | [Argo](https://argoproj.github.io/argo/) | 2.2.1+ | OpenShift 3.1x and 4.x | Orchestration platforms |
-| [mlflow](https://mlflow.org/) | 0.9.1+ | OpenShift 3.1x and 4.x | Model experimentation |
+| [MLflow](https://mlflow.org/) | 0.9.1+ | OpenShift 3.1x and 4.x | Model experimentation |
 | [Kafka (Strimzi / AMQ Streams)](https://strimzi.io/) | 0.11.2+ | OpenShift 3.1x and 4.x | Streaming and enrichment |
 | [Spark SQL Thrift Server](https://spark.apache.org/docs/latest/sql-distributed-sql-engine.html#running-the-thrift-jdbcodbc-server) | 2.2.3+ | OpenShift 3.1x and 4.x | Query & ETL frameworks |
 | Hive Metastore | 1.2.1+ | OpenShift 3.1x and 4.x | Metadata cataloging |
@@ -66,7 +66,7 @@ August 2019
 
 Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  Ceph-nano is being replaced by Ceph Rook, the best way to deploy and manage Ceph Storage on OpenShift. For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts to query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
 
-For machine learning model lifecycles, mlflow is being added to allow model experimentation.
+For machine learning model lifecycles, MLflow is being added to allow model experimentation.
 
 November 2019
 ------
