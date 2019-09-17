@@ -5,6 +5,17 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v0.4.0 - September 2019
+
+| Technology | Version | Category |
+|--|--|--|
+| Open Data Hub Operator | 0.4.0 | Meta Operator Application management |
+| [Argo](https://argoproj.github.io/argo/) | 2.3.0 | Container native workflow engine |
+| [Strimzi Kafka Operator](https://strimzi.io/) | 0.11.1 | Distributed streaming platform |
+| Open Data Hub AI-Library | 1.0  | Machine learning as a service |
+{:class="table table-bordered"}
+
+
 ### Open Data Hub version v0.3.0 - June 2019
 
 |Technology|Version|Category|
@@ -16,6 +27,7 @@ style_class: release-notes
 |Prometheus|2.3|System monitoring tools|
 |Grafana|4.7|System monitoring tools|
 {:class="table table-bordered"}
+
 
 ### Open Data Hub version v0.2.0 - May 2019
 
