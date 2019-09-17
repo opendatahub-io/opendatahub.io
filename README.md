@@ -63,12 +63,12 @@ If you add a new page and want it to appear in the sidebar of that section (such
 
 ## Links
 
-Links should include `{{ site.baseurl }}` before the location. e.g.:
+Links should prepend `site.baseurl` before the location. e.g.:
 
 ```jekyll
-<link href="{{ site.baseurl }}/assets/css/home.css" rel="stylesheet">
-<img src="{{ site.baseurl }}/assets/img/datahub_logo_black.png">
-<a class="nav-link" href="{{ site.baseurl }}/news/">NEWS</a>
+<link href="{{ '/assets/css/home.css' | prepend: site.baseurl }}" rel="stylesheet">
+<img src="{{ '/assets/img/datahub_logo_black.png' | prepend: site.baseurl }}">
+<a class="nav-link" href="{{ '/news/' | prepend: site.baseurl }}">NEWS</a>
 ```
 
 ## Local testing

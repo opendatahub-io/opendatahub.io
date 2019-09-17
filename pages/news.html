@@ -16,7 +16,7 @@ permalink: /news
                 <p class="news-content">
                     {{ post.preview }}
                 </p>
-                <a href="{{ post.url | prepend: site.baseurl }}">Read more &raquo;</a>
+                {% include next-link.html label="Read" url=post.url %}
                 {% else %}
                 <p class="news-content">{{ post.content }}</p>
                 {% endif %}
