@@ -99,6 +99,14 @@ The ODH platform is installed on OpenShift as a native operator and is available
 
 **Grafana** ([https://grafana.com/](https://grafana.com/)) is an open source tool for data visualization and monitoring. Data sources such as Prometheus can be added to Grafana for metrics collection. Users create Dashboards that include comprehensive  graphs or plots of specific metrics. It includes powerful visualization capabilities for graphs, tables, and heatmaps. Ready-made dashboards for different data types and sources are also available giving Grafana users a head start. It also has support for a wide variety of plugins so that users can incorporate community-powered visualisation tools for things such as scatter plots or pie charts.
 
+**Argo** ([https://argoproj.github.io/](https://argoproj.github.io/)) is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes.  It is useful for defining workflows using containers, running computer intensive jobs, and running CI/CD pipelines natively on Kubernetes.
+
+**Apache Kafka** ([https://kafka.apache.org/](https://kafka.apache.org/) is a distributed streaming platform for publishing and subscribing records as well as storing and processing streams of records.  It is deployed on ODH using **Strimzi** ([https://strimzi.io](https://strimzi.io)) a community supported operator.
+
+**Seldon** ([https://www.seldon.io](https://www.seldon.io))  is an open source framework that makes it easier to deploy AI/ML models on Kubernetes and OpenShift. The model can be created and trained using many tools such as Apache Spark, scikit-learn and TensorFlow. Seldon also provides metric for Prometheus scraping. Metrics can be custom model metrics or Seldon core system metrics. 
+
+**BeakerX** ([http://beakerx.com/](http://beakerx.com/)) is an extension to Jupyter Notebooks that includes tools for plotting, creating tables and forms and many more.
+
 {% include next-link.html label="Roadmap" url="/docs/roadmap/future.html"%}
 
 
