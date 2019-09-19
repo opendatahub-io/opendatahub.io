@@ -26,18 +26,13 @@ You can review the release notes for components added in the v0.3.0 release [her
 
 Argo
 ------
-Argo is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes.
-
-* Define workflows where each step in the workflow is a container.
-* Model multi-step workflows as a sequence of tasks or capture the dependencies between tasks using a graph (DAG).
-* Easily run compute intensive jobs for machine learning or data processing in a fraction of the time using Argo Workflows on Kubernetes.
-* Run CI/CD pipelines natively on Kubernetes without configuring complex software development products.
+[Argo](https://argoproj.github.io/) is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes.  It is useful for defining workflows using containers, running computer intensive jobs, and running CI/CD pipelines natively on Kubernetes.
 
 To learn more about deploying Argo in the Open Data Hub, please visit [link](https://gitlab.com/opendatahub/opendatahub-operator/blob/master/docs/deploying-argo.adoc)
 
 Strimzi Kafka Operator
 ------
-Strimzi provides a way to run an Apache Kafka cluster on Kubernetes in various deployment configurations. [Apache Kafka](https://kafka.apache.org/) is a distributed streaming platform
+[Strimzi](https://strimzi.io) provides a way to run an Apache Kafka cluster on Kubernetes in various deployment configurations. [Apache Kafka](https://kafka.apache.org/) is a distributed streaming platform for publishing and subscribing records as well as storing and processing streams of records.
 
 Strimzi is based on Apache Kafka 2.0.1 and consists of three main components:
 
