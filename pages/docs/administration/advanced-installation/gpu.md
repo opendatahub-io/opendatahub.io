@@ -76,4 +76,4 @@ tf.test.is_gpu_available()
 * [OpenShift 3.11 Cluster Administration / Managing Security Context Constraints](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html)
 * [JupyterHub deployment using OpenShift OAuth authenticator](https://github.com/AICoE/jupyterhub-ocp-oauth)
 
-{% include next-link.html label="Architecture" url="/docs/architecture.html"%}
+{% include next-link.html label="Architecture" url="/docs/architecture.html" %}

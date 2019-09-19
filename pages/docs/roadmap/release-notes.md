@@ -38,4 +38,4 @@ style_class: release-notes
 |TwoSigma BeakerX Integration|1.4.0|Data science tools|
 {:class="table table-bordered"}
 
-{% include next-link.html label="Additional Resources" url="/docs/additional.html"%}
+{% include next-link.html label="Additional Resources" url="/docs/additional.html" %}

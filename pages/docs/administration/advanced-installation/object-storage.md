@@ -100,4 +100,4 @@ oc get secrets -n rook-ceph rook-ceph-object-user-my-store-my-user -o json
 
 1.  From the OpenShift console, create a route to the rook service, `rook-ceph-rgw-my-store`, in the `rook-ceph` namespace to expose the endpoint. This endpoint url will be used to access the S3 interface from the example notebooks.
 
-{% include next-link.html label="GPU Enablement" url="/docs/administration/advanced-installation/gpu.html"%}
+{% include next-link.html label="GPU Enablement" url="/docs/administration/advanced-installation/gpu.html" %}
