@@ -20,7 +20,7 @@ The first phase of an AI workflow is initiated by Data Engineers that acquire th
 
 Open Data Hub also provides services for model creation, training and validation. Apache Spark™([https://spark.apache.org/](https://spark.apache.org/)) operator is provided as part of ODH installation for distributed data ingestion, transformation and model functionalities running natively on OpenShift. For the Data Scientist development environment, ODH provides Jupyter Hub and Jupyter Notebook images running natively distributed on OpenShift. ODH roadmap includes tools for monitoring services as discussed in the section below. These tools will include the ability for natively monitoring AI services and served models on OpenShift using Prometheus and Grafana.
 
-**AI Library** provides REST interface access to pre-trained and validated served models for Sentiment Analysis, Flake Analysis and Duplicate Bug Detection.
+**AI Library** provides REST interface access to pre-trained and validated served models for several AI based services including sentiment analysis, flake analysis and duplicate bug detection.  A complete look at the AI Library architecture is available in the  [architecture document]({{'/assets/files/pages/docs/ai-lib-arch.pdf' | prepend: site.baseurl }}){:target="_blank"}.
 
 ##  Open Data Hub Platform
 
@@ -107,6 +107,6 @@ The ODH platform is installed on OpenShift as a native operator and is available
 
 **BeakerX** ([http://beakerx.com/](http://beakerx.com/)) is an extension to Jupyter Notebooks that includes tools for plotting, creating tables and forms and many more.
 
-{% include next-link.html label="Roadmap" url="/docs/roadmap/future.html"%}
+{% include next-link.html label="Roadmap" url="/docs/roadmap/future.html" %}
 
 

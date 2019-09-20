@@ -103,5 +103,4 @@ Now, let's access that same data file from Spark so you can analyze data.
 
 That's it!  You have a working Jupyter notebook with access to storage and Spark.
 
-{% include next-link.html label="Administration" url="/docs/administration/advanced-installation/object-storage.html"%}
-<!--{% include next-link.html label="AI Library" url="/docs/ai-library/installation.html"%}-->
+{% include next-link.html label="AI Library" url="/docs/ai-library.html" %}

@@ -62,4 +62,4 @@ spec:
 1. Verify the installation by viewing the project status.  JupyterHub, Spark, and Prometheus should all be running.
 ![Verify Status]({{site.baseurl}}/assets/img/pages/docs/quick-installation/9-verify-pods.png "Verify Status")
 
-{% include next-link.html label="Basic Tutorial" url="/docs/getting-started/basic-tutorial.html"%}
+{% include next-link.html label="Basic Tutorial" url="/docs/getting-started/basic-tutorial.html" %}

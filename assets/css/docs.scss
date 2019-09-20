@@ -85,12 +85,17 @@
         margin-bottom: 1rem;
       }
 
+      img.img-small {
+        max-width: 500px;
+      }
+
       .next-link {
         margin-top: 3rem;
       }
 
       &.quick-installation,
-      &.basic-tutorial {
+      &.basic-tutorial ,
+      &.ai-library{
         ol > li {
           margin-top: 1rem;
           margin-bottom: 1rem;

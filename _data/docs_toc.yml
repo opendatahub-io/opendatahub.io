@@ -33,14 +33,16 @@ toc:
 #        url: /docs/advanced-tutorials/kafka.html
 #      - title: Combined
 #        url: /docs/advanced-tutorials/combined.html
-#  - title: AI Library
-#    url: /docs/ai-library/installation.html
-#    phony: true
-#    children:
-#      - title: Installation
-#        url: /docs/ai-library/installation.html
-#      - title: Consuming Services
-#        url: /docs/ai-library/consuming.html
+  - title: AI Library
+    url: /docs/ai-library.html
+    phony: true
+    children:
+      - title: Overview
+        url: /docs/ai-library.html
+      - title: Installation
+        url: /docs/ai-library/installation.html
+      - title: Services
+        url: /docs/ai-library/services.html
 #      - title: Custom Models
 #        url: /docs/ai-library/custom-models.html
 #      - title: API
