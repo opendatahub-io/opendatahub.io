@@ -106,6 +106,12 @@
         }
       }
 
+      &.future-roadmap {
+        img.img-roadmap {
+          max-width: 932px;
+        }
+      }
+
       &.release-notes {
         .table th {
           color: #495057;
