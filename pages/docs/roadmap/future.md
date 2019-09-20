@@ -1,9 +1,10 @@
 ---
 layout: docs
-title: Future Roadmap
+title: Roadmap
 permalink: /docs/roadmap/future
+style_class: future-roadmap
 ---
 
-![Open Data Hub Roadmap](../../assets/img/pages/docs/roadmap.png "Open Data Hub Roadmap")
+![Open Data Hub Roadmap]({{ '/assets/img/pages/docs/roadmap.png' | prepend: site.baseurl }} "Open Data Hub Roadmap"){:class="img-roadmap"}
 
 {% include next-link.html label="Release Notes" url="/docs/roadmap/release-notes.html" %}
