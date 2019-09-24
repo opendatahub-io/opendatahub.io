@@ -3,6 +3,11 @@ layout: arch
 title: Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on OpenShift Container Platform
 permalink: /arch
 ---
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  It has been superseded by the <a href="{{ '/docs.html' | prepend: site.baseurl }}">documentation</a> section.  Please refer to that document as this page is out of date.
+</div>
+
+
 ## Abstract
 
 The purpose of this document is to provide guidelines and considerations for installing and managing AI services using Open Data Hub on OpenShift Container Platform.Deploying and Managing Artificial Intelligence Services using the Open Data Hub Project on OpenShift Container Platform. 
@@ -22,6 +27,9 @@ This reference architecture describes the architecture, deployment and managemen
 This reference architecture serves as a potential blueprint for deploying and managing open source AI services from the Open Data Hub and AI Library projects to provide an end-to-end platform for running large and distributed AI workloads as well as serving and monitoring ML models on OpenShift Container Platform.
 
 ## AI as Service High Level Architecture
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/architecture.html' | prepend: site.baseurl }}">architecture documentation</a>.
+</div>
 
 A complete end-to-end AI platform requires services for each step of the AI workflow. In general, an AI workflow includes most of the steps shown in Figure 1  and is used by multiple AI engineering personas such as Data Engineers, Data Scientists and DevOps.
 
@@ -40,6 +48,9 @@ Open Data Hub also provides services for model creation, training and validation
 **AI Library** provides REST interface access to pre-trained and validated served models for Sentiment Analysis, Flake Analysis and Duplicate Bug Detection.
 
 ## Open Data Hub Platform
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/architecture.html#open-data-hub-platform' | prepend: site.baseurl }}">architecture documentation</a>.
+</div>
 
 Open Data Hub platform is a centralized self-service solution for analytic and data science distributed workloads. It is a collection of open source tools and services natively running on OpenShift.
 ### Components and Considerations
@@ -119,6 +130,10 @@ The ODH platform is installed on OpenShift as a native operator and is available
 **Grafana** ([https://grafana.com/](https://grafana.com/)) is an open source tool for data visualization and monitoring. Data sources such as Prometheus can be added to Grafana for metrics collection. Users create Dashboards that include comprehensive  graphs or plots of specific metrics. It includes powerful visualization capabilities for graphs, tables, and heatmaps. Ready-made dashboards for different data types and sources are also available giving Grafana users a head start. It also has support for a wide variety of plugins so that users can incorporate community-powered visualisation tools for things such as scatter plots or pie charts.
 
 ### Roadmap
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/roadmap/future.html' | prepend: site.baseurl }}">roadmap</a>.
+</div>
+
 
 ODH release schedule is displayed in the roadmap figure. ODH version 0.1 was released in February 2019 and included APB (Ansible Playbook Bundle) installation on OCP 3.10 and 3.11. It included three main components: JupyterHub, Apache Spark and Ceph-nano. Release version 0.2 is expected mid-May and will be an operator installation on OCP 4.0. This ODH operator will be available for download from the OperatorHub.io community operator. In addition to the core components it will also include: AI Library, Ceph TwoSigma BeakerX, GPU support for JupyterHub and Prometheus with Apache Spark monitoring. ODH August release will add Argo, MLflow, Kafka and Sedon-core. For detailed information on ODH roadmap please visit [https://opendatahub.io/news/2019-04-29/project-road-map-for-2019.html](https://opendatahub.io/news/2019-04-29/project-road-map-for-2019.html).
 
@@ -127,6 +142,9 @@ ODH release schedule is displayed in the roadmap figure. ODH version 0.1 was rel
 
 
 ### Community
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/additional.html#community' | prepend: site.baseurl }}">community documentation</a>.
+</div>
 
 Open Data Hub project portal is available at [https://opendatahub.io/](https://opendatahub.io/). All source code is available on gitlab at [https://gitlab.com/opendatahub](https://gitlab.com/opendatahub). To join the community sign up for mailing lists at [https://lists.opendatahub.io/admin/lists/](https://lists.opendatahub.io/admin/lists/).
 To contribute to the project knowledge of operators and operator development is important. To get started on operator development please visit the [operator sdk github link](https://github.com/operator-framework/operator-sdk). We also provide the following two development guides for beginners:
@@ -134,6 +152,9 @@ To contribute to the project knowledge of operators and operator development is 
 2. How to run [Open Data Hub Operator Remotely](https://gitlab.com/opendatahub/opendatahub-operator/blob/master/docs/run-operator-remotely.adoc)
 
 ## Deploying Open Data Hub Core Components
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/getting-started/quick-installation.html' | prepend: site.baseurl }}">quick installation</a> or <a href="{{ '/docs/administration/advanced-installation/object-storage.html' | prepend: site.baseurl }}">advanced installation</a> documentation.
+</div>
 
 ### Pre-requisites
 
@@ -158,6 +179,10 @@ The latest version of the Open Data Hub operator image is located here: [https:/
 The following installation instructions will describe installing Ceph(Rook) followed by ODH operator.
 
 #### Ceph installation with the Rook operator
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/administration/advanced-installation/object-storage.html' | prepend: site.baseurl }}">object storage installation documentation</a>.
+</div>
+
 
 To install Ceph with the Rook operator, please follow these instructions (this does require cluster-admin permissions):
 
@@ -244,7 +269,9 @@ To install Ceph with the Rook operator, please follow these instructions (this d
     
 
 #### Option 1: ODH Manual Installation
-
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the source  <a href="https://gitlab.com/opendatahub/opendatahub-operator/blob/master/docs/manual-installation.adoc">manual installation documentation</a>.
+</div>
 The Open Data Hub operator can be manually installed by adding the ODH Custom Resource Definition (CRD) to cluster, creating the ODH service account & RBAC policies in the target namespace and deploying the operator image.
 
 1.  Clone the opendatahub-operator repository
@@ -299,6 +326,10 @@ spark-operator-7c67cb6f8f-6xpvs 1/1 Running 0 2m7s
 ```
 
 #### Option 2: ODH Installation via the Operator Lifecycle Manager (OLM) Catalog
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/getting-started/quick-installation.html' | prepend: site.baseurl }}">quick installation</a> documentation.
+</div>
+
 
 Open Data Hub is available as an OpenShift OperatorHub community-operators section on [operatorhub.io](https://operatorhub.io/). You can install it from the OpenShift webui by following the steps below:
 
@@ -381,6 +412,9 @@ Grafana allows users to present cluster-level metrics in an easily digestible fo
 
 
 ## AI Library
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  Please refer to the new  <a href="{{ '/docs/ai-library.html' | prepend: site.baseurl }}">AI Library documentation</a>.
+</div>
 
 ### Description
 AI-Library is an open source collection of [AI components](https://gitlab.com/opendatahub/ai-library) including machine learning algorithms as well as machine learning solutions to common use cases from product and services teams. AI-Library enables users to implement machine learning models and solutions as stand-alone services or integrate into existing workflows to perform common and complex functions.
@@ -434,6 +468,10 @@ For detailed information on parameters for individual models, please refer [http
 
 
 ## Conclusion
+<div class="alert alert-secondary" role="alert">
+This document is here for historical purposes.  It has been superseded by the <a href="{{ '/docs.html' | prepend: site.baseurl }}">documentation</a> section.  Please refer to that document as this page is out of date.
+</div>
+
 This reference architecture describes in detail an end-to-end AI platform on OpenShift Container Platform built using open source tools and applications. Description of the different personas and layers of an AI platform are discussed with suggestions of available tools.
 
 Open Data Hub components, features and releases are provided. AI Library summary and model descriptions were also provided. Detailed installation steps for both Open Data Hub and AI Library are listed. For contribution to these project please visit opendatahub.io. 
