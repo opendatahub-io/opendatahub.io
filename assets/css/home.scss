@@ -134,6 +134,10 @@ nav.navbar.scrolled {
         }
       }
     }
+
+    .what-is {
+      margin-top: 8rem;
+    }
   }
 }
 
@@ -141,8 +145,8 @@ nav.navbar.scrolled {
   .jumbotron {
     background-color: $jumbotron-background-color;
     color: $jumbotron-font-color;
-
-
+    margin-bottom: 0;
+    border-radius: 0;
 
     div.image-container img {
       max-width: 15rem;
@@ -157,10 +161,8 @@ nav.navbar.scrolled {
       }
     }
 
-
-      &.particles {
+    &.particles {
       padding: 0;
-      margin-bottom: 8rem;
       height: 50rem;
       position: relative;
       user-select: none;
@@ -173,6 +175,18 @@ nav.navbar.scrolled {
         display: block;
         text-align: center;
       }
+    }
+  }
+
+  .alert-special {
+    background-color: #ffffa0;
+    a {
+      color: black;
+      font-weight: 600;
+    }
+
+    a:hover {
+      font-weight: 800;
     }
   }
 
