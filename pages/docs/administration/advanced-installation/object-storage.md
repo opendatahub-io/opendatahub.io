@@ -17,12 +17,12 @@ To install Ceph with the Rook operator, please follow these instructions (this d
       cd cluster/examples/kubernetes/ceph/
       ```
     * Here are links to modified versions of the files that will install a basic Rook Ceph cluster with object storage enabled
-      * <a href="../assets/files/pages/arch/rook/v0.9.3/scc.yaml" download>scc.yaml</a>
-      * <a href="../assets/files/pages/arch/rook/v0.9.3/operator.yaml" download>operator.yaml</a>
-      * <a href="../assets/files/pages/arch/rook/v0.9.3/cluster.yaml" download>cluster.yaml</a>
-      * <a href="../assets/files/pages/arch/rook/v0.9.3/toolbox.yaml" download>toolbox.yaml</a>
-      * <a href="../assets/files/pages/arch/rook/v0.9.3/object.yaml" download>object.yaml</a>
-      * <a href="../assets/files/pages/arch/rook/v0.9.3/object-user.yaml" download>object-user.yaml</a>
+      * <a href="{{ '/assets/files/pages/arch/rook/v0.9.3/scc.yaml' | prepend: site.baseurl }}" download>scc.yaml</a>
+      * <a href="{{ '/assets/files/pages/arch/rook/v0.9.3/operator.yaml' | prepend: site.baseurl }}" download>operator.yaml</a>
+      * <a href="{{ '/assets/files/pages/arch/rook/v0.9.3/cluster.yaml' | prepend: site.baseurl }}" download>cluster.yaml</a>
+      * <a href="{{ '/assets/files/pages/arch/rook/v0.9.3/toolbox.yaml' | prepend: site.baseurl }}" download>toolbox.yaml</a>
+      * <a href="{{ '/assets/files/pages/arch/rook/v0.9.3/object.yaml' | prepend: site.baseurl }}" download>object.yaml</a>
+      * <a href="{{ '/assets/files/pages/arch/rook/v0.9.3/object-user.yaml' | prepend: site.baseurl }}" download>object-user.yaml</a>
 
 
 1.  Edit `operator.yaml` and set the environment variables for `FLEXVOLUME_DIR_PATH` and `ROOK_HOSTPATH_REQUIRES_PRIVILEGED` to allow the Rook operator to use OpenShift hostpath storage
@@ -95,7 +95,7 @@ rook-ceph-tools-cb5655595-4g4b2 1/1 Running 0 8m46s
 1.  Next, you will need to create a set of S3 credentials, the resulting credentials will be stored in a secrets file under the `rook-ceph` namespace. There isn’t currently a way to cross-share secrets between OpenShift namespaces, so you will need to copy the secret to whichever namespace is running the applications you want to interact with the object store. You can also copy the AccessKey and SecretKey from the second command.
 ```bash
 oc create -f object-user.yaml
-oc get secrets -n rook-ceph rook-ceph-object-user-my-store-my-user -o json
+oc get secrets -n rook-ceph rook-ceph-object-user-my-store-odh-user -o json
 ```
 
 1.  From the OpenShift console, create a route to the rook service, `rook-ceph-rgw-my-store`, in the `rook-ceph` namespace to expose the endpoint. This endpoint url will be used to access the S3 interface from the example notebooks.
