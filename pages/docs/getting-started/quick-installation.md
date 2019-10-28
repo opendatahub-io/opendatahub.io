@@ -25,6 +25,8 @@ The Open Data Hub operator is available in the OpenShift 4.x Community Operators
 ![OperatorHub]({{site.baseurl}}/assets/img/pages/docs/quick-installation/3-operator-hub.png "OperatorHub")
 1. Click the `Install` button and follow the installation instructions to install the Open Data Hub operator.
 ![Install]({{site.baseurl}}/assets/img/pages/docs/quick-installation/4-install.png "Install")
+1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Catalog` -> `Installed Operators` (inside the namespace you created earlier). Once the STATUS field displays `InstallSucceeded`, you can proceed to create a new Open Data Hub deployment.
+![Installed Operators]({{site.baseurl}}/assets/img/pages/docs/quick-installation/5-installed-operators.png "Installed Operators")
 
 ### Create a New Open Data Hub Deployment
 
