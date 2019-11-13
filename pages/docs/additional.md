@@ -12,6 +12,12 @@ permalink: /docs/additional
 
 
 ## Videos
+Additional videos will be available on the OpenShift youtube channel <a class="external-link" href="https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqcg2znnClv-xbj93Q_wcY8L" target="_blank"><i class="fas fa-external-link-alt"></i>AI/ML on OpenShift </a> playlist.
+
+##### Tutorials
+- [Installing Open Data Hub on OpenShift 4.1](https://youtu.be/-T6ypF7LoKk)
+- [Uploading data to Ceph via command line](https://youtu.be/d6X1xvDXewM)
+
 ##### Presentations
 - [AI on OpenShift](https://www.youtube.com/watch?v=MD1x2IT7rdg)
 - [Fraud Detection using the Open Data Hub](https://youtu.be/IcQ2bhsw_kQ)
