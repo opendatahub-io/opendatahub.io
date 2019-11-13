@@ -4,11 +4,11 @@ title: Quick Installation
 permalink: /docs/getting-started/quick-installation
 style_class: quick-installation
 ---
+The steps are also available in a <a class="external-link" href="https://www.youtube.com/watch?v=-T6ypF7LoKk&t=2s" target="_blank"><i class="fas fa-external-link-alt"></i>tutorial video</a> available on the OpenShift youtube channel.
 
 ### Pre-requisites
 
 Installing ODH requires OpenShift 3.11 or 4.x. Documentation for OpenShift can be located ([here](https://docs.openshift.com/container-platform/4.1/welcome/index.html)).  All screenshots and instructions are from OpenShift 4.1.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials have also been tested on [Code Ready Containers](https://code-ready.github.io/crc/) with 16GB of RAM.
-
 
 ### Installing the Open Data Hub Operator
 
