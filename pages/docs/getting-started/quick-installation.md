@@ -41,7 +41,7 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
 1. Click `Create New` to create a new deployment.
 ![Create New ODH]({{site.baseurl}}/assets/img/pages/docs/quick-installation/7-new-deployment.png "Create New ODH")
 
-1. Here you'll be presented with a YAML file to customize your deployment.  Most options are disabled, and for this tutorial we'll leave them that way and stick with the defaults.  Take note of some parameters:
+1. Here you'll be presented with a YAML file to customize your deployment.  Most options are disabled, and for this tutorial we'll leave them that way and modify some of the parameters to make sure the components for JupyterHub and Spark fit within our cluster resource constraints.  Take note of some parameters:
     - the name of your deployment `example-opendatahub`
 ```yaml
 metadata:
@@ -52,6 +52,15 @@ metadata:
 spec:
     aicoe-jupyterhub:
         odh_deploy: true
+        # Set the Jupyter notebook pod to 1CPU and 2Gi of memory
+        notebook_cpu: 1
+        notebook_memory: 1Gi
+        # Disable creation of the spark worker node in the cluster
+        spark_master_nodes: 1
+        spark_worker_nodes: 0
+        # Reduce the master node to 1CPU and 1GB 
+        spark_memory: 1Gi
+        spark_cpu: 1
     spark-operator:
         odh_deploy: true
 ```
