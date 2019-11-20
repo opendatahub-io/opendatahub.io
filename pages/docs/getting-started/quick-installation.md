@@ -10,6 +10,8 @@ The steps are also available in a <a class="external-link" href="https://www.you
 
 Installing ODH requires OpenShift 3.11 or 4.x. Documentation for OpenShift can be located ([here](https://docs.openshift.com/container-platform/4.1/welcome/index.html)).  All screenshots and instructions are from OpenShift 4.1.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials have also been tested on [Code Ready Containers](https://code-ready.github.io/crc/) with 16GB of RAM.
 
+We will not be installing optional components such as Argo, Seldon, AI Library, and Kafka.  For these components, there are additional pre-requisites detailed in the [advanced installation]({{ '/docs/administration/advanced-installation/optional.html' | prepend: site.baseurl }}).  These additional pre-requisites must be installed before the Open Data Hub Operator if you intend to install these optional components.
+
 ### Installing the Open Data Hub Operator
 
 The Open Data Hub operator is available in the OpenShift 4.x Community Operators section. You can install it from the OpenShift webui by following the steps below:

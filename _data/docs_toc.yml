@@ -48,13 +48,15 @@ toc:
 #      - title: API
 #        url: /docs/ai-library/api.html
   - title: Administration
-    url: /docs/administration/advanced-installation/object-storage.html
+    url: /docs/administration/advanced-installation/optional.html
     phony: true
     children:
       - title: Advanced Installation
-        url: /docs/administration/advanced-installation/object-storage.html
+        url: /docs/administration/advanced-installation/optional.html
         phony: true
         children:
+          - title: Optional Components
+            url: /docs/administration/advanced-installation/optional.html
           - title: Object Storage
             url: /docs/administration/advanced-installation/object-storage.html
           - title: GPU Enablement

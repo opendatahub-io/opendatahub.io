@@ -94,8 +94,9 @@
       }
 
       &.quick-installation,
-      &.basic-tutorial ,
-      &.ai-library{
+      &.basic-tutorial,
+      &.ai-library,
+      &.optional {
         ol > li {
           margin-top: 1rem;
           margin-bottom: 1rem;
