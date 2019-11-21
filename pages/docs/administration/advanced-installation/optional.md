@@ -38,7 +38,7 @@ Before installing Argo, Seldon, Kafka, or AI Library, there are pre-requisites t
 ### Web Console Installation
 
 1.  From the OpenShift console, log in as a user with `cluster-admin` privileges.  For a developer installation from [try.openshift.com](https://try.openshift.com/) including AWS and CRC, the `kubeadmin` user will work.
-![Log in to OpenShift]({{site.baseurl}}/assets/img/pages/docs/quick-installation/1-login.png "Log in to OpenShift")
+![Log in to OpenShift]({{site.baseurl}}/assets/img/pages/docs/quick-installation/login.png "Log in to OpenShift")
 
 1.  To install CRDs, find the list of CRDs under `Administration` -> `Custom Resource Definitions` and click `Create Custom Resource Definitions`
 ![Admin CRDs]({{site.baseurl}}/assets/img/pages/docs/adv-install/admin-crd.png "Admin CRDs")
