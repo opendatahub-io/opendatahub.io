@@ -80,7 +80,7 @@
       img {
         display: block;
         width: 100%;
-        max-width: 900px;
+        max-width: 1000px;
         margin-top: 1rem;
         margin-bottom: 1rem;
       }
@@ -94,8 +94,9 @@
       }
 
       &.quick-installation,
-      &.basic-tutorial ,
-      &.ai-library{
+      &.basic-tutorial,
+      &.ai-library,
+      &.optional {
         ol > li {
           margin-top: 1rem;
           margin-bottom: 1rem;
