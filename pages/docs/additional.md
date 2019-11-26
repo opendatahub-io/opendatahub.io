@@ -39,6 +39,7 @@ Additional videos will be available on the OpenShift youtube channel <a class="e
 - [Building AI with Ceph and OpenShift](https://www.youtube.com/watch?v=B6E7SyxOB2M)
 - [Using the Massachusetts Open Cloud Data Hub to perform Data Science Experiments](https://www.youtube.com/watch?v=iUJ6RGfY0JQ)
 - [Using the Mass Open Cloud to perform Data Science Experiments](https://youtu.be/CZwUCgkKIc4)
+- [ML Workloads with GPUs on Openshift 4](https://www.youtube.com/watch?v=RbJurxB4RSo&feature=youtu.be)
 
 ## Audio
 - [Innovate @Open podcast](https://grhpodcasts.s3.amazonaws.com/opendatahub1908.mp3)
