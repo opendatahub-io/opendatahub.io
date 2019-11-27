@@ -4,9 +4,10 @@ title: Additional Resources
 permalink: /docs/additional
 ---
 
-## Community
-- [Gitlab]({{site.repo}})
-- [Mailing List]({{ site.email_list }})
+## [Community]({{ '/community.html' | prepend: site.baseurl }})
+- [Meetings](https://gitlab.com/opendatahub/opendatahub-community) -- Community meetings for Open Data Hub are conducted regularly.  Get the meeting information and find out more on the Open Data Hub Community Repo.
+- [Gitlab]({{site.repo}}) -- All Open Data Hub projects are open source.  Browse the source code.
+- [Mailing List]({{ site.email_list }}) -- Stay up to date with the latest announcements and discussion about the Open Data Hub.
 <!--- Slack-->
 <!--- Meetings-->
 
