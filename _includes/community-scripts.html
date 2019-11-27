@@ -1,9 +1,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js" integrity="sha256-bt5sKtbHgPbh+pz59UcZPl0t3VrNmD8NUbPu8lF4Ilc=" crossorigin="anonymous"></script>
 <script defer type="text/javascript">
-  var timezone = jstz.determine();
+  var timezone = encodeURIComponent(jstz.determine().name());
   var pref = '<iframe src="https://calendar.google.com/calendar/embed?src=redhat.com_vmmi1nmtt2dbcuujrbuhj97jrk%40group.calendar.google.com&ctz=';
   var suff = '" frameborder="0" scrolling="no" class="community-calendar">';
-  var iframe_html = pref + timezone.name() + suff;
+  var iframe_html = pref + timezone + suff;
   document.getElementById('calendar-container').innerHTML = iframe_html;
 </script>
 </script>
