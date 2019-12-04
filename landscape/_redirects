@@ -1,0 +1,4 @@
+/core-js/*        /
+/node_modules/*   /
+/                 /prerender.html 200
+/*                /index.html   200
