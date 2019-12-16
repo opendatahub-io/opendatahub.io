@@ -10,17 +10,26 @@ OpenShift 4.x GPU enablement is still in development. These instructions will be
 ### Prerequisites
 *   OpenShift cluster with GPU(s) enabled
     *   Enabling GPUs in OpenShift 3.11 is outside of the scope of Open Data Hub. The document [How to use GPUs with DevicePlugin in OpenShift 3.11](https://github.com/zvonkok/origin-ci-gpu/blob/release-3.11/doc/How%20to%20use%20GPUs%20with%20DevicePlugin%20in%20OpenShift%203.11%20.pdf) can provide guidance, but is not official.
-    *   Enabling GPUs in OpenShift 4.x can be achieved by deploying Cluster Node Feature Discovery (NFD) Operator and Special Resource Operator (SRO)
-        1.  Deploy the NFD operator, which will be part of OpenShift 4.2
+    *   Enabling GPUs in OpenShift 4.x can be achieved by deploying Node Feature Discovery (NFD) Operator and Special Resource Operator (SRO).
+
+        The NFD operator is responsible for discovering and labeling hardware (GPU(s) in this case) features available on each node.
+        The SRO operator will setup and install the necessary drivers to enable the use of GPU(s) as pod resource.
+
+        1.  Deploy the NFD operator using the OpenShift OperatorHub WebUI
+            --OR--
+            manually deploy by following the steps below
             ```bash
-            git clone https:
-            make -C cluster-nfd-operator deploy
+            git clone https://github.com/openshift/cluster-nfd-operator
+            cd cluster-nfd-operator/manifests
+            make deploy
             ```
 
-        2.  Deploy the SRO, which will be part of OperatorHub
+        1.  Deploy the SRO, which will be part of OperatorHub
             ```bash
-            git clone https://github.com/zvonkok/special-resource-operator
-            make -C special-resource-operator deploy
+            git clone https://github.com/openshift-psap/special-resource-operator
+            cd special-resource-operator
+            git checkout release-4.2
+            PULLPOLICY=Always make deploy
             ```
 
 ### Configuring the JupyterHub component
