@@ -9,10 +9,10 @@ toc:
         url: /docs/getting-started/quick-installation.html
       - title: Basic Tutorial
         url: /docs/getting-started/basic-tutorial.html
-#  - title: Advanced Tutorials
-#    url: /docs/advanced-tutorials/jupyterhub.html
-#    phony: true
-#    children:
+  - title: Advanced Tutorials
+    url: /docs/advanced-tutorials/jupyterhub.html
+    phony: true
+    children:
 #      - title: JupyterHub
 #        url: /docs/advanced-tutorials/jupyterhub.html
 #      - title: HDFS Data
@@ -27,8 +27,8 @@ toc:
 #        url: /docs/advanced-tutorials/seldon.html
 #      - title: Argo
 #        url: /docs/advanced-tutorials/argo.html
-#      - title: Data Exploration
-#        url: /docs/advanced-tutorials/data-exploration.html
+      - title: Data Exploration
+        url: /docs/advanced-tutorials/data-exploration.html
 #      - title: Kafka
 #        url: /docs/advanced-tutorials/kafka.html
 #      - title: Combined
