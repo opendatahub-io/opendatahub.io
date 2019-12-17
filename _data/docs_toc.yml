@@ -10,7 +10,7 @@ toc:
       - title: Basic Tutorial
         url: /docs/getting-started/basic-tutorial.html
   - title: Advanced Tutorials
-    url: /docs/advanced-tutorials/jupyterhub.html
+    url: /docs/advanced-tutorials/data-exploration.html
     phony: true
     children:
 #      - title: JupyterHub

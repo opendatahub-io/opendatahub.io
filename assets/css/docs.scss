@@ -85,8 +85,9 @@
         margin-bottom: 1rem;
       }
 
-      img.img-small {
-        max-width: 500px;
+      img.img-auto {
+        width:auto;
+        max-width: 100%;
       }
 
       .next-link {
