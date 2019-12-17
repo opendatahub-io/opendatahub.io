@@ -58,7 +58,7 @@ CREATE DATABASE opendatahub;
 ```
 
 2. In the explorer, click on the refresh button. The new database will appear:
-![New database created]({{site.baseurl}}/assets/img/pages/docs/data-catalog/new-database.png "New database created"){:style="width:auto; max-width=100%"}
+![New database created]({{site.baseurl}}/assets/img/pages/docs/data-catalog/new-database.png "New database created"){:class="img-auto"}
 
 3. Now let's select the database with the command:
 ```
@@ -105,3 +105,5 @@ select * from opendatahub.sample limit 10;
 ```
 7. Check the query results in Hue.
 ![Query results]({{site.baseurl}}/assets/img/pages/docs/data-catalog/query-results.png "Query results")
+
+{% include next-link.html label="AI Library" url="/docs/ai-library.html" %}
