@@ -10,6 +10,8 @@ As a component of Open Data Hub, the AI Library requires the same pre-requisites
 
 Installing ODH requires OpenShift 3.11 or 4.x. Documentation for OpenShift can be located ([here](https://docs.openshift.com/container-platform)).  All screenshots and instructions are from OpenShift 4.2.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials have also been tested on [Code Ready Containers](https://code-ready.github.io/crc/) with 16GB of RAM.
 
+Installation of Open Data Hub components Seldon and Argo will require the installation of their respective CRDs as outlined in the Advanced Installation instructions for [Optional Components](../administration/advanced-installation/optional.html).
+
 #### External Components:
 AI Library uses S3 Storage and has currently been tested with Ceph.
 - Ceph Storage
