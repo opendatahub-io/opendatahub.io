@@ -12,25 +12,68 @@ OpenShift 4.x GPU enablement is still in development. These instructions will be
     *   Enabling GPUs in OpenShift 3.11 is outside of the scope of Open Data Hub. The document [How to use GPUs with DevicePlugin in OpenShift 3.11](https://github.com/zvonkok/origin-ci-gpu/blob/release-3.11/doc/How%20to%20use%20GPUs%20with%20DevicePlugin%20in%20OpenShift%203.11%20.pdf) can provide guidance, but is not official.
     *   Enabling GPUs in OpenShift 4.x can be achieved by deploying Node Feature Discovery (NFD) Operator and Special Resource Operator (SRO).
 
-        The NFD operator is responsible for discovering and labeling hardware (GPU(s) in this case) features available on each node.
-        The SRO operator will setup and install the necessary drivers to enable the use of GPU(s) as pod resource.
+        The [Node Feature Discovery](https://github.com/openshift/cluster-nfd-operator) operator is responsible for discovering and labeling hardware (GPU(s) in this case) features available on each node.
+        The [Special Resource Operator](https://github.com/openshift-psap/special-resource-operator) will setup and install the necessary drivers to enable the use of GPU(s) as compute resource.
 
-        1.  Deploy the NFD operator using the OpenShift OperatorHub WebUI
-            --OR--
-            manually deploy by following the steps below
-            ```bash
-            git clone https://github.com/openshift/cluster-nfd-operator
-            cd cluster-nfd-operator/manifests
-            make deploy
-            ```
+        1.  Deploy the Node Feature Discovery operator using the OpenShift OperatorHub WebUI.
+            The blog on [Creating a GPU-enabled node with OpenShift 4.2 in Amazon EC2](https://blog.openshift.com/creating-a-gpu-enabled-node-with-openshift-4-2-in-amazon-ec2) has a "Deploy the Node Feature Discovery Operator" section that demonstrates how to deploy the NFD operator and create a `NodeFeatureDiscovery` custom resource
 
-        1.  Deploy the SRO, which will be part of OperatorHub
-            ```bash
-            git clone https://github.com/openshift-psap/special-resource-operator
-            cd special-resource-operator
-            git checkout release-4.2
-            PULLPOLICY=Always make deploy
-            ```
+        1. Before deploying the Special Resource Operator confirm that all of the nodes with GPUs have the appropriate hardware labels.
+           ```
+           $ oc describe node <GPU NODE NAME> -o json 
+
+            Name:    ip-10-0-137-200.ec2.internal
+            Roles:   worker
+            Labels:  beta.kubernetes.io/arch=amd64
+                      beta.kubernetes.io/instance-type=p2.xlarge
+                      beta.kubernetes.io/os=linux
+                      failure-domain.beta.kubernetes.io/region=us-east-1
+                      failure-domain.beta.kubernetes.io/zone=us-east-1a
+                      feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                      feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                      feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                      feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                      feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                      feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                      feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                      feature.node.kubernetes.io/cpu-hardware_multithreading=true
+                      feature.node.kubernetes.io/cpu-pstate.turbo=true
+                      feature.node.kubernetes.io/kernel-selinux.enabled=true
+                      feature.node.kubernetes.io/kernel-version.full=4.18.0-147.3.1.el8_1.x86_64
+                      feature.node.kubernetes.io/kernel-version.major=4
+                      feature.node.kubernetes.io/kernel-version.minor=18
+                      feature.node.kubernetes.io/kernel-version.revision=0
+                      feature.node.kubernetes.io/pci-1013.present=true
+                      feature.node.kubernetes.io/pci-10de.present=true
+                      feature.node.kubernetes.io/pci-1d0f.present=true
+                      feature.node.kubernetes.io/storage-nonrotationaldisk=true
+                      feature.node.kubernetes.io/system-os_release.ID=rhcos
+                      feature.node.kubernetes.io/system-os_release.VERSION_ID=4.3
+                      feature.node.kubernetes.io/system-os_release.VERSION_ID.major=4
+                      feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=3
+                      ...
+           ```
+        1. Deploy the Special Resource Operator to install drivers and enable GPUs in the cluster on all GPU nodes
+           ```
+           $ git clone https://github.com/openshift-psap/special-resource-operator
+           $ cd special-resource-operator
+           $ PULLPOLICY=Always make deploy
+           ```
+
+        1. Once the Special Resource Operator finishes the installation of the appropriate drivers, you should see the number of gpus available as a resource on the GPU enabled nodes.
+
+           ```
+           $ oc get node <GPU NODE NAME> -o json | jq .status.allocatable
+            {
+              "cpu": "3500m",
+              "hugepages-1Gi": "0",
+              "hugepages-2Mi": "0",
+              "memory": "15804984Ki",
+              "pods": "250",
+              "nvidia.com/gpus": "1"
+            }
+
+           ```
 
 ### Configuring the JupyterHub component
 
@@ -46,7 +89,7 @@ The build chain template can be found upstream at [https://github.com/thoth-stat
 Leave the `gpu_mode` empty or set it to `null`.
 ```yaml
 aicoe-jupyterhub:
-    gpu_mode:
+    gpu_mode: ""
     notebook_images:
         deploy_cuda_notebooks: True
 ```
