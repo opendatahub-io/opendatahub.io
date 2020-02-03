@@ -106,4 +106,4 @@ select * from opendatahub.sample limit 10;
 7. Check the query results in Hue.
 ![Query results]({{site.baseurl}}/assets/img/pages/docs/data-catalog/query-results.png "Query results")
 
-{% include next-link.html label="AI Library" url="/docs/ai-library.html" %}
+{% include next-link.html label="Kubeflow" url="/docs/kubeflow.html" %}
