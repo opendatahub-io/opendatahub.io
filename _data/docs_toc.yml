@@ -33,6 +33,31 @@ toc:
 #        url: /docs/advanced-tutorials/kafka.html
 #      - title: Combined
 #        url: /docs/advanced-tutorials/combined.html
+# Uncomment when Kubeflow docs are ready
+  - title: Kubeflow
+    url: /docs/kubeflow.html
+    phony: true
+    children:
+      - title: Overview
+        url: /docs/kubeflow.html
+      - title: Installation
+        url: /docs/kubeflow/installation.html
+#      - title: Components
+#       url: /docs/kubeflow/components/jupyter.html
+#       phony: true
+#        children:
+#          - title: Jupyter Notebooks
+#            url: /docs/kubeflow/components/jupyter.html
+#          - title: Hyperparameter Tuning
+#            url: /docs/kubeflow/components/hyperparameter.html
+#          - title: Pipelines
+#            url: /docs/kubeflow/components/pipelines.html
+#          - title: Serving
+#            url: /docs/kubeflow/components/serving.html
+#          - title: Training
+#            url: /docs/kubeflow/components/training.html
+#          - title: Miscellaneous
+#            url: /docs/kubeflow/components/misc.html
   - title: AI Library
     url: /docs/ai-library.html
     phony: true
