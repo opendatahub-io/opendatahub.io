@@ -5,11 +5,20 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v0.5.0 - December 2019
+
+| Technology | Version | Category |
+|--|--|--|
+| JupyterHub CUDA GPU Images and Notebooks | 3.0.7  | Support for building CUDA GPU Images and GPU Notebook |
+| Apache [Superset](https://github.com/apache/incubator-superset) | 0.34.0  | Data Exploration and Visualization Tool |
+| Data Catalog ([Hue](https://gethue.com/), [Spark Thrift Server](https://spark.apache.org/docs/latest/sql-distributed-sql-engine.html), Hive Metastore) | Hue 4.4.1 & Spark 2.4.3 & Spark Thrift Server 2.4 & Hive Metastore 1.2.1 | Deployment of Hue, Spark Thrift Server and Hive Metastore to simplify querying data lakes using Spark SQL language|
+| [Argo](https://argoproj.github.io/argo/) | 2.4.2 | Container native workflow engine |
+{:class="table table-bordered"}
+
 ### Open Data Hub version v0.4.0 - September 2019
 
 | Technology | Version | Category |
 |--|--|--|
-| Open Data Hub Operator | 0.4.0 | Meta Operator Application management |
 | [Argo](https://argoproj.github.io/argo/) | 2.3.0 | Container native workflow engine |
 | [Strimzi Kafka Operator](https://strimzi.io/) | 0.11.1 | Distributed streaming platform |
 | Open Data Hub AI-Library | 1.0  | Machine learning as a service |
