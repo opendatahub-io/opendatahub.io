@@ -32,15 +32,16 @@ JupyterHub and Spark are installed by default with Open Data Hub.  You can creat
 
     # Add the necessary Hadoop and AWS jars to access Ceph from Spark
     # Can be omitted if s3 storage access is not required
-    os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.hadoop:hadoop-aws:2.7.3,com.amazonaws:aws-java-sdk:1.7.4 pyspark-shell'
+    os.environ['PYSPARK_SUBMIT_ARGS'] = f"--conf spark.jars.ivy={os.environ['HOME']} --packages org.apache.hadoop:hadoop-aws:2.7.3,com.amazonaws:aws-java-sdk:1.7.4 pyspark-shell"
 
     # create a spark session
-    spark = SparkSession.builder.master('local[3]').getOrCreate()
+    spark_cluster_url = f"spark://{os.environ['SPARK_CLUSTER']}:7077"
+    spark = SparkSession.builder.master(spark_cluster_url).getOrCreate()
 
     # test your spark connection
     spark.range(5, numPartitions=5).rdd.map(lambda x: socket.gethostname()).distinct().collect()
     ```
-1.  Run the notebook.  If successful, you should see the output:
+1.  Run the notebook.  If successful, you should see the output similar to the following:
     ```
     ['jupyterhub-nb-kube-3aadmin']
     ```

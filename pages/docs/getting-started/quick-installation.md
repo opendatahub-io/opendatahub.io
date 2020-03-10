@@ -57,12 +57,28 @@ spec:
         # Set the Jupyter notebook pod to 1CPU and 2Gi of memory
         notebook_cpu: 1
         notebook_memory: 1Gi
-        # Disable creation of the spark worker node in the cluster
-        spark_master_nodes: 1
-        spark_worker_nodes: 0
-        # Reduce the master node to 1CPU and 1GB 
-        spark_memory: 1Gi
-        spark_cpu: 1
+        spark:
+          image: "quay.io/opendatahub/spark-cluster-image:spark22python36"
+          master:
+            instances: 1
+            # Reduce the master node to 1CPU and 1GB 
+            resources:
+              limits:
+                memory: 1Gi
+                cpu: 1
+              requests:
+                memory: 512Mi
+                cpu: 500m
+          worker:
+            # Disable creation of the spark worker node in the cluster
+            instances: 0
+            resources:
+              limits:
+                memory: 1Gi
+                cpu: 1
+              requests:
+                memory: 256Mi
+                cpu: 200m
     spark-operator:
         odh_deploy: true
     # Reduce the memory requirements
