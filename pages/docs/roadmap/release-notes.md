@@ -5,6 +5,20 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v0.6.0 - May 2020 (redesign on top of Kubeflow)
+
+| Technology | Version | Category | Deployment Method | 
+|--|--|--|--|
+| [Airflow](https://github.com/opendatahub-io/odh-manifests/tree/master/airflow) | Alpha | Workflow Management | Manifests |
+| [Grafana](https://github.com/opendatahub-io/odh-manifests/tree/master/grafana) | 2.0.0 | Monitoring Dashboards | OLM |
+| [JupyterHub](https://github.com/opendatahub-io/odh-manifests/tree/master/jupyterhub) | 3.0.7  | Data science tools | Manifests |
+| [Kafka Strimzi](https://github.com/opendatahub-io/odh-manifests/tree/master/kafka) | 0.17.0 | Distributed Streaming | OLM |
+| [Argo](https://github.com/opendatahub-io/odh-manifests/tree/master/odhargo) | 2.7.0 | Workflow Engine | Manifests |
+| [Prometheus](https://github.com/opendatahub-io/odh-manifests/tree/master/prometheus) | 0.32.0 | Monitoring | OLM |
+| [Radanalytics Spark Operator](https://github.com/opendatahub-io/odh-manifests/tree/master/radanalyticsio) | 1.0.7  | Operator for managing Spark cluster on OpenShift | Manifests |
+| [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | 0.34.0  | Data Exploration and Visualization Tool | Manifests |
+{:class="table table-bordered table-striped"}
+
 ### Open Data Hub version v0.5.1 - February 2020
 
 | Technology | Version | Category |
