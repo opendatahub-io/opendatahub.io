@@ -5,6 +5,14 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v0.6.1 - May 2020
+
+| Technology | Version | Category | Deployment Method |
+|--|--|--|--|
+| [AI Library](https://github.com/opendatahub-io/odh-manifests/tree/master/ai-library) | 0.6.0 | Machine Learning | Manifests |
+| [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.1.0 | Model Serving | OLM |
+{:class="table table-bordered"}
+
 ### Open Data Hub version v0.6.0 - May 2020 (redesign on top of Kubeflow)
 
 | Technology | Version | Category | Deployment Method | 
