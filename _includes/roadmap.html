@@ -1,0 +1,72 @@
+{% if site.data.roadmap.future[0] %}
+  {% for item in site.data.roadmap.future %}
+<div class="timeline-container">
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+            <h4>{{ item.title }}</h4>
+            {% if item.url %}
+            <div class="roadmap-issues"><a class="btn btn-dark" href="{{ item.url }}">Github Project</a></div>
+            {% endif %}
+            <div class="clear"></div>
+            <dl>
+            {% for child in item.children %}
+                <div class="roadmap-task">
+                    <div class="roadmap-task-content">
+                        <dt>{{ child.title }}</dt>
+                        <dd>
+                            <div class="roadmap-desc">{{ child.description }}</div>
+                        </dd>
+                    </div>
+                {% if child.url %}
+                <div class="roadmap-issues"><a class="btn-light btn" href="{{ child.url }}">Github Issues</a></div>
+                {% endif %}
+                <div class="clear"></div>
+                </div>
+            {% endfor %}
+            </dl>
+            </div>
+        </div>
+    </div>
+</div>
+  {% endfor %}
+{% endif %}
+
+<h3>Past releases</h3>
+<p>
+Visit the <a href="{{ site.baseurl }}/docs/roadmap/release-notes.html">release notes</a> section for detailed information about the releases.
+</p>
+{% if site.data.roadmap.past[0] %}
+  {% for item in site.data.roadmap.past %}
+<div class="timeline-container past">
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+            <h4>{{ item.title }}</h4>
+            {% if item.url %}
+            <div class="roadmap-issues"><a class="btn btn-dark" href="{{ item.url }}">Github Project</a></div>
+            {% endif %}
+            <div class="clear"></div>
+            <dl>
+                {% for child in item.children %}
+                <div class="roadmap-task">
+                    <div class="roadmap-task-content">
+                    <dt>{{ child.title }}</dt>
+                    <dd>
+                        <div class="roadmap-desc">{{ child.description }}</div>
+                    </dd>
+                    </div>
+                {% if child.url %}
+                <div class="roadmap-issues"><a class="btn-light btn" href="{{ child.url }}">Github Issues</a></div>
+                {% endif %}
+                <div class="clear"></div>
+                </div>
+                
+                {% endfor %}
+            </dl>
+            </div>
+        </div>
+    </div>
+</div>
+  {% endfor %}
+{% endif %}
