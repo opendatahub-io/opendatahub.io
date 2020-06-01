@@ -9,6 +9,12 @@ toc:
         url: /docs/getting-started/quick-installation.html
       - title: Basic Tutorial
         url: /docs/getting-started/basic-tutorial.html
+      - title: Legacy
+        children:
+          - title: Quick Installation
+            url: /docs/getting-started/legacy/quick-installation.html
+          - title: Basic Tutorial
+            url: /docs/getting-started/legacy/basic-tutorial.html
   - title: Advanced Tutorials
     url: /docs/advanced-tutorials/data-exploration.html
     phony: true

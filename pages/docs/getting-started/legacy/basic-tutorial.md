@@ -1,10 +1,15 @@
 ---
 layout: docs
 title: Basic Tutorial
-permalink: /docs/getting-started/basic-tutorial
+permalink: /docs/getting-started/legacy/basic-tutorial
 style_class: basic-tutorial
 ---
 
+### Note
+
+This tutorial is based on old - no longer developed - version of Open Data Hub. You can find the new version of the document [here]({{site.baseurl}}/docs/getting-started/basic-tutorial).
+
+---
 ### Pre-requisites
 
 This Tutorial requires a basic installation of Open Data Hub with Spark and JupyterHub as detailed in the [quick installation]({{site.baseurl}}/docs/getting-started/quick-installation). The quick installation steps are also available as a <a class="external-link" href="https://www.youtube.com/watch?v=-T6ypF7LoKk&t=2s" target="_blank"><i class="fas fa-external-link-alt"></i>tutorial video</a> on the OpenShift youtube channel.
@@ -18,11 +23,11 @@ The [source]({{site.repo}}/opendatahub.io/blob/master/assets/files/tutorials/bas
 JupyterHub and Spark are installed by default with Open Data Hub.  You can create Jupyter Notebooks and connect to Spark.  This is a simple `hello world`.
 
 1.  Find the route to JupyterHub.  Within your Open Data Hub Project click on Networking -> Routes
-    ![Routes]({{site.baseurl}}/assets/img/pages/docs/basic-tutorial/routes.png "Routes")
+    ![Routes]({{site.baseurl}}/assets/img/pages/docs/basic-tutorial-legavy/routes.png "Routes")
 1.  For the route named `jupyterhub`, click on the location to bring up JupyterHub (typically `https://jupyterhub-project.apps.your-cluster.your-domain.com`).
 1.  Sign in using your OpenShift credentials.
 1.  Spawn a new server with spark functionality.  (e.g. `s2i-spark-minimal-notebook:3.6`)
-    ![New Notebook]({{site.baseurl}}/assets/img/pages/docs/basic-tutorial/new-notebook.png "New Notebook")
+    ![New Notebook]({{site.baseurl}}/assets/img/pages/docs/basic-tutorial-legacy/new-notebook.png "New Notebook")
 1.  Create a new Python 3 notebook
 1.  Copy the following code to test a basic spark connection.
     ```python
