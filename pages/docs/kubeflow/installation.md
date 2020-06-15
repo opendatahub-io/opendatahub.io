@@ -10,7 +10,7 @@ To install Kubeflow 0.7 on OpenShift 4.2 the following are the prerequisites:
 1.**Code Ready Container (CRC)**:  A CRC-generated OpenShift cluster that with the following specifications:        Recommended:  
     `16GB memory`    
     `6 cpu`   
-    `5G disk space`    
+    `45G disk space`    
 Minimum:  
     `10GB memory`    
     `6 cpu`    
