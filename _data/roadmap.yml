@@ -1,0 +1,48 @@
+future:
+  - title: Open Data Hub 0.7 - end of June 2020
+    url: https://github.com/orgs/opendatahub-io/projects/7
+    children:
+    - title: KF 1.0 on OpenShift
+      url: https://github.com/opendatahub-io/manifests/labels/KF%201.0-openshift
+      description: The main goal of this initiative is to verify Kubeflow 1.0 works on OpenShift and fix the issues we find. Another goal is to document and ideally automate some of the verification process to start enabling the CI for KF on OpenSHift.
+    - title: CI improvements
+      url: https://github.com/opendatahub-io/odh-manifests/labels/ci%2Fcd
+      description: Extending tests for all components, enabling CI for the operator repository.
+    - title: Mixing ODH & KF components (start)
+      url: https://github.com/opendatahub-io/manifests/issues/37
+      description: Proving users can mix ODH and KF components, compiling a prioritized list of components to be verified and fixed, proving on the first component (probably TF Job or Pytorch Job)
+    - title: Add Object Storage Component
+      url: https://github.com/opendatahub-io/odh-manifests/issues/104
+      description: Since ODH relies on S3 compatible object storage, add dependency on some minimal install of OpenShift Container Storage.
+    - title: Convert Data Catalog to Kustomize
+      url: https://github.com/opendatahub-io/odh-manifests/issues/105
+      description: Data Catalog is the last component missing the conversion to Kustomize.
+
+  - title: Open Data Hub 0.8 - end of August 2020
+    children:
+      - title: ODH CD
+        description: Come up with a plan for Continuous Deployment for Red Hat Internal Data Hub and Mass Open Cloud.
+      - title: UBI based ODH
+        description: Verify and convert the image used by ODH to Universal Base Image.
+      - title: Mixing ODH & KF components (continued)
+        description: Continuation from 0.7.0, extending the components selection.
+  - title: Open Data Hub 0.9 - TBD
+    children:
+      - title: Disconnected Deployment
+        description: Investigate and introduce ability to deploy ODH on disconnected OpenShift clusters.
+      - title: UBI based KF
+        description: Continuation of the "UBI based ODH" expanding to Kubeflow project and looking at what does it take to move Kubeflow components to UBI.
+past:
+  - title: Open Data Hub 0.6 - end of April 2020
+    children:
+    - title: Rebase ODH on KF operator
+      description: Use Kubeflow operator as a base for ODH.
+    - title: Convert ODH components to Kustomize
+      description: Convert all ODH components to Kustomize to match Kubeflow deployment tooling.
+    - title: Start CI for ODH
+      description: Investicate and kickstart ODH CI based on OpenShift CI
+    - title: Move to Github
+      description: Since the goal of this release is to get closer to KF community, we need to move to Github
+    - title: Add Apache Airflow
+      description: Add Apache Airflow as a component into Open Data Hub
+    
