@@ -1,6 +1,4 @@
 
 User-agent: *
-Allow: *
-
-Sitemap: https://opendatahub.io/landscape/sitemap.xml
+Disallow: /
   
