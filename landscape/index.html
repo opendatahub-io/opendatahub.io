@@ -9,20 +9,31 @@ permalink: /landscape/index.html
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script>
       window.GA = "";
-      window.lastUpdated = "2019-12-20 19:18:14Z";
+      window.lastUpdated = "2020-07-13 15:09:57Z";
     </script>
-
 
     <title>Open Data Hub Landscape</title>
+
     <script>
-      window.prefix = ''; // this line will be replaced for a landscapeapp build
+      window.prefix = ""; // this line will be replaced for a landscapeapp build
       window.landscapeBasename = "{{ '/landscape' | prepend: site.baseurl }}";
       // window.landscapeBasename = "/landscape";
+      // adjust size
+      document.addEventListener('DOMContentLoaded', function() {
+        const el = document.querySelector('.landscape-wrapper');
+        if (el) {
+          var height = el.parentElement.clientHeight + window.innerHeight -
+            document.body.offsetHeight;
+          el.style.height = height + 'px';
+        } else {
+          console.info('No el to adjust');
+        }
+      });
     </script>
-    <link href="{{ '/landscape/main.623576b078b572c770ba.css' | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="{{ '/landscape/main.fbbac305a343ced3711a.css' | prepend: site.baseurl }}" rel="stylesheet">
 </head>
 <body>
 <div id="app"></div>
-<script type="text/javascript" src="{{ '/landscape/main.9c3a05fd848fc20ca372.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ '/landscape/main.9dd80166bfd866e83094.js' | prepend: site.baseurl }}"></script>
 </body>
 </html>
