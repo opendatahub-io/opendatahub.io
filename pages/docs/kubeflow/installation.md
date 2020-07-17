@@ -50,4 +50,4 @@ To delete a Kubeflow installation please follow these steps:
 `oc delete mutatingwebhookconfigurations katib-mutating-webhook-config`  
 `oc delete mutatingwebhookconfigurations mutating-webhook-configurations`  
 
-{% include next-link.html label="AI Library" url="/docs/ai-library.html" %}
+{% include next-link.html label="Combining Components" url="/docs/kubeflow/mixing.html" %}
