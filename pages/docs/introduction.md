@@ -8,7 +8,7 @@ permalink: /docs
 
 [AI Library](docs/ai-library/installation.html) is also an open source project initiated by Red Hat AI Center of Excellence team as an effort to provide ML models as a service on OpenShift Container Platform. The development of these models as services is a community driven open source project to make AI/ML models more accessible.
 
-Open Data Hub includes several open source components which cna be individially enabled. They include:
+Open Data Hub includes several open source components, which can be individially enabled. They include:
 - Apache Airflow
 - Apache Kafka
 - Apache Spark
