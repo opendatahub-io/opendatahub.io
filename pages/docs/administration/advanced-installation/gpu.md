@@ -10,15 +10,15 @@ OpenShift 4.x GPU enablement is still in development. These instructions will be
 ### Prerequisites
 *   OpenShift cluster with GPU(s) enabled
     *   Enabling GPUs in OpenShift 3.11 is outside of the scope of Open Data Hub. The document [How to use GPUs with DevicePlugin in OpenShift 3.11](https://github.com/zvonkok/origin-ci-gpu/blob/release-3.11/doc/How%20to%20use%20GPUs%20with%20DevicePlugin%20in%20OpenShift%203.11%20.pdf) can provide guidance, but is not official.
-    *   Enabling GPUs in OpenShift 4.x can be achieved by deploying Node Feature Discovery (NFD) Operator and Special Resource Operator (SRO).
+    *   Enabling GPUs in OpenShift 4.x can be achieved by deploying Node Feature Discovery (NFD) Operator and NVIDIA GPU Operator.
 
         The [Node Feature Discovery](https://github.com/openshift/cluster-nfd-operator) operator is responsible for discovering and labeling hardware (GPU(s) in this case) features available on each node.
-        The [Special Resource Operator](https://github.com/openshift-psap/special-resource-operator) will setup and install the necessary drivers to enable the use of GPU(s) as compute resource.
+        The [NVIDIA GPU Operator](https://github.com/NVIDIA/gpu-operator) will setup and install the necessary drivers to enable the use of GPU(s) as compute resource.
 
         1.  Deploy the Node Feature Discovery operator using the OpenShift OperatorHub WebUI.
             The blog on [Creating a GPU-enabled node with OpenShift 4.2 in Amazon EC2](https://blog.openshift.com/creating-a-gpu-enabled-node-with-openshift-4-2-in-amazon-ec2) has a "Deploy the Node Feature Discovery Operator" section that demonstrates how to deploy the NFD operator and create a `NodeFeatureDiscovery` custom resource
 
-        1. Before deploying the Special Resource Operator confirm that all of the nodes with GPUs have the appropriate hardware labels.
+        1. Before deploying the NVIDIA GPU Operator confirm that all of the nodes with GPUs have the appropriate hardware labels.
            ```
            $ oc describe node <GPU NODE NAME> -o json 
 
@@ -53,12 +53,8 @@ OpenShift 4.x GPU enablement is still in development. These instructions will be
                       feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=3
                       ...
            ```
-        1. Deploy the Special Resource Operator to install drivers and enable GPUs in the cluster on all GPU nodes
-           ```
-           $ git clone https://github.com/openshift-psap/special-resource-operator
-           $ cd special-resource-operator
-           $ PULLPOLICY=Always make deploy
-           ```
+        1. Deploy the NVIDIA GPU operator using the OpenShift OperatorHub WebUI.
+	The guide [OpenShift on GPU install](https://docs.nvidia.com/datacenter/kubernetes/openshift-on-gpu-install-guide/index.html) has a [GPU support](https://docs.nvidia.com/datacenter/kubernetes/openshift-on-gpu-install-guide/index.html#openshift-gpu-support) section covering all the steps to deploy the NVIDIA GPU operator.
 
         1. Once the Special Resource Operator finishes the installation of the appropriate drivers, you should see the number of gpus available as a resource on the GPU enabled nodes.
 
