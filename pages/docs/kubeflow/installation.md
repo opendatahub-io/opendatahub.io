@@ -29,7 +29,7 @@ Minimum:
 
 To install Kubeflow 0.7 on OpenShift 4.2 please follow the steps below:  
 1. Clone the opendatahub-manifests fork repo which defaults to the branch `v0.7.0-branch-openshift`  
-    `git clone https://github.com/opendatahub-io/manifests.git`
+    `git clone https://github.com/opendatahub-io/manifests.git`   
     `cd manifests`
 2. Install using the Openshift configuration file and local downloaded manifests since at the time of writing this document we ran into this kubeflow [bug](https://github.com/kubeflow/kubeflow/issues/4678) that would not allow downloading the manifests during a build process.  
     `sed -i 's#uri: .*#uri: '$PWD'#' ./kfdef/kfctl_openshift.yaml`  

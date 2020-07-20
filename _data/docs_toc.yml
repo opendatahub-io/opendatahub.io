@@ -48,7 +48,7 @@ toc:
         url: /docs/kubeflow.html
       - title: Installation
         url: /docs/kubeflow/installation.html
-      - title: Combinig components
+      - title: Combining components
         url: /docs/kubeflow/mixing.html
 #      - title: Components
 #       url: /docs/kubeflow/components/jupyter.html
