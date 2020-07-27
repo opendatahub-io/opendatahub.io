@@ -71,4 +71,4 @@ As each service varies, please visit the documentation for the service and model
 - [Topic Modeling](https://gitlab.com/opendatahub/ai-library/tree/master/topic_model)
 
 
-{% include next-link.html label="Administration" url="/docs/administration/advanced-installation/optional.html" %}
+{% include next-link.html label="Administration" url="/docs/administration/installation-customization/customization.html" %}

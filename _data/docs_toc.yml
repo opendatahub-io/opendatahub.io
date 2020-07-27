@@ -81,9 +81,12 @@ toc:
 #      - title: API
 #        url: /docs/ai-library/api.html
   - title: Administration
-    url: /docs/administration/advanced-installation/optional.html
+    url: /docs/administration/installation-customization/customization.html
     phony: true
     children:
+      - title: Customizing Installation
+        url: /docs/administration/installation-customization/customization.html
+        phony: true
       - title: Advanced Installation
         url: /docs/administration/advanced-installation/optional.html
         phony: true
