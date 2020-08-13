@@ -53,4 +53,5 @@ Before installing Argo, Seldon, Kafka, or AI Library, there are pre-requisites t
 ![Strimzi Install]({{site.baseurl}}/assets/img/pages/docs/adv-install/install-strimzi.png "Strimzi Install")
 
 
+{% include next-link.html label="Object Storage" url="/docs/administration/advanced-installation/object-storage.html" %}
 
