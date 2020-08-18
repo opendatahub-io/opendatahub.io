@@ -5,6 +5,14 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v0.7.0 - July 2020
+
+| Technology | Version | Category | Deployment Method |
+|--|--|--|--|
+| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.0 |  AI/ML | Manifests |
+| [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.2.0 | Model Serving | OLM |
+{:class="table table-bordered"}
+
 ### Open Data Hub version v0.6.1 - May 2020
 
 | Technology | Version | Category | Deployment Method |
