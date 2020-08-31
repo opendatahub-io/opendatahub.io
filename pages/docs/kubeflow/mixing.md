@@ -63,5 +63,7 @@ As you can see above, there are 2 components mentioned - Argo and TF Job Operato
 | Component | Version | Issues |
 | ----------| --------|--------|
 | [TF Job](https://github.com/opendatahub-io/manifests/blob/v1.0-branch-openshift/tf-training/)    |  v1     | |
+| [Pytorch Job](https://github.com/opendatahub-io/manifests/blob/v1.0-branch-openshift/pytorch-job/)    |  v1     | |
+
 
 {% include next-link.html label="AI Library" url="/docs/ai-library.html" %}
