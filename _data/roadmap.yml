@@ -1,38 +1,59 @@
 future:
-  - title: Open Data Hub 0.7 - end of June 2020
-    url: https://github.com/orgs/opendatahub-io/projects/7
-    children:
-    - title: KF 1.0 on OpenShift
-      url: https://github.com/opendatahub-io/manifests/labels/KF%201.0-openshift
-      description: The main goal of this initiative is to verify Kubeflow 1.0 works on OpenShift and fix the issues we find. Another goal is to document and ideally automate some of the verification process to start enabling the CI for KF on OpenSHift.
-    - title: CI improvements
-      url: https://github.com/opendatahub-io/odh-manifests/labels/ci%2Fcd
-      description: Extending tests for all components, enabling CI for the operator repository.
-    - title: Mixing ODH & KF components (start)
-      url: https://github.com/opendatahub-io/manifests/issues/37
-      description: Proving users can mix ODH and KF components, compiling a prioritized list of components to be verified and fixed, proving on the first component (probably TF Job or Pytorch Job)
-    - title: Add Object Storage Component
-      url: https://github.com/opendatahub-io/odh-manifests/issues/104
-      description: Since ODH relies on S3 compatible object storage, add dependency on some minimal install of OpenShift Container Storage.
-    - title: Convert Data Catalog to Kustomize
-      url: https://github.com/opendatahub-io/odh-manifests/issues/105
-      description: Data Catalog is the last component missing the conversion to Kustomize.
-
   - title: Open Data Hub 0.8 - end of August 2020
     children:
-      - title: ODH CD
-        description: Come up with a plan for Continuous Deployment for Red Hat Internal Data Hub and Mass Open Cloud.
-      - title: UBI based ODH
-        description: Verify and convert the image used by ODH to Universal Base Image.
-      - title: Mixing ODH & KF components (continued)
-        description: Continuation from 0.7.0, extending the components selection.
-  - title: Open Data Hub 0.9 - TBD
+      - title: ODH JupyterHub
+        description: Forked JupyterHub repos under Open Data Hub github repo for maintaining new changes. Added notebook images to Thoth Station for building. Added ability to launch JupyterLab images.
+      - title: Notebooks to Pipelines with Elyra
+        description: Added a JupyterLab notebook image that includes Elyra. Elyra converts notebooks to Argo or Kubeflow pipelines.
+      - title: Mixing ODH & KF components- Distributed Training
+        description: Added Pytorch operator to work with Open Data Hub components.
+      - title: Mixing ODH & KF components- Kubeflow Monitoring
+        description: Added monitoring to Kubeflow components by enabling monitoring to Argo and adding Prometheus and Grafana to Kubeflow installation.
+      - title: CI/CD
+        description: Added more tests to Open Data Hub components including Kafka and Superset and enhanced JupyterHub testing by adding Selenium for web portal testing
+        
+  - title: Open Data Hub 0.9 - End of October 2020
     children:
+      - title: Kubeflow 1.1
+        description: Add Kubeflow 1.1 to Open Data Hub installation and investigate migrating to Kustomize 3.0
       - title: Disconnected Deployment
         description: Investigate and introduce ability to deploy ODH on disconnected OpenShift clusters.
       - title: UBI based KF
         description: Continuation of the "UBI based ODH" expanding to Kubeflow project and looking at what does it take to move Kubeflow components to UBI.
+      - title: CI/CD
+        description: Continuation of the of the effort to design and create a complete CI/CD process.
+      - title: Object Storage
+        description: Add an Object Storage tool based on Rook-Ceph
+      - title: Enable Monitoring
+        description: Continuation of the effort to enable Prometheus enpoints in all Open Data Hub and Kubeflow components.
+      - title: Open Data Hub Dashboard
+        description: Team is currently creating an Open Data Hub dashboard that will be the entry point to all installed components.
+        
+  - title: Open Data Hub 1.0 - TBD
+    children:
+      - title: ODH Data Catalog
+        description: Migrate Open Data Hub Data Catalog component from Ansible to Kustomize.
+      - title: ODH Istio/Service Mesh
+        description: Add istio/Service Mesh to Open Data Hub.
+      - title: Kubeflow KFServing
+        description: Enable KFServing in Open Data Hub.
+      - title: Kubeflow Pipelines on Tekton
+        description: Enable Kubeflow Pipelines using Tekton in Open Data Hub.
+        
 past:
+  - title: Open Data Hub 0.7 - end of June 2020
+    children:
+    - title: KF 1.0 on OpenShift
+      description: The main goal of this initiative is to verify Kubeflow 1.0 works on OpenShift and fix the issues we find. Another goal is to document and ideally automate some of the verification process to start enabling the CI for KF on OpenSHift.
+    - title: CI improvements
+      description: Extending tests for all components, enabling CI for the operator repository.
+    - title: Mixing ODH & KF components (start)
+      description: Proving users can mix ODH and KF components, compiling a prioritized list of components to be verified and fixed, proving on the first component (probably TF Job or Pytorch Job)
+    - title: Add Object Storage Component
+      description: Since ODH relies on S3 compatible object storage, add dependency on some minimal install of OpenShift Container Storage.
+    - title: Convert Data Catalog to Kustomize
+      description: Data Catalog is the last component missing the conversion to Kustomize.
+
   - title: Open Data Hub 0.6 - end of April 2020
     children:
     - title: Rebase ODH on KF operator
