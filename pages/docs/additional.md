@@ -25,6 +25,7 @@ Additional videos will be available on the OpenShift youtube channel <a class="e
 
 ##### Conference Talks
 - [Kubecon 2020: How to Use Kubernetes to Build a Data Lake for AI Workloads](https://www.youtube.com/watch?v=0HIelZ3qMLE)
+- [Kubecon 2020: Is There a Place For Distributed Storage For AI/ML on Kubernetes?](https://www.youtube.com/watch?v=9XhbXtPKttM&feature=youtu.be)
 - [ML Pipelines with Kubeflow, Argo and Open Data Hub](https://youtu.be/NZOky2Gm0iA?list=PLU1vS0speL2bxDVhBGZOiNQotzkdxJ8ln)
 - [Scalable Kafka Deployment on OpenShift for ML](https://youtu.be/og_Abr9jZJU?list=PLU1vS0speL2bxDVhBGZOiNQotzkdxJ8ln)
 - [MLFlow: Experiment Tracking on OpenShift](https://youtu.be/WgEKfAj7PLc?list=PLU1vS0speL2bxDVhBGZOiNQotzkdxJ8ln)
