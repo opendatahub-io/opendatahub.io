@@ -5,6 +5,24 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v0.9.0 - November 2020
+
+| Technology | Version | Category | Deployment Method |
+|--|--|--|--|
+| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.1 |  AI/ML | Manifests |
+| [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-manifests/tree/master/odh-dashboard) | v0.9 | Dashboard | Manifests |
+| [Elyra Notebooks](https://github.com/elyra-ai) | 0.0.5 | Data Science Tools | Manifests |
+| [Ceph Nano Object Storage](https://github.com/opendatahub-io/odh-manifests/tree/master/odh-dashboard) | v0.7 | Object Storage | Manifests |
+{:class="table table-bordered"}
+
+### Open Data Hub version v0.8.0 - September 2020
+
+| Technology | Version | Category | Deployment Method |
+|--|--|--|--|
+| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.0 |  AI/ML | Manifests |
+| [Elyra Notebooks](https://github.com/elyra-ai) | 0.0.2 | Data Science Tools | Manifests |
+{:class="table table-bordered"}
+
 ### Open Data Hub version v0.7.0 - July 2020
 
 | Technology | Version | Category | Deployment Method |
