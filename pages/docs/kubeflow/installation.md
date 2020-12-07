@@ -29,12 +29,17 @@ To install Kubeflow on OpenShift 4.2+ the following are the prerequisites:
 
    **OpenShift 4.2 or later**: An available OpenShift 4.2+ cluster or you can try a cluster on [try.openshift.com](https://try.openshift.com)
 
-1. **kfctl**: The installation tool `kfctl` is needed to install/uninstall Kubeflow. Download the tool from [github](https://github.com/kubeflow/kubeflow/releases/), make sure the `kfctl` release number matches the Kubeflow release you are trying to install. 
+1. **kfctl**: The installation tool `kfctl` is needed to install/uninstall Kubeflow only if following the manual method. Download the tool from [github](https://github.com/kubeflow/kubeflow/releases/), make sure the `kfctl` release number matches the Kubeflow release you are trying to install. 
 
 1. An OpenShift user account with [cluster-admin](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html#creating-cluster-admin_using-rbac) privileges
 
+### Install Kubeflow using Open Data Hub Operator
+The easiest method to install Kubeflow is to use the Open Data Hub operator as described in the [Quick Installation] (getting-started/quick-installation.html) instructions. Make sure to use the example Kubeflow "KfDef".
 
-### Install Kubeflow with Istio Enabled
+### Manual Installation of Kubeflow
+To install Kubeflow manually, please follow the following instructions.
+
+#### Install Kubeflow with Istio Enabled
 
 To install Kubeflow on OpenShift 4.2(or later) please follow the steps below:
 1. Install the Open Data Hub operator by following the steps on `Installing the Open Data Hub Operator` in the Open Data Hub [Quick Installation](../getting-started/quick-installation.html#installing-the-open-data-hub-operator) guide.
