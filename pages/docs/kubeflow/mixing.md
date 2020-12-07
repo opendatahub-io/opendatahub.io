@@ -4,10 +4,8 @@ title: Combining Open Data Hub and Kubeflow Components
 permalink: /docs/kubeflow/mixing
 style_class: kubeflow
 ---
-```diff
-+ 
 Mixing only works for ODH 0.8 documented in issues [#255](https://github.com/opendatahub-io/odh-manifests/issues/255), [#257](https://github.com/opendatahub-io/odh-manifests/issues/257)
-```
+
 ### Combining Open Data Hub and Kubeflow Components
 
 With Open Data Hub Operator being built on top of Kubeflow operator, users are enabled to deploy both Open Data Hub and Kubeflow by the same operator. It is also our goal to provide the capability to mix components from both projects.
