@@ -34,7 +34,7 @@ To install Kubeflow on OpenShift 4.2+ the following are the prerequisites:
 1. An OpenShift user account with [cluster-admin](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html#creating-cluster-admin_using-rbac) privileges
 
 ### Install Kubeflow using Open Data Hub Operator
-The easiest method to install Kubeflow is to use the Open Data Hub operator as described in the [Quick Installation] (getting-started/quick-installation.html) instructions. Make sure to use the example Kubeflow "KfDef".
+The easiest method to install Kubeflow is to use the Open Data Hub operator as described in the [Quick Installation](getting-started/quick-installation.html) instructions. Make sure to use the example Kubeflow "KfDef".
 
 ### Manual Installation of Kubeflow
 To install Kubeflow manually, please follow the following instructions.
