@@ -6,7 +6,7 @@ style_class: kubeflow
 ---
 
 ### Pre-requisites
-To install Kubeflow 1.0 on OpenShift 4.2+ the following are the prerequisites:
+To install Kubeflow on OpenShift 4.2+ the following are the prerequisites:
 1. **Code Ready Container (CRC)**:  A CRC-generated OpenShift cluster with the following specifications:
 
    Recommended:
@@ -24,25 +24,26 @@ To install Kubeflow 1.0 on OpenShift 4.2+ the following are the prerequisites:
    ```
 
    **NOTE**: At the minimum specs, the CRC OpenShift cluster may be unresponsive for ~20mins while Kubeflow components are being deployed.
-   When installing Kubeflow on a CRC cluster, there is an extra overlay (named `crc`) to enable the `metadata` component in `kfctl_openshift.yaml`.  It is commented out by default.  Uncomment to enable it.
 
    --OR--
 
    **OpenShift 4.2 or later**: An available OpenShift 4.2+ cluster or you can try a cluster on [try.openshift.com](https://try.openshift.com)
 
-1. **kfctl**: The installation tool `kfctl` is needed to install/uninstall Kubeflow. Download the tool from [github](https://github.com/kubeflow/kubeflow/releases/), the version `1.0` is required for the installation.
+1. **kfctl**: The installation tool `kfctl` is needed to install/uninstall Kubeflow only if following the manual method. Download the tool from [github](https://github.com/kubeflow/kubeflow/releases/), make sure the `kfctl` release number matches the Kubeflow release you are trying to install. 
 
 1. An OpenShift user account with [cluster-admin](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html#creating-cluster-admin_using-rbac) privileges
 
+### Install Kubeflow using Open Data Hub Operator
+The easiest method to install Kubeflow is to use the Open Data Hub operator from the OpenShift OperatorHub as described in the [Quick Installation](../getting-started/beta/quick-installation.md) instructions. 
 
-### Install Kubeflow with Istio Enabled
+#### Install Kubeflow with Istio Enabled
 
-To install Kubeflow 1.0 on OpenShift 4.2(or later) please follow the steps below:
+To install Kubeflow on OpenShift 4.2(or later) please follow the steps below:
 1. Install the Open Data Hub operator by following the steps on `Installing the Open Data Hub Operator` in the Open Data Hub [Quick Installation](../getting-started/quick-installation.html#installing-the-open-data-hub-operator) guide.
 
 1. After the Open Data Hub operator is installed, follow the steps to `Create a New Open Data Hub Deployment` in the Open Data Hub [Quick Installation](../getting-started/quick-installation.html#create-a-new-open-data-hub-deployment) guide.
 
-   **NOTE**: During these steps, you will need to use the [kfctl_openshift.yaml](https://github.com/opendatahub-io/manifests/blob/v1.0-branch-openshift/kfdef/kfctl_openshift.yaml) KfDef in our opendatahub-io/manifests repo that we have curated specifically for installing Kubeflow. Additionally, you will need to create the Open Data Hub instance in the namespace `kubeflow`.
+   **NOTE**: During these steps, you will need to use the [kfctl_openshift_<versionnumber>.yaml](https://github.com/kubeflow/manifests/tree/master/kfdef) KfDef in the kubeflow/manifests repo that we have curated specifically for installing Kubeflow. Additionally, you will need to create the Open Data Hub instance in the namespace `kubeflow`.
 
 1. Verify installation
     ```bash
@@ -54,6 +55,11 @@ To install Kubeflow 1.0 on OpenShift 4.2(or later) please follow the steps below
     oc get routes -n istio-system istio-ingressgateway -o jsonpath='http://{.spec.host}/'
      http://<istio ingress route>/
     ```
+    Once the pods are all running you can access the Kubeflow dashboard as shown below by going to the `istio-system` namespace and clicking on the `istio-ingressgateway` route.
+    ![Dashboard]({{site.baseurl}}/assets/img/pages/docs/kubeflow/kfdashboard.png "Dashboard")
+    
+### Manual Installation of Kubeflow
+To install Kubeflow manually, please follow the following instructions on the [Kubeflow Openshift documentation](https://www.kubeflow.org/docs/openshift/install-kubeflow/)
 
 ### Delete A Kubeflow installation
 You can remove a Kubeflow installation by deleting the KfDef custom resources that you created previously.
@@ -70,5 +76,6 @@ oc delete mutatingwebhookconfiguration seldon-mutating-webhook-configuration-kub
 oc delete validatingwebhookconfiguration seldon-validating-webhook-configuration-kubeflow
 oc delete validatingwebhookconfiguration katib-validating-webhook-config
 ```
+If you installed Kubeflow manually follow the uninstall instruction found on the [Kubeflow Openshift documentation](https://www.kubeflow.org/docs/openshift/)
 
 {% include next-link.html label="Combining Components" url="/docs/kubeflow/mixing.html" %}

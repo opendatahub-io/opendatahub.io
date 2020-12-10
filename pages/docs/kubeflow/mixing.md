@@ -4,6 +4,7 @@ title: Combining Open Data Hub and Kubeflow Components
 permalink: /docs/kubeflow/mixing
 style_class: kubeflow
 ---
+Mixing only works for ODH 0.8 documented in issues [#255](https://github.com/opendatahub-io/odh-manifests/issues/255), [#257](https://github.com/opendatahub-io/odh-manifests/issues/257)
 
 ### Combining Open Data Hub and Kubeflow Components
 
