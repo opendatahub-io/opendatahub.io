@@ -7,7 +7,7 @@ style_class: quick-installation
 
 ### Note
 
-This tutorial is based on old - no longer developed - version of Open Data Hub. You can find the new version of the document [here]({{site.baseurl}}/docs/getting-started/quick-installation).
+This tutorial is based on an archived version of Open Data Hub. You can find the new version of the document [here]({{site.baseurl}}/docs/getting-started/quick-installation).
 
 ---
 The steps are also available in a <a class="external-link" href="https://www.youtube.com/watch?v=-T6ypF7LoKk&t=2s" target="_blank"><i class="fas fa-external-link-alt"></i>tutorial video</a> available on the OpenShift youtube channel.
