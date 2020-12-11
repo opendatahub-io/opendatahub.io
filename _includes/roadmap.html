@@ -4,7 +4,7 @@
     <div class="timeline">
         <div class="container left">
             <div class="content">
-            <h4>{{ item.title }}</h4>
+            <h4 id="{{ item.version }}">{{ item.title }}</h4>
             {% if item.url %}
             <div class="roadmap-issues"><a class="btn btn-dark" href="{{ item.url }}">Github Project</a></div>
             {% endif %}
@@ -42,7 +42,7 @@ Visit the <a href="{{ site.baseurl }}/docs/roadmap/release-notes.html">release n
     <div class="timeline">
         <div class="container left">
             <div class="content">
-            <h4>{{ item.title }}</h4>
+            <h4 id="{{ item.version }}">{{ item.title }}</h4>
             {% if item.url %}
             <div class="roadmap-issues"><a class="btn btn-dark" href="{{ item.url }}">Github Project</a></div>
             {% endif %}
@@ -50,8 +50,8 @@ Visit the <a href="{{ site.baseurl }}/docs/roadmap/release-notes.html">release n
             <dl>
                 {% for child in item.children %}
                 <div class="roadmap-task">
-                    <div class="roadmap-task-content">
-                    <dt>{{ child.title }}</dt>
+                    <div class="roadmap-task-content {% if child.moved %}roadmap-task-moved{% endif %}">
+                    <dt>{{ child.title }}{% if child.moved %} (Moved to <a href="#{{ child.moved }}">{{ child.moved }}</a>){% endif %}</dt>
                     <dd>
                         <div class="roadmap-desc">{{ child.description }}</div>
                     </dd>
