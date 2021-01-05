@@ -6,7 +6,7 @@ style_class: quick-installation
 ---
 ### Pre-requisites
 
-Installing Open Data Hub requires OpenShift Container Platform version 4.2+. Documentation for OpenShift is located ([here](https://docs.openshift.com/container-platform/4.5/welcome/index.html)). All screenshots and instructions are from OpenShift 4.5.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials have also been tested on [Code Ready Containers](https://code-ready.github.io/crc/) (CRC) with cluster resources of 6 CPUS and 16GB of RAM.
+Installing Open Data Hub requires OpenShift Container Platform version 4.2+. Documentation for OpenShift is located ([here](https://docs.openshift.com/container-platform/4.5/welcome/index.html)). All screenshots and instructions are from OpenShift 4.5.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials have also been tested on [Code Ready Containers](https://code-ready.github.io/crc/) (CRC) with cluster resources [configured](https://code-ready.github.io/crc/#configuring-the-virtual-machine_gsg) for 6 CPUS and 16GB of RAM.
 
 We will not be installing optional components such as Argo, Seldon, AI Library, or Kafka to avoid using too many resources in case your cluster is small.
 
