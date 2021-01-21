@@ -10,16 +10,15 @@ the Open Data Hub team has verified that JupyterHub can successfully access the 
 ### Prerequisites
 *   OpenShift cluster with GPU(s) enabled
 
-    *   Enabling GPUs in OpenShift 4.2+ can be achieved by deploying Node Feature Discovery (NFD) Operator and NVIDIA GPU Operator. Please follow NVIDIA GPU OpenShift installation instructions [here](https://docs.nvidia.com/datacenter/kubernetes/openshift-on-gpu-install-guide/). At this time there are known issues with this installation as documented in these two Bugzilla issues: [Issue1](https://bugzilla.redhat.com/show_bug.cgi?id=1905714), [Issue2](https://bugzilla.redhat.com/show_bug.cgi?id=1907722).
+    *   Enabling GPUs in OpenShift 4.2+ can be achieved by deploying Node Feature Discovery (NFD) Operator and NVIDIA GPU Operator. Please follow NVIDIA GPU OpenShift installation instructions [here](https://docs.nvidia.com/datacenter/kubernetes/openshift-on-gpu-install-guide/) and refer to the section on Red Hat entitlements if you encounter errors related to `dnf` package installation errors. If you encounter any issue related to this operator, please check your issue against the list open bugs in [bugzilla](https://bugzilla.redhat.com/buglist.cgi?bug_status=__open__&classification=Red%20Hat&component=Special%20Resource%20Operator&list_id=11632255&product=OpenShift%20Container%20Platform&query_format=advanced) for the NVIDIA GPU operator running on OpenShift.
 
         The [Node Feature Discovery](https://github.com/openshift/cluster-nfd-operator) operator is responsible for discovering and labeling hardware (GPU(s) in this case) features available on each node.
         The [NVIDIA GPU Operator](https://github.com/NVIDIA/gpu-operator) will setup and install the necessary drivers to enable the use of GPU(s) as compute resource.
 
-       
 
 ### Configuring the JupyterHub component
 
-To properly configure the `jupytherhub` component to use GPUs, please enable `cuda` images by uncommenting the `cuda` overlay in the `KFDef` file as seen below. 
+To properly configure the `jupytherhub` component to use GPUs, please enable `cuda` images by uncommenting the `cuda` overlay in the `KFDef` file as seen below.
 ```
 - kustomizeConfig:
     overlays:
