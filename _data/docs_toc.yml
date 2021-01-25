@@ -87,6 +87,9 @@ toc:
       - title: Customizing Installation
         url: /docs/administration/installation-customization/customization.html
         phony: true
+        children:
+          - title: Adding Custom Notebook Images
+            url: /docs/administration/installation-customization/add-custom-image.html
       - title: Advanced Installation
         url: /docs/administration/advanced-installation/optional.html
         phony: true
