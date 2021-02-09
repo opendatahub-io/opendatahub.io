@@ -7,12 +7,98 @@ permalink: /docs/advanced-tutorials/data-exploration
 Pre-requisites
 ------
 
-This tutorial requires that you followed the [basic tutorial]({{site.baseurl}}/docs/getting-started/basic-tutorial). Make sure you enabled the following components in Open Data Hub CR:
+This tutorial requires that you followed the [basic tutorial]({{site.baseurl}}/docs/getting-started/basic-tutorial) and added the following components to your ODH deployment using the KfDef shown below:
 
 * spark-operator
-* data-catalog
+* hue
+* thrift-server
+* ceph-nano
 
-All screenshots and instructions are from OpenShift 4.2.
+
+```yaml
+# ODH uses the KfDef manifest format to specify what components will be included in the deployment
+apiVersion: kfdef.apps.kubeflow.org/v1
+kind: KfDef
+metadata:
+  name: opendatahub
+spec:
+  applications:
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: odh-common
+      name: odh-common
+    # Create the SecurityContextConstraint to grant the ceph-nano service account anyuid permissions
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: ceph/object-storage/scc
+      name: ceph-nano-scc
+    # Deploy ceph-nano for minimal object storage running in a pod
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: ceph/object-storage/nano
+      name: ceph-nano
+    # Deploy Radanalytics Spark Operator
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: radanalyticsio/spark/cluster
+      name: radanalyticsio-spark-cluster
+    # Deploy Open Data Hub JupyterHub
+    - kustomizeConfig:
+        parameters:
+          - name: s3_endpoint_url
+            value: s3.odh.com
+        repoRef:
+          name: manifests
+          path: jupyterhub/jupyterhub
+      name: jupyterhub
+    # Deploy addtional Open Data Hub Jupyter notebooks
+    - kustomizeConfig:
+        overlays:
+          - additional
+        repoRef:
+          name: manifests
+          path: jupyterhub/notebook-images
+      name: notebook-images
+    # Deploy Hue with configuration to access the ceph-nano object store
+    - kustomizeConfig:
+        # These parameters are required to allow access to object storage provided by ceph-nano
+        parameters:
+          - name: s3_is_secure
+            value: "false"
+          - name: s3_endpoint_url
+            value: "ceph-nano-0"
+          - name: s3_credentials_secret
+            value: ceph-nano-credentials
+        repoRef:
+          name: manifests
+          path: hue/hue
+      name: hue
+    # Deploy Thriftserver with configuration to access the ceph-nano object store
+    - kustomizeConfig:
+        overlays:
+          - create-spark-cluster
+        # These parameters are required to allow access to object storage provided by ceph-nano
+        parameters:
+          - name: spark_url
+            value: "spark://spark-cluster-thriftserver"
+          - name: s3_endpoint_url
+            value: "http://ceph-nano-0"
+          - name: s3_credentials_secret
+            value: ceph-nano-credentials
+        repoRef:
+          name: manifests
+          path: thriftserver/thriftserver
+      name: thriftserver
+  repos:
+    - name: manifests
+      uri: 'https://github.com/opendatahub-io/odh-manifests/tarball/v1.0.0'
+```
+
+All screenshots and instructions are from OpenShift 4.6.
 
 Exploring Data Catalog
 ------
@@ -25,7 +111,6 @@ below a picture of the simplified architecture of Data Catalog:
 
 These are the components that are part of Data Catalog:
 
-* Hive Metastore, responsible for maintaining the table metadata created by the user to query the data stored in Ceph/S3
 * Spark SQL Thrift server to enable an endpoint where clients can connect using an ODBC/JDBC connection
 * Cloudera Hue as a Data Exploration tool to explore the Data Lake, create tables and query them. You can 
 also create dashboards using the tables managed by Hive Metastore
@@ -92,7 +177,7 @@ WITH SERDEPROPERTIES (
 "escapeChar" = "\\" 
 )
 TBLPROPERTIES("skip.header.line.count"="1")
-LOCATION 's3a://<csv-file-location>'
+LOCATION 's3a://<bucket-name>/<csv-file-rootdir>'
 ```
 **NOTE:** The `LOCATION` statement needs a path to the directory where the file is stored, not the file path.
 
