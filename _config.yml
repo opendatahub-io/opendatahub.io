@@ -12,7 +12,7 @@ description: >
   OpenDataHub
 #baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://opendatahub.io" # the base hostname & protocol for your site
-repo: https://gitlab.com/opendatahub
+repo: https://github.com/opendatahub-io
 email_list: https://lists.opendatahub.io/admin/lists/
 #twitter_username: aicoe
 #github_username:  aicoe
