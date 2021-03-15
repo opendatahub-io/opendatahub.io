@@ -1,8 +1,3 @@
-![Build Status](https://gitlab.com/opendatahub/opendatahub.io/badges/master/build.svg)
-![Jekyll Version](https://img.shields.io/gem/v/jekyll.svg)
-
----
-
 # OpenDataHub.io Website
 
 ## Creating an Inline Announcement
