@@ -28,7 +28,7 @@ The following is a list of components that are available in v1.0.0 release of od
 | [Airflow](https://github.com/opendatahub-io/odh-manifests/tree/master/airflow) | v1.10.11 | Workflow Management | Manifests |
 | [Grafana](https://github.com/opendatahub-io/odh-manifests/tree/master/grafana) | v7.1.1 | Monitoring Dashboards | OLM |
 | [JupyterHub](https://github.com/opendatahub-io/odh-manifests/tree/master/jupyterhub) | v0.1.5  | Data science tools | Manifests |
-| [Elyra](https://github.com/elyra-ai) | v0.0.5  | Data science tools | Manifests |
+| [Elyra](https://github.com/elyra-ai/elyra) | v1.3.3  | Data science tools | Manifests |
 | [Kafka Strimzi](https://github.com/opendatahub-io/odh-manifests/tree/master/kafka) | v2.4.0 | Distributed Streaming | OLM |
 | [Argo](https://github.com/opendatahub-io/odh-manifests/tree/master/odhargo) | v2.12.5 | Workflow Engine | Manifests |
 | [Prometheus](https://github.com/opendatahub-io/odh-manifests/tree/master/prometheus) | v2.16.0 | Monitoring | OLM |
