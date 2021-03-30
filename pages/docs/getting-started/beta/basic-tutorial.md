@@ -11,7 +11,7 @@ This Tutorial requires a basic installation of Open Data Hub with Spark and Jupy
 
 All screenshots and instructions are from OpenShift 4.4.  For the purposes of this tutorial, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials have also been tested on [Code Ready Containers](https://code-ready.github.io/crc/) with 16GB of RAM.
 
-The [source]({{site.repo}}/opendatahub.io/blob/master/assets/files/tutorials/basic/basic_tutorial_notebook.ipynb) for the following notebook is available in GitLab with comments for easy viewing.
+The [source]({{site.repo}}/opendatahub.io/blob/master/assets/files/tutorials/basic/basic_tutorial_notebook.ipynb) for the following notebook is available in GitHub with comments for easy viewing.
 
 ### Exploring JupyterHub and Spark
 
