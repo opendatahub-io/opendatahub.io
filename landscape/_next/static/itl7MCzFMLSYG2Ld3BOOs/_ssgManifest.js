@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fembed","\u002Facquisitions","\u002Ffullscreen\u002F[[...landscape]]","\u002Fpages\u002F[page]","\u002F[[...landscape]]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

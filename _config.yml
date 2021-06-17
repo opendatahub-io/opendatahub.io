@@ -28,6 +28,12 @@ permalink: /news/:year-:month-:day/:title:output_ext
 plugins:
 - jekyll-feed
 
+include: 
+  - _next
+  - _app
+  - _buildManifest.js
+  - _ssgManifest.js
+
 exclude:
   - design
   - "README.md"
