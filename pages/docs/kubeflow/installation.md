@@ -43,7 +43,7 @@ To install Kubeflow on OpenShift 4.2(or later) please follow the steps below:
 
 1. After the Open Data Hub operator is installed, follow the steps to `Create a New Open Data Hub Deployment` in the Open Data Hub [Quick Installation](../getting-started/quick-installation.html#create-a-new-open-data-hub-deployment) guide.
 
-   **NOTE**: During these steps, you will need to use the [kfctl_openshift_<versionnumber>.yaml](https://github.com/kubeflow/manifests/tree/master/kfdef) KfDef in the kubeflow/manifests repo that we have curated specifically for installing Kubeflow. Additionally, you will need to create the Open Data Hub instance in the namespace `kubeflow`.
+   **NOTE**: During these steps, you will need to use the [kfctl_openshift_*.yaml](https://github.com/kubeflow/manifests/tree/master/distributions/kfdef) KfDef in the kubeflow/manifests repo that we have curated specifically for installing Kubeflow. Additionally, you will need to create the Open Data Hub instance in the namespace `kubeflow`.
 
 1. Verify installation
     ```bash

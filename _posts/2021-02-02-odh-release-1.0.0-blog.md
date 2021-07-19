@@ -13,8 +13,8 @@ Open Data Hub 1.0.0 brings in many new features and components. Components from 
 Legacy option for installing ODH has been removed as the team focuses on ODH Beta where all the new features and bug fixes will be included moving forward. 
 An important note to users, ODH 1.0 includes three example KFDefs for installation on OpenShift 4.3 (or later) :
 1. ODH components [KFDef](https://raw.githubusercontent.com/opendatahub-io/odh-manifests/master/kfdef/kfctl_openshift.yaml)
-2. Kubeflow 1.2 [KFDef](https://raw.githubusercontent.com/kubeflow/manifests/master/kfdef/kfctl_openshift.v1.2.0.yaml)
-3. Kubeflow from master that included KF Serving and KF Pipeline on Tekton [KFDef](https://raw.githubusercontent.com/kubeflow/manifests/master/kfdef/kfctl_openshift.master.kfptekton.yaml)
+2. Kubeflow 1.2 [KFDef](https://raw.githubusercontent.com/kubeflow/manifests/master/distributions/kfdef/kfctl_openshift.v1.2.0.yaml)
+3. Kubeflow from master that included KF Serving and KF Pipeline on Tekton [KFDef](https://raw.githubusercontent.com/kubeflow/manifests/master/distributions/kfdef/kfctl_openshift.master.kfptekton.yaml)
 
 For detailed information on Kubeflow v1.2 components please visit the official Kubeflow 1.2 release [blog](https://blog.kubeflow.org/release/official/2020/11/18/kubeflow-1.2-blog-post.html)
 
