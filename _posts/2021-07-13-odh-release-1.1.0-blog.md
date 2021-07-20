@@ -12,8 +12,8 @@ What is new?
 In Open Data Hub version 1.1.0 the community focused on hardening the JupyterHub deployment, providing new and improved JupyterHub spawner UI, integrating Open Data Hub dashboard with Openshift oauth, adding [Kubeflow 1.3 Openshift distribution stack](https://github.com/kubeflow/manifests/tree/v1.3.0/distributions/stacks/openshift) along with adding new components such as Trino and Openshift Pipelines.  ODH version 1.1.0 also comes with an Operator Level 4 verification indicating "Deep Insight" status after enabling more monitoring and logging. 
  
 An important note to users, ODH 1.1.0 includes two example KFDefs for installation on OpenShift 4.3 (or later) :
-1. ODH components [KFDef](https://raw.githubusercontent.com/opendatahub-io/odh-manifests/master/kfdef/kfctl_openshift.yaml)
-2. Kubeflow 1.3 [KFDef](https://raw.githubusercontent.com/kubeflow/manifests/v1.3.0/distributions/kfdef/kfctl_openshift_v1.3.0.yaml)
+1. ODH components [KFDef](https://raw.githubusercontent.com/opendatahub-io/odh-manifests/v1.1.0/kfdef/kfctl_openshift.yaml)
+2. Kubeflow 1.3 [KFDef](https://raw.githubusercontent.com/kubeflow/manifests/v1.3-branch/distributions/kfdef/kfctl_openshift_v1.3.0.yaml)
 
 For detailed information on Kubeflow v1.3 components please visit the official Kubeflow 1.3 release [blog](https://blog.kubeflow.org/kubeflow-1.3-release/)
 
