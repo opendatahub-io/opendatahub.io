@@ -48,9 +48,9 @@ past:
       - title: JupyterHub
         description: Updates include new Spawner user interface,ability to customize and specify JupyterHub PostgreSQL parameters and new notebook images with JupyterLab.
       - title: Open Data Hub operator
-      description: Updates include support for Operator Level 4 (Deep Insights), new Prometheus metrics collection, new Grafana Dashboard and new status field to reflect operator installation status.
+        description: Updates include support for Operator Level 4 (Deep Insights), new Prometheus metrics collection, new Grafana Dashboard and new status field to reflect operator installation status.
       - title: Open Data Hub Dashboard
-      description: Integrated with Openshift Authentication to access the dashboard.
+        description: Integrated with Openshift Authentication to access the dashboard.
   - title: Open Data Hub 1.0 - January 2021
     version: 1.0
     url: https://github.com/orgs/opendatahub-io/projects/12
