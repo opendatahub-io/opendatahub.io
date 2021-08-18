@@ -46,7 +46,7 @@ past:
       - title: Trino
         description: Trino is a fast distributed SQL query engine that can integrate with multiple data sources such as S3, SQL databases, and NoSQL databases
       - title: JupyterHub
-	description: Updates include new Spawner user interface,ability to customize and specify JupyterHub PostgreSQL parameters and new notebook images with JupyterLab.
+        description: Updates include new Spawner user interface,ability to customize and specify JupyterHub PostgreSQL parameters and new notebook images with JupyterLab.
       - title: Open Data Hub operator
       description: Updates include support for Operator Level 4 (Deep Insights), new Prometheus metrics collection, new Grafana Dashboard and new status field to reflect operator installation status.
       - title: Open Data Hub Dashboard
