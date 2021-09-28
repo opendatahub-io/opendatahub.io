@@ -5,7 +5,7 @@ permalink: /docs/administration/advanced-installation/optional
 style_class: optional
 ---
 
-Before installing Argo, Seldon, Kafka, or AI Library, there are pre-requisites that must be installed before the Open Data Hub operator.  You must install several [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions) either through command line, or through the console.
+Before installing Argo, Seldon, or Kafka, there are pre-requisites that must be installed before the Open Data Hub operator.  You must install several [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions) either through command line, or through the console.
 
 
 ### CLI Installation
@@ -26,7 +26,7 @@ Before installing Argo, Seldon, Kafka, or AI Library, there are pre-requisites t
     customresourcedefinition.apiextensions.k8s.io/workflows.argoproj.io created
     ```
 
-1.  To prepare to install **Seldon** and [AI Library]({{ '/docs/ai-library/installation.html' | prepend: site.baseurl }}), install the [SeldonDeployment CRD](https://gitlab.com/opendatahub/opendatahub-operator/raw/v0.5.1/deploy/crds/seldon-deployment-crd.json)
+1.  To prepare to install **Seldon**, install the [SeldonDeployment CRD](https://gitlab.com/opendatahub/opendatahub-operator/raw/v0.5.1/deploy/crds/seldon-deployment-crd.json)
     ```bash
     $ oc apply -f https://gitlab.com/opendatahub/opendatahub-operator/raw/v0.5.1/deploy/crds/seldon-deployment-crd.json
     customresourcedefinition.apiextensions.k8s.io/seldondeployments.machinelearning.seldon.io created
@@ -46,7 +46,7 @@ Before installing Argo, Seldon, Kafka, or AI Library, there are pre-requisites t
 1.  To prepare to install **Argo**, install the workflow CRD.  Click `Create Custom Resource Definitions` copy the [argo-crd.yaml](https://gitlab.com/opendatahub/opendatahub-operator/blob/v0.5.1/deploy/crds/argo-crd.yaml) into the editing window, and click `Create`.
 ![Argo CRD]({{site.baseurl}}/assets/img/pages/docs/adv-install/create-argo-crd.png "Argo CRD")
 
-1.  To prepare to install **Seldon** and [AI Library]({{ '/docs/ai-library/installation.html' | prepend: site.baseurl }}), install the SeldonDeployment CRD.  Click `Create Custom Resource Definitions` copy the [seldon-deployment-crd.json](https://gitlab.com/opendatahub/opendatahub-operator/blob/v0.5.1/deploy/crds/seldon-deployment-crd.json) into the editing window, and click `Create`.
+1.  To prepare to install **Seldon**, install the SeldonDeployment CRD.  Click `Create Custom Resource Definitions` copy the [seldon-deployment-crd.json](https://gitlab.com/opendatahub/opendatahub-operator/blob/v0.5.1/deploy/crds/seldon-deployment-crd.json) into the editing window, and click `Create`.
 ![Seldon CRD]({{site.baseurl}}/assets/img/pages/docs/adv-install/create-seldon-crd.png "Seldon CRD")
 
 1.  In preparation to deploy a **Kafka** cluster, install [Strimzi](https://strimzi.io/).

@@ -61,7 +61,6 @@ August 2019
 | Hive Metastore | 1.2.1+ | OpenShift 3.1x and 4.x | Metadata cataloging |
 | [Cloudera Hue](http://gethue.com/) | 4.4+ | OpenShift 3.1x and 4.x | Data exploration |
 | [Ceph Rook](https://rook.io/docs/rook/v0.8/ceph-quickstart.html) Operator Integration | 0.9.3 | OpenShift 3.1x and 4.x | Storage |
-| Open Data Hub AI Library | 0.1 | OpenShift 3.1x and 4.x | Data science tools |
 {:class="table table-bordered table-striped"}
 
 Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  Ceph-nano is being replaced by Ceph Rook, the best way to deploy and manage Ceph Storage on OpenShift. For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts to query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
