@@ -46,15 +46,6 @@ toc:
         url: /arch.html#installation-and-setup
       - title: Alerting and Dashboarding
         url: /arch.html#alerting-and-dashboarding
-  - title: AI Library
-    url: /arch.html#ai-library
-    children:
-      - title: Description
-        url: /arch.html#description-1
-      - title: Installation
-        url: /arch.html#installation-1
-      - title: Available Models
-        url: /arch.html#available-models
   - title: Conclusion
     url: /arch.html#conclusion
   - title: Contributers

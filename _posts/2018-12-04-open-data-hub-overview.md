@@ -15,10 +15,6 @@ What is the Open Data Hub?
 
 Built on OpenShift, Open Data Hub uses the leading Kubernetes platform to deliver a meta-project that integrates Open Source components into a practical service-oriented AI and ML solution.  Organizations and IT departments can deploy Open Data Hub as a centralized self-service solution for analytic and data science workloads.
 
-AI Library
-------
-
-Open Data Hub deploys with a set of pre-defined AI models available for use.  Try the services out and get some value out of your data immediately without having to accumulate massive amounts of training data.  Current models available include sentiment analysis, test flake analysis and more.
 
 Data Science and ETL Tools
 ------
@@ -68,7 +64,6 @@ Tools
 ------
 
 <b>Available in Open Data Hub</b>
-* AI Library
 * [Ceph Object Storage](https://ceph.com/ceph-storage/object-storage/)
 * [Spark](https://spark.apache.org/)
 * [JuypyterHub](http://jupyter.org/hub)

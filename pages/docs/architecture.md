@@ -20,8 +20,6 @@ The first phase of an AI workflow is initiated by Data Engineers that acquire th
 
 Open Data Hub also provides services for model creation, training and validation. Apache Spark™([https://spark.apache.org/](https://spark.apache.org/)) operator is provided as part of ODH installation for distributed data ingestion, transformation and model functionalities running natively on OpenShift. For the Data Scientist development environment, ODH provides Jupyter Hub and Jupyter Notebook images running natively distributed on OpenShift. ODH roadmap includes tools for monitoring services as discussed in the section below. These tools will include the ability for natively monitoring AI services and served models on OpenShift using Prometheus and Grafana.
 
-**AI Library** provides REST interface access to pre-trained and validated served models for several AI based services including sentiment analysis, flake analysis and duplicate bug detection.  A complete look at the AI Library architecture is available in the  [architecture document]({{'/assets/files/pages/docs/ai-lib-arch.pdf' | prepend: site.baseurl }}){:target="_blank"}.
-
 ##  Open Data Hub Platform
 
 Open Data Hub platform is a centralized self-service solution for analytic and data science distributed workloads. It is a collection of open source tools and services natively running on OpenShift.
@@ -64,10 +62,6 @@ All the tools and components listed below are currently being used as part of Re
 
 
 **Artificial Intelligence and Machine Learning: Model Lifecycle** tools provide functionalities to serve the model and collect essential metrics needed to monitor the lifecycle of the model. It allows constant evaluation of model performance which can lead to the need for retraining or re-validation. [Seldon](https://www.seldon.io/) is a tool that provides model hosting and metric collection from both the model itself and the component serving the model. MLflow provides parameter tracking for models and deployment functionalities.
-
-
-
-**Artificial Intelligence and Machine Learning: ML Applications** such as the Open Data Hub AI Library provides pre-trained models such as sentiment analysis and topic modeling. These models can be deployed and used for prediction out of the box making it effortlessly accessible to users.
 
 
 

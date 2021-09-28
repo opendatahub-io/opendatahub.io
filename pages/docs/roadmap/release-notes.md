@@ -35,7 +35,6 @@ style_class: release-notes
 
 | Technology | Version | Category | Deployment Method |
 |--|--|--|--|
-| [AI Library](https://github.com/opendatahub-io/odh-manifests/tree/master/ai-library) | 0.6.0 | Machine Learning | Manifests |
 | [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.1.0 | Model Serving | OLM |
 {:class="table table-bordered"}
 
