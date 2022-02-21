@@ -46,3 +46,5 @@ Additional videos will be available on the OpenShift youtube channel <a class="e
 
 ## Audio
 - [Innovate @Open podcast](https://grhpodcasts.s3.amazonaws.com/opendatahub1908.mp3)
+
+{% include next-link.html label="Troubleshooting" url="/docs/troubleshooting.html" %}

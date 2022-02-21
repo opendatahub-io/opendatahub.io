@@ -1,61 +1,18 @@
 toc:
   - title: Introduction
     url: /docs.html
-  - title: Getting Started
-    url: /docs/getting-started/quick-installation.html
-    phony: true
     children:
-      - title: Quick Installation
-        url: /docs/getting-started/quick-installation.html
-      - title: Basic Tutorial
-        url: /docs/getting-started/basic-tutorial.html
-      - title: Legacy
+      - title: High Level Architecture
+        url: /docs/intro/architecture.html
         children:
-          - title: Quick Installation
-            url: /docs/getting-started/legacy/quick-installation.html
-          - title: Basic Tutorial
-            url: /docs/getting-started/legacy/basic-tutorial.html
-  - title: Advanced Tutorials
-    url: /docs/advanced-tutorials/data-exploration.html
-    phony: true
-    children:
-#      - title: JupyterHub
-#        url: /docs/advanced-tutorials/jupyterhub.html
-#      - title: HDFS Data
-#        url: /docs/advanced-tutorials/hdfs.html
-#      - title: Data Warehouses
-#        url: /docs/advanced-tutorials/warehouse.html
-#      - title: Ceph
-#        url: /docs/advanced-tutorials/ceph.html
-#      - title: Spark
-#        url: /docs/advanced-tutorials/spark.html
-#      - title: Seldon
-#        url: /docs/advanced-tutorials/seldon.html
-#      - title: Argo
-#        url: /docs/advanced-tutorials/argo.html
-      - title: Data Exploration
-        url: /docs/advanced-tutorials/data-exploration.html
-#      - title: Kafka
-#        url: /docs/advanced-tutorials/kafka.html
-#      - title: Combined
-#        url: /docs/advanced-tutorials/combined.html
-# Uncomment when Kubeflow docs are ready
-  - title: Kubeflow
-    url: /docs/kubeflow.html
-    phony: true
-    children:
-      - title: Overview
-        url: /docs/kubeflow.html
-      - title: Installation
-        url: /docs/kubeflow/installation.html
-      - title: Combining components
-        url: /docs/kubeflow/mixing.html
-#      - title: Components
-#       url: /docs/kubeflow/components/jupyter.html
-#       phony: true
-#        children:
-#          - title: Jupyter Notebooks
-#            url: /docs/kubeflow/components/jupyter.html
+          - title: Technology Landscape
+            url: /docs/intro/landscape.html
+            phony: true
+      - title: ODH Components
+        url: /docs/components.html
+        children:
+          - title: Jupyter Notebooks
+            url: /docs/components/jupyter.html
 #          - title: Hyperparameter Tuning
 #            url: /docs/kubeflow/components/hyperparameter.html
 #          - title: Pipelines
@@ -66,71 +23,44 @@ toc:
 #            url: /docs/kubeflow/components/training.html
 #          - title: Miscellaneous
 #            url: /docs/kubeflow/components/misc.html
-  - title: AI Library
-    url: /docs/ai-library.html
-    phony: true
-    children:
-      - title: Overview
-        url: /docs/ai-library.html
-      - title: Installation
-        url: /docs/ai-library/installation.html
-      - title: Services
-        url: /docs/ai-library/services.html
-#      - title: Custom Models
-#        url: /docs/ai-library/custom-models.html
-#      - title: API
-#        url: /docs/ai-library/api.html
-  - title: Administration
-    url: /docs/administration/installation-customization/customization.html
-    phony: true
-    children:
-      - title: Customizing Installation
-        url: /docs/administration/installation-customization/customization.html
-        phony: true
-        children:
-          - title: Adding Custom Notebook Images
-            url: /docs/administration/installation-customization/add-custom-image.html
-      - title: Advanced Installation
-        url: /docs/administration/advanced-installation/optional.html
-        phony: true
-        children:
-          - title: Optional Components
-            url: /docs/administration/advanced-installation/optional.html
-          - title: Object Storage
-            url: /docs/administration/advanced-installation/object-storage.html
-          - title: GPU Enablement
-            url: /docs/administration/advanced-installation/gpu.html
-#      - title: Upgrading
-#        url: /docs/administration/upgrading.html
-#      - title: Monitoring
-#        url: /docs/administration/monitoring.html
-#      - title: Security
-#        url: /docs/administration/security.html
-#      - title: Troubleshooting
-#        url: /docs/administration/troubleshooting.html
-  - title: Architecture
-    url: /docs/architecture.html
-    phony: true
-    children:
-      - title: Technology Landscape
-        url: /docs/landscape.html
-        phony: true
-  - title: Roadmap
-    url: /docs/roadmap/future.html
-    phony: true
-    children:
-      - title: Future
-        url: /docs/roadmap/future.html
+      - title: Roadmap
+        url: /docs/intro/roadmap.html
       - title: Release Notes
-        url: /docs/roadmap/release-notes.html
+        url: /docs/intro/release-notes.html
+  - title: Getting Started
+    url: /docs/getting-started/odh-installation.html
+    phony: true
+    children:
+      - title: ODH Operator Installation
+        url: /docs/getting-started/odh-installation.html
+  - title: Data Ingestion
+    url: /docs/data-ingestion.html
+    children:
+        - title: Kafka
+          url: /docs/data-ingestion/kafka.html
+        - title: Spark
+          url: /docs/data-ingestion/spark.html
+  - title: Data Storage
+    url: /docs/data-storage.html
+  - title: Data Exploration
+    url: /docs/data-exploration.html
+    children:
+      - title: SparkSQL Thrift Server
+        url: /docs/data-exploration/thrift.html
+      - title: Trino
+        url: /docs/data-exploration/trino.html
+  - title: Data Visualization
+    url: /docs/data-visualization.html
+  - title: Model Development
+    url: /docs/model-development.html
+  - title: MLOps Pipelines
+    url: /docs/mlops-pipelines.html
+  - title: Model Deployment
+    url: /docs/model-deployment.html
+  - title: Monitoring
+    url: /docs/monitoring.html
   - title: Additional Resources
     url: /docs/additional.html
-    children:
-      - title: Community
-        url: /docs/additional.html#community
-      - title: Videos
-        url: /docs/additional.html#videos
-      - title: Audio
-        url: /docs/additional.html#audio
-#  - title: FAQ
-#    url: /docs/faq.html
+  - title: Troubleshooting
+    url: /docs/troubleshooting.html
+
