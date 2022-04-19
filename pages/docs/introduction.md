@@ -18,6 +18,7 @@ Open Data Hub includes several open source components, which can be individially
 - JupyterHub
 - Prometheus
 - Seldon
+- Pachyderm
 
 For further information refer to the [architecture]({{ '/docs/architecture.html' | prepend: site.baseurl }}) and [release notes]({{ '/docs/roadmap/release-notes.html' | prepend: site.baseurl }}).
 
