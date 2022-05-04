@@ -1,4 +1,51 @@
 future:
+  - title: Open Data Hub 1.3 - (May/June 2022)
+    version: 1.3
+    children:
+      - title: Tutorials and website cleanup
+        url: https://github.com/opendatahub-io/opendatahub.io/projects/1
+      - title: Dashboard updates
+        description: Admin - BYON + Cluster Settings
+      - title: Bring your own notebooks (with and without Pipelines)
+        description: Allow admins the flexibility to provide to users their own notebook images
+      - title: Model Serving
+        description: Implementation of Model Mesh using Oauth
+      - title: Community governance model
+        url: https://github.com/opendatahub-io/opendatahub-community/issues/11
+      - title: Kubeflow 1.5 support
+        url: https://github.com/opendatahub-io/manifests/projects/2
+        description: Includes ability to install Kubeflow v1.5.0 components on OpenShift <br>
+          Support for the integration of Service Mesh with Kubeflow v1.5 on OpenShift
+
+  - title: Open Data Hub 1.4 - (June/July 2022)
+    version: 1.4
+    children:
+      - title: Model Serving
+        description: Updates to the etcd and minio setups
+      - title: Support for ODH Notebook Controller
+        url: https://github.com/opendatahub-io/odh-dashboard/projects/1
+      - title: Admin UI feature(s)
+        description: Add UI support for admin configurations
+      - title: ODH Re-architecture - Phase 1
+        description: Categorize existing components (as of ODH v1.3.0) into support Tiers for updates/deprecation and designate maintainers
+             Tiered approach <br>
+             - Tier 0 - ODH Core <br>
+             - Tier 1 - Long Term community support with assigned MAINTAINERS and full test suite <br>
+             - Tier 2 - All other components <br>
+      - title: Deployment of Kubeflow Pipelines Standalone
+
+  - title: Open Data Hub 1.5 - (July/August 2022)
+    version: 1.5
+    children:
+      - title: Kubeflow 1.6 support
+        url: https://github.com/opendatahub-io/manifests/projects/1
+      - title: Custom notebook Images
+        description: Includes the ability for a user so request specific packages and libraries
+      - title: ODH Re-architecture - Phase 2 
+        description: ODH Core - Integrated Operator, Dashboard and notebook controller
+      - title: Integration of Kubeflow Pipelines with ODH dashboard
+ 
+past:
   - title: Open Data Hub 1.2 - Q4 2021
     version: 1.2
     children:
@@ -13,28 +60,7 @@ future:
         description: Architect an integrated authentication solution for ODH and KF.
       - title: KF 1.3.1 OCP Stack update.
         description: This includes updating the Kubeflow 1.3.1 openshift stack to work on OCP 4.4+
-      - title: Nvidia Triton Server upgrade
-        description: This includes upgrading Triton Server that comes with KFServing and creating demos
-  - title: Open Data Hub 1.3 - Q1 2022
-    version: 1.3
-    children:
-      - title: KF Integration with RH Serverless.
-        description: This includes substituting Knative with Serverless and making sure KFServing is working.
-      - title: KF 1.4 OCP Stack update
-        description: Upgrading the KF OCP stack to KF 1.4, this will also include developing a development process to do all this work on opendatahub-io github KF fork.
-      - title: Kubeflow and ODH Disconnected
-        description: Enable installation of Kubeflow and ODH in a disconnected cluster.
-      - title: ODH+ KF authentication integration.
-        description: This includes seamless authentication from ODH dashboard to all components including Kubeflow
-      - title: Integrating TRINO with Hue and Superset
-        description: This includes replacing Thrift Server with TRINO
-      - title: Enable KF Multiuser for KF Pipelines (Tekton, Argo).
-        description: Today we install the single user pipelines where they run in Kubeflow namespace. Need to allow users to run pipelines in their own namespace. 
-      - title: ODH+ KF authentication Implementation
-        description: Implement the integrated authentication solution designed in ODH 1.2.0
-  
         
-past:
   - title: Open Data Hub 1.1 - July 2021
     version: 1.1
     children:
