@@ -5,7 +5,8 @@ future:
       - title: Tutorials and website cleanup
         url: https://github.com/opendatahub-io/opendatahub.io/projects/1
       - title: Dashboard updates
-        description: Admin - BYON + Cluster Settings
+        url: https://github.com/opendatahub-io/odh-dashboard/projects/2
+        description: Admin -  Bring your own notebooks+ Cluster Settings
       - title: Bring your own notebooks (with and without Pipelines)
         description: Allow admins the flexibility to provide to users their own notebook images
       - title: Model Serving
