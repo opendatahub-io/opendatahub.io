@@ -7,7 +7,7 @@ future:
       - title: Dashboard updates
         url: https://github.com/opendatahub-io/odh-dashboard/projects/2
         description: Admin -  Bring your own notebooks+ Cluster Settings
-      - title: Bring your own notebooks (with and without Pipelines)
+      - title: Bring your own notebooks
         description: Allow admins the flexibility to provide to users their own notebook images
       - title: Model Serving
         description: Implementation of Model Mesh using Oauth
