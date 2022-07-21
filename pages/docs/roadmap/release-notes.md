@@ -5,51 +5,98 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v1.3.0 - July 2022
+
+| Technology | Version | Category |
+|--|--|--|--|
+| [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-dashboard) | v2.0 | Dashboard |
+| [Elyra Notebooks](https://github.com/elyra-ai) | 3.9.1 | Data Science Tools |
+| Support for Kubeflow 1.5 on [OpenShift](https://raw.githubusercontent.com/opendatahub-io/manifests/v1.5-branch-openshift/openshift/kfdef/kfctl_openshift_v1.5.0_odh.yaml) | 1.5 |  AI/ML |
+{:class="table table-bordered"}
+
+### Open Data Hub version v1.2.0 - April 2022
+
+| Technology | Version | Category |
+|--|--|--|--|
+| [Elyra Notebooks](https://elyra.readthedocs.io/en/latest/getting_started/changelog.html#release-3-6-0-02-08-2022) | 3.6.0 | Data Science Tools |
+| [Superset](https://github.com/apache/superset/blob/1.4.1/CHANGELOG.md) | 1.4.1 | Data Exploration and Visualization Tool |
+| Service Mesh with Kubeflow v1.4 on OpenShift ([kfdef](https://raw.githubusercontent.com/opendatahub-io/manifests/v1.4.0-rc.2-openshift/openshift/kfdef/kfctl_openshift_v1.4.0_servicemesh.yaml)) | 1.4 | AI/ML |
+{:class="table table-bordered"}
+
+### Open Data Hub version v1.1.2 - February 2022
+
+| Technology | Version | Category |
+|--|--|--|--|
+| Support for Kubeflow 1.4 on [OpenShift](https://raw.githubusercontent.com/opendatahub-io/manifests/v1.4.0-rc.2-openshift/openshift/kfdef/kfctl_openshift_v1.4.0_odh.yaml) | 1.4 |  AI/ML |
+|  Update addtional components affected by the deprecation of kubernetes apis in OpenShift 4.9 (k8s v1.22) | N/A |  N/A |
+{:class="table table-bordered"}
+
+### Open Data Hub version v1.1.1 - January 2022
+
+| Technology | Version | Category |
+|--|--|--|--|
+|  Update components affected by the deprecation of kubernetes apis in OpenShift 4.9 (k8s v1.22) | N/A |  N/A |
+{:class="table table-bordered"}
+
+### Open Data Hub version v1.1.0 - July 2021
+
+| Technology | Version | Category |
+|--|--|--|--|
+| Support for Kubeflow 1.3 on [OpenShift](https://raw.githubusercontent.com/kubeflow/manifests/v1.3-branch/distributions/kfdef/kfctl_openshift_v1.3.0.yaml) | 1.3 |  AI/ML |
+{:class="table table-bordered"}
+
+### Open Data Hub version v1.0.0 - February 2021
+
+| Technology | Version | Category |
+|--|--|--|--|
+| Support for Kubeflow 1.2 on [OpenShift](https://github.com/kubeflow/manifests/blob/v1.2-branch/kfdef/kfctl_openshift.v1.2.0.yaml) | 1.2 |  AI/ML |
+{:class="table table-bordered"}
+
 ### Open Data Hub version v0.9.0 - November 2020
 
 | Technology | Version | Category | Deployment Method |
 |--|--|--|--|
-| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.1 |  AI/ML | Manifests |
-| [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-manifests/tree/master/odh-dashboard) | v0.9 | Dashboard | Manifests |
-| [Elyra Notebooks](https://github.com/elyra-ai) | 0.0.5 | Data Science Tools | Manifests |
-| [Ceph Nano Object Storage](https://github.com/opendatahub-io/odh-manifests/tree/master/odh-dashboard) | v0.7 | Object Storage | Manifests |
+| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.1 |  AI/ML |
+| [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-manifests/tree/master/odh-dashboard) | v0.9 | Dashboard |
+| [Elyra Notebooks](https://github.com/elyra-ai) | 0.0.5 | Data Science Tools |
+| [Ceph Nano Object Storage](https://github.com/opendatahub-io/odh-manifests/tree/master/odh-dashboard) | v0.7 | Object Storage |
 {:class="table table-bordered"}
 
 ### Open Data Hub version v0.8.0 - September 2020
 
 | Technology | Version | Category | Deployment Method |
 |--|--|--|--|
-| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.0 |  AI/ML | Manifests |
-| [Elyra Notebooks](https://github.com/elyra-ai) | 0.0.2 | Data Science Tools | Manifests |
+| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.0 |  AI/ML |
+| [Elyra Notebooks](https://github.com/elyra-ai) | 0.0.2 | Data Science Tools |
 {:class="table table-bordered"}
 
 ### Open Data Hub version v0.7.0 - July 2020
 
 | Technology | Version | Category | Deployment Method |
 |--|--|--|--|
-| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.0 |  AI/ML | Manifests |
-| [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.2.0 | Model Serving | OLM |
+| Support for Kubeflow on [OpenShift](https://github.com/opendatahub-io/manifests/tree/v1.0-branch-openshift) | 1.0 |  AI/ML |
+| [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.2.0 | Model Serving |
 {:class="table table-bordered"}
 
 ### Open Data Hub version v0.6.1 - May 2020
 
 | Technology | Version | Category | Deployment Method |
 |--|--|--|--|
-| [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.1.0 | Model Serving | OLM |
+| [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.1.0 | Model Serving |
 {:class="table table-bordered"}
 
 ### Open Data Hub version v0.6.0 - May 2020 (redesign on top of Kubeflow)
 
 | Technology | Version | Category | Deployment Method | 
 |--|--|--|--|
-| [Airflow](https://github.com/opendatahub-io/odh-manifests/tree/master/airflow) | Alpha | Workflow Management | Manifests |
-| [Grafana](https://github.com/opendatahub-io/odh-manifests/tree/master/grafana) | 2.0.0 | Monitoring Dashboards | OLM |
-| [JupyterHub](https://github.com/opendatahub-io/odh-manifests/tree/master/jupyterhub) | 3.0.7  | Data science tools | Manifests |
-| [Kafka Strimzi](https://github.com/opendatahub-io/odh-manifests/tree/master/kafka) | 0.17.0 | Distributed Streaming | OLM |
-| [Argo](https://github.com/opendatahub-io/odh-manifests/tree/master/odhargo) | 2.7.0 | Workflow Engine | Manifests |
-| [Prometheus](https://github.com/opendatahub-io/odh-manifests/tree/master/prometheus) | 0.32.0 | Monitoring | OLM |
-| [Radanalytics Spark Operator](https://github.com/opendatahub-io/odh-manifests/tree/master/radanalyticsio) | 1.0.7  | Operator for managing Spark cluster on OpenShift | Manifests |
-| [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | 0.34.0  | Data Exploration and Visualization Tool | Manifests |
+| [Airflow](https://github.com/opendatahub-io/odh-manifests/tree/master/airflow) | Alpha | Workflow Management |
+| [Grafana](https://github.com/opendatahub-io/odh-manifests/tree/master/grafana) | 2.0.0 | Monitoring Dashboards |
+| [JupyterHub](https://github.com/opendatahub-io/odh-manifests/tree/master/jupyterhub) | 3.0.7  | Data science tools |
+| [Kafka Strimzi](https://github.com/opendatahub-io/odh-manifests/tree/master/kafka) | 0.17.0 | Distributed Streaming |
+| [Argo](https://github.com/opendatahub-io/odh-manifests/tree/master/odhargo) | 2.7.0 | Workflow Engine |
+| [Prometheus](https://github.com/opendatahub-io/odh-manifests/tree/master/prometheus) | 0.32.0 | Monitoring |
+| [Radanalytics Spark Operator](https://github.com/opendatahub-io/odh-manifests/tree/master/radanalyticsio) | 1.0.7  | Operator for managing Spark cluster on OpenShift |
+| [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | 0.34.0  | Data Exploration and Visualization Tool |
 {:class="table table-bordered table-striped"}
 
 ### Open Data Hub version v0.5.1 - February 2020
