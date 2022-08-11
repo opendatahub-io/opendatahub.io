@@ -5,18 +5,16 @@ permalink: /docs/additional
 ---
 
 ## [Community]({{ '/community.html' | prepend: site.baseurl }})
-- [Meetings](https://github.com/opendatahub-io/opendatahub-community) -- Community meetings for Open Data Hub are conducted regularly.  Get the meeting information and find out more on the Open Data Hub Community Repo.
+- [Slack](https://odh-io.slack.com)  - Community discussions for the Open Data Hub Special Interest Groups and Working Groups occur in the [odh-io](https://odh-io.slack.com) workspace.
+- [Meetings](http://opendatahub.io/community.html) -- Community meetings for Open Data Hub are conducted regularly.  Get the meeting information and find out more on the Open Data Hub Community Repo.
 - [GitHub]({{site.repo}}) -- All Open Data Hub projects are open source.  Browse the source code.
 - [Mailing List]({{ site.email_list }}) -- Stay up to date with the latest announcements and discussion about the Open Data Hub.
-<!--- Slack-->
-<!--- Meetings-->
 
 
 ## Videos
 Additional videos will be available on the OpenShift youtube channel <a class="external-link" href="https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqcg2znnClv-xbj93Q_wcY8L" target="_blank"><i class="fas fa-external-link-alt"></i>AI/ML on OpenShift </a> playlist.
 
 ##### Tutorials
-- [Installing Open Data Hub on OpenShift 4.1](https://youtu.be/-T6ypF7LoKk)
 - [Uploading data to Ceph via command line](https://youtu.be/d6X1xvDXewM)
 
 ##### Presentations

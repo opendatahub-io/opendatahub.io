@@ -92,6 +92,9 @@ toc:
     url: /docs/architecture.html
     phony: true
     children:
+      - title: Tiered Components
+        url: /docs/tiered-components.html
+        phony: true
       - title: Technology Landscape
         url: /docs/landscape.html
         phony: true
