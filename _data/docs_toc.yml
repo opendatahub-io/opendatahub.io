@@ -3,16 +3,10 @@ toc:
     url: /docs.html
   - title: Getting Started
     url: /docs/getting-started/quick-installation.html
-    phony: true
-    children:
-      - title: Quick Installation
-        url: /docs/getting-started/quick-installation.html
-      - title: Basic Tutorial
-        url: /docs/getting-started/basic-tutorial.html
-  - title: Advanced Tutorials
-    url: /docs/advanced-tutorials/data-exploration.html
-    phony: true
-    children:
+# - title: Advanced Tutorials
+#   url: /docs/advanced-tutorials/data-exploration.html
+#   phony: true
+#   children:
 #      - title: JupyterHub
 #        url: /docs/advanced-tutorials/jupyterhub.html
 #      - title: HDFS Data
@@ -27,23 +21,23 @@ toc:
 #        url: /docs/advanced-tutorials/seldon.html
 #      - title: Argo
 #        url: /docs/advanced-tutorials/argo.html
-      - title: Data Exploration
-        url: /docs/advanced-tutorials/data-exploration.html
+#      - title: Data Exploration
+#        url: /docs/advanced-tutorials/data-exploration.html
 #      - title: Kafka
 #        url: /docs/advanced-tutorials/kafka.html
 #      - title: Combined
 #        url: /docs/advanced-tutorials/combined.html
-# Uncomment when Kubeflow docs are ready
-  - title: Kubeflow
-    url: /docs/kubeflow.html
-    phony: true
-    children:
-      - title: Overview
-        url: /docs/kubeflow.html
-      - title: Installation
-        url: /docs/kubeflow/installation.html
-      - title: Combining components
-        url: /docs/kubeflow/mixing.html
+# Uncomment if we relocate KF on OpenShift install doc to opendatahub.io
+#  - title: Kubeflow
+#    url: /docs/kubeflow.html
+#    phony: true
+#    children:
+#      - title: Overview
+#        url: /docs/kubeflow.html
+#      - title: Installation
+#        url: /docs/kubeflow/installation.html
+#      - title: Combining components
+#        url: /docs/kubeflow/mixing.html
 #      - title: Components
 #       url: /docs/kubeflow/components/jupyter.html
 #       phony: true
@@ -71,13 +65,13 @@ toc:
           - title: Adding Custom Notebook Images
             url: /docs/administration/installation-customization/add-custom-image.html
       - title: Advanced Installation
-        url: /docs/administration/advanced-installation/optional.html
+        url: /docs/administration/advanced-installation/gpu.html
         phony: true
         children:
-          - title: Optional Components
-            url: /docs/administration/advanced-installation/optional.html
-          - title: Object Storage
-            url: /docs/administration/advanced-installation/object-storage.html
+#          - title: Optional Components
+#            url: /docs/administration/advanced-installation/optional.html
+#          - title: Object Storage
+#            url: /docs/administration/advanced-installation/object-storage.html
           - title: GPU Enablement
             url: /docs/administration/advanced-installation/gpu.html
 #      - title: Upgrading
