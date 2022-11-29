@@ -78,7 +78,7 @@ spec:
       volumes: 
       - name: trusted-cabundle
         configMap:
-          name: trusted-cabundle
+          name: trusted-cabundle-odh
           items:
             - key: ca-bundle.crt 
               path: tls-ca-bundle.pem
