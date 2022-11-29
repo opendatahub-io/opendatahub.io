@@ -35,7 +35,7 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 
 #### Installing the Open Data Hub Operator via subscription object in the openshift-operators namespace
 
-If you want to use publicly-trusted CAs as they come with the operator docker image as a basis for SSL trust when downloading manifests from a server url , you can define this default subscription CRD, which will work well for default manifest locations like Github.
+If you do not want to use publicly-trusted CAs as they come with the operator docker image as a basis for SSL trust when downloading manifests from a server url, you can define this default subscription CRD, which will work well for default manifest locations like Github.
 
 ```
 apiVersion: operators.coreos.com/v1alpha1
