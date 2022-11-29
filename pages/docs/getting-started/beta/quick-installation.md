@@ -33,7 +33,7 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 
 #### Installing the Open Data Hub Operator via subscription object in the openshift-operators namespace
 
-If you do not want to use publicly-trusted CAs as they come with the operator docker image as a basis for SSL trust when downloading manifests from a server url, you can define this default subscription CRD, which will work well for default manifest locations like Github.
+If you want to use publicly-trusted CAs as they come with the operator docker image as a basis for SSL trust when downloading manifests from a server url, you can define this default subscription CRD, which will work well for default manifest locations like Github.
 
 ```
 apiVersion: operators.coreos.com/v1alpha1
@@ -54,7 +54,7 @@ For enterprise-internal scenarios, your cluster administrators can also modify t
 
 From ODH 1.4.1 on, we provide a mix-in configmap trusted-ca-bundle-odh that via the Cluster Network Operator merges the user-provided (additionally-trusted) and system CA certificates coming from the operating system of the cluster nodes into a single CA-bundle file in the configmap trusted-ca-bundle-odh that we reference in the [operator subscription spec.config](https://docs.openshift.com/container-platform/4.10/operators/admin/olm-configuring-proxy-support.html#olm-inject-custom-ca_olm-configuring-proxy-support).
 
-This is especially useful if you want to download manifest.tar.gz files from an enterprise-internal server location with private PKI-based SSL that is not publicly-trusted.
+This is especially useful if you want to download manifest.tar.gz files from an enterprise-internal server location with private PKI-based SSL that is not publicly-trusted. Also, the publicly-trusted CAs as they are mixed in from the cluster network operator tend to be more up-to-date than what is contained within docker images.
 
 ```
 apiVersion: operators.coreos.com/v1alpha1
