@@ -49,7 +49,7 @@ spec:
   name: opendatahub-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: opendatahub-operator.v1.4.0
+  startingCSV: opendatahub-operator.v1.4.1
 ```
 
 For enterprise-internal scenarios, your cluster administrators can also modify the cluster proxy CRD to enable additional trusted certificate CAs (root followed by intermediate for a certain PKI) in PEM format defined [during cluster installation with additionalTrustBundle in install-config.yaml](https://docs.openshift.com/container-platform/4.10/networking/configuring-a-custom-pki.html#installation-configure-proxy_configuring-a-custom-pki) or [after cluster installation](https://docs.openshift.com/container-platform/4.10/networking/configuring-a-custom-pki.html#nw-proxy-configure-object_configuring-a-custom-pki). 
@@ -70,7 +70,7 @@ spec:
   name: opendatahub-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: opendatahub-operator.v1.4.0
+  startingCSV: opendatahub-operator.v1.4.1
   config: 
       selector:
         matchLabels:
