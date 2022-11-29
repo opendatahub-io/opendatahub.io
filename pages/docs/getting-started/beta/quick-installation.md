@@ -9,6 +9,9 @@ style_class: quick-installation
 Installing Open Data Hub requires OpenShift Container Platform version 4.8+. All screenshots and instructions are from OpenShift 4.10.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials will require an OpenShift cluster with a minimum of 16 CPUS and 32GB of memory across all OpenShift worker nodes.
 
 ### Installing the Open Data Hub Operator
+
+You can either install the Open Data Hub Operator via Web GUI or via a subscription yaml. Decide that works best in your environment. Important to note is that we operate in namespace/project openshift-operators, whether installing the operator via GUI or subscription yaml.
+
 #### Installing the Open Data Hub Operator via Openshift Web GUI
 The Open Data Hub operator is available for deployment in the OpenShift OperatorHub as a Community Operators. You can install it from the OpenShift web console by following the steps below:
 
