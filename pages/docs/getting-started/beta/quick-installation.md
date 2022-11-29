@@ -9,7 +9,7 @@ style_class: quick-installation
 Installing Open Data Hub requires OpenShift Container Platform version 4.8+. All screenshots and instructions are from OpenShift 4.10.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials will require an OpenShift cluster with a minimum of 16 CPUS and 32GB of memory across all OpenShift worker nodes.
 
 ### Installing the Open Data Hub Operator
-
+## Installing the Open Data Hub Operator via Openshift Web GUI
 The Open Data Hub operator is available for deployment in the OpenShift OperatorHub as a Community Operators. You can install it from the OpenShift web console by following the steps below:
 
 1. From the OpenShift web console, log in as a user with `cluster-admin` privileges.  For a developer installation from [try.openshift.com](https://try.openshift.com/), the `kubeadmin` user will work.
@@ -23,12 +23,71 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 ![OperatorHub]({{site.baseurl}}/assets/img/pages/docs/quick-installation/operator-hub.png "OperatorHub")
 1. Click the `Install` button and follow the installation instructions to install the Open Data Hub operator.
 ![Install]({{site.baseurl}}/assets/img/pages/docs/quick-installation/install.png "Install")
-1. The subscription creation view will offer a few options including *Update Channel*, keep the `rolling` channel selected.
+1. The subscription creation view will offer a few options including *Update Channel*, make sure the `stable` channel is selected.
 ![Select Channel]({{site.baseurl}}/assets/img/pages/docs/quick-installation/channels.png "Install")
 1. It is important to switch to the namespace you created earlier. Installing in the "OpenShift Operators" namespace will result in a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically".
 ![Change Namespace to 'odh']({{site.baseurl}}/assets/img/pages/docs/quick-installation/odh-namespace.png "Change Namespace to 'odh'")
 1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators` (inside the namespace you created earlier). Once the STATUS field displays `InstallSucceeded`, you can proceed to create a new Open Data Hub deployment.
 ![Installed Operators]({{site.baseurl}}/assets/img/pages/docs/quick-installation/installed-operators.png "Installed Operators")
+
+## Installing the Open Data Hub Operator via subscription object in the openshift-operators namespace
+
+If you want to use publicly-trusted CAs as they come with the operator docker image as a basis for SSL trust when downloading manifests from a server url , you can define this default subscription CRD, which will work well for default manifest locations like Github.
+
+```
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: opendatahub-operator
+  namespace: openshift-operators
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: opendatahub-operator
+  source: community-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: opendatahub-operator.v1.4.0
+```
+
+For enterprise-internal scenarios, your cluster administrators can also modify the cluster proxy CRD to enable additional trusted certificate CAs (root followed by intermediate for a certain PKI) in PEM format defined [during cluster installation with additionalTrustBundle in install-config.yaml](https://docs.openshift.com/container-platform/4.10/networking/configuring-a-custom-pki.html#installation-configure-proxy_configuring-a-custom-pki) or [after cluster installation](https://docs.openshift.com/container-platform/4.10/networking/configuring-a-custom-pki.html#nw-proxy-configure-object_configuring-a-custom-pki). 
+
+From ODH 1.4.1 on, we provide a mix-in configmap trusted-ca-bundle-odh that via the Cluster Network Operator merges the user-provided (additionally-trusted) and system CA certificates coming from the operating system of the cluster nodes into a single CA-bundle file in the configmap trusted-ca-bundle-odh that we reference in the [operator subscription spec.config](https://docs.openshift.com/container-platform/4.10/operators/admin/olm-configuring-proxy-support.html#olm-inject-custom-ca_olm-configuring-proxy-support).
+
+This is especially useful if you want to download manifest.tar.gz files from an enterprise-internal server location with private PKI-based SSL that is not publicly-trusted.
+
+```
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: opendatahub-operator
+  namespace: openshift-operators
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: opendatahub-operator
+  source: community-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: opendatahub-operator.v1.4.0
+  config: 
+      selector:
+        matchLabels:
+          name: opendatahub-operator
+      volumes: 
+      - name: trusted-cabundle
+        configMap:
+          name: trusted-cabundle
+          items:
+            - key: ca-bundle.crt 
+              path: tls-ca-bundle.pem
+          optional: true
+      volumeMounts: 
+      - name: trusted-cabundle
+        mountPath: /etc/pki/ca-trust/extracted/pem
+        readOnly: true
+```
+
+
+
 
 ### Create a New Open Data Hub Deployment
 
