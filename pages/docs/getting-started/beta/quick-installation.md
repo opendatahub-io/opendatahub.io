@@ -28,7 +28,6 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 ![Install]({{site.baseurl}}/assets/img/pages/docs/quick-installation/install.png "Install")
 1. The subscription creation view will offer a few options including *Update Channel*, make sure the `stable` channel is selected. Notice that the installation mode is 'All Namespaces in the cluster (default)'.
 ![Select Channel]({{site.baseurl}}/assets/img/pages/docs/quick-installation/channels.png "Install")
-![Change Namespace to 'odh']({{site.baseurl}}/assets/img/pages/docs/quick-installation/odh-namespace.png "Change Namespace to 'odh'")
 1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators` (inside the namespace you created earlier). Once the STATUS field displays `InstallSucceeded`, you can proceed to create a new Open Data Hub deployment.
 ![Installed Operators]({{site.baseurl}}/assets/img/pages/docs/quick-installation/installed-operators.png "Installed Operators")
 
@@ -96,6 +95,7 @@ spec:
 The Open Data Hub operator will create new Open Data Hub deployments and manage its components.  Let's create a new Open Data Hub deployment.
 
 1. Find the Open Data Hub Operator under `Installed Operators` (inside the namespace you created earlier)
+![Change Namespace to 'odh']({{site.baseurl}}/assets/img/pages/docs/quick-installation/odh-namespace.png "Change Namespace to 'odh'")
 ![Installed Operators]({{site.baseurl}}/assets/img/pages/docs/quick-installation/installed-operators.png "Installed Operators")
 
 1. Click on the Open Data Hub Operator to bring up the details for the version that is currently installed.
@@ -104,7 +104,7 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
 1. Click `Create Instance` to create a new deployment.
 ![Create New ODH]({{site.baseurl}}/assets/img/pages/docs/quick-installation/new-deployment.png "Create New ODH")
 
-1. Select the `YAML View` radio button to be presented with a YAML file to customize your deployment.  Most of the components available in ODH have been removed, and for this tutorial we'll leave them that way to make sure the components for JupyterHub and Spark fit within our cluster resource constraints.
+1. Select the `YAML View` radio button to be presented with a YAML file to customize your deployment. The current core components KfDef is also listed [here](https://raw.githubusercontent.com/opendatahub-io/odh-manifests/master/kfdef/odh-core.yaml)
 
 
    Take note of some parameters:
