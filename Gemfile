@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
-# This will help ensure the proper Jekyll version is running.
-gem "jekyll", "3.8.3"
-
+gem "jekyll", "~> 4.3.1"
+gem "coderay", "~> 1.1.3"
 
 group :jekyll_plugins do
+  gem "jekyll-asciidoc"
   gem "jekyll-feed"
   gem "jekyll-paginate"
 end

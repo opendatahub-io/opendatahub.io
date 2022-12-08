@@ -14,21 +14,35 @@ description: >
 url: "https://opendatahub.io" # the base hostname & protocol for your site
 repo: https://github.com/opendatahub-io
 email_list: https://lists.opendatahub.io/admin/lists/
-#twitter_username: aicoe
-#github_username:  aicoe
 
 # Build settings
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
+  math_engine: mathjax
   syntax_highlighter: rouge
+gist:
+  noscript: false
+asciidoc: {}
+asciidoctor:
+  base_dir: :docdir
+  safe: unsafe
+  attributes:
+    - idseparator=_
+    - source-highlighter=coderay
+    - icons=font
+
 
 permalink: /news/:year-:month-:day/:title:output_ext
 
 plugins:
 - jekyll-feed
 
-include: 
+include:
   - _next
   - _app
   - _buildManifest.js
