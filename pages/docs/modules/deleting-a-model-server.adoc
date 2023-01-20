@@ -4,7 +4,10 @@
 = Deleting a model server
 
 [role='_abstract']
-You can delete model servers that you have assigned to host your data science projects. This enables you to remove model servers that you no longer require. If you delete a project's model server, models hosted by the server are then unavailable for applications to use. Red Hat recommends that you advise the users of these models before deleting the model server. 
+You can delete model servers that you have assigned to host your data science projects. This enables you to remove model servers that you no longer require. If you delete a project's model server, models hosted by the server are then unavailable for applications to use. 
+ifndef::upstream[]
+Red Hat recommends that you advise the users of these models before deleting the model server. 
+endif::[]
 
 .Prerequisites
 * You have logged in to {productname-long}.
