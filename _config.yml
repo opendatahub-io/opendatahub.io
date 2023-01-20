@@ -35,6 +35,7 @@ asciidoctor:
     - idseparator=_
     - source-highlighter=coderay
     - icons=font
+    - imagesdir=images
 
 
 permalink: /news/:year-:month-:day/:title:output_ext
