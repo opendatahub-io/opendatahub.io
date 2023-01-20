@@ -25,5 +25,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
+<!-- use custom stylesheet for downstream to upstream documentation -->
+  {% if page.custom_css %}
+    {% for stylesheet in page.custom_css %}
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/asciidoctor-default.css">
+ {% endfor %}
+  {% endif %}
+
 {% include favicons.html %}
 
