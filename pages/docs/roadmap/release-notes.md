@@ -10,7 +10,7 @@ style_class: release-notes
 | Technology | Version | Category |
 |--|--|--|--|
 | [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-dashboard) | v2.5.2 | Dashboard |
-| [Open Data Hub Notebook Images](https://github.com/opendatahub-io/notebooks) | v1.3.1 | Dashboard |
+| [Open Data Hub Notebook Images](https://github.com/opendatahub-io/notebooks) | v1.3.1 | Jupyter |
 | [Model Mesh Serving](https://github.com/opendatahub-io/modelmesh-serving) | v0.9.0 | AI/ML |
 | [Data Science Pipelines](https://github.com/opendatahub-io/data-science-pipelines) | v1.2.1 | Data Science Tools |
 {:class="table table-bordered"}
