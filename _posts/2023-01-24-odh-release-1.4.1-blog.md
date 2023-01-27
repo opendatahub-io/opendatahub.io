@@ -14,7 +14,7 @@ Changes included in the Open Data Hub v1.4.1 release:
   * Jupyter Python Notebook
   * Jupyter Data Science Notebook - CPU & CUDA
   * Jupyter PyTorch Notebook - CUDA
-  * jupyter Tensorflow Notebook - CUDA
+  * Jupyter Tensorflow Notebook - CUDA
 
 * ODH Dashboard v2.5.2  -- [Release Notes](https://github.com/opendatahub-io/odh-dashboard/releases/tag/v2.5.2) & [ChangeLog](https://github.com/opendatahub-io/odh-dashboard/compare/v2.2.1...v2.5.2) since previous ODH release
   * [Demo](https://bluejeans.com/s/OSrgirIbbyl) from November ODH Community Meeting
