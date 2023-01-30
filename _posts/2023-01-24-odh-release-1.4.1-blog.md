@@ -19,7 +19,7 @@ Changes included in the Open Data Hub v1.4.1 release:
 * ODH Dashboard v2.5.2  -- [Release Notes](https://github.com/opendatahub-io/odh-dashboard/releases/tag/v2.5.2) & [ChangeLog](https://github.com/opendatahub-io/odh-dashboard/compare/v2.2.1...v2.5.2) since previous ODH release
   * [Demo](https://bluejeans.com/s/OSrgirIbbyl) from November ODH Community Meeting
   * New OdhApplication CustomResources to dynamically add component tiles
-  * Jupyer/KFNBC now supports opening in a new tab
+  * Jupyter/KFNBC now supports opening in a new tab
   * Data Science Groupings ([DSG](https://github.com/opendatahub-io/odh-dashboard/issues/433))
     * Optional feature -- enabled through the disableProjects (set to false) feature flag found in OdhDashboardConfig
     * When enabled it will grant access to users of the Dashboard the ability to create their own projects in OpenShift Console through the Dashboard interface
