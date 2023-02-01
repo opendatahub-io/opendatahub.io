@@ -3,57 +3,19 @@ toc:
     url: /docs.html
   - title: Getting Started
     url: /docs/getting-started/quick-installation.html
-# - title: Advanced Tutorials
-#   url: /docs/advanced-tutorials/data-exploration.html
-#   phony: true
-#   children:
-#      - title: JupyterHub
-#        url: /docs/advanced-tutorials/jupyterhub.html
-#      - title: HDFS Data
-#        url: /docs/advanced-tutorials/hdfs.html
-#      - title: Data Warehouses
-#        url: /docs/advanced-tutorials/warehouse.html
-#      - title: Ceph
-#        url: /docs/advanced-tutorials/ceph.html
-#      - title: Spark
-#        url: /docs/advanced-tutorials/spark.html
-#      - title: Seldon
-#        url: /docs/advanced-tutorials/seldon.html
-#      - title: Argo
-#        url: /docs/advanced-tutorials/argo.html
-#      - title: Data Exploration
-#        url: /docs/advanced-tutorials/data-exploration.html
-#      - title: Kafka
-#        url: /docs/advanced-tutorials/kafka.html
-#      - title: Combined
-#        url: /docs/advanced-tutorials/combined.html
-# Uncomment if we relocate KF on OpenShift install doc to opendatahub.io
-#  - title: Kubeflow
-#    url: /docs/kubeflow.html
-#    phony: true
-#    children:
-#      - title: Overview
-#        url: /docs/kubeflow.html
-#      - title: Installation
-#        url: /docs/kubeflow/installation.html
-#      - title: Combining components
-#        url: /docs/kubeflow/mixing.html
-#      - title: Components
-#       url: /docs/kubeflow/components/jupyter.html
-#       phony: true
-#        children:
-#          - title: Jupyter Notebooks
-#            url: /docs/kubeflow/components/jupyter.html
-#          - title: Hyperparameter Tuning
-#            url: /docs/kubeflow/components/hyperparameter.html
-#          - title: Pipelines
-#            url: /docs/kubeflow/components/pipelines.html
-#          - title: Serving
-#            url: /docs/kubeflow/components/serving.html
-#          - title: Training
-#            url: /docs/kubeflow/components/training.html
-#          - title: Miscellaneous
-#            url: /docs/kubeflow/components/misc.html
+  - title: Data Science Projects
+    url: /docs/working-on-data-science-projects.html
+    children:
+      - title: Creating and importing notebooks
+        url: /docs/working-on-data-science-projects.html#creating-and-importing-notebooks_notebooks
+      - title: Collaborating on notebooks using Git
+        url: /docs/working-on-data-science-projects.html#collaborating-on-notebooks-using-git_git-collab
+      - title: Working on data science projects
+        url: /docs/working-on-data-science-projects.html#working-on-data-science-projects_nb-server
+      - title: Model serving on Open Data Hub
+        url: /docs/working-on-data-science-projects.html#model-serving-on-openshift-data-science_model-serving
+      - title: Troubleshooting
+        url: /docs/working-on-data-science-projects.html#troubleshooting-common-problems-in-jupyter-for-administrators_model-serving
   - title: Administration
     url: /docs/administration/installation-customization/customization.html
     phony: true
