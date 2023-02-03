@@ -13,7 +13,7 @@ ifndef::upstream[]
 endif::[]
 ifdef::upstream[]
 * If you are using specialized {productname-short} groups, you are part of the user group or admin group (for example, `odh-users`) in OpenShift.
-endiff::[]
+endif::[]
 * You have created a data science project that you can add a workbench to.
 
 .Procedure
