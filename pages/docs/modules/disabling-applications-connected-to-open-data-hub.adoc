@@ -25,8 +25,8 @@ endif::[]
 ====
 
 .Prerequisites
-* You have logged in to the {productname-short}} web console.
-* You are part of the `cluster-admins` user group in {productname-short}.
+* You have logged in to the {productname-short} web console.
+* You are part of the `cluster-admins` user group in {openshift-platform}.
 * You have installed or configured the service on your {productname-short} cluster.
 * The application or component that you want to disable is enabled and appears on the *Enabled* page.
 
