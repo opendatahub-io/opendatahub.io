@@ -19,8 +19,8 @@ The *Resources* page opens.
 .Verification
 * You can view and access the learning resources for {productname-long} and supported applications.
 
+ifndef::upstream[]
 [role='_additional-resources']
 .Additional resources
-ifndef::upstream[]
 * link:{rhodsdocshome}{default-format-url}/getting_started_with_{url-productname-long}/common-questions_get-started[Common questions]
 endif::[]

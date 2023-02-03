@@ -32,7 +32,7 @@ endif::[]
 
 .Procedure
 
-. In the {platformname-short} web console, change into the *Administrator* perspective.
+. In the {openshift-platform} web console, change into the *Administrator* perspective.
 ifndef::upstream[]
 . Change into the `redhat-ods-applications` project.
 endif::[]
