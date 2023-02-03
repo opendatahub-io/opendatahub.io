@@ -35,9 +35,9 @@ include::modules/the-open-data-hub-user-interface.adoc[leveloffset=+1]
 include::modules/notifications-in-open-data-hub.adoc[leveloffset=+1]
 endif::[]
 
-include::/modules/creating-a-data-science-project.adoc[leveloffset=+1]
+include::modules/creating-a-data-science-project.adoc[leveloffset=+1]
 
-include::/modules/creating-a-project-workbench.adoc[leveloffset=+1]
+include::modules/creating-a-project-workbench.adoc[leveloffset=+1]
 
 include::modules/launching-jupyter-and-starting-a-notebook-server.adoc[leveloffset=+2]
 
@@ -65,16 +65,15 @@ include::modules/disabling-applications-connected-to-open-data-hub.adoc[leveloff
 include::modules/removing-disabled-applications-from-open-data-hub.adoc[leveloffset=+2]
 endif::[]
 
-ifndef::upstream[]
 include::assemblies/support-requirements-and-limitations.adoc[leveloffset=+1]
 
-
+// leave out upstream for now
 include::modules/common-questions.adoc[leveloffset=+1]
-endif::[]
 
-include::modules/troubleshooting-common-problems-in-jupyter-for-administrators.adoc[leveloffset=+1]
+// leave out - already in working on data science projects
+//include::modules/troubleshooting-common-problems-in-jupyter-for-administrators.adoc[leveloffset=+1]
 
-include::modules/troubleshooting-common-problems-in-jupyter-for-users.adoc[leveloffset=+1]
+//include::modules/troubleshooting-common-problems-in-jupyter-for-users.adoc[leveloffset=+1]
 
 // [role='_additional-resources']
 // == Additional resources
