@@ -7,7 +7,7 @@ date: 2023-02-06
 categories: features, release, documentation
 ---
 
-New documentation has been added for the new Data Science Projects feature in the ODH dashboard,the documentation covers the following items:
+New documentation has been added for the new [Data Science Projects](http://opendatahub.io/docs/working-on-data-science-projects.html) feature in the ODH dashboard, the documentation covers the following items:
 * Creating and importing notebooks
 * Collaborating on notebooks using Git
 * Working on data science projects
