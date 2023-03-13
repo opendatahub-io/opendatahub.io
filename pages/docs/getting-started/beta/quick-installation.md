@@ -25,8 +25,11 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 ![Install]({{site.baseurl}}/assets/img/pages/docs/quick-installation/install.png "Install")
 1. The subscription creation view will offer a few options including *Update Channel*, keep the `rolling` channel selected.
 ![Select Channel]({{site.baseurl}}/assets/img/pages/docs/quick-installation/channels.png "Install")
-1. It is important to switch to the namespace you created earlier. Installing in the "OpenShift Operators" namespace will result in a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically".
+*NOTE:* The OpenShift console will change your target namespaces to `openshift-operators`, it is important that you switch to the empty namespace you created earlier. Installing in the "openshift-operators" namespace will result in a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically".
+
+1. It is important to switch to the namespace you created earlier. Installing in the "openshift-operators" namespace will result in a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically".
 ![Change Namespace to 'odh']({{site.baseurl}}/assets/img/pages/docs/quick-installation/odh-namespace.png "Change Namespace to 'odh'")
+
 1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators` (inside the namespace you created earlier). Once the STATUS field displays `InstallSucceeded`, you can proceed to create a new Open Data Hub deployment.
 ![Installed Operators]({{site.baseurl}}/assets/img/pages/docs/quick-installation/installed-operators.png "Installed Operators")
 
