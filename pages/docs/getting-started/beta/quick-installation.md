@@ -120,4 +120,4 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
 1. Verify the installation by viewing the project workload.  The [ODH Core components]({{site.baseurl}}/docs/tiered-components.html) should be running.
 ![Verify Status]({{site.baseurl}}/assets/img/pages/docs/quick-installation/verify-install.png "Verify Status")
 
-{% include next-link.html label="Administration" url="/docs/administration/installation-customization/customization.html" %}
+{% include next-link.html label="Working On Data Science Projects" url="/docs/working-on-data-science-projects.html" %}
