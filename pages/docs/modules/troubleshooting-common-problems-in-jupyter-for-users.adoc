@@ -43,8 +43,6 @@ You might have run out of storage space on your notebook server.
 .Resolution
 Contact your administrator so that they can perform further checks.
 
-{% include next-link.html label="Administration" url="/docs/administration/installation-customization/customization.html" %}
-
 // [role='_additional-resources']
 // == Additional resources
 // * TODO
