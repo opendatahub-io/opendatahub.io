@@ -70,19 +70,42 @@ Links should prepend `site.baseurl` before the location. e.g.:
 
 You can run the site just like any other Jekyll site as [documented](https://jekyllrb.com/docs/) or using a [jekyll container](https://store.docker.com/community/images/jekyll/jekyll).
 
-### Running a jekyll container on linux using docker
-You can view the local changes to your clone of the opendatahub.io in realtime by running the jekyll server in a docker container. You'll be running the container with a volume mounted to the root of your opendatahub.io repository.
-From the root of your cloned opendatahub.io repository:
+### Serving ODH site locally
 
-```bash
-# To prevent SELinux from denying docker from mounting your repository folder as a volume You'll need to change the selinux context for the root of the opendatahub.io repository directory
-chcon -Rt svirt_sandbox_file_t $PWD
-
-# Set an environment variable for the version of the jekyll container
-export JEKYLL_VERSION=3.8
-
-# Run the jekyll container, map the container port 4000 to the host port 4000 and set the environment variable JEKYLL_UID to your user ID to prevent any permission issues with adding or modifying files
-# If you're concerned about the container user running with the same user ID, you can modify the permission of the repo folder to allow read/write access to other
-docker run --rm --volume="/home/llasmith/projects/data-hub/opendatahub.io:/srv/jekyll" -it -p 4000:4000 -e JEKYLL_UID=$(id -u) jekyll/jekyll:$JEKYLL_VERSION jekyll serve
-
+1. Ensure all of the requirements [here](https://jekyllrb.com/docs/installation/#requirements) are installed, as well as the `ruby-devel` library.
+2. In the root of the repository, run:
+``` bash
+bundle install
+bundle exec jekyll serve
 ```
+3. Go to http://localhost:4000
+4. To automatically refresh after every change, use: `bundle exec jekyll serve --livereload`
+
+### Troubleshooting
+
+#### On running `bundle install` you receive: `Ignoring <package-version> because its extensions are not built. Try: gem pristine <package> --version <version>`
+
+This issue might stem from 2 cases:
+1. The package was installed on a previous Ruby version
+2. The package was installed when not all prerequisites were satisfied
+
+The easiest solution is to delete the package explicitly with
+` sudo -i gem uninstall -i /usr/share/gems <package>`
+where `/usr/share/gems` might be a different directory on your system.
+It can then be reinstalled with `bundle install` once all prerequisites are satisfied.
+
+#### On running bundle exec jekyll serve you receive: `Could not find <package>-<version> in any of the sources`
+
+See troubleshooting case 1.
+
+#### On running `bundle install` you receive: `An error occurred while installing <package> (<version>), and Bundler cannot continue.`
+    
+This is most likely caused by missing the `ruby-devel`, `gcc` or `g++` libraries.
+
+#### `bundle exec jekyll serve` fails on Ruby 3.0.0 and above:
+
+Run `bundle add webrick` and retry.
+
+
+
+
