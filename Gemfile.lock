@@ -77,9 +77,10 @@ DEPENDENCIES
   jekyll-feed
   jekyll-paginate
   tzinfo-data
+  webrick (~> 1.7)
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.1.3p185
 
 BUNDLED WITH
    2.3.7
