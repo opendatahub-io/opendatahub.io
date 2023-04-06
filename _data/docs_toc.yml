@@ -1,8 +1,10 @@
 toc:
   - title: Introduction
     url: /docs.html
-  - title: Getting Started
+  - title: Installation
     url: /docs/getting-started/quick-installation.html
+#  - title: Getting Started
+#    url: /docs/getting-started/getting-started-with-open-data-hub.html
   - title: Data Science Projects
     url: /docs/working-on-data-science-projects.html
     children:
