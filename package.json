@@ -1,0 +1,36 @@
+{
+  "name": "opendatahub.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "opendatahub.io",
+  "author": "Gage Krumbach",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop --verbose",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.3.0",
+    "@patternfly/react-core": "^4.276.6",
+    "gatsby": "^5.8.1",
+    "gatsby-plugin-google-gtag": "^5.8.0",
+    "gatsby-plugin-mdx": "^5.8.0",
+    "gatsby-source-filesystem": "^5.8.0",
+    "gatsby-source-git": "^1.1.0",
+    "gatsby-transformer-remark": "^6.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3"
+  }
+}
