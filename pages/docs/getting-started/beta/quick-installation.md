@@ -42,79 +42,8 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
 1. Click on the Open Data Hub Operator to bring up the details for the version that is currently installed.
 ![Open Data Hub Operator]({{site.baseurl}}/assets/img/pages/docs/quick-installation/odh-operator.png "Open Data Hub Operator")
 
-1. Click `Create Instance` to create a new deployment.
+1. Click `Create Instance` to create a new deployment.  The default `kfdef` provided will deploy the latest release of the [ODH Core components]({{site.baseurl}}/docs/tiered-components.html). If you accepted the default name, this will trigger the creation of an Open Data Hub kfdef object named `opendatahub` and start the rollout of the [ODH Core components]({{site.baseurl}}/docs/tiered-components.html).
 ![Create New ODH]({{site.baseurl}}/assets/img/pages/docs/quick-installation/new-deployment.png "Create New ODH")
-
-1. Select the `YAML View` radio button to be presented with a YAML file to customize your deployment.  Most of the components available in ODH have been removed, and for this tutorial we'll leave them that way to make sure the components for JupyterHub and Spark fit within our cluster resource constraints.
-
-
-   Take note of some parameters:
-      ```yaml
-      # ODH uses the KfDef manifest format to specify what components will be included in the deployment
-      apiVersion: kfdef.apps.kubeflow.org/v1
-      kind: KfDef
-      metadata:
-        # The name of your kfdef object in OpenShift
-        name: opendatahub
-      # only the components listed in the `KFDef` resource will be deployed:
-      spec:
-        applications:
-          # REQUIRED: This contains all of the common options used by all ODH components
-          - kustomizeConfig:
-              repoRef:
-                name: manifests
-                path: odh-common
-            name: odh-common
-          # Deploy ODH Dashboard w/ authentication enabled
-          - kustomizeConfig:
-              overlays:
-              - authentication
-              repoRef:
-                name: manifests
-                path: odh-dashboard
-            name: odh-dashboard
-          # Deploy ODH Notebook Controller
-          - kustomizeConfig:
-              repoRef:
-                name: manifests
-                path: odh-notebook-controller
-            name: odh-notebook-controller
-          # Deploy addtional Open Data Hub Jupyter notebooks
-          - kustomizeConfig:
-              overlays:
-                - additional
-              repoRef:
-                name: manifests
-                path: jupyterhub/notebook-images
-            name: notebook-images
-          # Deploy Model Mesh
-          - kustomizeConfig:
-              overlays:
-                - odh-model-controller
-              repoRef:
-                name: manifests
-                path: model-mesh
-            name: model-mesh
-          # Deploy Data Science Pipeline w/ standalone UI
-          - kustomizeConfig:
-              overlays:
-                - metadata-store-mariadb
-                - ds-pipeline-ui
-                - object-store-minio
-                - default-configs
-              repoRef:
-                name: manifests
-                path: data-science-pipelines
-            name: data-science-pipelines
-        # Reference to all of the git repo archives that contain component kustomize manifests
-        repos:
-          # Official Open Data Hub v1.4 component manifests repo
-          # This shows that we will be deploying components from an archive of the odh-manifests repo tagged for v1.4.0
-          - name: manifests
-            uri: 'https://github.com/opendatahub-io/odh-manifests/tarball/v1.4'
-      ```
-
-1. Update the `spec` of the resource to match the above and click `Create`.  If you accepted the default name, this will trigger the creation of an Open Data Hub kfdef object named `opendatahub` and start the rollout of the [ODH Core components]({{site.baseurl}}/docs/tiered-components.html).
 
 1. Verify the installation by viewing the Open Data Hub tab within the operator details.  You Should see `opendatahub` listed.
 ![ODH List]({{site.baseurl}}/assets/img/pages/docs/quick-installation/odh-list.png "ODH List")
