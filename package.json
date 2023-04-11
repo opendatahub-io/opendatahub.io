@@ -18,6 +18,8 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "@patternfly/react-core": "^4.276.6",
+    "@react-three/fiber": "^8.12.0",
+    "@types/three": "^0.150.1",
     "gatsby": "^5.8.1",
     "gatsby-plugin-google-gtag": "^5.8.0",
     "gatsby-plugin-mdx": "^5.8.0",
@@ -25,7 +27,8 @@
     "gatsby-source-git": "^1.1.0",
     "gatsby-transformer-remark": "^6.8.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.151.3"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
