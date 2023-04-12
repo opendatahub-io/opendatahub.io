@@ -8,7 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ preview, title, children }: {preview?: string, title: string, children?: React.ReactNode}) => {
+export const Seo = ({ preview, title, children }: {preview?: string, title: string, children?: React.ReactNode}) => {
   const { site } = useStaticQuery(
     graphql`
       query siteMetadata{
@@ -42,5 +42,3 @@ const Seo = ({ preview, title, children }: {preview?: string, title: string, chi
     </>
   )
 }
-
-export default Seo

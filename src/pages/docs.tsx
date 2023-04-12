@@ -1,4 +1,5 @@
 import * as React from "react"
+import '@patternfly/react-core/dist/styles/base.css';
 import type { PageProps } from "gatsby"
 
 
