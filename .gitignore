@@ -1,5 +1,4 @@
-_site
-.sass-cache
-.jekyll-metadata
-.jekyll-cache
-public/
+node_modules/
+.cache/
+public
+src/gatsby-types.d.ts
