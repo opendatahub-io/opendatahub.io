@@ -1,0 +1,17 @@
+.navbar-root {
+    position: sticky !important;
+    top: 0;
+}
+
+.transparent {
+    background-color: transparent !important; 
+  }
+
+.navbar-links {
+    width: 100%;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: var(--pf-global--palette--white) !important;
+}
