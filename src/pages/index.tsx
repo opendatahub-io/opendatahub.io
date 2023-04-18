@@ -7,7 +7,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout location='/'>
       <Header />
-      <CompetitiveAdvantage />
+      <CompetitiveAdvantage/>
       <Personas />
       <CaseStudies />
       <ArchitectureMap />
