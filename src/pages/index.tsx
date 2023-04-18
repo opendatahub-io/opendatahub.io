@@ -8,7 +8,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout location='/'>
       <Navbar />
       <Header />
-      <CompetitiveAdvantage />
+      <CompetitiveAdvantage/>
       <Personas />
       <CaseStudies />
       <ArchitectureMap />

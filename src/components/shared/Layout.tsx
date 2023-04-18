@@ -6,8 +6,8 @@ export const Layout = ({ location, children }) => {
   const isRootPath = location.pathname === rootPath
 
   return (
-    <div data-is-root-path={isRootPath}>
-      <main>{children}</main>
-    </div>
+      <main data-is-root-path={isRootPath}>
+          {children}
+      </main>
   )
 }
