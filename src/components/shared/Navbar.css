@@ -1,5 +1,6 @@
 .navbar-root {
     position: sticky !important;
+    top: 0;
 }
 
 .transparent {

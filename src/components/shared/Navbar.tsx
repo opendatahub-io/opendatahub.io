@@ -21,7 +21,7 @@ export const Navbar = ({ }) => {
       }, []);
 
     return (
-        <Masthead className={`navbar-root ${isTransparent ? 'transparent' : ''}`}>
+        <Masthead  className={`navbar-root ${isTransparent ? 'transparent' : ''}`}>
             <MastheadMain>
                 <Link to="/">
                     <img src={vert_logo} alt='Open Data Hub logo' style={{ overflow: "hidden", height: 45 }} />
