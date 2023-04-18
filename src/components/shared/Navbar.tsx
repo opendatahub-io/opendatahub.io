@@ -1,4 +1,4 @@
-import { Masthead, MastheadToggle, Button, MastheadMain, MastheadBrand, MastheadContent, Split, SplitItem } from '@patternfly/react-core'
+import { Masthead, MastheadMain, MastheadContent, Split, SplitItem, Button } from '@patternfly/react-core'
 import React from 'react'
 import vert_logo from '../../images/logos/datahub_mark_color-blkbg.png'
 import { Link } from 'gatsby'
@@ -23,28 +23,36 @@ export const Navbar = ({ }) => {
     return (
         <Masthead  className={`navbar-root ${isTransparent ? 'transparent' : ''}`}>
             <MastheadMain>
-                <Link to="/">
+                <Button variant='link' isInline component={(props: any) => <Link {...props} to="/" />}>
                     <img src={vert_logo} alt='Open Data Hub logo' style={{ overflow: "hidden", height: 45 }} />
-                </Link>
+                </Button>
             </MastheadMain>
             <MastheadContent>
                 <Split hasGutter className='navbar-links'>
                     <SplitItem>
-                        <Link to="/docs">DOCS</Link>
+                    <Button variant='link' isInline component={(props: any) => <Link {...props} to="/docs" />}>
+                        DOCS
+                    </Button>
                     </SplitItem>
                     <SplitItem>
-                        <Link to="/blog">BLOG</Link>
+                    <Button variant='link' isInline component={(props: any) => <Link {...props} to="/blog" />}>
+                        BLOG
+                    </Button>
                     </SplitItem>
                     <SplitItem>
-                        <Link to="/community">COMMUNITY</Link>
+                    <Button variant='link' isInline component={(props: any) => <Link {...props} to="/community" />}>
+                        COMMUNITY
+                    </Button>
                     </SplitItem>
                     <SplitItem isFilled />
                     <SplitItem>
-                        <Link to="https://github.com/opendatahub-io">GITHUB</Link>
+                        <Button variant='link' component="a" href="https://github.com/opendatahub-io">GITHUB</Button>
                     </SplitItem>
                     <SplitItem>
                         {/* TODO find rss svg */}
-                        <Link to="/rss.xml">RSS</Link>
+                        <Button variant='link' isInline component={(props: any) => <Link {...props} to="/rss.xml" />}>
+                        RSS
+                    </Button>
                     </SplitItem>
                 </Split>
 

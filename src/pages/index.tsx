@@ -14,29 +14,6 @@ const IndexPage: React.FC<PageProps> = () => {
       <CommunityDetails />
       <FeaturedBlogs />
       <Footer />
-      <p>
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      dsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as ddsfdasf sdaf dsaf sdf as d
-      </p>
     </Layout>
   )
 }

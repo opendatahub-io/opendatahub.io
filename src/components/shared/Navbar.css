@@ -13,5 +13,5 @@
 }
 
 .navbar-links a {
-    color: var(--pf-global--palette--white);
+    color: var(--pf-global--palette--white) !important;
 }
