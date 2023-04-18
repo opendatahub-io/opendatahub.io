@@ -64,17 +64,11 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions 
   const posts = result.data?.allMarkdownRemark.edges ?? []
 
   posts.forEach(({ node }, index) => {
-    const previousPostId = index === posts.length - 1 ? null : posts[index + 1].node
-    const nextPostId = index === 0 ? null : posts[index - 1].node
-
     createPage({
       path: node.fields.slug,
       component: path.resolve("./src/templates/blog-post.tsx"),
       context: {
-        id: node.id,
-        previousPostId,
-        nextPostId,
-        
+        id: node.id,        
       },
     })
   })
