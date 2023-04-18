@@ -1,5 +1,4 @@
 import * as React from "react"
-import '@patternfly/react-core/dist/styles/base.css';
 import { Link, graphql } from "gatsby"
 
 import {Layout, Seo} from "../components/shared"
@@ -10,7 +9,7 @@ const BlogIndex = ({ data, location }) => {
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location}>
         <p>
           No blog posts found.
         </p>
@@ -19,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

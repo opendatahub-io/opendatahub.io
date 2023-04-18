@@ -1,0 +1,15 @@
+@import '~@patternfly/react-core/dist/styles/base.css';
+
+:root {
+    --pf-global--primary-color--100: #5075ff;
+    --pf-global--primary-color--200: #2b6af3;
+    --pf-global--primary-color--light-100: #819BFF;
+    --pf-global--primary-color--dark-100: #5075ff;
+
+    --pf-global--link--Color: var(--pf-global--primary-color--100);
+    --pf-global--link--Color--hover: #002093;
+};
+
+.pf-c-card {
+    --pf-global--BorderRadius--sm: 10px;
+}
