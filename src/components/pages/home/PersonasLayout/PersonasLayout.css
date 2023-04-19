@@ -4,7 +4,6 @@
 
 .pf-c-toggle-group__item .pf-c-toggle-group__button, .pf-c-toggle-group__item .pf-c-toggle-group__button::before {
     border-radius: var(--pf-global--BorderRadius--sm) !important;
-
 }
 
 .pf-c-toggle-group__item + .pf-c-toggle-group__item {

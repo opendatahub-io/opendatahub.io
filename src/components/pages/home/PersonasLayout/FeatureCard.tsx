@@ -13,7 +13,7 @@ export const FeatureCard = ({ title, body, imageUrl }: FeatureCardProps) => {
             {imageUrl && (
                 <CardHeader>
                     <CardHeaderMain>
-                        <img src={imageUrl} alt={`${title} feature image`} style={{ height: '50px' }} />
+                        <img src={imageUrl} alt={`${title} feature image`} style={{ height: '35px' }} />
                     </CardHeaderMain>
                 </CardHeader>
             )}
