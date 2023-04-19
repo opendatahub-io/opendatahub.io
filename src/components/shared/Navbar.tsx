@@ -21,7 +21,7 @@ export const Navbar = ({ }) => {
       }, []);
 
     return (
-        <Masthead  className={`navbar-root ${isTransparent ? 'transparent' : ''}`}>
+        <Masthead display={{default: "inline"}} className={`navbar-root ${isTransparent ? 'transparent' : ''}`}>
             <MastheadMain>
                 <Button variant='link' isInline component={(props: any) => <Link {...props} to="/" />}>
                     <img src={vert_logo} alt='Open Data Hub logo' style={{ overflow: "hidden", height: 45 }} />
