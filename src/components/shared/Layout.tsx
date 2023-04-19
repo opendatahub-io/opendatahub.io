@@ -8,6 +8,7 @@ export const Layout = ({ location, children }) => {
 
   return (
       <main data-is-root-path={isRootPath}>
+          <Navbar />
           {children}
       </main>
   )
