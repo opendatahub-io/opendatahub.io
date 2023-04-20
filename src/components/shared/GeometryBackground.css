@@ -1,0 +1,13 @@
+.triangle {
+    width: 100vw;
+    height: 100px;
+    transform: translateX(var(--pf-global--spacer-lg));
+}
+
+.triangle.top {
+    clip-path: polygon(100% 0, 0 101%, 100% 101%);
+}
+
+.triangle.bottom {
+    clip-path: polygon(100% -1%, 0 -1%, 0 100%);
+}

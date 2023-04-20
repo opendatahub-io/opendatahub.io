@@ -1,12 +1,102 @@
 import React from 'react'
-import { BenefitLayout } from './BenefitLayout'
+import { PlainImageCard } from '../../../shared/PlainImageCard'
 import { Flex, FlexItem, Stack, StackItem, Title, ToggleGroup, ToggleGroupItem } from '@patternfly/react-core'
 import placeholderImage from "../../../../images/placeholder.svg"
 import logo from '../../../../images/logos/datahub_mark_color-blkbg.png'
 import "./PersonasLayout.css"
+import { FeatureCard, FeatureCardProps } from './FeatureCard'
+import { PlainImageCardProps } from '../../../shared/PlainImageCard'
+
+type PersonaBenefits = {
+    name: string;
+    benefits: (PlainImageCardProps & {
+        features: FeatureCardProps[]
+    })[]
+}[]
+const data: PersonaBenefits = [
+    {
+        name: "Data Scientist",
+        benefits: [
+            {
+                title: "Data Catalog",
+                body: "Find, understand and trust your data",
+                link: "/docs/data-catalog",
+                imageUrl: placeholderImage,
+                features: [
+                    {
+                        title: "Data Lineage",
+                        body: "Understand how data is used and transformed",
+                        imageUrl: logo,
+                    },
+                    {
+                        title: "Data Quality",
+                        body: "Discover data issues and improve data quality",
+                        imageUrl: logo,
+                    },
+                    {
+                        title: "Schema Discovery",
+                        body: "Discover data schemas and relationships",
+                        imageUrl: logo,
+                    },
+                ]
+            },
+            {
+                title: "DevOps",
+                body: "Build, deploy and monitor data pipelines",
+                link: "/docs/data-pipelines",
+                imageUrl: placeholderImage,
+                features: [
+                    {
+                        title: "Data Pipelines",
+                        body: "Build, deploy and monitor data pipelines",
+                        imageUrl: logo,
+                    },
+                    {
+                        title: "Data Quality",
+                        body: "Discover data issues and improve data quality",
+                        imageUrl: logo,
+                    },
+                    {
+                        title: "Schema Discovery",
+                        body: "Discover data schemas and relationships",
+                        imageUrl: logo,
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        name: "ML Engineer",
+        benefits: [
+            {
+                title: "Data Catalog",
+                body: "Find, understand and trust your data",
+                link: "/docs/data-catalog",
+                imageUrl: placeholderImage,
+                features: [
+                    {
+                        title: "Data Lineage",
+                        body: "Understand how data is used and transformed",
+                        imageUrl: logo,
+                    },
+                    {
+                        title: "Data Quality",
+                        body: "Discover data issues and improve data quality",
+                        imageUrl: logo,
+                    },
+                    {
+                        title: "Schema Discovery",
+                        body: "Discover data schemas and relationships",
+                        imageUrl: logo,
+                    },
+                ]
+            },
+        ]
+    }
+]
 
 export const PersonasLayout = () => {
-    const [isSelected, setIsSelected] = React.useState('data-scientist');
+    const [isSelected, setIsSelected] = React.useState(data[0].name);
     const handleItemClick = (isSelected: boolean, event: React.MouseEvent<any> | React.KeyboardEvent | MouseEvent) => {
         const id = event.currentTarget.id;
         setIsSelected(id);
@@ -15,404 +105,51 @@ export const PersonasLayout = () => {
     return (
         <Stack className='personas-layout' hasGutter>
             <StackItem>
-                <Flex direction={{default: "column"}} alignItems={{default: "alignItemsCenter"}}>
+                <Flex direction={{ default: "column" }} alignItems={{ default: "alignItemsCenter" }}>
                     <FlexItem>
                         <Title className='pf-u-primary-color-100' headingLevel='h4' size='xl'>I am a</Title>
                     </FlexItem>
                     <FlexItem>
                         <ToggleGroup>
-                            <ToggleGroupItem
-                                text="Data Scientist"
-                                buttonId="data-scientist"
-                                isSelected={isSelected === 'data-scientist'}
-                                onChange={handleItemClick}
-                            />
-                            <ToggleGroupItem
-                                text="ML Engineer"
-                                buttonId="ml-engineer"
-                                isSelected={isSelected === 'ml-engineer'}
-                                onChange={handleItemClick}
-                            />
-                            <ToggleGroupItem
-                                text="DevOps"
-                                buttonId="devops"
-                                isSelected={isSelected === 'devops'}
-                                onChange={handleItemClick}
-                            />
+                            {data.map(persona => (
+                                <ToggleGroupItem
+                                    key={persona.name}
+                                    text={persona.name}
+                                    buttonId={persona.name}
+                                    isSelected={isSelected === persona.name}
+                                    onChange={handleItemClick}
+                                />
+                            ))}
                         </ToggleGroup>
                     </FlexItem>
-
                 </Flex>
             </StackItem>
-            {isSelected === 'data-scientist' && (
-                <>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 1"
-                            body="Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
 
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 3",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                }
-                            ]}
-                        />
-                    </StackItem>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 2"
-                            body="Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
+            {data.map(persona => isSelected === persona.name && (
+                <StackItem key={persona.name}>
+                    <Stack hasGutter>
+                        {persona.benefits.map(benefit => (
+                            <StackItem key={benefit.title}>
+                                <Stack hasGutter>
+                                    <StackItem>
+                                        <PlainImageCard {...benefit} />
+                                        </StackItem>
+                                    <StackItem>
+                                        <Flex direction={{ sm: "row", default: "columnReverse" }} flexWrap={{ default: "nowrap" }}>
+                                            {benefit.features.map((feature) => (
+                                                <FlexItem key={feature.title}>
+                                                    <FeatureCard {...feature} />
+                                                </FlexItem>
+                                            ))}
+                                        </Flex>
+                                    </StackItem>
+                                </Stack>
+                            </StackItem>
+                        ))}
+                    </Stack>
 
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                            ]}
-                        />
-                    </StackItem>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 3"
-                            body="Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
-
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 3",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                consectetur adipiscing elit, \
-                                sed do eiusmod tempor incididun\
-                                aliquip ex ea commodo consequat.\
-                                Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                }
-                            ]}
-                        />
-                    </StackItem>
-                </>
-            )}
-            {isSelected === 'ml-engineer' && (
-                <>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 4"
-                            body="Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
-
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 3",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                }
-                            ]}
-                        />
-                    </StackItem>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 4"
-                            body="Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt
-                                exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
-
-                            features={[
-                                {
-                                    title: "Feature 2.1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                        consectetur adipiscing elit, \
-                                        Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2.2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                        consectetur adipiscing elit",
-                                    imageUrl: logo
-                                },
-                            ]}
-                        />
-                    </StackItem>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 5"
-                            body="Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit, 
-                                Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
-
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                        consectetur adipiscing elit, \
-                                        sed do eiusmod tempor incididun\
-                                        aliquip ex ea commodo consequat.\
-                                        Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 3",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                }
-                            ]}
-                        />
-                    </StackItem>
-                </>
-            )}
-            {isSelected === 'devops' && (
-                <>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 1"
-                            body="Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
-
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 3",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                }
-                            ]}
-                        />
-                    </StackItem>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 2"
-                            body="Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. 
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat.
-                                    Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
-
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                            ]}
-                        />
-                    </StackItem>
-                    <StackItem>
-                        <BenefitLayout
-                            title="Benefit 3"
-                            body="Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. 
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat.
-                                    Duis aute irure dolor in reprehenderit ir."
-                            imageUrl={placeholderImage}
-
-                            features={[
-                                {
-                                    title: "Feature 1",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 2",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                },
-                                {
-                                    title: "Feature 3",
-                                    body: "Lorem ipsum dolor sit amet,\
-                                            consectetur adipiscing elit, \
-                                            sed do eiusmod tempor incididun\
-                                            aliquip ex ea commodo consequat.\
-                                            Duis aute irure dolor in reprehenderit ir.",
-                                    imageUrl: logo
-                                }
-                            ]}
-                        />
-                    </StackItem>
-                </>
-            )}
+                </StackItem>
+            ))}
         </Stack>
     )
 }

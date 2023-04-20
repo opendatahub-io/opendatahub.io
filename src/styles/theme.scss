@@ -11,6 +11,12 @@
     --pf-global--BorderRadius--sm: 10px;
 };
 
+.pf-c-page {
+    --pf-c-page--section--m-limit-width--MaxWidth: 55rem !important;
+    --pf-c-page__main-section--BackgroundColor: #fff;
+    --pf-c-page--BackgroundColor: #fff;
+}
+
 .pf-c-toggle-group {
     --pf-c-toggle-group__button--m-selected--BackgroundColor: #e2e8ff !important;
 }
