@@ -1,3 +1,7 @@
+.pf-c-masthead {
+    --pf-c-masthead--BackgroundColor: #0e0e0e !important
+}
+
 .navbar-root {
     position: sticky !important;
     top: 0;
