@@ -20,9 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <PageSection isCenterAligned isWidthLimited padding={{ default: "padding" }}>
         <ArchitectureMap />
       </PageSection>
-      <PageSection isCenterAligned isWidthLimited padding={{ default: "padding" }}>
-        <CommunityDetails />
-      </PageSection>
+      <CommunityDetails />
       <PageSection isCenterAligned isWidthLimited padding={{ default: "padding" }}>
         <FeaturedBlogs />
       </PageSection>
