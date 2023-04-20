@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardHeaderMain, Title, CardBody, Text, Chip, StackItem, Stack, Flex, FlexItem, CardFooter, CardTitle, Button } from "@patternfly/react-core"
+import { Card, Title, CardBody, Text, Chip, StackItem, Stack, Flex, FlexItem, CardTitle } from "@patternfly/react-core"
 import React from "react"
 import "./ContentCard.css"
 import { navigate } from "gatsby"
