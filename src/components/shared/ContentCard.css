@@ -1,0 +1,9 @@
+.custom-content-card .subtitle {
+    color: var(--pf-global--primary-color--200);
+    font-weight: normal;
+}
+
+.custom-content-card {
+    max-width: 30rem;
+    min-width: 20rem;
+}
