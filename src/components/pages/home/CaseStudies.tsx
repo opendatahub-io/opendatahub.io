@@ -29,6 +29,7 @@ export const CaseStudies = ({ }) => {
                             imageSize={ImageSizeEnum.lg}
                         />
                     </StackItem>
+                    <StackItem>
                     <PlainImageCard
                         title="Case Study 2"
                         body="Lorem ipsumasdf dolsdafsdfor sit amet, consectetur adipiscing elit.\
@@ -40,7 +41,6 @@ export const CaseStudies = ({ }) => {
                         imageUrl={placeholderImage}
                         imageSize={ImageSizeEnum.lg}
                     />
-                    <StackItem>
                     </StackItem>
                 </Stack>
             </PageSection>
