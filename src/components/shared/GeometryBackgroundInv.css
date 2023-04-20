@@ -1,0 +1,14 @@
+.invtriangle {
+    width: 100vw;
+    height: 100px;
+    transform: translateX(var(--pf-global--spacer-lg));
+}
+
+.invtriangle.top {
+    clip-path: polygon(0 101%, 100% 101%, 0 0);
+
+}
+
+.invtriangle.bottom {
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
