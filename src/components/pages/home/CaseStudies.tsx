@@ -1,6 +1,6 @@
 import React from 'react'
 import { GeometryBackground } from '../../shared/GeometryBackground'
-import { Bullseye, PageSection, PageSectionVariants, PanelHeader, Stack, StackItem, Title } from '@patternfly/react-core'
+import { Bullseye, PageSection, PageSectionVariants, Stack, StackItem, Title } from '@patternfly/react-core'
 import { ImageSizeEnum, PlainImageCard } from '../../shared/PlainImageCard'
 import placeholderImage from "../../../images/placeholder.svg"
 
@@ -14,7 +14,7 @@ export const CaseStudies = ({ }) => {
                 variant={PageSectionVariants.dark}
                 style={{ backgroundColor: "transparent" }}
             >
-                <Bullseye className=''><Title headingLevel={'h3'} size='3xl'>Case Studies</Title></Bullseye>
+                <Title className='pf-u-text-align-center' style={{marginBottom: "4rem"}} headingLevel={'h3'} size='3xl'>Case Studies</Title>
                 <Stack hasGutter>
                     <StackItem>
                         <PlainImageCard
