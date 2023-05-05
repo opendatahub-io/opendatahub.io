@@ -2,7 +2,7 @@ import React from 'react'
 import { Title, Gallery, GalleryItem, StackItem, Stack, Flex, FlexItem, Button } from '@patternfly/react-core'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { ContentCard } from '../../shared'
-import placeholderImage from "../../../images/placeholder.svg"
+import placeholderImage from "../../../content/assets/img/placeholder.svg"
 
 const getLatestBlog = (start: number, end?: number) => {
 
