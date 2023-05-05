@@ -1,22 +1,17 @@
 .pf-c-masthead {
-    --pf-c-masthead--BackgroundColor: #0e0e0e !important
+  --pf-c-masthead--BackgroundColor: #0e0e0e !important;
 }
 
-.navbar-root {
-    position: sticky !important;
-    top: 0;
-    z-index: 9999;
-}
 
 .transparent {
-    background-color: transparent !important; 
-  }
+  background-color: transparent !important;
+}
 
 .navbar-links {
-    width: 100%;
-    align-items: center;
+  width: 100%;
+  align-items: center;
 }
 
 .navbar-links a {
-    color: var(--pf-global--palette--white) !important;
+  color: var(--pf-global--palette--white) !important;
 }

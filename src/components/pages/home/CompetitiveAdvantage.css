@@ -1,18 +1,18 @@
 .icon {
-    overflow: hidden;
-    height: 45px
+  overflow: hidden;
+  height: 45px;
 }
 
 .max-width-900 {
-    max-width: 900px;
+  max-width: 900px;
 }
 
 iframe {
-    width: 100%;
-    height: 12rem;
+  width: 100%;
+  height: 12rem;
 }
 
 .inline-link-underline {
-    text-decoration: underline;
-    color: var(--pf-global--Color--100) !important;
+  text-decoration: underline;
+  color: var(--pf-global--Color--100) !important;
 }

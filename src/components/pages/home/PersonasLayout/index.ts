@@ -1,1 +1,1 @@
-export * from "./PersonasLayout"
+export * from "./PersonasLayout";

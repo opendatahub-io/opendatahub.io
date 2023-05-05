@@ -28,10 +28,10 @@ const getLatestBlog = (start: number, end?: number) => {
 };
 const blogCards = (data) => {
     return (
-        <Gallery hasGutter maxWidths={{default: '400px'}}>
+        <Gallery hasGutter maxWidths={{ default: '400px' }}>
             {
-                data.map(({frontmatter, fields}) => (
-                    <ContentCard title={frontmatter.title} body={frontmatter.preview} link={fields.slug} imageUrl={placeholderImage}/>
+                data.map(({ frontmatter, fields }) => (
+                    <ContentCard title={frontmatter.title} body={frontmatter.preview} link={fields.slug} imageUrl={placeholderImage} />
                 ))
             }
         </Gallery>
@@ -40,17 +40,17 @@ const blogCards = (data) => {
 
 const blogLinks = (data) => {
     return (
-        <Gallery hasGutter maxWidths={{default: '400px'}}>
+        <Gallery hasGutter maxWidths={{ default: '400px' }}>
             {
-                data.map(({frontmatter, fields}) => (
+                data.map(({ frontmatter, fields }) => (
                     <GalleryItem>
-                        <Flex flexWrap={{default: 'nowrap'}} direction={{default:'row'}} justifyContent={{xl: 'justifyContentFlexStart', md:'justifyContentFlexEnd'}}>
+                        <Flex flexWrap={{ default: 'nowrap' }} direction={{ default: 'row' }} justifyContent={{ xl: 'justifyContentFlexStart', md: 'justifyContentFlexEnd' }}>
                             <FlexItem>
                                 <p>{frontmatter.title}</p>
                             </FlexItem>
                             <FlexItem>
                                 <Button isInline iconPosition="right" variant='link' component={(props: any) => <Link {...props} to={fields.slug} />}>
-                                        {frontmatter.date}
+                                    {frontmatter.date}
                                 </Button>
                             </FlexItem>
                         </Flex>
@@ -61,14 +61,14 @@ const blogLinks = (data) => {
     )
 }
 
-export const FeaturedBlogs = ({}) => {
+export const FeaturedBlogs = ({ }) => {
     return (
         <Stack hasGutter>
             <StackItem>
                 <Title className='pf-u-text-align-center' headingLevel={'h3'} size='3xl'>Whats New</Title>
             </StackItem>
             <StackItem>
-                {blogCards(getLatestBlog(0,2))}
+                {blogCards(getLatestBlog(0, 2))}
             </StackItem>
             <StackItem>
                 {blogLinks(getLatestBlog(2, 12))}

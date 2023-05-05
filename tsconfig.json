@@ -24,6 +24,6 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/html.jsx"  ],
   "exclude": ["node_modules"]
 }
