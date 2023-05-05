@@ -1,16 +1,11 @@
-import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
+import * as React from "react";
 
-import {Layout, Seo} from "../components/shared"
+import { Layout, Seo } from "../components/shared";
 
-const BlogPostTemplate = ({
-  data: { site, markdownRemark: post },
-  location,
-}) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
-
+const BlogPostTemplate = ({ data: { markdownRemark: post } }) => {
   return (
-    <Layout location={location}>
+    <Layout>
       <article
         className="blog-post"
         itemScope
@@ -27,8 +22,8 @@ const BlogPostTemplate = ({
         <hr />
       </article>
     </Layout>
-  )
-}
+  );
+};
 
 export const Head = ({ data: { markdownRemark: post } }) => {
   return (
@@ -36,20 +31,13 @@ export const Head = ({ data: { markdownRemark: post } }) => {
       title={post.frontmatter.title}
       preview={post.frontmatter.preview || post.excerpt}
     />
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-  ) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query BlogPostTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
@@ -64,4 +52,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

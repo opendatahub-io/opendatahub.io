@@ -3,14 +3,10 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `opendatahub.io`,
-    // siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.opendatahub.io`
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    `gatsby-plugin-sass`,
     // "gatsby-plugin-google-gtag", // TODO: set up google analytics
     {
       resolve: "gatsby-plugin-feed",
@@ -67,29 +63,38 @@ const config: GatsbyConfig = {
         ],
       },
     },
-     {
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: []
       }
     },
+
+    // `gatsby-plugin-catch-links`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "pages",
-        "path": "./content/posts/"
+        "name": "blog",
+        "path": "src/content/posts/"
       },
-    __key: "pages"
-  },
-  // {
-  //   resolve: `gatsby-source-git`,
-  //   options: {
-  //     name: `docs-repo`,
-  //     remote: `https://github.com/opendatahub-io/opendatahub-documentation.git`,
-  //     branch: `main`
-  //   }
-  // },
-]
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `src/content/assets`,
+        name: `assets`,
+      },
+    },
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `docs`,
+        remote: `https://github.com/opendatahub-io/opendatahub-documentation.git`,
+        branch: `main`
+      }
+    },
+  ]
 };
 
 export default config;

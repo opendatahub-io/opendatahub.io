@@ -1,41 +1,87 @@
-@import '@patternfly/patternfly/patternfly.min.css';
-@import '@patternfly/patternfly/patternfly-addons.css';
-
-
+@import "@patternfly/patternfly/patternfly.min.css";
+@import "@patternfly/patternfly/patternfly-addons.css";
+@import "./asciidoc.scss";
 
 :root {
-    --pf-global--primary-color--100: #5075ff;
-    --pf-global--primary-color--200: #2b6af3;
-    --pf-global--primary-color--light-100: #819BFF;
-    --pf-global--primary-color--dark-100: #5075ff;
-    
-    --pf-global--BorderRadius--sm: 10px;
-};
+  --pf-global--primary-color--100: #5075ff;
+  --pf-global--primary-color--200: #2b6af3;
+  --pf-global--primary-color--light-100: #819bff;
+  --pf-global--primary-color--dark-100: #5075ff;
+
+  --pf-global--BorderRadius--sm: 10px;
+}
+
+
+blockquote,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  padding: revert;
+  margin: revert;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: revert;
+  font-weight: revert;
+}
 
 .pf-c-page {
-    --pf-c-page--section--m-limit-width--MaxWidth: 55rem !important;
-    --pf-c-page__main-section--BackgroundColor: #fff;
-    --pf-c-page--BackgroundColor: #fff;
+  --pf-c-page--section--m-limit-width--MaxWidth: 55rem !important;
+  --pf-c-page__main-section--BackgroundColor: #fff;
+  --pf-c-page--BackgroundColor: #fff;
 }
 
 .pf-c-toggle-group {
-    --pf-c-toggle-group__button--m-selected--BackgroundColor: #e2e8ff !important;
+  --pf-c-toggle-group__button--m-selected--BackgroundColor: #e2e8ff !important;
 }
 
 .pf-c-title {
-    --pf-c-title--m-4xl--FontWeight: var(--pf-global--FontWeight--bold);
-    --pf-c-title--m-3xl--FontWeight: var(--pf-global--FontWeight--bold);
-    --pf-c-title--m-2xl--FontWeight: var(--pf-global--FontWeight--bold);
-    --pf-c-title--m-xl--FontWeight: var(--pf-global--FontWeight--bold);
-    --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--bold);
-    --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-title--m-4xl--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-title--m-3xl--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-title--m-2xl--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-title--m-xl--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--bold);
+}
+
+button.pf-c-nav__link {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.pf-c-page__sidebar {
+  min-width: 350px
 }
 
 .strong-text {
-    font-weight: var(--pf-global--FontWeight--bold);
-    color: var(--pf-global--primary-color--200);
+  font-weight: var(--pf-global--FontWeight--bold);
+  color: var(--pf-global--primary-color--200);
 }
 
 .rounded {
-    border-radius: var(--pf-global--BorderRadius--sm);
+  border-radius: var(--pf-global--BorderRadius--sm);
 }
