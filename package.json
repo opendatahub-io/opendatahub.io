@@ -20,6 +20,7 @@
     "@mdx-js/react": "^2.3.0",
     "@patternfly/patternfly": "^4.224.2",
     "@patternfly/react-core": "^4.276.6",
+    "asciidoctor": "^2.2.6",
     "asciidoctor.js": "^1.5.9",
     "gatsby": "^5.8.1",
     "gatsby-plugin-catch-links": "^5.9.0",
@@ -32,7 +33,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-tsparticles": "^2.9.3",
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "tsparticles": "^2.9.3"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

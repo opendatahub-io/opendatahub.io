@@ -1,4 +1,4 @@
-import { GatsbyNode, NodeInput, Node as _Node } from "gatsby"
+import { GatsbyNode, Node as _Node } from "gatsby"
 import { createFilePath, FileSystemNode } from "gatsby-source-filesystem"
 
 const path = require(`path`)
