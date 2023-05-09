@@ -9,6 +9,12 @@ const config: GatsbyConfig = {
   plugins: [
     // "gatsby-plugin-google-gtag", // TODO: set up google analytics
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "src/content/assets/img/logos/datahub_mark_color.png"
+      }
+    },
+    {
       resolve: "gatsby-plugin-feed",
       options: {
         query: `
@@ -78,20 +84,14 @@ const config: GatsbyConfig = {
         "path": "src/content/posts/"
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `src/content/assets`,
-    //     name: `assets`,
-    //   },
-    // },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-git`,
       options: {
         name: `docs`,
-        remote: `https://github.com/gkrumbach07/opendatahub-documentation.git`,
-        branch: `main`
+        remote: `https://github.com/opendatahub-io/opendatahub-documentation.git`,
+        branch: `main`,
+        local: "public/static/docs"
       }
     },
   ]

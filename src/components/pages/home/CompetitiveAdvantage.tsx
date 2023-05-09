@@ -11,7 +11,7 @@ import {
 } from "@patternfly/react-core";
 import React from "react";
 
-import logo from "../../../content/assets/img/logos/datahub_mark_color-blkbg.png";
+import monitorIcon from "../../../content/assets/img/monitor_icon.svg";
 import cloudUploadIcon from "../../../content/assets/img/cloud_upload_icon.svg";
 import hybridCloud from "../../../content/assets/img/hybrid_cloud_icon.svg";
 
@@ -146,7 +146,7 @@ export const CompetitiveAdvantage = (
           <FlexItem>
             <Stack>
               <StackItem>
-                <img src={logo} alt="Open Data Hub logo" className="icon" />
+                <img src={monitorIcon} alt="monitor icon" className="icon" />
               </StackItem>
               <StackItem>
                 <Title size={TitleSizes["xl"]} headingLevel="h3">
