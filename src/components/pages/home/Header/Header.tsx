@@ -30,7 +30,7 @@ export const Header = () => {
         </FlexItem>
         <FlexItem className="overlay" spacer={{ default: "spacer3xl" }}>
           <Title headingLevel="h1" size="4xl">
-            A Data & AI Platform for the Hybrid Cloud
+            An AI Platform for the Hybrid Cloud
           </Title>
         </FlexItem>
         <FlexItem className="overlay">

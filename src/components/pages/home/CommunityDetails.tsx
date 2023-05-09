@@ -18,11 +18,11 @@ import {
 import { Link } from "gatsby";
 import React from "react";
 
-import { GeometryBackgroundInv } from "../../shared/GeometryBackgroundInv";
+import { GeometryBackground } from "../../shared/GeometryBackground";
 
-export const CommunityDetails = ({}) => {
+export const CommunityDetails = ({ }) => {
   return (
-    <GeometryBackgroundInv color="#EEEEEE">
+    <GeometryBackground color="#EEEEEE" invert>
       <PageSection
         isCenterAligned
         isWidthLimited
@@ -46,8 +46,7 @@ export const CommunityDetails = ({}) => {
           </FlexItem>
           <FlexItem>
             <Text component={TextVariants.p}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, hybrid
-              cloud tempor inc.Lorem ipsum dolor sit amet, consectetur adipiscin
+              Get involved with our discussions or contribute to the project!
             </Text>
           </FlexItem>
         </Flex>
@@ -154,7 +153,7 @@ export const CommunityDetails = ({}) => {
                     <Link {...props} to={"https://github.com/opendatahub-io"} />
                   )}
                 >
-                  GITHUB ORIGINATION
+                  GITHUB ORGANIZATION
                 </Button>
               </StackItem>
             </Stack>
@@ -189,6 +188,6 @@ export const CommunityDetails = ({}) => {
           </GalleryItem>
         </Gallery>
       </PageSection>
-    </GeometryBackgroundInv>
+    </GeometryBackground>
   );
 };

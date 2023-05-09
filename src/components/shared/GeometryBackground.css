@@ -11,3 +11,16 @@
 .triangle.bottom {
   clip-path: polygon(100% -1%, 0 -1%, 0 100%);
 }
+
+
+.triangle.top.inverted {
+  clip-path: polygon(0 101%, 100% 101%, 0 0);
+}
+
+.triangle.bottom.inverted {
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.triangle-geometry-background {
+  background-color: #fff;
+}

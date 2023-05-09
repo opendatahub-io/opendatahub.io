@@ -78,19 +78,19 @@ const config: GatsbyConfig = {
         "path": "src/content/posts/"
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `src/content/assets`,
-        name: `assets`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `src/content/assets`,
+    //     name: `assets`,
+    //   },
+    // },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-git`,
       options: {
         name: `docs`,
-        remote: `https://github.com/opendatahub-io/opendatahub-documentation.git`,
+        remote: `https://github.com/gkrumbach07/opendatahub-documentation.git`,
         branch: `main`
       }
     },

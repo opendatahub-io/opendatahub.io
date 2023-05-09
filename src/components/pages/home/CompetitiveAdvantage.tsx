@@ -12,6 +12,9 @@ import {
 import React from "react";
 
 import logo from "../../../content/assets/img/logos/datahub_mark_color-blkbg.png";
+import cloudUploadIcon from "../../../content/assets/img/cloud_upload_icon.svg";
+import hybridCloud from "../../../content/assets/img/hybrid_cloud_icon.svg";
+
 import "./CompetitiveAdvantage.css";
 
 type CompetitiveAdvantageProps = {
@@ -53,9 +56,12 @@ export const CompetitiveAdvantage = (
               </FlexItem>
               <FlexItem>
                 <Text component={TextVariants.p}>
-                  The Open Data Hub is a comprehensive collection of open source
-                  tools designed to facilitate the entire data science life
-                  cycle. The project was developed to take advantage of{" "}
+                  Open Data Hub is an open source AI platform designed for the hybrid cloud.
+                  The community seeks to bridge the gap between application developers,
+                  data stewards and data scientists by blending the leading open source AI
+                  tools with a unifying and intuitive user experience. Open Data Hub reduces
+                  the time it takes to infuse applications, services or business operations
+                  with AI. With
                   <Button
                     className="inline-link-underline"
                     component="a"
@@ -64,8 +70,8 @@ export const CompetitiveAdvantage = (
                     isInline
                   >
                     Kubernetes
-                  </Button>{" "}
-                  running on the{" "}
+                  </Button>
+                  {", "}
                   <Button
                     className="inline-link-underline"
                     component="a"
@@ -73,9 +79,21 @@ export const CompetitiveAdvantage = (
                     variant="link"
                     isInline
                   >
-                    Red Hat OpenShift Container Platform
+                    OpenShift
                   </Button>
-                  .
+                  {" and "}
+                  <Button
+                    className="inline-link-underline"
+                    component="a"
+                    href="https://kubernetes.io/docs/concepts/extend-kubernetes/operator/"
+                    variant="link"
+                    isInline
+                  >
+                    operators
+                  </Button>
+                  {" "}at its core, Open Data Hub
+                  also simplifies AI application deployments at scale to private data centers,
+                  cloud providers, edge devices and anywhere in between.
                 </Text>
               </FlexItem>
             </Flex>
@@ -91,18 +109,36 @@ export const CompetitiveAdvantage = (
           <FlexItem>
             <Stack>
               <StackItem>
-                <img src={logo} alt="Open Data Hub logo" className="icon" />
+                <img src={hybridCloud} alt="hybrid cloud icon" className="icon" />
               </StackItem>
               <StackItem>
                 <Title size={TitleSizes["xl"]} headingLevel="h3">
-                  Flexible
+                  Hybrid Cloud Ready
                 </Title>
               </StackItem>
               <StackItem>
                 <Text component={TextVariants.p}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-                  <span className="strong-text">hybrid cloud</span> tempor
-                  inc.Lorem ipsum dolor sit amet, consectetur adipiscin
+                  Simplify the lifecycle management of your <span className="strong-text">machine learning models</span> and AI
+                  applications across private data centers, public cloud providers, edge devices and more.
+                </Text>
+              </StackItem>
+            </Stack>
+          </FlexItem>
+          <FlexItem>
+            <Stack>
+              <StackItem>
+                <img src={cloudUploadIcon} alt="cloud upload icon" className="icon" />
+              </StackItem>
+              <StackItem>
+                <Title size={TitleSizes["xl"]} headingLevel="h3">
+                  Fast Deployment
+                </Title>
+              </StackItem>
+              <StackItem>
+                <Text component={TextVariants.p}>
+                  With the power of Kubernetes operators, get up and running in minutes on any OpenShift cluster
+                  running in the <span className="strong-text">hybrid cloud</span>. Customize your deployment with additional tools using the extensible plug-and-play framework.
+
                 </Text>
               </StackItem>
             </Stack>
@@ -114,33 +150,13 @@ export const CompetitiveAdvantage = (
               </StackItem>
               <StackItem>
                 <Title size={TitleSizes["xl"]} headingLevel="h3">
-                  Scalable
+                  Enhanced User Experience
                 </Title>
               </StackItem>
               <StackItem>
                 <Text component={TextVariants.p}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-                  <span className="strong-text">hybrid cloud</span> tempor
-                  inc.Lorem ipsum dolor sit amet, consectetur adipiscin
-                </Text>
-              </StackItem>
-            </Stack>
-          </FlexItem>
-          <FlexItem>
-            <Stack>
-              <StackItem>
-                <img src={logo} alt="Open Data Hub logo" className="icon" />
-              </StackItem>
-              <StackItem>
-                <Title size={TitleSizes["xl"]} headingLevel="h3">
-                  Deploy Anywhere
-                </Title>
-              </StackItem>
-              <StackItem>
-                <Text component={TextVariants.p}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-                  <span className="strong-text">hybrid cloud</span> tempor
-                  inc.Lorem ipsum dolor sit amet, consectetur adipiscin
+                  An improved user experience allows application developers and data scientists to orchestrate workflows,
+                  <span className="strong-text">train and serve models</span>, and build AI-infused applications faster than ever.
                 </Text>
               </StackItem>
             </Stack>
