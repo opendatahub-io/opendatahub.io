@@ -49,10 +49,10 @@ h6 {
   font-weight: revert;
 }
 
-.pf-c-page .pf-c-page__main-section {
+.pf-c-page {
   --pf-c-page--section--m-limit-width--MaxWidth: 55rem !important;
-  --pf-c-page__main-section--BackgroundColor: #fff;
-  --pf-c-page--BackgroundColor: #fff;
+  --pf-c-page__main-section--BackgroundColor: #fff !important;
+  --pf-c-page--BackgroundColor: #fff !important;
 }
 
 .pf-c-toggle-group {
@@ -84,4 +84,8 @@ button.pf-c-nav__link {
 
 .rounded {
   border-radius: var(--pf-global--BorderRadius--sm);
+}
+
+table {
+  margin-bottom: 1rem;
 }

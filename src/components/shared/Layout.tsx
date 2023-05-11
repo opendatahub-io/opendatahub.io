@@ -25,7 +25,7 @@ export const Layout = ({
           theme="light"
         />
       ) : undefined}
-      header={<Navbar isTransparentAtTop={useTransparentNavbar} />}
+      header={<Navbar useSidebarExpand={!!sidebar} isTransparentAtTop={useTransparentNavbar} />}
     >
       {children}
     </Page>
