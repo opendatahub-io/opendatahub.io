@@ -17,9 +17,10 @@ import "./Navbar.css";
 
 type NavbarProps = {
   isTransparentAtTop?: boolean;
+  useSidebarExpand?: boolean;
 };
 
-export const Navbar = ({ isTransparentAtTop }: NavbarProps) => {
+export const Navbar = ({ isTransparentAtTop, useSidebarExpand }: NavbarProps) => {
   const [isTransparent, setIsTransparent] = React.useState(true);
 
   React.useEffect(() => {
@@ -37,14 +38,16 @@ export const Navbar = ({ isTransparentAtTop }: NavbarProps) => {
 
   return (
     <Masthead
-      className={isTransparent && isTransparentAtTop ? "transparent" : ""}
+      className={`${isTransparent && isTransparentAtTop ? "transparent" : ""} sticky`}
     >
       <MastheadToggle>
-        <PageToggleButton
-          variant="plain"
-        >
-          <BarsIcon />
-        </PageToggleButton>
+        {useSidebarExpand && (
+          <PageToggleButton
+            variant="plain"
+          >
+            <BarsIcon />
+          </PageToggleButton>
+        )}
       </MastheadToggle>
       <MastheadMain>
         <Button

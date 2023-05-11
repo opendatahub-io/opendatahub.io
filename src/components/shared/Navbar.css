@@ -15,3 +15,8 @@
 .navbar-links a {
   color: var(--pf-global--palette--white) !important;
 }
+
+.sticky {
+  position: sticky !important;
+  top: 0;
+}

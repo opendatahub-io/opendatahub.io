@@ -61,7 +61,7 @@ export const CompetitiveAdvantage = (
                   data stewards and data scientists by blending the leading open source AI
                   tools with a unifying and intuitive user experience. Open Data Hub reduces
                   the time it takes to infuse applications, services or business operations
-                  with AI. With
+                  with AI. With{" "}
                   <Button
                     className="inline-link-underline"
                     component="a"

@@ -1,4 +1,4 @@
-import { PageSection } from "@patternfly/react-core";
+import { Flex, FlexItem, PageSection } from "@patternfly/react-core";
 import type { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
 
@@ -23,43 +23,53 @@ const IndexPage: React.FC<PageProps> = () => {
       >
         <Header />
       </PageSection>
-      <PageSection
-        isCenterAligned
-        isWidthLimited
-        padding={{ default: "padding" }}
-      >
-        <CompetitiveAdvantage />
-      </PageSection>
-      <PageSection
-        isCenterAligned
-        isWidthLimited
-        padding={{ default: "padding" }}
-      >
-        <PersonasLayout />
-      </PageSection>
-      <CaseStudies />
-      <PageSection
-        isCenterAligned
-        isWidthLimited
-        padding={{ default: "padding" }}
-      >
-        <ArchitectureMap />
-      </PageSection>
-      <CommunityDetails />
-      <PageSection
-        isCenterAligned
-        isWidthLimited
-        padding={{ default: "padding" }}
-      >
-        <FeaturedBlogs />
-      </PageSection>
-      <PageSection
-        isCenterAligned
-        isWidthLimited
-        padding={{ default: "padding" }}
-      >
-        <Footer />
-      </PageSection>
+      <Flex spaceItems={{ default: "spaceItems4xl" }} direction={{ default: "column" }}>
+        <FlexItem>
+          <PageSection
+            isCenterAligned
+            isWidthLimited
+            padding={{ default: "padding" }}
+          >
+            <CompetitiveAdvantage />
+          </PageSection>
+        </FlexItem>
+        <FlexItem>
+          <PageSection
+            isCenterAligned
+            isWidthLimited
+            padding={{ default: "padding" }}
+          >
+            <PersonasLayout />
+          </PageSection>
+        </FlexItem>
+        <FlexItem>
+          <CaseStudies />
+        </FlexItem>
+        <FlexItem>
+          <PageSection
+            isCenterAligned
+            isWidthLimited
+            padding={{ default: "padding" }}
+          >
+            <ArchitectureMap />
+          </PageSection>
+        </FlexItem>
+        <FlexItem>
+          <CommunityDetails />
+        </FlexItem>
+        <FlexItem>
+          <PageSection
+            isCenterAligned
+            isWidthLimited
+            padding={{ default: "padding" }}
+          >
+            <FeaturedBlogs />
+          </PageSection>
+        </FlexItem>
+        <FlexItem>
+          <Footer />
+        </FlexItem>
+      </Flex>
     </Layout>
   );
 };
