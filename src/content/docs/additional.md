@@ -7,8 +7,8 @@ permalink: /docs/additional
 ## [Community](/community.html)
 - [Slack](https://odh-io.slack.com)  - Community discussions for the Open Data Hub Special Interest Groups and Working Groups occur in the [odh-io](https://odh-io.slack.com) workspace.
 - [Meetings](http://opendatahub.io/community.html) -- Community meetings for Open Data Hub are conducted regularly.  Get the meeting information and find out more on the Open Data Hub Community Repo.
-- [GitHub]({{site.repo}}) -- All Open Data Hub projects are open source.  Browse the source code.
-- [Mailing List]({{ site.email_list }}) -- Stay up to date with the latest announcements and discussion about the Open Data Hub.
+- [GitHub](https://github.com/opendatahub-io) -- All Open Data Hub projects are open source.  Browse the source code.
+- [Mailing List](https://lists.opendatahub.io/admin/lists/) -- Stay up to date with the latest announcements and discussion about the Open Data Hub.
 
 
 ## Videos

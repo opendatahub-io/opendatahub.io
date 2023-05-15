@@ -28,5 +28,3 @@ The way overlays generally work in the context of Open Data Hub manifests is tha
 Overlays add a bit of complexity and it takes a bit of learning to become productive when using them, but it is well worth due to the flexibility and long term maintainablity you gain by leveraging them for your customizations.
 
 If you need additional examples of kustomize overlays, please read the kubernetes documentation on kustomize manifests [Bases and Overlays](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/#bases-and-overlays)
-
-{% include next-link.html label="Advanced Installation" url="/docs/administration/advanced-installation/gpu.html" %}

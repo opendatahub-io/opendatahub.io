@@ -8,7 +8,7 @@ import { PageSection } from "@patternfly/react-core";
 import { AsciiDocSection } from "../types";
 
 const DocsPageTemplate = ({
-  data: { asciidoc: doc, allFile: allDocs },
+  data: { asciidoc, markdownRemark, allFile: allDocs },
   location,
 }: PageProps<Queries.DocsPageTemplateQuery>) => {
   const toc: { [key: string]: AsciiDocSection[] } = allDocs.edges
@@ -25,6 +25,7 @@ const DocsPageTemplate = ({
         return prev;
       }
     }, {});
+  const html = markdownRemark?.html ?? asciidoc?.html
 
   return (
     <Layout
@@ -43,7 +44,7 @@ const DocsPageTemplate = ({
       >
         <div
           className="asciidoc-docs"
-          dangerouslySetInnerHTML={{ __html: doc?.html ?? "" }}
+          dangerouslySetInnerHTML={{ __html: html ?? "" }}
         />
       </PageSection>
     </Layout>
@@ -51,51 +52,52 @@ const DocsPageTemplate = ({
 };
 
 export const Head = ({
-  data: { asciidoc: doc },
+  data: { asciidoc, markdownRemark },
 }: PageProps<Queries.DocsPageTemplateQuery>) => {
-  return <Seo title={doc?.document?.title ?? "Documentation"} />;
+  const title = asciidoc?.document?.title ?? markdownRemark?.frontmatter?.title ?? "Documentation"
+  return <Seo title={title} />;
 };
 
 export default DocsPageTemplate;
 
 export const pageQuery = graphql`
-  query DocsPageTemplate($id: String!) {
-    allFile(
-      filter: {
+query DocsPageTemplate($id: String!) {
+  allFile(
+    filter: {
         sourceInstanceName: { eq: "docs" }
         childrenAsciidoc: { elemMatch: { id: { ne: null } } }
       }
-    ) {
-      edges {
-        node {
-          childAsciidoc {
-            fields {
-              slug
-            }
-            sections {
-              parentId
-              name
-              level
-              index
-              id
-            }
+  ) {
+    edges {
+      node {
+        childAsciidoc {
+          fields {
+            slug
+          }
+          sections {
+            parentId
+            name
+            level
+            index
+            id
           }
         }
       }
     }
-    asciidoc(id: { eq: $id }) {
-      html
-      id
-      document {
-        title
-      }
-      sections {
-        id
-        index
-        level
-        name
-        parentId
-      }
+  }
+  asciidoc(id: {eq: $id}) {
+    html
+    id
+    document {
+      title
     }
   }
+  markdownRemark(id: {eq: $id}) {
+    html
+    id
+    frontmatter {
+      title
+    }
+  }
+}
 `;

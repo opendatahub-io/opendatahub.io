@@ -45,5 +45,3 @@ All components/projects will be required to designate dedicated maintainers/owne
   * Apache Spark on OpenShift
   * Apache Airflow on OpenShift
   * Ray.io
-
-{% include next-link.html label="Landscape" url="/docs/landscape.html" %}

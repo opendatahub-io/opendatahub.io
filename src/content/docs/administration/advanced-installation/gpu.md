@@ -22,6 +22,3 @@ To spawn a Jupyter Notebook with GPU support, set the `GPU` field to a number gr
 import tensorflow as tf
 tf.test.is_gpu_available()
 ```
-
-
-{% include next-link.html label="Architecture" url="/docs/architecture.html" %}
