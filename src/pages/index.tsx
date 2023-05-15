@@ -1,10 +1,9 @@
-import { Flex, FlexItem, PageSection } from "@patternfly/react-core";
+import { Flex, FlexItem, PageSection, PageSectionVariants } from "@patternfly/react-core";
 import type { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
 
 import {
   ArchitectureMap,
-  CaseStudies,
   CommunityDetails,
   CompetitiveAdvantage,
   FeaturedBlogs,
@@ -43,9 +42,6 @@ const IndexPage: React.FC<PageProps> = () => {
           </PageSection>
         </FlexItem>
         <FlexItem>
-          <CaseStudies />
-        </FlexItem>
-        <FlexItem>
           <PageSection
             isCenterAligned
             isWidthLimited
@@ -67,7 +63,16 @@ const IndexPage: React.FC<PageProps> = () => {
           </PageSection>
         </FlexItem>
         <FlexItem>
-          <Footer />
+          <PageSection
+            isCenterAligned
+            isWidthLimited
+            className="footer-section"
+            padding={{ default: "padding" }}
+            variant={PageSectionVariants.dark}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <Footer />
+          </PageSection>
         </FlexItem>
       </Flex>
     </Layout>

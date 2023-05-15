@@ -57,18 +57,36 @@ const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => 
         }
     }
 
+    const renderNavItem = (item: SideNavItemConfig) => {
+        if (toc[item.slug]) {
+            return (
+                <NavExpandable key={item.slug} title={item.title} isExpanded={location.pathname.includes(item.slug)} isActive={location.pathname.includes(item.slug)}>
+                    {nestSections(toc[item.slug]).map(section => renderSection(section, item.slug))}
+                </NavExpandable>
+            )
+        }
+        else if (item.children) {
+            return (
+                <NavExpandable key={item.slug} title={item.title} isExpanded={location.pathname.includes(item.slug)} isActive={location.pathname.includes(item.slug)}>
+                    {item.children.map(i => renderNavItem(i))}
+                </NavExpandable>
+            )
+        }
+        else {
+            return (
+                <NavItem isActive={location.pathname.includes(item.slug)}>
+                    <Link to={item.slug}>
+                        {item.title}
+                    </Link>
+                </NavItem>
+            )
+        }
+    }
 
     return (
         <Nav theme="light">
             <NavList>
-                {config.map(item => {
-                    return (
-                        <NavExpandable key={item.slug} title={item.title} isExpanded={location.pathname.includes(item.slug)} isActive={location.pathname.includes(item.slug)}>
-                            {nestSections(toc[item.slug]).map(section => renderSection(section, item.slug))}
-                        </NavExpandable>
-
-                    )
-                })}
+                {config.map(item => renderNavItem(item))}
             </NavList>
         </Nav>
     )

@@ -13,3 +13,13 @@ export type AsciiDocSection = {
 }
 
 export type NestedAsciiDocSection = (AsciiDocSection & { sections: NestedAsciiDocSection[] })
+
+export type ContentType = "video" | "audio" | "file"
+
+export type LinkedContent = {
+    title: string,
+    url: string,
+    type: ContentType
+    description?: string
+    categories?: string[]
+}

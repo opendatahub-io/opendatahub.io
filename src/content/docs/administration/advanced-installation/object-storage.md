@@ -75,5 +75,3 @@ The ceph-nano component of Open Data Hub can provide minimal object storage for 
    S3 credentials to access object storage will be saved in the secret name `ceph-nano-credentials`.
 
    <b>NOTE:</b> This object storage is for DEVELOPMENT PURPOSES ONLY. The access credentials and stored objects DO NOT persist across pod restarts and will be changed/deleted when a new pod is spawned.
-
-{% include next-link.html label="GPU Enablement" url="/docs/administration/advanced-installation/gpu.html" %}

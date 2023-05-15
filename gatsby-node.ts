@@ -48,7 +48,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
       to_file: false,
       attributes: {
         showtitle: true,
-        // "site-baseurl": "src/content",
+        "site-baseurl": "/",
         imagesdir: "/static/docs/",
         upstream: true,
         "skip-front-matter": true,
@@ -131,9 +131,8 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
         child: asciiNode,
       });
     } catch (err) {
-      reporter.panicOnBuild(`Error processing Asciidoc ${
-        node.absolutePath ? `file ${node.absolutePath}` : `in node ${node.id}`
-      }:\n
+      reporter.panicOnBuild(`Error processing Asciidoc ${node.absolutePath ? `file ${node.absolutePath}` : `in node ${node.id}`
+        }:\n
       ${err}`);
     }
   }
@@ -269,14 +268,17 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   // create docs pages
   const docs = docsResult.data?.allFile.edges ?? [];
-  docs.forEach(({ node }) => {
-    createPage({
-      path: node.childAsciidoc.fields.slug,
-      component: path.resolve("./src/templates/docs-page.tsx"),
-      context: {
-        id: node.childAsciidoc.id,
-      },
-    });
+  docs.forEach(({ node: _node }) => {
+    const node = _node.childAsciidoc ?? _node.childMarkdownRemark
+    if (node?.fields?.slug) {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve("./src/templates/docs-page.tsx"),
+        context: {
+          id: node.id,
+        },
+      });
+    }
   });
 
   // create blog post pages

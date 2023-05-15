@@ -125,9 +125,9 @@ export const PersonasLayout = () => {
             <Title
               className="pf-u-primary-color-100"
               headingLevel="h4"
-              size="xl"
+              size="3xl"
             >
-              I am a
+              <i>I am a</i>
             </Title>
           </FlexItem>
           <FlexItem>
@@ -145,7 +145,6 @@ export const PersonasLayout = () => {
           </FlexItem>
         </Flex>
       </StackItem>
-
       {data.map(
         (persona) =>
           isSelected === persona.name && (

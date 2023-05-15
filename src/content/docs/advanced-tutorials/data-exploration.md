@@ -7,7 +7,7 @@ permalink: /docs/advanced-tutorials/data-exploration
 Pre-requisites
 ------
 
-This tutorial requires that you followed the [basic tutorial]({{site.baseurl}}/docs/getting-started/basic-tutorial) and added the following components to your ODH deployment using the KfDef shown below:
+This tutorial requires that you followed the [basic tutorial](/docs/getting-started/basic-tutorial) and added the following components to your ODH deployment using the KfDef shown below:
 
 * spark-operator
 * hue
@@ -107,7 +107,7 @@ The Data Catalog is a set of components with which you can
 read data stored in Data Lakes, create tables and query them in a SQL-like style. You can find
 below a picture of the simplified architecture of Data Catalog:
 
-![Data Catalog Architecture]({{site.baseurl}}/assets/img/pages/docs/data-catalog/architecture.png "Data Catalog Architecture")
+![Data Catalog Architecture](../../assets/img/pages/docs/data-catalog/architecture.png "Data Catalog Architecture")
 
 These are the components that are part of Data Catalog:
 
@@ -119,18 +119,18 @@ Using Data Catalog
 ------
 
 1. Find the route to Hue. Within your Open Data Hub Project click on Networking -> Routes
-![OpenShift routes]({{site.baseurl}}/assets/img/pages/docs/data-catalog/routes.png "OpenShift routes")
+![OpenShift routes](../assets/img/pages/docs/data-catalog/routes.png "OpenShift routes")
 
-2. For the route named hue, click on the location to bring up Hue (typically `http://hue-project.apps.your-cluster.your-domain.com`).
+1. For the route named hue, click on the location to bring up Hue (typically `http://hue-project.apps.your-cluster.your-domain.com`).
 
-3. It will open the first-time login page where you can create the superuser for Hue.
-![Hue user creation]({{site.baseurl}}/assets/img/pages/docs/data-catalog/hue-user-creation.png "Hue user creation")
+2. It will open the first-time login page where you can create the superuser for Hue.
+![Hue user creation](../../assets/img/pages/docs/data-catalog/hue-user-creation.png "Hue user creation")
 
-4. As the first login, Hue will show a tutorial about the interface. You can skip the tutorial by closing the window.
-![Hue tutorial]({{site.baseurl}}/assets/img/pages/docs/data-catalog/tutorial.png "Hue tutorial")
+1. As the first login, Hue will show a tutorial about the interface. You can skip the tutorial by closing the window.
+![Hue tutorial](../../assets/img/pages/docs/data-catalog/tutorial.png "Hue tutorial")
 
-5. The Hue editor will appear in a blank textarea.
-![Hue editor]({{site.baseurl}}/assets/img/pages/docs/data-catalog/editor.png "Hue editor")
+1. The Hue editor will appear in a blank textarea.
+![Hue editor](../../assets/img/pages/docs/data-catalog/editor.png "Hue editor")
 
 Now we can create a table from a file inside the Data Lake.
 
@@ -142,15 +142,15 @@ Creating and querying tables
 CREATE DATABASE opendatahub;
 ```
 
-2. In the explorer, click on the refresh button. The new database will appear:
-![New database created]({{site.baseurl}}/assets/img/pages/docs/data-catalog/new-database.png "New database created"){:class="img-auto"}
+1. In the explorer, click on the refresh button. The new database will appear:
+![New database created](../../assets/img/pages/docs/data-catalog/new-database.png "New database created"){:class="img-auto"}
 
-3. Now let's select the database with the command:
+1. Now let's select the database with the command:
 ```
 USE opendatahub;
 ```
 
-4. We will create a table from the `sample_data.csv` file used in the `Basic Tutorial` section:
+1. We will create a table from the `sample_data.csv` file used in the `Basic Tutorial` section:
 ```
 CREATE EXTERNAL TABLE opendatahub.sample(
     timestamp TIMESTAMP,
@@ -181,14 +181,12 @@ LOCATION 's3a://<bucket-name>/<csv-file-rootdir>'
 ```
 **NOTE:** The `LOCATION` statement needs a path to the directory where the file is stored, not the file path.
 
-5. You will see the result of table creation.
-![New table created]({{site.baseurl}}/assets/img/pages/docs/data-catalog/table-creation.png "New table created")
+1. You will see the result of table creation.
+![New table created](../../assets/img/pages/docs/data-catalog/table-creation.png "New table created")
 
-6. We can now query the data.
+1. We can now query the data.
 ```
 select * from opendatahub.sample limit 10;
 ```
-7. Check the query results in Hue.
-![Query results]({{site.baseurl}}/assets/img/pages/docs/data-catalog/query-results.png "Query results")
-
-{% include next-link.html label="Kubeflow" url="/docs/kubeflow.html" %}
+1. Check the query results in Hue.
+![Query results](../../assets/img/pages/docs/data-catalog/query-results.png "Query results")
