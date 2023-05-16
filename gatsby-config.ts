@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `opendatahub.io`,
-    siteUrl: `https://www.opendatahub.io`
+    siteUrl: `https://www.opendatahub.io`,
   },
   graphqlTypegen: true,
   plugins: [
@@ -11,8 +11,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: "src/content/assets/img/logos/datahub_mark_color.png"
-      }
+        icon: "src/content/assets/img/logos/datahub_mark_color.png",
+      },
     },
     {
       resolve: "gatsby-plugin-feed",
@@ -32,15 +32,15 @@ const config: GatsbyConfig = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -64,7 +64,6 @@ const config: GatsbyConfig = {
             output: "/rss.xml",
             title: "Open Data Hub RSS Feed",
             match: "^/blog/",
-
           },
         ],
       },
@@ -72,16 +71,30 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: []
-      }
+        plugins: [],
+      },
     },
 
     // `gatsby-plugin-catch-links`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        "name": "blog",
-        "path": "src/content/posts/"
+        name: "blog",
+        path: "src/content/posts/",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "events",
+        path: "src/content/events/",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "videos",
+        path: "src/content/videos/",
       },
     },
     `gatsby-plugin-sass`,
@@ -91,10 +104,10 @@ const config: GatsbyConfig = {
         name: `docs`,
         remote: `https://github.com/opendatahub-io/opendatahub-documentation.git`,
         branch: `main`,
-        local: "public/static/docs"
-      }
+        local: "public/static/docs",
+      },
     },
-  ]
+  ],
 };
 
 export default config;

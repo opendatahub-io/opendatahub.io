@@ -1,6 +1,7 @@
 .custom-content-card .subtitle {
   color: var(--pf-global--primary-color--200);
   font-weight: normal;
+  font-size: small;
 }
 
 .custom-content-card {

@@ -9,10 +9,12 @@ import {
   StackItem,
   Text,
   Title,
+  CardFooter,
+  Button,
 } from "@patternfly/react-core";
 import { navigate } from "gatsby";
 import React from "react";
-
+import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-icon";
 import "./ContentCard.css";
 
 type ContentCardProps = {
@@ -23,6 +25,10 @@ type ContentCardProps = {
   link?: string;
   chips?: string[];
   className?: string;
+  hasCardFooter?: boolean;
+  hasMoreButton?: boolean;
+  buttonText?: string;
+  buttonVariant?: string;
 };
 
 export const ContentCard = ({
@@ -33,6 +39,10 @@ export const ContentCard = ({
   link,
   chips = [],
   className = "",
+  hasCardFooter,
+  hasMoreButton,
+  buttonText,
+  buttonVariant,
 }: ContentCardProps) => {
   return (
     <Card
@@ -93,6 +103,15 @@ export const ContentCard = ({
           </Flex>
         )}
       </CardBody>
+      {hasCardFooter && (
+        <CardFooter>
+          {hasMoreButton && (
+            <Button variant="primary">
+              {buttonText} <ArrowRightIcon />
+            </Button>
+          )}
+        </CardFooter>
+      )}
     </Card>
   );
 };

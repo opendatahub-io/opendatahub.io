@@ -19,13 +19,15 @@ export const Layout = ({
     <Page
       className={!!sidebar ? "pf-u-h-100vh" : undefined}
       isManagedSidebar
-      sidebar={sidebar ? (
-        <PageSidebar
-          nav={sidebar}
-          theme="light"
+      sidebar={
+        sidebar ? <PageSidebar nav={sidebar} theme="light" /> : undefined
+      }
+      header={
+        <Navbar
+          useSidebarExpand={!!sidebar}
+          isTransparentAtTop={useTransparentNavbar}
         />
-      ) : undefined}
-      header={<Navbar useSidebarExpand={!!sidebar} isTransparentAtTop={useTransparentNavbar} />}
+      }
     >
       {children}
     </Page>

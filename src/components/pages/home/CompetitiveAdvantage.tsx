@@ -46,7 +46,7 @@ export const CompetitiveAdvantage = (
           )}
           <FlexItem className={`${enableIntroVideo ? "pf-u-w-50-on-md" : ""}`}>
             <Flex
-              className="pf-u-text-align-center"
+              className="pf-u-text-align-center max-width-900"
               justifyContent={{ default: "justifyContentCenter" }}
             >
               <FlexItem>

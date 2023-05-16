@@ -1,39 +1,46 @@
-import { GatsbyNode, Node as _Node } from "gatsby"
-import { createFilePath, FileSystemNode } from "gatsby-source-filesystem"
+import { GatsbyNode, Node as _Node } from "gatsby";
+import { createFilePath, FileSystemNode } from "gatsby-source-filesystem";
 
-const path = require(`path`)
+const path = require(`path`);
 const asciidoc = require(`asciidoctor`)();
 
 interface Node {
-  id: string
+  id: string;
   fields: {
-    slug: string
-  }
+    slug: string;
+  };
   frontmatter: {
-    title: string
-    date: string
-  }
+    title: string;
+    date: string;
+  };
 }
 
 type Without<T, U> = Pick<T, Exclude<keyof T, keyof U>>;
-type XOR<T, U> = (T | U) extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U;
+type XOR<T, U> = T | U extends object
+  ? (Without<T, U> & U) | (Without<U, T> & T)
+  : T | U;
 
 interface QueryResult {
   allFile: {
     edges: {
-      node: XOR<{ childAsciidoc: Node }, { childMarkdownRemark: Node }>
-    }[]
-  }
+      node: XOR<{ childAsciidoc: Node }, { childMarkdownRemark: Node }>;
+    }[];
+  };
 }
-
 
 const isFileSystemNode = (node: _Node): node is FileSystemNode => {
   return (node as FileSystemNode).absolutePath !== undefined;
-}
+};
 
-
-export const onCreateNode: GatsbyNode["onCreateNode"] = async ({ node, actions, getNode, createNodeId, createContentDigest, reporter }) => {
-  const { createNodeField, createParentChildLink, createNode } = actions
+export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
+  node,
+  actions,
+  getNode,
+  createNodeId,
+  createContentDigest,
+  reporter,
+}) => {
+  const { createNodeField, createParentChildLink, createNode } = actions;
 
   if (isFileSystemNode(node) && ["adoc", "asciidoc"].includes(node.extension)) {
     const asciidocOptions = {
@@ -47,15 +54,15 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({ node, actions, 
         "skip-front-matter": true,
         stem: "asciimath",
       },
-    }
+    };
 
     try {
       var _title$getCombined, _title$getMain;
-      const doc = asciidoc.loadFile(node.absolutePath, asciidocOptions)
-      const html = doc.convert(asciidocOptions)
+      const doc = asciidoc.loadFile(node.absolutePath, asciidocOptions);
+      const html = doc.convert(asciidocOptions);
 
       const title = doc.getDocumentTitle({
-        partition: true
+        partition: true,
       });
       let sections = null;
       if (doc.hasSections()) {
@@ -66,22 +73,23 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({ node, actions, 
               id: s.getId(),
               level: s.getLevel(),
               index: s.getIndex(),
-              parentId: parentId
+              parentId: parentId,
             };
             const nestedSections = flattenSections(s.getSections(), section.id);
             return flattened.concat(section, nestedSections);
           }, []);
         };
 
-        sections = flattenSections(doc.getSections(), null)
+        sections = flattenSections(doc.getSections(), null);
       }
 
-      const extractPageAttributes = allAttributes => Object.entries(allAttributes).reduce((pageAttributes, [key, value]) => {
-        if (key.startsWith(`page-`)) {
-          pageAttributes[key.replace(/^page-/, ``)] = value;
-        }
-        return pageAttributes;
-      }, {});
+      const extractPageAttributes = (allAttributes) =>
+        Object.entries(allAttributes).reduce((pageAttributes, [key, value]) => {
+          if (key.startsWith(`page-`)) {
+            pageAttributes[key.replace(/^page-/, ``)] = value;
+          }
+          return pageAttributes;
+        }, {});
 
       const pageAttributes = extractPageAttributes(doc.getAttributes());
       const asciiNode = {
@@ -90,103 +98,177 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({ node, actions, 
         internal: {
           type: `Asciidoc`,
           mediaType: `text/html`,
-          contentDigest: ''
+          contentDigest: "",
         },
         children: [],
         html,
         document: {
-          title: (_title$getCombined = title === null || title === void 0 ? void 0 : title.getCombined()) !== null && _title$getCombined !== void 0 ? _title$getCombined : ``,
-          subtitle: title !== null && title !== void 0 && title.hasSubtitle() ? title.getSubtitle() : ``,
-          main: (_title$getMain = title === null || title === void 0 ? void 0 : title.getMain()) !== null && _title$getMain !== void 0 ? _title$getMain : ``
+          title:
+            (_title$getCombined =
+              title === null || title === void 0
+                ? void 0
+                : title.getCombined()) !== null && _title$getCombined !== void 0
+              ? _title$getCombined
+              : ``,
+          subtitle:
+            title !== null && title !== void 0 && title.hasSubtitle()
+              ? title.getSubtitle()
+              : ``,
+          main:
+            (_title$getMain =
+              title === null || title === void 0 ? void 0 : title.getMain()) !==
+              null && _title$getMain !== void 0
+              ? _title$getMain
+              : ``,
         },
         sections,
-        pageAttributes
+        pageAttributes,
       };
       asciiNode.internal.contentDigest = createContentDigest(asciiNode);
       createNode(asciiNode);
       createParentChildLink({
         parent: node,
-        child: asciiNode
+        child: asciiNode,
       });
     } catch (err) {
-      reporter.panicOnBuild(`Error processing Asciidoc ${node.absolutePath ? `file ${node.absolutePath}` : `in node ${node.id}`}:\n
+      reporter.panicOnBuild(`Error processing Asciidoc ${
+        node.absolutePath ? `file ${node.absolutePath}` : `in node ${node.id}`
+      }:\n
       ${err}`);
     }
-
   }
 
-  if (node.internal.type === "MarkdownRemark" || node.internal.type === "Asciidoc") {
-    const slug = createFilePath({ node, getNode, basePath: "src/content" })
-    const sourceInstanceName = getNode(node.parent!)!.sourceInstanceName
+  if (
+    node.internal.type === "MarkdownRemark" ||
+    node.internal.type === "Asciidoc"
+  ) {
+    const slug = createFilePath({ node, getNode, basePath: "src/content" });
+    const sourceInstanceName = getNode(node.parent!)!.sourceInstanceName;
 
     createNodeField({
       node,
       name: "slug",
       value: `/${sourceInstanceName}${slug}`,
-    })
+    });
   }
-}
+};
 
-export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions
+export const createPages: GatsbyNode["createPages"] = async ({
+  graphql,
+  actions,
+}) => {
+  const { createPage, createRedirect } = actions;
 
   createRedirect({
-    fromPath: '/docs/',
+    fromPath: "/docs/",
     isPermanent: false,
     redirectInBrowser: true,
-    toPath: '/docs/getting-started-with-open-data-hub'
+    toPath: "/docs/getting-started-with-open-data-hub",
   });
 
   const docsResult = await graphql<QueryResult>(`
-  query docFiles {
-    allFile(filter: {sourceInstanceName: {eq: "docs"}, childAsciidoc: {fields: {slug: {ne: null}}}}) {
-      edges {
-        node {
-          childAsciidoc {
-            document {
-              title
+    query docFiles {
+      allFile(
+        filter: {
+          sourceInstanceName: { eq: "docs" }
+          childAsciidoc: { fields: { slug: { ne: null } } }
+        }
+      ) {
+        edges {
+          node {
+            childAsciidoc {
+              document {
+                title
+              }
+              fields {
+                slug
+              }
+              id
             }
-            fields {
-              slug
-            }
-            id
           }
         }
       }
     }
-  }
-  `)
+  `);
 
   const blogResult = await graphql<QueryResult>(`
-  query blogFiles {
-    allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
-      edges {
-        node {
-          childMarkdownRemark {
-            excerpt
-            fields {
-              slug
+    query blogFiles {
+      allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              excerpt
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+              id
             }
-            frontmatter {
-              title
-            }
-            id
           }
         }
       }
     }
-  }
-  `)
+  `);
+
+  const eventsResult = await graphql<QueryResult>(`
+    query eventFiles {
+      allFile(filter: { sourceInstanceName: { eq: "events" } }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              excerpt
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+              id
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const videosResult = await graphql<QueryResult>(`
+    query videoFiles {
+      allFile(filter: { sourceInstanceName: { eq: "videos" } }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              excerpt
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+              id
+            }
+          }
+        }
+      }
+    }
+  `);
 
   if (docsResult.errors) {
-    throw docsResult.errors
+    throw docsResult.errors;
   }
   if (blogResult.errors) {
-    throw blogResult.errors
+    throw blogResult.errors;
+  }
+  if (eventsResult.errors) {
+    throw eventsResult.errors;
+  }
+  if (videosResult.errors) {
+    throw videosResult.errors;
   }
 
   // create docs pages
-  const docs = docsResult.data?.allFile.edges ?? []
+  const docs = docsResult.data?.allFile.edges ?? [];
   docs.forEach(({ node }) => {
     createPage({
       path: node.childAsciidoc.fields.slug,
@@ -194,11 +276,11 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions 
       context: {
         id: node.childAsciidoc.id,
       },
-    })
-  })
+    });
+  });
 
   // create blog post pages
-  const post = blogResult.data?.allFile.edges ?? []
+  const post = blogResult.data?.allFile.edges ?? [];
   post.forEach(({ node }) => {
     createPage({
       path: node.childMarkdownRemark.fields.slug,
@@ -206,15 +288,39 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions 
       context: {
         id: node.childMarkdownRemark.id,
       },
-    })
-  })
-}
+    });
+  });
+
+  // create blog post pages
+  const events = eventsResult.data?.allFile.edges ?? [];
+  events.forEach(({ node }) => {
+    createPage({
+      path: node.childMarkdownRemark.fields.slug,
+      component: path.resolve("./src/templates/events-page.tsx"),
+      context: {
+        id: node.childMarkdownRemark.id,
+      },
+    });
+  });
+
+  // create blog post pages
+  const videos = videosResult.data?.allFile.edges ?? [];
+  videos.forEach(({ node }) => {
+    createPage({
+      path: node.childMarkdownRemark.fields.slug,
+      component: path.resolve("./src/templates/videos-page.tsx"),
+      context: {
+        id: node.childMarkdownRemark.id,
+      },
+    });
+  });
+};
 
 /**
  * @type {import('gatsby').GatsbyNode['createSchemaCustomization']}
  */
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
@@ -240,5 +346,5 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Fields {
       slug: String
     }
-  `)
-}
+  `);
+};

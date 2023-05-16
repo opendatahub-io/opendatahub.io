@@ -1,5 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
+
+import { Layout, Seo } from "../components/shared";
 import {
   PageSection,
   Flex,
@@ -8,9 +10,7 @@ import {
   TitleSizes,
   Text,
 } from "@patternfly/react-core";
-import { Layout, Seo } from "../components/shared";
-
-const BlogPostTemplate = ({ data: { markdownRemark: post } }) => {
+const VideosTemplate = ({ data: { markdownRemark: post } }) => {
   return (
     <Layout>
       <PageSection variant="light">
@@ -33,7 +33,6 @@ const BlogPostTemplate = ({ data: { markdownRemark: post } }) => {
                 <Text>{post.frontmatter.address}</Text>
               </FlexItem>
             </header>
-
             <FlexItem>
               <section
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -56,10 +55,10 @@ export const Head = ({ data: { markdownRemark: post } }) => {
   );
 };
 
-export default BlogPostTemplate;
+export default VideosTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostTemplate($id: String!) {
+  query VideosTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
