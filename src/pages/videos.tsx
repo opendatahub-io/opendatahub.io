@@ -4,7 +4,6 @@ import * as React from "react";
 import { Layout, Seo } from "../components/shared";
 
 const BlogIndex = ({ data }) => {
-  console.log("🚀 ~ file: events.tsx:7 ~ BlogIndex ~ data:", data);
   const events = data.allMarkdownRemark.nodes;
 
   if (events.length === 0) {
@@ -19,7 +18,6 @@ const BlogIndex = ({ data }) => {
     <Layout>
       <ol style={{ listStyle: `none` }}>
         {events.map((post) => {
-          console.log("🚀 ~ file: videos.tsx:22 ~ {events.map ~ post:", post);
           const title = post.frontmatter.title || post.fields.slug;
 
           return (

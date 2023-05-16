@@ -37,10 +37,8 @@ export const FeaturedBlogs: React.FC = () => {
   `);
 
   const data = pageQuery.allMarkdownRemark.nodes ?? [];
-  console.log("🚀 ~ file: FeaturedBlogs.tsx:42 ~ data:", data);
   const featured = data.filter((d) => d.frontmatter.featured);
   const posts = featured.length >= 0 ? featured : data;
-  console.log("🚀 ~ file: FeaturedBlogs.tsx:44 ~ posts:", posts);
 
   return (
     <Stack>
