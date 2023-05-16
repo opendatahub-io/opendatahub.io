@@ -1,19 +1,14 @@
 import { Link, graphql } from "gatsby";
 import * as React from "react";
-
 import { Layout, Seo } from "../components/shared";
 
-const BlogIndex = ({ data }) => {
-  const edges = data.allFile.edges;
-  const posts: any = [];
-  edges.forEach(({ node }: any) => {
-    posts.push(node.childMarkdownRemark);
-  });
+const Events = ({ data }) => {
+  const events = data.allMarkdownRemark.nodes;
 
-  if (posts.length === 0) {
+  if (events.length === 0) {
     return (
       <Layout>
-        <p>No blog posts found.</p>
+        <p>No event found.</p>
       </Layout>
     );
   }
@@ -21,7 +16,7 @@ const BlogIndex = ({ data }) => {
   return (
     <Layout>
       <ol style={{ listStyle: `none` }}>
-        {posts.map((post) => {
+        {events.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
 
           return (
@@ -39,14 +34,6 @@ const BlogIndex = ({ data }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
               </article>
             </li>
           );
@@ -56,7 +43,7 @@ const BlogIndex = ({ data }) => {
   );
 };
 
-export default BlogIndex;
+export default Events;
 
 /**
  * Head export to define metadata for the page
@@ -65,24 +52,20 @@ export default BlogIndex;
  */
 export const Head = () => <Seo title="All posts" />;
 
-export const query = graphql`
-  query FeaturedBlogsQuery {
-    allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            excerpt
-            fields {
-              slug
-            }
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              preview
-              featured
-            }
-            id
-          }
+export const pageQuery = graphql`
+  {
+    allMarkdownRemark(filter: { frontmatter: { layout: { eq: "events" } } }) {
+      nodes {
+        id
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          preview
+          featured
         }
       }
     }

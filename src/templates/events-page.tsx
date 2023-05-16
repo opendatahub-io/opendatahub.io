@@ -1,16 +1,20 @@
 import { graphql } from "gatsby";
 import * as React from "react";
+
+import { Layout, Seo } from "../components/shared";
 import {
   PageSection,
+  Grid,
+  GridItem,
+  Stack,
+  StackItem,
   Flex,
   FlexItem,
   Title,
   TitleSizes,
   Text,
 } from "@patternfly/react-core";
-import { Layout, Seo } from "../components/shared";
-
-const BlogPostTemplate = ({ data: { markdownRemark: post } }) => {
+const EventsTemplate = ({ data: { markdownRemark: post } }) => {
   return (
     <Layout>
       <PageSection variant="light">
@@ -33,7 +37,6 @@ const BlogPostTemplate = ({ data: { markdownRemark: post } }) => {
                 <Text>{post.frontmatter.address}</Text>
               </FlexItem>
             </header>
-
             <FlexItem>
               <section
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -56,10 +59,10 @@ export const Head = ({ data: { markdownRemark: post } }) => {
   );
 };
 
-export default BlogPostTemplate;
+export default EventsTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostTemplate($id: String!) {
+  query EventsTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
@@ -71,6 +74,8 @@ export const pageQuery = graphql`
         categories
         preview
         date(formatString: "MMMM DD, YYYY")
+        venue
+        address
       }
     }
   }

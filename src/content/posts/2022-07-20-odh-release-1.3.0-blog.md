@@ -5,6 +5,7 @@ title:  Open Data Hub 1.3.0 Release Guide
 preview: Open Data Hub 1.3.0 was just released
 date: 2022-07-20
 categories: features, road map, release
+featured: true
 ---
 
 What is new?

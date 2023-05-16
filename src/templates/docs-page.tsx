@@ -11,25 +11,31 @@ const DocsPageTemplate = ({
   data: { asciidoc: doc, allFile: allDocs },
   location,
 }: PageProps<Queries.DocsPageTemplateQuery>) => {
-
-
   const toc: { [key: string]: AsciiDocSection[] } = allDocs.edges
-    .map(edge => edge.node.childAsciidoc)
+    .map((edge) => edge.node.childAsciidoc)
     .reduce((prev, curr) => {
       if (curr?.fields?.slug && curr.sections) {
-        return ({
+        return {
           ...prev,
-          [curr.fields.slug]: curr.sections.filter((section) => section?.level && section.level <= 1)
-        })
+          [curr.fields.slug]: curr.sections.filter(
+            (section) => section?.level && section.level <= 1
+          ),
+        };
+      } else {
+        return prev;
       }
-      else {
-        return prev
-      }
-    }, {})
-
+    }, {});
 
   return (
-    <Layout sidebar={<SideNavigation config={DOCS_NAVIGATION} location={location} toc={toc} />}>
+    <Layout
+      sidebar={
+        <SideNavigation
+          config={DOCS_NAVIGATION}
+          location={location}
+          toc={toc}
+        />
+      }
+    >
       <PageSection
         isCenterAligned
         isWidthLimited
@@ -37,17 +43,17 @@ const DocsPageTemplate = ({
       >
         <div
           className="asciidoc-docs"
-          dangerouslySetInnerHTML={{ __html: doc?.html ?? '' }}
+          dangerouslySetInnerHTML={{ __html: doc?.html ?? "" }}
         />
       </PageSection>
     </Layout>
   );
 };
 
-export const Head = ({ data: { asciidoc: doc } }: PageProps<Queries.DocsPageTemplateQuery>) => {
-  return (
-    <Seo title={doc?.document?.title ?? "Documentation"} />
-  );
+export const Head = ({
+  data: { asciidoc: doc },
+}: PageProps<Queries.DocsPageTemplateQuery>) => {
+  return <Seo title={doc?.document?.title ?? "Documentation"} />;
 };
 
 export default DocsPageTemplate;
@@ -55,7 +61,10 @@ export default DocsPageTemplate;
 export const pageQuery = graphql`
   query DocsPageTemplate($id: String!) {
     allFile(
-      filter: {sourceInstanceName: {eq: "docs"}, childrenAsciidoc: {elemMatch: {id: {ne: null}}}}
+      filter: {
+        sourceInstanceName: { eq: "docs" }
+        childrenAsciidoc: { elemMatch: { id: { ne: null } } }
+      }
     ) {
       edges {
         node {
