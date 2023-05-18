@@ -1,4 +1,11 @@
 future:
+  - title: Open Data Hub 1.7 (June 2023)
+    version: 1.7
+    children:
+      - title: ODH Operator
+      - title: ODH Dashboard v2.10
+
+past:
   - title: Open Data Hub 1.6 (May 2023)
     version: 1.6
     children:
@@ -8,8 +15,6 @@ future:
       - title: TrustyAI Explainability
       - title: Data Science Pipelines operator
       - title: Distributed Workloads
-
-past:
   - title: Open Data Hub 1.5 (April 2023)
     version: 1.5
     children:
