@@ -5,6 +5,17 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### Open Data Hub version v1.6.0 - May 2023
+
+| Technology | Version |
+|--|--|--|
+| [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-dashboard) | v2.9.0 |
+| [Open Data Hub Notebook Images](https://github.com/opendatahub-io/notebooks) | v1.4.0 |
+| [Model Mesh Serving](https://github.com/opendatahub-io/modelmesh-serving) | v0.11.0 |
+| [Data Science Pipelines Operator](https://github.com/opendatahub-io/data-science-pipelines-operator) | v0.2.0 |
+| [TrustyAI Explainability](https://github.com/trustyai-explainability/trustyai-explainability) | v0.1.0 |
+{:class="table table-bordered table-striped"}
+
 ### Open Data Hub version v1.5.0 - April 2023
 
 | Technology | Version |
