@@ -5,7 +5,10 @@ import { ContentCard, ContentCardList, SectionLayout } from "../../shared";
 export const FeaturedBlogs: React.FC = () => {
   const pageQuery = useStaticQuery(graphql`
     {
-      allMarkdownRemark(filter: { frontmatter: { layout: { eq: "blog" } } }) {
+      allMarkdownRemark(
+        filter: {frontmatter: {type: {eq: "blog"}}}
+        sort: {frontmatter: {date: DESC}}
+    ) {
         nodes {
           excerpt(truncate: true, pruneLength: 100)
           fields {
@@ -26,17 +29,22 @@ export const FeaturedBlogs: React.FC = () => {
 
   const data = pageQuery.allMarkdownRemark.nodes ?? [];
   const featured = data.filter((d) => d.frontmatter.featured);
-  const posts = featured.length >= 0 ? featured : data;
+  const posts = [...featured, ...data]
 
   return (
     <SectionLayout
+<<<<<<< HEAD
       title="Featured Posts"
+=======
+      title="Featured posts"
+>>>>>>> eb764c9 (UX fixes)
       actionTitle="View all posts"
       actionLink="/blog/?type=blog"
     >
       <ContentCardList>
         {posts.slice(0, 2).map(({ frontmatter, fields, excerpt }) => (
           <ContentCard
+            key={frontmatter.title}
             title={frontmatter.title}
             body={excerpt}
             link={fields.slug}

@@ -33,18 +33,22 @@ export const JoinCommunity: React.FC = () => {
               improvements—that's the open source way.
             </Text>
             <Button
-              title="Source Code"
+              title="Source code"
               component="a"
-              href="https://github.com/opendatahub-io/opendatahub-community"
+              icon={<GithubIcon />}
+              href="https://github.com/opendatahub-io"
+              className="pf-u-mr-md"
             >
-              <GithubIcon size="lg" />
-            </Button>{" "}
+              Source code
+            </Button>
             <Button
               title="Click to join our workspace on Slack"
-              icon={<SlackIcon size="lg" />}
+              icon={<SlackIcon />}
               component="a"
               href="https://join.slack.com/t/odh-io/shared_invite/zt-13hp18gxj-Yb34PfQyP9GDmKMU7AkVYw"
-            ></Button>
+            >
+              Join us on Slack
+            </Button>
           </FlexItem>
         </Flex>
       </StackItem>

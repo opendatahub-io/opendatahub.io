@@ -1,5 +1,5 @@
 ---
-layout: blog
+type: release
 author: lavlas
 title:  Open Data Hub 1.4.1 Release Guide
 preview: Open Data Hub 1.4.1 was just released
@@ -29,8 +29,8 @@ Changes included in the Open Data Hub v1.4.1 release:
 
 The following is a list of components that are available in [v1.4.1](https://github.com/opendatahub-io/odh-manifests/releases/tag/v1.4.1) release of odh-manifests:
 
-| Technology | Version | Category |
-|--|--|--|--|
+| Technology                                                                         | Version | Category           |
+| ---------------------------------------------------------------------------------- | ------- | ------------------ |  |
 | [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-dashboard) | v2.5.2 | Dashboard |
 | [Open Data Hub Notebook Images](https://github.com/opendatahub-io/notebooks) | v1.3.1 | Jupyter |
 | [Model Mesh Serving](https://github.com/opendatahub-io/modelmesh-serving) | v0.9.0 | AI/ML |

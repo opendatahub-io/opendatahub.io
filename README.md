@@ -26,7 +26,7 @@ Instead of showing all content on the news list, they will have a preview field 
 
 ```md
 ---
-layout: blog
+type: blog
 author: yourusername
 title:  Sample Blog Post
 preview: Preview text is required.  It is shown on the news list instead of the full content.

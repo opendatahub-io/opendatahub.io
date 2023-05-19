@@ -2,6 +2,8 @@ import {
   Button,
   Flex,
   FlexItem,
+  Grid,
+  GridItem,
   Stack,
   StackItem,
   Text,
@@ -101,12 +103,10 @@ export const CompetitiveAdvantage = (
         </Flex>
       </StackItem>
       <StackItem className="pf-u-mx-auto">
-        <Flex
-          spacer={{ default: "spacerLg" }}
-          direction={{ default: "column", md: "row" }}
-          flexWrap={{ default: "nowrap" }}
+        <Grid
+          hasGutter
         >
-          <FlexItem>
+          <GridItem span={4} className="pf-u-text-align-center">
             <Stack>
               <StackItem>
                 <img src={hybridCloud} alt="hybrid cloud icon" className="icon" />
@@ -123,8 +123,8 @@ export const CompetitiveAdvantage = (
                 </Text>
               </StackItem>
             </Stack>
-          </FlexItem>
-          <FlexItem>
+          </GridItem>
+          <GridItem span={4} className="pf-u-text-align-center">
             <Stack>
               <StackItem>
                 <img src={cloudUploadIcon} alt="cloud upload icon" className="icon" />
@@ -142,8 +142,8 @@ export const CompetitiveAdvantage = (
                 </Text>
               </StackItem>
             </Stack>
-          </FlexItem>
-          <FlexItem>
+          </GridItem>
+          <GridItem span={4} className="pf-u-text-align-center">
             <Stack>
               <StackItem>
                 <img src={monitorIcon} alt="monitor icon" className="icon" />
@@ -160,8 +160,8 @@ export const CompetitiveAdvantage = (
                 </Text>
               </StackItem>
             </Stack>
-          </FlexItem>
-        </Flex>
+          </GridItem>
+        </Grid>
       </StackItem>
     </Stack>
   );

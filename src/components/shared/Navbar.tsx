@@ -102,13 +102,12 @@ export const Navbar = ({ isTransparentAtTop, useSidebarExpand }: NavbarProps) =>
             </Button>
           </SplitItem>
           <SplitItem>
-            {/* TODO find rss svg */}
             <Button
-              variant="link"
+              variant="tertiary"
               isInline
-              component={(props: any) => <Link {...props} to="/rss.xml" />}
+              component={(props: any) => <Link {...props} to="/docs/getting-started-with-open-data-hub/" />}
             >
-              RSS
+              Get Started
             </Button>
           </SplitItem>
         </Split>

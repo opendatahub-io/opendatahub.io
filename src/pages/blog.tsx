@@ -26,7 +26,10 @@ import {
   PaginationVariant,
 } from "@patternfly/react-core";
 import { ContentCard } from "../components/shared/ContentCard";
+<<<<<<< HEAD
 import { SourceInstanceNameLabel } from "../const";
+=======
+>>>>>>> eb764c9 (UX fixes)
 import { FilterIcon, SearchIcon } from "@patternfly/react-icons";
 
 
@@ -62,7 +65,11 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
       .reduce((prev, curr) => new Set([...prev, ...curr]), new Set<string>())
 
     const contentTypes = data.allFile.edges
+<<<<<<< HEAD
       .reduce((prev, curr) => new Set([...prev, curr.node.sourceInstanceName]), new Set<string>())
+=======
+      .reduce((prev, curr) => new Set([...prev, curr.node?.childMarkdownRemark?.frontmatter?.type ?? "blog"]), new Set<string>())
+>>>>>>> eb764c9 (UX fixes)
 
     return [
       Array.from(nodeCategories).map((category) => (
@@ -94,12 +101,20 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
   const selectedContent = React.useMemo(() => {
     return posts.filter(({ node }) => {
       const frontmatter = node.childMarkdownRemark?.frontmatter
+<<<<<<< HEAD
       const sourceInstanceName = node.sourceInstanceName
+=======
+      const contentType = node.childMarkdownRemark?.frontmatter?.type ?? "blog"
+>>>>>>> eb764c9 (UX fixes)
       const nodeCategories = frontmatter?.categories?.split(",").map(c => c.trim()) ?? []
       const title = frontmatter?.title ?? ""
 
       return (categoryFilter.length === 0 || categoryFilter.every((option) => nodeCategories.includes(option))) &&
+<<<<<<< HEAD
         (contentTypeFilter === null || contentTypeFilter === sourceInstanceName) &&
+=======
+        (contentTypeFilter === null || contentTypeFilter === contentType) &&
+>>>>>>> eb764c9 (UX fixes)
         (searchValue.length === 0 || title.toLowerCase().includes(searchValue.toLowerCase()))
     })
   }, [categoryFilter, contentTypeFilter, searchValue, posts])
@@ -204,12 +219,21 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
         <ContentCardList rowSpan={6}>
           {selectedContent
             .slice((page - 1) * perPage, page * perPage)
+<<<<<<< HEAD
             .map(({ node: { childMarkdownRemark: markdown, sourceInstanceName } }, i) => {
               return (
                 <ContentCard
                   key={(markdown?.fields?.slug ?? "") + i}
                   title={markdown?.frontmatter?.title}
                   subTitle={SourceInstanceNameLabel[sourceInstanceName]}
+=======
+            .map(({ node: { childMarkdownRemark: markdown } }, i) => {
+              return (
+                <ContentCard
+                  key={(markdown?.fields?.slug ?? "") + i}
+                  title={markdown?.frontmatter?.title ?? ""}
+                  subTitle={contentTypeFilter ?? markdown?.frontmatter?.type ?? "blog"}
+>>>>>>> eb764c9 (UX fixes)
                   link={markdown?.frontmatter?.permalink ?? markdown?.fields?.slug}
                   body={(
                     <Stack>
@@ -280,7 +304,11 @@ query AllContentQuery {
             categories
             title
             preview
+<<<<<<< HEAD
             featured
+=======
+            type
+>>>>>>> eb764c9 (UX fixes)
           }
           id
         }

@@ -25,7 +25,6 @@ const IndexPage: React.FC<PageProps> = () => {
       <SectionList
         sections={[
           { component: <CompetitiveAdvantage /> },
-          { component: <PersonasLayout /> },
           { component: <ArchitectureMap /> },
           {
             component: <CommunityDetails />,

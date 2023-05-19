@@ -1,5 +1,5 @@
 ---
-layout: blog
+type: blog
 author: anishasthana
 title: Incubation of Distributed Workloads stack in ODH
 preview: ODH is now incubating a Distributed Workloads stack

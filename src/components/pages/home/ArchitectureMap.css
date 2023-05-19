@@ -2,3 +2,19 @@
     justify-content: center;
     align-items: center;
 }
+
+.project-image {
+    height: 30px;
+    max-width: initial;
+}
+
+.pf-c-card.pf-m-selectable.pf-m-selected {
+    border-top-color: #0466cc;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-width: 3px;
+}
+
+.pf-c-card.pf-m-selectable.pf-m-selected::before {
+    display: none;
+}
