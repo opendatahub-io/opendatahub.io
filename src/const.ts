@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LinkedContent, PersonaBenefits, SideNavItemConfig } from "./types";
 =======
 import { LinkedContent, PersonaBenefits, RoadmapDataType, SideNavItemConfig } from "./types";
 >>>>>>> eb764c9 (UX fixes)
+=======
+import { LinkedContent, PersonaBenefits, RoadmapDataType, SideNavItemConfig } from "./types";
+>>>>>>> 137e27d (UX fixes)
 import logo from "./content/assets/img/logos/datahub_mark_color-blkbg.png";
 import placeholderImage from "./content/assets/img/placeholder.svg";
 
@@ -223,6 +227,7 @@ const LINKED_CONTENT: LinkedContent[] = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export enum SourceInstanceNameLabel {
     videos = "VIDEO",
     blog = "BLOG",
@@ -231,6 +236,8 @@ export enum SourceInstanceNameLabel {
 }
 =======
 >>>>>>> eb764c9 (UX fixes)
+=======
+>>>>>>> 137e27d (UX fixes)
 
 export const PERSONAS: PersonaBenefits = [
     {
@@ -414,8 +421,11 @@ export const PERSONAS: PersonaBenefits = [
         ],
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
+=======
+>>>>>>> 137e27d (UX fixes)
 ];
 
 export const ROADMAP_DATA: RoadmapDataType = {
@@ -754,4 +764,7 @@ export const ROADMAP_DATA: RoadmapDataType = {
         }
     ]
 }
+<<<<<<< HEAD
 >>>>>>> eb764c9 (UX fixes)
+=======
+>>>>>>> 137e27d (UX fixes)

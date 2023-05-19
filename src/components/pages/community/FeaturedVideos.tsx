@@ -67,9 +67,13 @@ export const FeaturedVideos: React.FC = () => {
             }
             body={frontmatter.preview}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             chips={frontmatter.categories.split(",")}
 >>>>>>> eb764c9 (UX fixes)
+=======
+            chips={frontmatter.categories.split(",")}
+>>>>>>> 137e27d (UX fixes)
             hasMoreButton
             buttonText={"Watch Now"}
           />

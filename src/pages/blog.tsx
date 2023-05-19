@@ -27,9 +27,12 @@ import {
 } from "@patternfly/react-core";
 import { ContentCard } from "../components/shared/ContentCard";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SourceInstanceNameLabel } from "../const";
 =======
 >>>>>>> eb764c9 (UX fixes)
+=======
+>>>>>>> 137e27d (UX fixes)
 import { FilterIcon, SearchIcon } from "@patternfly/react-icons";
 
 
@@ -66,10 +69,14 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
 
     const contentTypes = data.allFile.edges
 <<<<<<< HEAD
+<<<<<<< HEAD
       .reduce((prev, curr) => new Set([...prev, curr.node.sourceInstanceName]), new Set<string>())
 =======
       .reduce((prev, curr) => new Set([...prev, curr.node?.childMarkdownRemark?.frontmatter?.type ?? "blog"]), new Set<string>())
 >>>>>>> eb764c9 (UX fixes)
+=======
+      .reduce((prev, curr) => new Set([...prev, curr.node?.childMarkdownRemark?.frontmatter?.type ?? "blog"]), new Set<string>())
+>>>>>>> 137e27d (UX fixes)
 
     return [
       Array.from(nodeCategories).map((category) => (
@@ -102,19 +109,27 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
     return posts.filter(({ node }) => {
       const frontmatter = node.childMarkdownRemark?.frontmatter
 <<<<<<< HEAD
+<<<<<<< HEAD
       const sourceInstanceName = node.sourceInstanceName
 =======
       const contentType = node.childMarkdownRemark?.frontmatter?.type ?? "blog"
 >>>>>>> eb764c9 (UX fixes)
+=======
+      const contentType = node.childMarkdownRemark?.frontmatter?.type ?? "blog"
+>>>>>>> 137e27d (UX fixes)
       const nodeCategories = frontmatter?.categories?.split(",").map(c => c.trim()) ?? []
       const title = frontmatter?.title ?? ""
 
       return (categoryFilter.length === 0 || categoryFilter.every((option) => nodeCategories.includes(option))) &&
 <<<<<<< HEAD
+<<<<<<< HEAD
         (contentTypeFilter === null || contentTypeFilter === sourceInstanceName) &&
 =======
         (contentTypeFilter === null || contentTypeFilter === contentType) &&
 >>>>>>> eb764c9 (UX fixes)
+=======
+        (contentTypeFilter === null || contentTypeFilter === contentType) &&
+>>>>>>> 137e27d (UX fixes)
         (searchValue.length === 0 || title.toLowerCase().includes(searchValue.toLowerCase()))
     })
   }, [categoryFilter, contentTypeFilter, searchValue, posts])
@@ -220,6 +235,7 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
           {selectedContent
             .slice((page - 1) * perPage, page * perPage)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .map(({ node: { childMarkdownRemark: markdown, sourceInstanceName } }, i) => {
               return (
                 <ContentCard
@@ -234,6 +250,14 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
                   title={markdown?.frontmatter?.title ?? ""}
                   subTitle={contentTypeFilter ?? markdown?.frontmatter?.type ?? "blog"}
 >>>>>>> eb764c9 (UX fixes)
+=======
+            .map(({ node: { childMarkdownRemark: markdown } }, i) => {
+              return (
+                <ContentCard
+                  key={(markdown?.fields?.slug ?? "") + i}
+                  title={markdown?.frontmatter?.title ?? ""}
+                  subTitle={contentTypeFilter ?? markdown?.frontmatter?.type ?? "blog"}
+>>>>>>> 137e27d (UX fixes)
                   link={markdown?.frontmatter?.permalink ?? markdown?.fields?.slug}
                   body={(
                     <Stack>
@@ -305,14 +329,17 @@ query AllContentQuery {
             title
             preview
 <<<<<<< HEAD
+<<<<<<< HEAD
             featured
 =======
             type
 >>>>>>> eb764c9 (UX fixes)
+=======
+            type
+>>>>>>> 137e27d (UX fixes)
           }
           id
         }
-        sourceInstanceName
       }
     }
   }
