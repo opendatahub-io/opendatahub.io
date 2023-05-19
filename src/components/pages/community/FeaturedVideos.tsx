@@ -78,6 +78,7 @@ export const FeaturedVideos: React.FC = () => {
             hasCardFooter
             hasMoreButton
             buttonText={"Watch Now"}
+            date={new Date(frontmatter.date)}
           />
         ))}
       </ContentCardList>

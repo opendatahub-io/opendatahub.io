@@ -30,8 +30,8 @@ export const FeaturedBlogs: React.FC = () => {
 
   return (
     <SectionLayout
-      title="Featured Blogs"
-      actionTitle="View all blogs"
+      title="Featured Posts"
+      actionTitle="View all posts"
       actionLink="/blog/?layout=blog"
     >
       <ContentCardList>
@@ -45,6 +45,7 @@ export const FeaturedBlogs: React.FC = () => {
             hasMoreButton
             buttonVariant={"primary"}
             buttonText={"Continue Reading"}
+            date={new Date(frontmatter.date)}
           />
         ))}
       </ContentCardList>

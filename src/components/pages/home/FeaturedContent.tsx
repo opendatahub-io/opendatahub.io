@@ -46,6 +46,7 @@ export const FeaturedContent = ({ }) => {
                         hasMoreButton
                         buttonVariant={"primary"}
                         buttonText={"View"}
+                        date={new Date(frontmatter.date)}
                     />
                 ))}
             </ContentCardList>

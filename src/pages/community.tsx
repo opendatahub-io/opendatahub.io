@@ -5,7 +5,6 @@ import { Footer, Layout, SectionList } from "../components/shared";
 import {
   JoinCommunity,
   CommunityMeetings,
-  UpcomingEvents,
   MailingList,
   FeaturedVideos,
   FeaturedBlogs,
@@ -18,7 +17,6 @@ const CommunityPage: React.FC<PageProps> = () => {
         sections={[
           { component: <JoinCommunity /> },
           { component: <CommunityMeetings /> },
-          { component: <UpcomingEvents /> },
           {
             component: <MailingList />,
             props: {
