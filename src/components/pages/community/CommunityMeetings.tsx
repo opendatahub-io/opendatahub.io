@@ -11,9 +11,9 @@ import {
 import { Link } from "gatsby";
 import { ExternalLinkAltIcon } from "@patternfly/react-icons/dist/esm/icons/external-link-alt-icon";
 
-export const CommunityMeetins: React.FC = () => {
+export const CommunityMeetings: React.FC = () => {
   return (
-    <Grid hasGutter className="pf-u-mx-auto pf-u-mb-3xl max-width-900">
+    <Grid hasGutter>
       <GridItem lg={4} sm={6}>
         <Title size={TitleSizes["2xl"]} headingLevel="h2">
           Meetings

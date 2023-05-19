@@ -53,6 +53,7 @@ export const ContentCard = ({
       isCompact
       isFlat
       isRounded
+      isFullHeight
       className={`custom-content-card ${className}`}
     >
       <CardTitle>

@@ -88,32 +88,11 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "blog",
-        path: "src/content/posts/",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "events",
-        path: "src/content/events/",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "videos",
         path: "src/content/videos/",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "docs",
-        "path": "src/content/docs/"
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
@@ -123,14 +102,8 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "events",
-        path: "src/content/events/",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        "path": "src/content/assets/"
+        name: "releases",
+        path: "src/content/releases/",
       },
     },
     {

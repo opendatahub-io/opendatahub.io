@@ -1,18 +1,6 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
-import {
-  Flex,
-  FlexItem,
-  Stack,
-  StackItem,
-  Title,
-  TitleSizes,
-  Grid,
-  GridItem,
-  Button,
-} from "@patternfly/react-core";
-import placeholderImage from "../../../content/assets/img/placeholder.svg";
-import { ContentCard } from "../../shared/ContentCard";
+import { ContentCard, ContentCardList, SectionLayout } from "../../shared";
 
 export const FeaturedBlogs: React.FC = () => {
   const pageQuery = useStaticQuery(graphql`
@@ -41,54 +29,25 @@ export const FeaturedBlogs: React.FC = () => {
   const posts = featured.length >= 0 ? featured : data;
 
   return (
-    <Stack>
-      <StackItem className="pf-u-mx-auto pf-u-mb-3xl max-width-900">
-        <Flex
-          className="pf-u-text-align-center"
-          justifyContent={{ default: "justifyContentCenter" }}
-        >
-          <FlexItem>
-            <Title size={TitleSizes["4xl"]} headingLevel="h2">
-              Featured Blogs
-            </Title>
-          </FlexItem>
-        </Flex>
-      </StackItem>
-      <StackItem className="pf-u-mx-auto pf-u-mb-2xl max-width-900">
-        <Grid hasGutter>
-          {posts.slice(0, 2).map(({ frontmatter, fields, excerpt }) => (
-            <GridItem lg={6} sm={12} key={fields.slug}>
-              <ContentCard
-                title={frontmatter.title}
-                body={excerpt}
-                link={fields.slug}
-                imageUrl={placeholderImage}
-                subTitle={frontmatter.date}
-                hasCardFooter
-                hasMoreButton
-                buttonVariant={"primary"}
-                buttonText={"Continue Reading"}
-              />
-            </GridItem>
-          ))}
-        </Grid>
-        <Flex
-          className="pf-u-text-align-center"
-          justifyContent={{ default: "justifyContentCenter" }}
-        >
-          <FlexItem className="pf-u-mt-2xl">
-            <Button
-              variant="link"
-              component={(props: any) => (
-                <Link {...props} to={"/blog/?layout=blog"} />
-              )}
-              isInline
-            >
-              View All Blogs
-            </Button>
-          </FlexItem>
-        </Flex>
-      </StackItem>
-    </Stack>
+    <SectionLayout
+      title="Featured Blogs"
+      actionTitle="View all blogs"
+      actionLink="/blog/?layout=blog"
+    >
+      <ContentCardList>
+        {posts.slice(0, 2).map(({ frontmatter, fields, excerpt }) => (
+          <ContentCard
+            title={frontmatter.title}
+            body={excerpt}
+            link={fields.slug}
+            subTitle={frontmatter.date}
+            hasCardFooter
+            hasMoreButton
+            buttonVariant={"primary"}
+            buttonText={"Continue Reading"}
+          />
+        ))}
+      </ContentCardList>
+    </SectionLayout>
   );
 };

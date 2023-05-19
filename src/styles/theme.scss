@@ -49,6 +49,10 @@ h6 {
   font-weight: revert;
 }
 
+.gutter-2xl {
+  --pf-l-stack--m-gutter--MarginBottom: 3rem;
+}
+
 .pf-c-page {
   --pf-c-page--section--m-limit-width--MaxWidth: 55rem !important;
   --pf-c-page__main-section--BackgroundColor: #fff !important;
