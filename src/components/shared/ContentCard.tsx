@@ -28,6 +28,7 @@ type ContentCardProps = {
   hasCardFooter?: boolean;
   hasMoreButton?: boolean;
   buttonText?: string;
+  date: Date;
   buttonVariant?: string;
 };
 
@@ -42,6 +43,7 @@ export const ContentCard = ({
   hasCardFooter,
   hasMoreButton,
   buttonText,
+  date,
   buttonVariant,
 }: ContentCardProps) => {
   return (
@@ -76,6 +78,11 @@ export const ContentCard = ({
                     <Title headingLevel="h3" size="2xl">
                       {title}
                     </Title>
+                  </StackItem>
+                )}
+                {date && (
+                  <StackItem>
+                    <Text>{date.toString()}</Text>
                   </StackItem>
                 )}
                 {body && (
