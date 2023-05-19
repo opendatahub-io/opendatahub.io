@@ -166,75 +166,37 @@ export const createPages: GatsbyNode["createPages"] = async ({
   });
 
   const docsResult = await graphql<QueryResult>(`
-    query docFiles {
-      allFile(
-        filter: {
-          sourceInstanceName: { eq: "docs" }
-          childAsciidoc: { fields: { slug: { ne: null } } }
-        }
-      ) {
-        edges {
-          node {
-            childAsciidoc {
-              document {
-                title
-              }
-              fields {
-                slug
-              }
-              id
+  query docFiles {
+    allFile(filter: {sourceInstanceName: {eq: "docs"}}) {
+      edges {
+        node {
+          childAsciidoc {
+            document {
+              title
+            }
+            fields {
+              slug
+            }
+            id
+          }
+          childMarkdownRemark {
+            fields {
+              slug
+            }
+            id
+            frontmatter {
+              title
             }
           }
         }
       }
     }
+  }
   `);
 
   const blogResult = await graphql<QueryResult>(`
     query blogFiles {
       allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              excerpt
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-              id
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const eventsResult = await graphql<QueryResult>(`
-    query eventFiles {
-      allFile(filter: { sourceInstanceName: { eq: "events" } }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              excerpt
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-              id
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const videosResult = await graphql<QueryResult>(`
-    query videoFiles {
-      allFile(filter: { sourceInstanceName: { eq: "videos" } }) {
         edges {
           node {
             childMarkdownRemark {
@@ -259,12 +221,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
   if (blogResult.errors) {
     throw blogResult.errors;
   }
-  if (eventsResult.errors) {
-    throw eventsResult.errors;
-  }
-  if (videosResult.errors) {
-    throw videosResult.errors;
-  }
 
   // create docs pages
   const docs = docsResult.data?.allFile.edges ?? [];
@@ -287,30 +243,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
     createPage({
       path: node.childMarkdownRemark.fields.slug,
       component: path.resolve("./src/templates/blog-post.tsx"),
-      context: {
-        id: node.childMarkdownRemark.id,
-      },
-    });
-  });
-
-  // create blog post pages
-  const events = eventsResult.data?.allFile.edges ?? [];
-  events.forEach(({ node }) => {
-    createPage({
-      path: node.childMarkdownRemark.fields.slug,
-      component: path.resolve("./src/templates/events-page.tsx"),
-      context: {
-        id: node.childMarkdownRemark.id,
-      },
-    });
-  });
-
-  // create blog post pages
-  const videos = videosResult.data?.allFile.edges ?? [];
-  videos.forEach(({ node }) => {
-    createPage({
-      path: node.childMarkdownRemark.fields.slug,
-      component: path.resolve("./src/templates/videos-page.tsx"),
       context: {
         id: node.childMarkdownRemark.id,
       },

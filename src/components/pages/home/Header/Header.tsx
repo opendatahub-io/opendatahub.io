@@ -50,6 +50,7 @@ export const Header = () => {
       </Flex>
       <Particles
         canvasClassName="particles header-group"
+        height="90%"
         id="tsparticles"
         init={particlesInit}
         options={particle_config}

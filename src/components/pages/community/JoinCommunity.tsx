@@ -16,7 +16,7 @@ import SlackIcon from "@patternfly/react-icons/dist/esm/icons/slack-icon";
 export const JoinCommunity: React.FC = () => {
   return (
     <Stack>
-      <StackItem className="pf-u-mx-auto pf-u-mt-4xl pf-u-mb-4xl max-width-900">
+      <StackItem>
         <Flex
           className="pf-u-text-align-center"
           justifyContent={{ default: "justifyContentCenter" }}

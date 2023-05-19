@@ -1,5 +1,5 @@
 export * from "./JoinCommunity";
-export * from "./CommunityMeetins";
+export * from "./CommunityMeetings";
 export * from "./UpcomingEvents";
 export * from "./MailingList";
 export * from "./FeaturedVideos";

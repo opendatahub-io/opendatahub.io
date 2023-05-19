@@ -1,4 +1,4 @@
-import { Flex, FlexItem, PageSection, PageSectionVariants } from "@patternfly/react-core";
+import { PageSection } from "@patternfly/react-core";
 import type { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
 
@@ -6,11 +6,11 @@ import {
   ArchitectureMap,
   CommunityDetails,
   CompetitiveAdvantage,
-  FeaturedBlogs,
+  FeaturedContent,
   Header,
   PersonasLayout,
 } from "../components/pages/home";
-import { Footer, Layout } from "../components/shared";
+import { Footer, Layout, SectionList } from "../components/shared";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -22,60 +22,31 @@ const IndexPage: React.FC<PageProps> = () => {
       >
         <Header />
       </PageSection>
-      <Flex spaceItems={{ default: "spaceItems4xl" }} direction={{ default: "column" }}>
-        <FlexItem>
-          <PageSection
-            isCenterAligned
-            isWidthLimited
-            padding={{ default: "padding" }}
-          >
-            <CompetitiveAdvantage />
-          </PageSection>
-        </FlexItem>
-        <FlexItem>
-          <PageSection
-            isCenterAligned
-            isWidthLimited
-            padding={{ default: "padding" }}
-          >
-            <PersonasLayout />
-          </PageSection>
-        </FlexItem>
-        <FlexItem>
-          <PageSection
-            isCenterAligned
-            isWidthLimited
-            padding={{ default: "padding" }}
-          >
-            <ArchitectureMap />
-          </PageSection>
-        </FlexItem>
-        <FlexItem>
-          <CommunityDetails />
-        </FlexItem>
-        <FlexItem>
-          <PageSection
-            isCenterAligned
-            isWidthLimited
-            padding={{ default: "padding" }}
-          >
-            <FeaturedBlogs />
-          </PageSection>
-        </FlexItem>
-        <FlexItem>
-          <PageSection
-            isCenterAligned
-            isWidthLimited
-            className="footer-section"
-            padding={{ default: "padding" }}
-            variant={PageSectionVariants.dark}
-            style={{ backgroundColor: "transparent" }}
-          >
-            <Footer />
-          </PageSection>
-        </FlexItem>
-      </Flex>
-    </Layout>
+      <SectionList
+        sections={[
+          { component: <CompetitiveAdvantage /> },
+          { component: <PersonasLayout /> },
+          { component: <ArchitectureMap /> },
+          {
+            component: <CommunityDetails />,
+            props: {
+              className: "pf-u-py-xl",
+              style: {
+                backgroundColor: "#eeeeee",
+              }
+            }
+          },
+          { component: <FeaturedContent /> },
+          {
+            component: <Footer />,
+            props: {
+              isWidthLimited: false,
+              padding: { default: "noPadding" }
+            },
+          }
+        ]}
+      />
+    </Layout >
   );
 };
 
