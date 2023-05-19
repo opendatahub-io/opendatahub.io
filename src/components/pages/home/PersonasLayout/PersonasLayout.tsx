@@ -75,7 +75,7 @@ const data: PersonaBenefits = [
     ],
   },
   {
-    name: "IT Ops/Admins",
+    name: "IT Operator",
     benefits: [
       {
         title: "Customization",
@@ -134,11 +134,11 @@ const data: PersonaBenefits = [
     ],
   },
   {
-    name: "App Dev",
+    name: "App Developer",
     benefits: [
       {
-        title: "Collaborative Model Development & Jupyter Notebook Integration",
-        body: "Get access to models your data science colleagues are working on so you can work collaboratively with them. Open existing models in Jupyter Notebooks to ensure they include the information you need in your application",
+        title: "Collaborative Model Development",
+        body: "Get access to models your data science colleagues are working on so you can work collaboratively with them",
         link: "/docs/",
         imageUrl: placeholderImage,
         features: [
@@ -147,6 +147,14 @@ const data: PersonaBenefits = [
             body: "Collaborate with data science colleagues by accessing their models",
             imageUrl: logo,
           },
+        ],
+      },
+      {
+        title: "Jupyter Notebook Integration",
+        body: "Open existing models in Jupyter Notebooks to ensure they include the information you need in your application",
+        link: "/docs/",
+        imageUrl: placeholderImage,
+        features: [
           {
             title: "Model Integration in Notebooks",
             body: "Seamlessly integrate existing models in Jupyter Notebooks",
@@ -155,21 +163,11 @@ const data: PersonaBenefits = [
         ],
       },
       {
-        title: "Model Containerization & Endpoint Management",
-        body: "Containerize models and serve them manually. Access and create multiple model endpoints",
+        title: "Model Endpoint Management",
+        body: "Access and create multiple model endpoints",
         link: "/docs/",
         imageUrl: placeholderImage,
         features: [
-          {
-            title: "Manual Model Server Deployment",
-            body: "Containerize and serve models manually",
-            imageUrl: logo,
-          },
-          {
-            title: "LLM Model Serving",
-            body: "Serve LLM models from the Model Server",
-            imageUrl: logo,
-          },
           {
             title: "Endpoint Creation and Management",
             body: "Efficiently manage and create multiple model endpoints",
@@ -186,6 +184,24 @@ const data: PersonaBenefits = [
           {
             title: "User-Friendly Interface",
             body: "Access resources through an intuitive user interface",
+            imageUrl: logo,
+          },
+        ],
+      },
+      {
+        title: "Model Containerization",
+        body: "Containerize models and serve them manually",
+        link: "/docs/",
+        imageUrl: placeholderImage,
+        features: [
+          {
+            title: "Manual Model Server Deployment",
+            body: "Containerize and serve models manually",
+            imageUrl: logo,
+          },
+          {
+            title: "LLM Model Serving",
+            body: "Serve LLM models from the Model Server",
             imageUrl: logo,
           },
         ],
@@ -209,6 +225,7 @@ const data: PersonaBenefits = [
         ],
       },
     ],
+  };
   }
 ];
 
