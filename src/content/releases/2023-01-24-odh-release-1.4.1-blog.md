@@ -4,7 +4,7 @@ author: lavlas
 title:  Open Data Hub 1.4.1 Release Guide
 preview: Open Data Hub 1.4.1 was just released
 date: 2023-01-24
-categories: features, road map, release
+categories: features, road-map, release
 featured: true
 ---
 

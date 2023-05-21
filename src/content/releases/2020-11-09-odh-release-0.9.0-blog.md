@@ -4,7 +4,7 @@ author: llasmith
 title:  Open Data Hub 0.9.0 Release Guide
 preview: Open Data Hub 0.9.0 was just released
 date: 2020-11-09
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is new?

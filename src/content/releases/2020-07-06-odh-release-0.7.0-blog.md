@@ -4,7 +4,7 @@ author: llasmith
 title:  Open Data Hub 0.7.0 Release Guide
 preview: Open Data Hub 0.7.0 was just released with updates to deploy upstream Kubeflow on OpenShift.
 date: 2020-07-06
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is new?

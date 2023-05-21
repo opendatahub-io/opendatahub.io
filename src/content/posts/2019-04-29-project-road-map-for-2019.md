@@ -4,7 +4,7 @@ author: shgriffi
 title:  Project Road Map for 2019
 preview: The Open Data Hub community has some exciting new features planned for 2019.  Driven by the release of OpenShift 4, we have officially moved to operators.  This will make deployment and management of the services easier for administrators.
 date: 2019-04-29
-categories: features, road map
+categories: features, road-map
 ---
 
 

@@ -214,7 +214,7 @@ const LINKED_CONTENT: LinkedContent[] = [
 
 export enum SourceInstanceNameLabel {
     videos="VIDEO",
-    blog="POST",
+    blog="BLOG",
     audio="AUDIO",
     releases="RELEASE"
 }

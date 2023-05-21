@@ -27,6 +27,7 @@ type ContentCardProps = {
   className?: string;
   hasMoreButton?: boolean;
   buttonText?: string;
+  handleChipClick?: (chip: string) => void;
 };
 
 export const ContentCard = ({
@@ -39,6 +40,7 @@ export const ContentCard = ({
   className = "",
   hasMoreButton,
   buttonText,
+  handleChipClick = () => undefined
 }: ContentCardProps) => {
   return (
     <Card
@@ -92,21 +94,30 @@ export const ContentCard = ({
       </CardBody>
       {(hasMoreButton || chips.length > 0) && (
         <CardFooter>
-          {chips.length > 0 && (
-            <Flex style={{ marginTop: "1rem" }}>
-              {chips &&
-                chips.map((chip) => (
-                  <FlexItem key={chip}>
-                    <Chip isReadOnly>{chip}</Chip>
-                  </FlexItem>
-                ))}
-            </Flex>
-          )}
-          {hasMoreButton && (
-            <Button variant="primary">
-              {buttonText} <ArrowRightIcon />
-            </Button>
-          )}
+          <Stack hasGutter>
+            {chips.length > 0 && (
+              <StackItem>
+                <Flex style={{ marginTop: "1rem" }}>
+                  {chips &&
+                    chips.map((chip) => (
+                      <FlexItem key={chip}>
+                        <Chip component="button" isOverflowChip onClick={(event) => {
+                          handleChipClick(chip)
+                          event.stopPropagation()
+                        }}>{chip}</Chip>
+                      </FlexItem>
+                    ))}
+                </Flex>
+              </StackItem>
+            )}
+            {hasMoreButton && (
+              <StackItem>
+                <Button variant="primary">
+                  {buttonText} <ArrowRightIcon />
+                </Button>
+              </StackItem>
+            )}
+          </Stack>
         </CardFooter>
       )}
     </Card>

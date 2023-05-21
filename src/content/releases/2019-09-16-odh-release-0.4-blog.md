@@ -4,7 +4,7 @@ author: lavlas
 title:  Open Data Hub 0.4.0 Release Guide
 preview: Open Data Hub 0.4.0 just released with exciting new tools for different AI/ML platform phases. We added Argo, AI-Library and support for the Strimzi Kafka operator
 date: 2019-09-16
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 

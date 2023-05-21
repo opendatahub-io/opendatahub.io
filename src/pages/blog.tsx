@@ -1,4 +1,4 @@
-import { PageProps, graphql } from "gatsby";
+import { PageProps, graphql, navigate } from "gatsby";
 import * as React from "react";
 
 import { ContentCardList, Layout, Seo } from "../components/shared";
@@ -30,20 +30,35 @@ import { SourceInstanceNameLabel } from "../const";
 import { FilterIcon, SearchIcon } from "@patternfly/react-icons";
 
 
-const BlogIndex = ({ data }: PageProps<Queries.AllContentQueryQuery>) => {
+const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) => {
   const posts = data.allFile.edges;
   const [page, setPage] = React.useState(1);
   const [perPage, setPerPage] = React.useState(10);
 
-  const [searchValue, setSearchValue] = React.useState("");
-  const [categoryFilter, setCategoryFilter] = React.useState<string[]>([]);
+  // get url params
+  const urlParams = new URLSearchParams(location.search);
+  const searchDefault = urlParams.get("search");
+  const contentTypeDefault = urlParams.get("type");
+  const categoryDefault = urlParams.get("category") ? urlParams.get("category")!.split(",") : [];
+
+  const [searchValue, setSearchValue] = React.useState(searchDefault ?? "");
+  const [categoryFilter, setCategoryFilter] = React.useState<string[]>(categoryDefault);
   const [isCategoryFilterOpen, setIsCategoryFilterOpen] = React.useState(false);
-  const [contentTypeFilter, setContentTypeFilter] = React.useState<string[]>([]);
+  const [contentTypeFilter, setContentTypeFilter] = React.useState<string | null>(contentTypeDefault);
   const [isContentTypeFilterOpen, setIsContentTypeFilterOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const searchPart = searchValue.length > 0 ? `search=${searchValue}` : null
+    const categoryPart = categoryFilter.length > 0 ? `category=${categoryFilter.map(c => c.trim()).join(",")}` : null
+    const contentTypePart = contentTypeFilter !== null ? `type=${contentTypeFilter}` : null
+    const query = [searchPart, categoryPart, contentTypePart].filter((part) => part !== null).join("&")
+    navigate(`?${query}`, { replace: true })
+  }, [searchValue, categoryFilter, contentTypeFilter])
+
 
   const [categorySelectOptions, contentTypeSelectOptions] = React.useMemo(() => {
     const nodeCategories = data.allFile.edges
-      .map((edge) => edge.node.childMarkdownRemark?.frontmatter?.categories?.split(",") ?? [])
+      .map((edge) => edge.node.childMarkdownRemark?.frontmatter?.categories?.split(",").map(c => c.trim()) ?? [])
       .reduce((prev, curr) => new Set([...prev, ...curr]), new Set<string>())
 
     const contentTypes = data.allFile.edges
@@ -80,11 +95,11 @@ const BlogIndex = ({ data }: PageProps<Queries.AllContentQueryQuery>) => {
     return posts.filter(({ node }) => {
       const frontmatter = node.childMarkdownRemark?.frontmatter
       const sourceInstanceName = node.sourceInstanceName
-      const nodeCategories = frontmatter?.categories?.split(",") ?? []
+      const nodeCategories = frontmatter?.categories?.split(",").map(c => c.trim()) ?? []
       const title = frontmatter?.title ?? ""
 
       return (categoryFilter.length === 0 || categoryFilter.every((option) => nodeCategories.includes(option))) &&
-        (contentTypeFilter.length === 0 || contentTypeFilter.every((option) => sourceInstanceName === option)) &&
+        (contentTypeFilter === null || contentTypeFilter === sourceInstanceName) &&
         (searchValue.length === 0 || title.toLowerCase().includes(searchValue.toLowerCase()))
     })
   }, [categoryFilter, contentTypeFilter, searchValue, posts])
@@ -101,7 +116,7 @@ const BlogIndex = ({ data }: PageProps<Queries.AllContentQueryQuery>) => {
           collapseListedFiltersBreakpoint="md"
           clearAllFilters={() => {
             setCategoryFilter([])
-            setContentTypeFilter([])
+            setContentTypeFilter(null)
             setSearchValue("")
           }}>
           <ToolbarContent>
@@ -141,22 +156,22 @@ const BlogIndex = ({ data }: PageProps<Queries.AllContentQueryQuery>) => {
                   </Select>
                 </ToolbarFilter>
                 <ToolbarFilter
-                  chips={contentTypeFilter}
-                  deleteChip={(_category, chip) => setContentTypeFilter(contentTypeFilter.filter(c => c !== chip))}
+                  chips={contentTypeFilter !== null ? [contentTypeFilter] : undefined}
+                  deleteChip={(_category, chip) => setContentTypeFilter(null)}
                   categoryName="Content Type"
                 >
                   <Select
-                    variant={SelectVariant.checkbox}
+                    variant={SelectVariant.single}
                     aria-label="Content Type"
                     onToggle={() => setIsContentTypeFilterOpen(!isContentTypeFilterOpen)}
                     onSelect={(_, value) => {
-                      if (typeof value === "string" && contentTypeFilter.includes(value)) {
-                        setContentTypeFilter(contentTypeFilter.filter((content) => content !== value))
+                      if (typeof value === "string" && contentTypeFilter === value) {
+                        setContentTypeFilter(null)
                       } else {
-                        setContentTypeFilter([...contentTypeFilter, value as string])
+                        setContentTypeFilter(value as string)
                       }
                     }}
-                    selections={contentTypeFilter}
+                    selections={contentTypeFilter ?? ""}
                     isOpen={isContentTypeFilterOpen}
                     placeholderText="Content Type"
                   >
@@ -178,7 +193,7 @@ const BlogIndex = ({ data }: PageProps<Queries.AllContentQueryQuery>) => {
             <EmptyStateSecondaryActions>
               <Button variant="link" onClick={() => {
                 setCategoryFilter([])
-                setContentTypeFilter([])
+                setContentTypeFilter("")
                 setSearchValue("")
               }}>
                 Clear all filters
@@ -205,7 +220,12 @@ const BlogIndex = ({ data }: PageProps<Queries.AllContentQueryQuery>) => {
 
                     </Stack>
                   )}
-                  chips={(markdown?.frontmatter?.categories ?? "").split(",")}
+                  chips={(markdown?.frontmatter?.categories ?? "").split(",").map(c => c.trim())}
+                  handleChipClick={chip => {
+                    if (!categoryFilter.includes(chip)) {
+                      setCategoryFilter([...categoryFilter, chip])
+                    }
+                  }}
                 />
               );
             })}

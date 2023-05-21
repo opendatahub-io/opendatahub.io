@@ -4,7 +4,7 @@ author: nakfour
 title:  Open Data Hub 0.3 Release Guide
 preview: Open Data Hub 0.3 just released with exciting new tools for different AI/ML platform phases. We added monitoring, model serving and GPU processing tools.  
 date: 2019-06-27
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 
