@@ -34,7 +34,7 @@ What is Sentiment analysis
 
 Sentiment Analysis is a technique to identify emotional states and polarity from human language. These tasks, pertaining to extracting sentiments from a piece of text, often about a certain topic fall under the field of Natural language processing (NLP). NLP is a range of computational techniques for the automatic analysis and representation of human language. It is closely linked to the fields of artificial intelligence (AI) and computational linguistics. 
 
-![alt text](../../assets/img/posts/2019-08-21-sentiment-analysis-blog/sentiment_analysis_example.png "An example of sentence classification of tweets into positive and negative sentiments.")
+![alt text](../assets/img/pages/posts/2019-08-21-sentiment-analysis-blog/sentiment_analysis_example.png "An example of sentence classification of tweets into positive and negative sentiments.")
 
 There are various approaches that can be taken to build a sentiment analysis service. One of the most intuitive approaches is that of building of a textual analysis system. Such a system comprises of analyzing a piece of text based on the terms appearing in the text and building a rule-based or fact-based system around categorizing pieces of text into various sentiment classes. The other approach, which is mainly how most of the state-of-the-art systems work is a machine learning and deep learning based approach. In this approach, rather than teaching a system to make a decision based on a set of rules, we expose the system to a variety of examples and train it to learn from the examples and then draw predictions on the basis of those. 
 
@@ -55,7 +55,7 @@ The initial approach involved sentiment calculation using the CoreNLP Annotator 
 
 The results of the above approach are shown in the figure below. We are displaying F1-scores, which is calculated from Precision and Recall values for each sentiment. Precision is the ratio of correctly predicted positive observations to the total predicted positive observations. Recall is the ratio of correctly predicted positive observations to the all observations in actual class. 
 
-![alt text](../../assets/img/posts/2019-08-21-sentiment-analysis-blog/metrics-for-initial-approach.png "F-1 scores of initially developed service using open source NLP tools")
+![alt text](../assets/img/pages/posts/2019-08-21-sentiment-analysis-blog/metrics-for-initial-approach.png "F-1 scores of initially developed service using open source NLP tools")
 
 F1 Score is the weighted average of Precision and Recall. Therefore, this score takes both false positives and false negatives into account.  
 
@@ -64,7 +64,7 @@ In order to improve this service, we created a service, which is an ensemble of 
 
 The results of this approach are shown in the figure below. We are displaying the F1-scores of the ensembled model when tested on a test dataset.
 
-![alt text](../../assets/img/posts/2019-08-21-sentiment-analysis-blog/metrics-for-weighted-approach.png "F-1 scores of service  using model stacking approach with weighted precision scores")
+![alt text](../assets/img/pages/posts/2019-08-21-sentiment-analysis-blog/metrics-for-weighted-approach.png "F-1 scores of service  using model stacking approach with weighted precision scores")
 
 As we can see from the results in the above figure, as compared to the results of the primary approach as shown in the previous figure, there were improvements in the service by using a model stacking method with weighted average.
 
@@ -89,7 +89,7 @@ A big challenge in NLP is the shortage of training data. Most modern deep learni
 
 To close this gap, a technique called Bidirectional Encoder Representation from Transformers (BERT) was developed for training general purpose language representation models using enormous amount of unannotated text on the web ( known as pre-training) by researchers at Google.
 
-![alt text](../../assets/img/posts/2019-08-21-sentiment-analysis-blog/bert-architecture.png "Pre - training general purpose language representation models on huge unannotated text and Fine tuning on customer review dataset")
+![alt text](../assets/img/pages/posts/2019-08-21-sentiment-analysis-blog/bert-architecture.png "Pre - training general purpose language representation models on huge unannotated text and Fine tuning on customer review dataset")
 
 The pre-trained model can then be fined tuned on smaller datasets for performing sentiment analysis.
 
@@ -97,7 +97,7 @@ The advantage that this gives us is that, by using the principles of transfer le
 
 We use pre-trained BERT models and fine-tune it on our comparatively smaller dataset. This allows us to take advantage of feature extraction that happens in the front layers of the network without developing that feature extraction network from scratch.
 
-![alt text](../../assets/img/posts/2019-08-21-sentiment-analysis-blog/bert-results.png "F-1 Scores of Positive and Negative sentiments run on BERT based model")
+![alt text](../assets/img/pages/posts/2019-08-21-sentiment-analysis-blog/bert-results.png "F-1 Scores of Positive and Negative sentiments run on BERT based model")
 
 ##### Results using the BERT model
 
@@ -106,7 +106,7 @@ The BERT based model performs better than our RNN based approach and predicts po
 Infrastructure requirements for building the service
 ------
 
-![alt text](../../assets/img/posts/2019-08-21-sentiment-analysis-blog/cpu-vs-gpu.png "CPU vs GPU and comparison of training time")
+![alt text](../assets/img/pages/posts/2019-08-21-sentiment-analysis-blog/cpu-vs-gpu.png "CPU vs GPU and comparison of training time")
 
 So, as we fine-tune a sentiment analysis model, with pre-trained BERT parameters by training it on a large annotated dataset, we introduce large computational operations in terms of memory. To compute the data efficiently, we need infrastructures that can handle the computation processes in minimum time. 
 
@@ -125,7 +125,7 @@ The code used for training and testing and the saved model can be found in this 
 Continuous improvement and incorporating feedback
 ------
 
-![alt text](../../assets/img/posts/2019-08-21-sentiment-analysis-blog/feedback.png "Feedback system for the sentiment analysis service")
+![alt text](../assets/img/pages/posts/2019-08-21-sentiment-analysis-blog/feedback.png "Feedback system for the sentiment analysis service")
 
 The lifecycle of developing AI systems, does not end with building the first iteration of the system. We improve the system and continuously evolve it by making it learn from a feedback system. 
 

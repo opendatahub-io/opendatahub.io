@@ -19,7 +19,7 @@ The components added or (re)enabled in this version are:
 | Technology | Version | Category | Deployment Method | 
 |--|--|--|--|
 | [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.1.0 | Model Serving | OLM |
-{:class="table table-bordered table-striped"}
+
 
 We have also enabled OpenShift CI for our odh-manifests repository to help us with PR reviews. We have a basic set of tests and are [expanding the test set](https://github.com/orgs/opendatahub-io/projects/4) to make sure that your PRs are reviewed faster in a more automated fashion.
 

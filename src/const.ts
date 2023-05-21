@@ -211,3 +211,10 @@ const LINKED_CONTENT: LinkedContent[] = [
         type: "audio",
     },
 ]
+
+export enum SourceInstanceNameLabel {
+    videos="VIDEO",
+    blog="POST",
+    audio="AUDIO",
+    releases="RELEASE"
+}

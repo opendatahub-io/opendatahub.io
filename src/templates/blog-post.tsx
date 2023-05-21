@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { PageProps, graphql } from "gatsby";
 import * as React from "react";
 import {
   PageSection,
@@ -7,41 +7,30 @@ import {
   Title,
   TitleSizes,
   Text,
+  Chip,
 } from "@patternfly/react-core";
 import { Layout, Seo } from "../components/shared";
 
-const BlogPostTemplate = ({ data: { markdownRemark: post } }) => {
+const BlogPostTemplate = ({ data: { markdownRemark: post } }: PageProps<Queries.BlogPostTemplateQuery>) => {
+  const chips: string[] = (post?.frontmatter?.categories ?? "").split(",")
   return (
     <Layout>
-      <PageSection variant="light">
-        <article
-          className="blog-post"
-          itemScope
-          itemType="http://schema.org/Article"
-        >
-          <Flex className="pf-u-w-75vw pf-u-flex-direction-column">
-            <header>
-              <FlexItem>
-                <Title size={TitleSizes["4xl"]} headingLevel="h2">
-                  {post.frontmatter.title}
-                </Title>
+      <PageSection variant="light" className="markdown">
+        <Title size={TitleSizes["4xl"]} headingLevel="h2">
+          {post?.frontmatter?.title}
+        </Title>
+        <Text>{post?.frontmatter?.date}</Text>
+        <Flex>
+          {
+            chips.map((chip) => (
+              <FlexItem key={chip}>
+                <Chip isReadOnly>{chip}</Chip>
               </FlexItem>
-
-              <FlexItem>
-                <Text>{post.frontmatter.date}</Text>
-                <Text>{post.frontmatter.venue}</Text>
-                <Text>{post.frontmatter.address}</Text>
-              </FlexItem>
-            </header>
-
-            <FlexItem>
-              <section
-                dangerouslySetInnerHTML={{ __html: post.html }}
-                itemProp="articleBody"
-              />
-            </FlexItem>
-          </Flex>
-        </article>
+            ))}
+        </Flex>
+        <div
+          dangerouslySetInnerHTML={{ __html: post?.html ?? "" }}
+        />
       </PageSection>
     </Layout>
   );
@@ -60,14 +49,13 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostTemplate($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 160)
+    markdownRemark(id: {eq: $id }) {
+    id
+    excerpt(pruneLength: 160)
       html
       frontmatter {
         title
         author
-        preview
         categories
         preview
         date(formatString: "MMMM DD, YYYY")

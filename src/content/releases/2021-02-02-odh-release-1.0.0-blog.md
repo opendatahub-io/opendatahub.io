@@ -36,4 +36,4 @@ The following is a list of components that are available in v1.0.0 release of od
 | [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | v0.34.0  | Data Exploration and Visualization Tool | Manifests |
 | [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | v1.2.2 | Model Serving | OLM |
 | [Ceph Nano](https://github.com/ceph/cn-core) | v0.7 | Object Storage | Manifests |
-{:class="table table-bordered table-striped"}
+

@@ -28,7 +28,7 @@ The following is a list of tools that are available in v0.7.0 release of odh-man
 | [Radanalytics Spark Operator](https://github.com/opendatahub-io/odh-manifests/tree/master/radanalyticsio) | 1.0.7  | Operator for managing Spark cluster on OpenShift | Manifests |
 | [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | 0.34.0  | Data Exploration and Visualization Tool | Manifests |
 | [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.2.0 | Model Serving | OLM |
-{:class="table table-bordered table-striped"}
+
 
 
 Read More

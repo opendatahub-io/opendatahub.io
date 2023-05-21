@@ -21,7 +21,7 @@ Open Data Hub 0.3 includes many new tools that are essential to a comprehensive 
 | TwoSigma [BeakerX](http://beakerx.com/) Integration | 1.4.0 |  Data science tools |
 | [Prometheus](https://prometheus.io/) | 2.3 | System monitoring tools |
 | [Grafana](https://grafana.com/) | 4.7 |  System monitoring tools |
-{:class="table table-bordered table-striped"}
+
 
 Seldon
 ------

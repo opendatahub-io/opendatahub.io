@@ -31,4 +31,4 @@ The following is a list of components that are available in v1.4.0 release of od
 | [Open Data Hub notebook-controller](https://github.com/opendatahub-io/kubeflow/tree/master/components/odh-notebook-controller) | N/A | Notebooks |
 | [Model Mesh](https://github.com/opendatahub-io/modelmesh-serving) | v0.9.0 |
 | [Data Science Pipelines](https://github.com/opendatahub-io/data-science-pipelines) | v1.3.1 | Data Science Tools |
-{:class="table table-bordered table-striped"}
+

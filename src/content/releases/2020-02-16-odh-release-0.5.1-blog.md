@@ -18,7 +18,7 @@ The following is a list of tools added to Open Data Hub in this release:
 | JupyterHub | 3.0.7  | Data science tools |
 | Radanalytics [Spark Operator](https://github.com/radanalyticsio/spark-operator) | 1.0.5  | Operator for managing Spark cluster on OpenShift |
 | Apache [Superset](https://github.com/apache/incubator-superset) | 0.34.0  | Data Exploration and Visualization Tool |
-{:class="table table-bordered table-striped"}
+
 
 You can review the release notes for components added in the previous v0.5.0 release [here](https://opendatahub.io/news/2019-12-17/odh-release-0.5-blog.html)
 

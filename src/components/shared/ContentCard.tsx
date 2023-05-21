@@ -18,18 +18,15 @@ import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-i
 import "./ContentCard.css";
 
 type ContentCardProps = {
-  title?: string;
+  title?: string | null;
   body?: React.ReactNode;
   imageUrl?: string;
-  subTitle?: string;
-  link?: string;
+  subTitle?: string | null;
+  link?: string | null;
   chips?: string[];
   className?: string;
-  hasCardFooter?: boolean;
   hasMoreButton?: boolean;
   buttonText?: string;
-  date: Date;
-  buttonVariant?: string;
 };
 
 export const ContentCard = ({
@@ -40,11 +37,8 @@ export const ContentCard = ({
   link,
   chips = [],
   className = "",
-  hasCardFooter,
   hasMoreButton,
   buttonText,
-  date,
-  buttonVariant,
 }: ContentCardProps) => {
   return (
     <Card
@@ -81,14 +75,9 @@ export const ContentCard = ({
                     </Title>
                   </StackItem>
                 )}
-                {date && (
-                  <StackItem>
-                    <Text>{date.toString()}</Text>
-                  </StackItem>
-                )}
                 {body && (
                   <StackItem>
-                    <Text>{body}</Text>
+                    {body}
                   </StackItem>
                 )}
               </Stack>
@@ -100,19 +89,19 @@ export const ContentCard = ({
             </FlexItem>
           )}
         </Flex>
-        {chips.length > 0 && (
-          <Flex style={{ marginTop: "1rem" }}>
-            {chips &&
-              chips.map((chip) => (
-                <FlexItem key={chip}>
-                  <Chip isReadOnly>{chip}</Chip>
-                </FlexItem>
-              ))}
-          </Flex>
-        )}
       </CardBody>
-      {hasCardFooter && (
+      {(hasMoreButton || chips.length > 0) && (
         <CardFooter>
+          {chips.length > 0 && (
+            <Flex style={{ marginTop: "1rem" }}>
+              {chips &&
+                chips.map((chip) => (
+                  <FlexItem key={chip}>
+                    <Chip isReadOnly>{chip}</Chip>
+                  </FlexItem>
+                ))}
+            </Flex>
+          )}
           {hasMoreButton && (
             <Button variant="primary">
               {buttonText} <ArrowRightIcon />

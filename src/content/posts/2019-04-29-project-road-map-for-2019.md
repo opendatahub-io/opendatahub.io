@@ -11,7 +11,7 @@ categories: features, road map
 What's Next?
 ------
 
-![alt text](../../assets/img/posts/2019-04-29-project-road-map-for-2019/roadmap_2019.png "Open Data Hub Road Map - 2019")
+![alt text](../assets/img/pages/posts/2019-04-29-project-road-map-for-2019/roadmap_2019.png "Open Data Hub Road Map - 2019")
 
 The Open Data Hub community has some exciting new features planned for 2019.  Driven by the release of OpenShift 4, we have officially moved to operators.  This will make deployment and management of the services easier for administrators.  Other key highlights on the road map for this year include added support for monitoring services with Prometheus and Grafana, as well as improved machine learning model lifecycle management with tools such as MLflow and Seldon-core.
 
@@ -24,7 +24,7 @@ February 2019
 | [JupyterHub](https://jupyter.org/hub) | 0.9.4 | OpenShift 3.1x, Minishift 1.3x | Data science tools |
 | [Apache Spark](http://spark.apache.org/) | 2.2.3 | OpenShift 3.1x, Minishift 1.3x | Query & ETL frameworks |
 | [Ceph-nano](https://github.com/ceph/cn) | Latest master | OpenShift 3.1x, Minishift 1.3x | Storage |
-{:class="table table-bordered table-striped"}
+
 
 The [initial launch of ODH](https://gitlab.com/opendatahub/jupyterhub-ansible) includes an object store, an analytics engine for big data and a platform for spinning up data science notebooks.  This provides everything you need to get started with machine learning on OpenShift.
 
@@ -41,7 +41,7 @@ May 2019
 | TwoSigma [BeakerX](http://beakerx.com/) Integration | 1.3.0 | OpenShift 3.1x and 4.x | Data science tools |
 | [Prometheus](https://prometheus.io/) | 2.3 | OpenShift 3.1x and 4.x | System monitoring tools |
 | [Grafana](https://grafana.com/) | 4.7 | OpenShift 3.1x and 4.x | System monitoring tools |
-{:class="table table-bordered table-striped"}
+
 
 The May release of ODH brings a re-design of the deployment to take advantage of [Kubernetes operators](https://blog.openshift.com/introducing-the-operator-framework/)!   Seldon-core will provide model-serving and model-monitoring capabilities. In order to better understand system usage and workloads, Prometheus and Grafana are also being targeted with pre-configured metrics and dashboards to monitor ODH.
 
@@ -61,7 +61,7 @@ August 2019
 | Hive Metastore | 1.2.1+ | OpenShift 3.1x and 4.x | Metadata cataloging |
 | [Cloudera Hue](http://gethue.com/) | 4.4+ | OpenShift 3.1x and 4.x | Data exploration |
 | [Ceph Rook](https://rook.io/docs/rook/v0.8/ceph-quickstart.html) Operator Integration | 0.9.3 | OpenShift 3.1x and 4.x | Storage |
-{:class="table table-bordered table-striped"}
+
 
 Version 0.3 of ODH includes added support for data engineers with Cloudera Hue, Argo, Kafka, and Spark SQL Thrift Server.  Argo is great for managing pipelines and workflows.  Ceph-nano is being replaced by Ceph Rook, the best way to deploy and manage Ceph Storage on OpenShift. For metadata and cataloging of data stored in the Ceph data lake, Hive Metastore will be added.  Spark SQL Thrift Server can be configured to enable SQL access to data stored in the Ceph data lake by leveraging Spark as the processing engine.  Hue will provide an interface for data analysts to query the data lake using metadata in Hive Metastore and the SQL capabilities of Spark SQL Thrift Server.
 

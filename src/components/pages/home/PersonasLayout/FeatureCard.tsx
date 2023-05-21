@@ -15,7 +15,7 @@ export type FeatureCardProps = {
 
 export const FeatureCard = ({ title, body, imageUrl }: FeatureCardProps) => {
   return (
-    <Card isCompact isFlat isRounded>
+    <Card isFullHeight isCompact isFlat isRounded>
       {imageUrl && (
         <CardHeader>
           <CardHeaderMain>

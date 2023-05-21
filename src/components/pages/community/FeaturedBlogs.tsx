@@ -41,11 +41,8 @@ export const FeaturedBlogs: React.FC = () => {
             body={excerpt}
             link={fields.slug}
             subTitle={frontmatter.date}
-            hasCardFooter
             hasMoreButton
-            buttonVariant={"primary"}
             buttonText={"Continue Reading"}
-            date={new Date(frontmatter.date)}
           />
         ))}
       </ContentCardList>

@@ -74,11 +74,8 @@ export const FeaturedVideos: React.FC = () => {
               frontmatter.permalink ? frontmatter.permalink : fields.slug
             }
             body={frontmatter.preview}
-            buttonVariant={"primary"}
-            hasCardFooter
             hasMoreButton
             buttonText={"Watch Now"}
-            date={new Date(frontmatter.date)}
           />
         ))}
       </ContentCardList>

@@ -11,8 +11,7 @@ import React from "react";
 
 import logo from "../../../../content/assets/img/logos/datahub_mark_color-blkbg.png";
 import placeholderImage from "../../../../content/assets/img/placeholder.svg";
-import { PlainImageCard } from "../../../shared/PlainImageCard";
-import { PlainImageCardProps } from "../../../shared/PlainImageCard";
+import { PlainImageCard, ContentCardList, PlainImageCardProps } from "../../../shared";
 import { FeatureCard, FeatureCardProps } from "./FeatureCard";
 import "./PersonasLayout.css";
 
@@ -281,16 +280,11 @@ export const PersonasLayout = () => {
                         <PlainImageCard {...benefit} />
                       </StackItem>
                       <StackItem>
-                        <Flex
-                          direction={{ sm: "row", default: "columnReverse" }}
-                          flexWrap={{ default: "nowrap" }}
-                        >
+                        <ContentCardList>
                           {benefit.features.map((feature) => (
-                            <FlexItem key={feature.title}>
-                              <FeatureCard {...feature} />
-                            </FlexItem>
+                            <FeatureCard {...feature} />
                           ))}
-                        </Flex>
+                        </ContentCardList>
                       </StackItem>
                     </Stack>
                   </StackItem>
