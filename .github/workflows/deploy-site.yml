@@ -1,0 +1,19 @@
+name: Build and Deploy to gh-pages
+on:
+  push:
+    branches:
+      - refresh
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public/
+          clean-exclude: pr-preview/
