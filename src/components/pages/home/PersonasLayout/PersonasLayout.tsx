@@ -62,7 +62,7 @@ export const PersonasLayout = () => {
             <StackItem key={persona.name}>
               <Stack hasGutter>
                 {persona.benefits.map((benefit) => (
-                  <StackItem key={benefit.title}>
+                  <StackItem key={benefit.title} className="pf-u-mt-3xl">
                     <Stack hasGutter>
                       <StackItem>
                         <PlainImageCard {...benefit} />
