@@ -29,7 +29,7 @@
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-sass": "^6.8.0",
-    "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-remark-images": "^7.9.0",
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-source-git": "^1.1.0",
