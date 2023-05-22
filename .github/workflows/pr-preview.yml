@@ -22,3 +22,4 @@ jobs:
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: auto
+          github-token: ${{ secrets.ACCESS_TOKEN }}
