@@ -15,14 +15,14 @@ export type FeatureCardProps = {
 
 export const FeatureCard = ({ title, body, imageUrl }: FeatureCardProps) => {
   return (
-    <Card isCompact isFlat isRounded>
+    <Card isFullHeight isCompact isFlat isRounded>
       {imageUrl && (
         <CardHeader>
           <CardHeaderMain>
             <img
               src={imageUrl}
               alt={`${title} feature image`}
-              style={{ height: "35px" }}
+              style={{ height: "35px", maxWidth: "revert" }}
             />
           </CardHeaderMain>
         </CardHeader>

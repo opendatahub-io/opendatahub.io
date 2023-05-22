@@ -63,7 +63,7 @@ export const FeaturedVideos: React.FC = () => {
         playlist.
       </>)}
       actionTitle="View all videos"
-      actionLink="/videos"
+      actionLink="/blog/?type=videos"
     >
       <ContentCardList>
         {posts.slice(0, 2).map(({ frontmatter, fields }) => (
@@ -74,8 +74,6 @@ export const FeaturedVideos: React.FC = () => {
               frontmatter.permalink ? frontmatter.permalink : fields.slug
             }
             body={frontmatter.preview}
-            buttonVariant={"primary"}
-            hasCardFooter
             hasMoreButton
             buttonText={"Watch Now"}
           />

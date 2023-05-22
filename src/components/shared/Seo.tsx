@@ -34,7 +34,7 @@ export const Seo = ({
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />

@@ -4,7 +4,7 @@ author: lavlas
 title:  Open Data Hub 1.1.1 Release Guide
 preview: Open Data Hub 1.1.1 was just released
 date: 2022-01-10
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is new?
@@ -31,4 +31,4 @@ The following is a list of components that are available in v1.1.1 release of od
 | [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | v1.3.2  | Data Exploration and Visualization Tool | Manifests |
 | [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | v1.2.2 | Model Serving | OLM |
 | [Ceph Nano](https://github.com/ceph/cn-core) | v0.7 | Object Storage | Manifests |
-{:class="table table-bordered table-striped"}
+

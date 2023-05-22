@@ -11,7 +11,7 @@ Apache Kafka
 ------
 
 
-![alt text](../../assets/img/posts/2019-08-20-kafka-in-odh/apache_kafka.png "Apache Kafka")
+![alt text](../assets/img/pages/posts/2019-08-20-kafka-in-odh/apache_kafka.png "Apache Kafka")
 
 The Open Data Hub is a reference architecture running on OpenShift that incorporates a variety of open source projects to function as an ML-as-a-service platform. Given the huge amounts of data to be ingested and processed, it's crucial to have a reliable streaming platform. To solve this problem we use Apache Kafka.
 
@@ -34,7 +34,7 @@ Building real-time streaming applications that transform or react to the streams
 Strimzi Operator
 ------
 
-![alt text](../../assets/img/posts/2019-08-20-kafka-in-odh/strimzi.png "Strimzi")
+![alt text](../assets/img/pages/posts/2019-08-20-kafka-in-odh/strimzi.png "Strimzi")
 
 [Strimzi](https://strimzi.io/) is based on Apache Kafka, a popular platform for streaming data delivery and processing. Strimzi makes it easy to run Apache Kafka on Kubernetes.
 
@@ -55,7 +55,7 @@ Monitoring
 
 Kafka deployed usind ODH Operator comes pre-configured to expose metrics out of the box which are scraped using Prometheus and Visualized using Grafana. This gives us a holistic view of the Kafka cluster's health and performance.
 
-![alt text](../../assets/img/posts/2019-08-20-kafka-in-odh/kafka_metrics.png "Kafka Monitoring")
+![alt text](../assets/img/pages/posts/2019-08-20-kafka-in-odh/kafka_metrics.png "Kafka Monitoring")
 
 Sample Use Cases
 ------

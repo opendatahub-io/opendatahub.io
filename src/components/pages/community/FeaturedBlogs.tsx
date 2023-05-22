@@ -30,9 +30,9 @@ export const FeaturedBlogs: React.FC = () => {
 
   return (
     <SectionLayout
-      title="Featured Blogs"
-      actionTitle="View all blogs"
-      actionLink="/blog/?layout=blog"
+      title="Featured Posts"
+      actionTitle="View all posts"
+      actionLink="/blog/?type=blog"
     >
       <ContentCardList>
         {posts.slice(0, 2).map(({ frontmatter, fields, excerpt }) => (
@@ -41,9 +41,8 @@ export const FeaturedBlogs: React.FC = () => {
             body={excerpt}
             link={fields.slug}
             subTitle={frontmatter.date}
-            hasCardFooter
             hasMoreButton
-            buttonVariant={"primary"}
+            chips={frontmatter.categories.split(",")}
             buttonText={"Continue Reading"}
           />
         ))}

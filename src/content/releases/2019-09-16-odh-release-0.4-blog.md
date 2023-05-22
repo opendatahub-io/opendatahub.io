@@ -4,7 +4,7 @@ author: lavlas
 title:  Open Data Hub 0.4.0 Release Guide
 preview: Open Data Hub 0.4.0 just released with exciting new tools for different AI/ML platform phases. We added Argo, AI-Library and support for the Strimzi Kafka operator
 date: 2019-09-16
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 
@@ -20,7 +20,7 @@ The following is a list of tools added to the Open Data Hub in this release:
 | [Argo](https://argoproj.github.io/argo/) | 2.3.0 | Container native workflow engine |
 | [Strimzi Kafka Operator](https://strimzi.io/) | 0.11.1 | Distributed streaming platform |
 | Open Data Hub [AI-Library](https://opendatahub.io) | 1.0  | Machine learning as a service |
-{:class="table table-bordered table-striped"}
+
 
 You can review the release notes for components added in the v0.3.0 release [here](https://opendatahub.io/news/2019-06-27/odh-release-0.3-blog.html)
 

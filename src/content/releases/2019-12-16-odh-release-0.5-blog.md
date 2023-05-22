@@ -4,7 +4,7 @@ author: lavlas
 title:  Open Data Hub 0.5.0 Release Guide
 preview: Open Data Hub 0.5.0 was just released with exciting new tools for different AI/ML platform phases. We added JupyterHub support for CUDA GPU images & notebooks, Apache Superset for data exploration & visualization and a data catalog role for deploying 
 date: 2019-12-17
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is included?
@@ -19,7 +19,7 @@ The following is a list of tools added to Open Data Hub in this release:
 | Apache [Superset](https://github.com/apache/incubator-superset) | 0.34.0  | Data Exploration and Visualization Tool |
 | Data Catalog ([Hue](https://gethue.com/), [Spark Thrift Server](https://spark.apache.org/docs/latest/sql-distributed-sql-engine.html), Hive Metastore) | Hue 4.4.1 & Spark Thrift Server 2.4 & Hive Metastore 1.2.1 | Deployment of Hue, Spark Thrift Server and Hive Metastore to simplify querying data lakes using Spark SQL language|
 | [Argo](https://argoproj.github.io/argo/) | 2.4.2 | Container native workflow engine |
-{:class="table table-bordered table-striped"}
+
 
 You can review the release notes for components added in the previous v0.4.0 release [here](https://opendatahub.io/news/2019-09-16/odh-release-0.4-blog.html)
 

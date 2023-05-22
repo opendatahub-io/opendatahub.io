@@ -4,7 +4,7 @@ author: llasmith
 title:  Open Data Hub 0.9.0 Release Guide
 preview: Open Data Hub 0.9.0 was just released
 date: 2020-11-09
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is new?
@@ -31,4 +31,4 @@ The following is a list of components that are available in v0.9.0 release of od
 | [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | 0.34.0  | Data Exploration and Visualization Tool | Manifests |
 | [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.2.2 | Model Serving | OLM |
 | [Ceph Nano](https://github.com/ceph/cn-core) | v0.7 | Object Storage | Manifests |
-{:class="table table-bordered table-striped"}
+

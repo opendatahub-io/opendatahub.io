@@ -14,7 +14,7 @@ In the Open Data Hub v0.5.0 release, we introduced Data Catalog. It is a set of 
 read data stored in Data Lakes, create tables and query them in a SQL-like style. You can find
 below a picture of the simplified architecture of Data Catalog:
 
-![alt text](../../assets/img/posts/2019-10-10-data-catalog-in-odh/Data_Catalog_Simplified_Diagram.png "Data Catalog architecture")
+![alt text](../assets/img/pages/posts/2019-10-10-data-catalog-in-odh/Data_Catalog_Simplified_Diagram.png "Data Catalog architecture")
 
 These are the components that are part of Data Catalog:
 

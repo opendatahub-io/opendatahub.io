@@ -4,7 +4,7 @@ author: nakfour
 title:  Open Data Hub 0.3 Release Guide
 preview: Open Data Hub 0.3 just released with exciting new tools for different AI/ML platform phases. We added monitoring, model serving and GPU processing tools.  
 date: 2019-06-27
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 
@@ -21,7 +21,7 @@ Open Data Hub 0.3 includes many new tools that are essential to a comprehensive 
 | TwoSigma [BeakerX](http://beakerx.com/) Integration | 1.4.0 |  Data science tools |
 | [Prometheus](https://prometheus.io/) | 2.3 | System monitoring tools |
 | [Grafana](https://grafana.com/) | 4.7 |  System monitoring tools |
-{:class="table table-bordered table-striped"}
+
 
 Seldon
 ------

@@ -3,9 +3,8 @@ import React from "react";
 import "./ArchitectureMap.css"
 import prometheus_logo from "../../../content/assets/img/logos/prometheus-logo.png"
 import grafana_logo from "../../../content/assets/img/logos/grafana-logo.svg"
-import redhat_logo from "../../../content/assets/img/logos/redhat-logo.png"
-import minio_logo from "../../../content/assets/img/logos/minio-logo.png"
-import s3_logo from "../../../content/assets/img/logos/aws-s3-logo.png"
+import ceph_logo from "../../../content/assets/img/logos/ceph-logo.png"
+import r_studio_logo from "../../../content/assets/img/logos/r-studio-logo.png"
 import odh_logo from "../../../content/assets/img/logos/datahub_mark_color-blkbg.png"
 import jupyter_logo from "../../../content/assets/img/logos/jupyter-logo.png"
 import pytorch_logo from "../../../content/assets/img/logos/pytorch-logo.png"
@@ -13,6 +12,13 @@ import tensorflow_logo from "../../../content/assets/img/logos/tensorflow-logo.p
 import kubeflow_logo from "../../../content/assets/img/logos/kubeflow-logo.jpg"
 import tekton_logo from "../../../content/assets/img/logos/tekton-logo.png"
 import kserve_logo from "../../../content/assets/img/logos/kserve-logo.png"
+import vscode_logo from "../../../content/assets/img/logos/vscode-logo.png"
+import elyra_logo from "../../../content/assets/img/logos/elyra-logo.svg"
+import openshift_logo from "../../../content/assets/img/logos/openshift-logo.svg"
+import kubernetes_logo from "../../../content/assets/img/logos/kubernetes-logo.png"
+import scikit_learn_logo from "../../../content/assets/img/logos/scikit-learn-logo.png"
+import intel_logo from "../../../content/assets/img/logos/intel-logo.png"
+import triton_server_logo from "../../../content/assets/img/logos/triton-server-logo.png"
 
 type ArchitectureComponentProps = {
   title?: string;
@@ -63,23 +69,11 @@ const ProjectCard = ({ title, body, link, icon }: ProjectCardProps) => {
 const architectureComponents: { [key: string]: ProjectCardProps[] } = {
   "storage": [
     {
-      title: "AWS S3",
-      body: "S3 is the default storage for Open Data Hub. It is used for storing data, models, and notebooks.",
-      link: "https://aws.amazon.com/s3/",
-      icon: s3_logo
+      title: "Ceph",
+      body: "Ceph is a distributed object store and file system designed to provide excellent performance, reliability and scalability.",
+      link: "https://ceph.io/",
+      icon: ceph_logo
     },
-    {
-      title: "MinIO",
-      body: "MinIO is an S3-compatible object storage solution that can be deployed on-premises or in the cloud.",
-      link: "https://min.io/",
-      icon: minio_logo
-    },
-    {
-      title: "Openshift Data Foundation",
-      body: "ODF is a Red Hat solution for running Ceph on OpenShift.",
-      link: "https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation",
-      icon: redhat_logo
-    }
   ],
   "odh-dashboard": [{
     title: "Open Data Hub Dashboard",
@@ -128,6 +122,24 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       body: "An end-to-end open source platform for machine learning.",
       link: "https://www.tensorflow.org/",
       icon: tensorflow_logo
+    },
+    {
+      title: "RStudio",
+      body: "RStudio is an integrated development environment for R",
+      link: "https://posit.co/products/open-source/rstudio/",
+      icon: r_studio_logo
+    },
+    {
+      title: "VS Code",
+      body: "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.",
+      link: "https://code.visualstudio.com/",
+      icon: vscode_logo
+    },
+    {
+      title: "Elyra",
+      body: "Elyra is a set of AI-centric extensions to JupyterLab Notebooks.",
+      link: "https://elyra.readthedocs.io/en/latest/",
+      icon: elyra_logo
     }
   ],
   "model-serving": [
@@ -138,15 +150,33 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       icon: kserve_logo
     },
     {
-      title: "ModelMesh Serving",
-      body: "ModelMesh Serving is the Controller for managing ModelMesh, a general-purpose model serving management/routing layer.",
-      link: "https://github.com/opendatahub-io/modelmesh-serving",
+      title: "KServe",
+      body: "KFServing is a Kubernetes-based server that supports high performance serving of machine learning (ML) models, and inference.",
+      link: "https://github.com/kserve/kserve",
       icon: kserve_logo
     },
     {
       title: "TrustyAI",
       body: "responsible for storing model inference data and providing fairness metrics",
       link: "https://kogito.kie.org/trustyai/"
+    },
+    {
+      title: "scikit-learn",
+      body: "A set of python modules for machine learning and data mining.",
+      link: "https://scikit-learn.org/stable/",
+      icon: scikit_learn_logo
+    },
+    {
+      title: "OpenVINO",
+      body: "OpenVINO Toolkit is a comprehensive toolkit for quickly developing applications and solutions that emulate human vision.",
+      link: "https://docs.openvinotoolkit.org/latest/index.html",
+      icon: intel_logo
+    },
+    {
+      title: "Triton Server",
+      body: "An open-source deep learning inference server.",
+      link: "https://developer.nvidia.com/nvidia-triton-inference-server",
+      icon: triton_server_logo
     }
   ],
   "data-science-pipelines": [
@@ -198,6 +228,20 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
     }
   ],
   "hybrid-cloud": [],
+  "cluster": [
+    {
+      title: "OpenShift",
+      body: "Red Hat OpenShift is a Kubernetes platform that provides a foundation for on-premises, hybrid, and multicloud deployments.",
+      link: "https://www.openshift.com/",
+      icon: openshift_logo
+    },
+    {
+      title: "Kubernetes",
+      body: "An open-source system for automating deployment, scaling, and management of containerized applications.",
+      link: "https://kubernetes.io/",
+      icon: kubernetes_logo
+    }
+  ]
 }
 
 enum ArchitectureComponentColors {
@@ -228,14 +272,14 @@ export const ArchitectureMap = ({ }) => {
           </FlexItem>
           <FlexItem>
             <Text component={TextVariants.p}>
-              Explore some of the projects Open Data Hub is built on.
+              Explore the projects of Open Data Hub
             </Text>
           </FlexItem>
         </Flex>
       </StackItem>
       <StackItem>
         <Grid hasGutter>
-          <GridItem span={2} rowSpan={2}>
+          <GridItem span={2} rowSpan={6}>
             <ArchitectureComponent color={ArchitectureComponentColors.external} isSelected={selectedComponent === "storage"} title="Storage" onClick={() => setSelectedComponent("storage")} />
           </GridItem>
           <GridItem span={10}>
@@ -256,13 +300,18 @@ export const ArchitectureMap = ({ }) => {
           <GridItem span={10}>
             <ArchitectureComponent color={ArchitectureComponentColors.management} title="Monitoring and Alerting" isSelected={selectedComponent === "monitoring"} onClick={() => setSelectedComponent("monitoring")} />
           </GridItem>
-          <GridItem span={12}>
+          <GridItem span={10}>
             <ArchitectureComponent color={ArchitectureComponentColors.management} title="Open Data Hub Operator" isSelected={selectedComponent === "open-data-hub-operator"} onClick={() => setSelectedComponent("open-data-hub-operator")}>
               Responsible for deploying and maintaining all components
             </ArchitectureComponent>
           </GridItem>
+          <GridItem span={10}>
+            <ArchitectureComponent color={ArchitectureComponentColors.management} title="Kubernetes, OKD and OpenShift" isSelected={selectedComponent === "cluster"} onClick={() => setSelectedComponent("cluster")} />
+          </GridItem>
           <GridItem span={12}>
-            <ArchitectureComponent color={ArchitectureComponentColors.external} title="AWS, GCP, On-Prem" />
+            <ArchitectureComponent color={ArchitectureComponentColors.external} title="Hybrid Cloud">
+              Physical Servers, Virtual Machines, Private Cloud, AWS, Google Cloud, Microsoft Azure, IBM Cloud
+            </ArchitectureComponent>
           </GridItem>
         </Grid >
       </StackItem>

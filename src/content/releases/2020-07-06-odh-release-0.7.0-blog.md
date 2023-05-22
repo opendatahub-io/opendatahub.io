@@ -4,7 +4,7 @@ author: llasmith
 title:  Open Data Hub 0.7.0 Release Guide
 preview: Open Data Hub 0.7.0 was just released with updates to deploy upstream Kubeflow on OpenShift.
 date: 2020-07-06
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is new?
@@ -28,7 +28,7 @@ The following is a list of tools that are available in v0.7.0 release of odh-man
 | [Radanalytics Spark Operator](https://github.com/opendatahub-io/odh-manifests/tree/master/radanalyticsio) | 1.0.7  | Operator for managing Spark cluster on OpenShift | Manifests |
 | [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | 0.34.0  | Data Exploration and Visualization Tool | Manifests |
 | [Seldon](https://github.com/opendatahub-io/odh-manifests/tree/master/odhseldon) | 1.2.0 | Model Serving | OLM |
-{:class="table table-bordered table-striped"}
+
 
 
 Read More

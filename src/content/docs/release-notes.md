@@ -116,7 +116,7 @@ style_class: release-notes
 | [Prometheus](https://github.com/opendatahub-io/odh-manifests/tree/master/prometheus)                      | 0.32.0  | Monitoring                                       |
 | [Radanalytics Spark Operator](https://github.com/opendatahub-io/odh-manifests/tree/master/radanalyticsio) | 1.0.7   | Operator for managing Spark cluster on OpenShift |
 | [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset)                   | 0.34.0  | Data Exploration and Visualization Tool          |
-{:class="table table-bordered table-striped"}
+
 
 ### Open Data Hub version v0.5.1 - February 2020
 

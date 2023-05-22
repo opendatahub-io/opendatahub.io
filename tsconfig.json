@@ -1,11 +1,10 @@
-
 {
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
     "outDir": "dist",
     "module": "esnext",
-    "target": "es5",
+    "target": "es6",
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "jsx": "react",
@@ -21,9 +20,6 @@
     "importHelpers": true,
     "skipLibCheck": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-, "src/html.jsx"  ],
+  "include": ["**/*.ts", "**/*.tsx", "src/html.jsx"],
   "exclude": ["node_modules"]
 }

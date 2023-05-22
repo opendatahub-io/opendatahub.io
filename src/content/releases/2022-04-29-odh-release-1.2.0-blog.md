@@ -4,7 +4,7 @@ author: lavlas
 title:  Open Data Hub 1.2.0 Release Guide
 preview: Open Data Hub 1.2.0 was just released
 date: 2022-04-29
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is new?
@@ -35,5 +35,5 @@ The following is a list of components that are available in v1.2.0 release of od
 | [Prometheus](https://github.com/opendatahub-io/odh-manifests/tree/master/prometheus) | * | Monitoring | OLM |
 | [Apache Superset](https://github.com/opendatahub-io/odh-manifests/tree/master/superset) | v1.4.1  | Data Exploration and Visualization Tool | Manifests |
 | [Ceph Nano](https://github.com/opendatahub-io/odh-manifests/tree/master/ceph) | v0.7 | Object Storage | Manifests |
-{:class="table table-bordered table-striped"}
+
 NOTE: Any components listed above that do not specify a version will use the default operator version available in OpenShift OperatorHub at the time of deployment
