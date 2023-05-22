@@ -1,5 +1,5 @@
 ---
-layout: blog
+type: release
 author: lavlas
 title:  Open Data Hub 1.4.1 Release Guide
 preview: Open Data Hub 1.4.1 was just released

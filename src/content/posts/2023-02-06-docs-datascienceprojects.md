@@ -1,5 +1,5 @@
 ---
-layout: blog
+type: blog
 author: ezidav
 title:  New documentation for Data Science Projects added
 preview: Added New Data Science Project documentation
