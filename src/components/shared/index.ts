@@ -8,3 +8,4 @@ export * from "./SectionLayout";
 export * from "./SectionList";
 export * from "./ContentCardList";
 export * from "./PlainImageCard"
+export * from "./SideNavigation"

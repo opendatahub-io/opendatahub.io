@@ -22,7 +22,7 @@ export const FeatureCard = ({ title, body, imageUrl }: FeatureCardProps) => {
             <img
               src={imageUrl}
               alt={`${title} feature image`}
-              style={{ height: "35px", maxWidth: "revert" }}
+              style={{ height: "35px" }}
             />
           </CardHeaderMain>
         </CardHeader>

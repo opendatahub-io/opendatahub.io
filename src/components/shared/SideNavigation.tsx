@@ -15,7 +15,7 @@ type SideNavigationProps = {
 }
 
 
-const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => {
+export const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => {
     function nestSections(sections: AsciiDocSection[]): NestedAsciiDocSection[] {
         const nestedSections: NestedAsciiDocSection[] = [];
 
@@ -92,5 +92,3 @@ const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => 
     )
 
 }
-
-export default SideNavigation;

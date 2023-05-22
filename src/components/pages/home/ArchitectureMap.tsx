@@ -50,7 +50,7 @@ const ProjectCard = ({ title, body, link, icon }: ProjectCardProps) => {
         <Split hasGutter style={{ alignItems: "center" }}>
           {icon && (
             <SplitItem>
-              <img style={{ height: "30px" }} src={icon} alt={`${title} icon`} />
+              <img className="project-image" src={icon} alt={`${title} icon`} />
             </SplitItem>
           )}
           <SplitItem>

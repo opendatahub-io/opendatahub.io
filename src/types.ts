@@ -33,3 +33,24 @@ export type PersonaBenefits = {
         features: FeatureCardProps[];
     })[];
 }[];
+
+export type RoadmapDataType = {
+    future: {
+        title: string;
+        version: string | number
+        children: {
+            title: string;
+        }[]
+    }[],
+    past: {
+        title: string;
+        version: string | number
+        url?: string
+        children: {
+            title: string;
+            description?: string;
+            url?: string;
+            moved?: string | number
+        }[]
+    }[]
+}
