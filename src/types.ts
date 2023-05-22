@@ -1,3 +1,6 @@
+import { FeatureCardProps } from "./components/pages/home/PersonasLayout/FeatureCard";
+import { PlainImageCardProps } from "./components/shared";
+
 export type SideNavItemConfig = {
     title: string;
     slug: string;
@@ -23,3 +26,10 @@ export type LinkedContent = {
     description?: string
     categories?: string[]
 }
+
+export type PersonaBenefits = {
+    name: string;
+    benefits: (PlainImageCardProps & {
+        features: FeatureCardProps[];
+    })[];
+}[];
