@@ -66,10 +66,7 @@ export const FeaturedVideos: React.FC = () => {
               frontmatter.permalink ? frontmatter.permalink : fields.slug
             }
             body={frontmatter.preview}
-<<<<<<< HEAD
-=======
             chips={frontmatter.categories.split(",")}
->>>>>>> eb764c9 (UX fixes)
             hasMoreButton
             buttonText={"Watch Now"}
           />

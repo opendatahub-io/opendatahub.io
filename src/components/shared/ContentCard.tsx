@@ -18,11 +18,7 @@ import React from "react";
 import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-icon";
 import "./ContentCard.css";
 
-<<<<<<< HEAD
-type ContentCardProps = {
-=======
 type ContentCardProps = CardProps & {
->>>>>>> eb764c9 (UX fixes)
   title?: string | null;
   body?: React.ReactNode;
   imageUrl?: string;
@@ -45,12 +41,8 @@ export const ContentCard = ({
   className = "",
   hasMoreButton,
   buttonText,
-<<<<<<< HEAD
-  handleChipClick = () => undefined
-=======
   handleChipClick = () => undefined,
   ...props
->>>>>>> eb764c9 (UX fixes)
 }: ContentCardProps) => {
   return (
     <Card
