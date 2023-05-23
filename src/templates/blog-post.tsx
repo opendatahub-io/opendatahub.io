@@ -15,7 +15,7 @@ const BlogPostTemplate = ({ data: { markdownRemark: post } }: PageProps<Queries.
   const chips: string[] = (post?.frontmatter?.categories ?? "").split(",")
   return (
     <Layout>
-      <PageSection variant="light" className="markdown" style={{ height: "100vh" }}>
+      <PageSection variant="light" className="markdown" style={{ minHeight: "100vh" }}>
         <Title size={TitleSizes["4xl"]} headingLevel="h2">
           {post?.frontmatter?.title}
         </Title>
