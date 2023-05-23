@@ -81,10 +81,10 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       <>
         <p>A dashboard for Open Data Hub components.</p>
         <List>
-          <ListItem>Shows what's installed</ListItem>
-          <ListItem>Show's what's available for installation</ListItem>
-          <ListItem>Links to component UIs</ListItem>
-          <ListItem>Links to component documentation</ListItem>
+          <ListItem>Show's what's installed.</ListItem>
+          <ListItem>Show's what's available for installation.</ListItem>
+          <ListItem>Links to component UIs.</ListItem>
+          <ListItem>Links to component documentation.</ListItem>
         </List>
       </>
     ),
@@ -95,7 +95,7 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
   "notebook-controller": [
     {
       title: "ODH Notebook Controller",
-      body: "The controller will watch the Kubeflow Notebook custom resource events to extend the Kubeflow notebook controller behavior",
+      body: "The controller will watch the Kubeflow Notebook custom resource events to extend the Kubeflow notebook controller behavior.",
       link: "https://github.com/opendatahub-io/kubeflow/tree/master/components/odh-notebook-controller",
       icon: odh_logo
     },
@@ -125,7 +125,7 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
     },
     {
       title: "RStudio",
-      body: "RStudio is an integrated development environment for R",
+      body: "RStudio is an integrated development environment for R.",
       link: "https://posit.co/products/open-source/rstudio/",
       icon: r_studio_logo
     },
@@ -157,7 +157,7 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
     },
     {
       title: "TrustyAI",
-      body: "responsible for storing model inference data and providing fairness metrics",
+      body: "Responsible for storing model inference data and providing fairness metrics.",
       link: "https://kogito.kie.org/trustyai/"
     },
     {
