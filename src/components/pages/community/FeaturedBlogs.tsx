@@ -33,15 +33,7 @@ export const FeaturedBlogs: React.FC = () => {
 
   return (
     <SectionLayout
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title="Featured Posts"
-=======
       title="Featured posts"
->>>>>>> eb764c9 (UX fixes)
-=======
-      title="Featured posts"
->>>>>>> 137e27d (UX fixes)
       actionTitle="View all posts"
       actionLink="/blog/?type=blog"
     >

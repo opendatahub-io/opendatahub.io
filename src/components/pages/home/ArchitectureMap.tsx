@@ -4,13 +4,6 @@ import "./ArchitectureMap.css"
 import prometheus_logo from "../../../content/assets/img/logos/prometheus-logo.png"
 import grafana_logo from "../../../content/assets/img/logos/grafana-logo.svg"
 import ceph_logo from "../../../content/assets/img/logos/ceph-logo.png"
-<<<<<<< HEAD
-<<<<<<< HEAD
-import r_studio_logo from "../../../content/assets/img/logos/r-studio-logo.png"
-=======
->>>>>>> eb764c9 (UX fixes)
-=======
->>>>>>> 137e27d (UX fixes)
 import odh_logo from "../../../content/assets/img/logos/datahub_mark_color-blkbg.png"
 import jupyter_logo from "../../../content/assets/img/logos/jupyter-logo.png"
 import pytorch_logo from "../../../content/assets/img/logos/pytorch-logo.png"
@@ -18,24 +11,9 @@ import tensorflow_logo from "../../../content/assets/img/logos/tensorflow-logo.p
 import kubeflow_logo from "../../../content/assets/img/logos/kubeflow-logo.jpg"
 import tekton_logo from "../../../content/assets/img/logos/tekton-logo.png"
 import kserve_logo from "../../../content/assets/img/logos/kserve-logo.png"
-<<<<<<< HEAD
-<<<<<<< HEAD
-import vscode_logo from "../../../content/assets/img/logos/vscode-logo.png"
-import elyra_logo from "../../../content/assets/img/logos/elyra-logo.svg"
-=======
->>>>>>> 137e27d (UX fixes)
 import openshift_logo from "../../../content/assets/img/logos/openshift-logo.svg"
 import kubernetes_logo from "../../../content/assets/img/logos/kubernetes-logo.png"
 import intel_logo from "../../../content/assets/img/logos/intel-logo.png"
-<<<<<<< HEAD
-import triton_server_logo from "../../../content/assets/img/logos/triton-server-logo.png"
-=======
-import openshift_logo from "../../../content/assets/img/logos/openshift-logo.svg"
-import kubernetes_logo from "../../../content/assets/img/logos/kubernetes-logo.png"
-import intel_logo from "../../../content/assets/img/logos/intel-logo.png"
->>>>>>> eb764c9 (UX fixes)
-=======
->>>>>>> 137e27d (UX fixes)
 
 type ArchitectureComponentProps = {
   title?: string;
@@ -104,23 +82,10 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       <>
         <p>A dashboard for Open Data Hub components.</p>
         <List>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <ListItem>Show's what's installed.</ListItem>
-          <ListItem>Show's what's available for installation.</ListItem>
-          <ListItem>Links to component UIs.</ListItem>
-          <ListItem>Links to component documentation.</ListItem>
-=======
-=======
->>>>>>> 137e27d (UX fixes)
           <ListItem>Shows what's installed</ListItem>
           <ListItem>Shows what's available for installation</ListItem>
           <ListItem>Links to component UIs</ListItem>
           <ListItem>Links to component documentation</ListItem>
-<<<<<<< HEAD
->>>>>>> eb764c9 (UX fixes)
-=======
->>>>>>> 137e27d (UX fixes)
         </List>
       </>
     ),
@@ -159,30 +124,6 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       link: "https://www.tensorflow.org/",
       icon: tensorflow_logo
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {
-      title: "RStudio",
-      body: "RStudio is an integrated development environment for R.",
-      link: "https://posit.co/products/open-source/rstudio/",
-      icon: r_studio_logo
-    },
-    {
-      title: "VS Code",
-      body: "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.",
-      link: "https://code.visualstudio.com/",
-      icon: vscode_logo
-    },
-    {
-      title: "Elyra",
-      body: "Elyra is a set of AI-centric extensions to JupyterLab Notebooks.",
-      link: "https://elyra.readthedocs.io/en/latest/",
-      icon: elyra_logo
-    }
-=======
->>>>>>> eb764c9 (UX fixes)
-=======
->>>>>>> 137e27d (UX fixes)
   ],
   "model-serving": [
     {
@@ -192,54 +133,16 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       icon: kserve_logo
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: "KServe",
-      body: "KFServing is a Kubernetes-based server that supports high performance serving of machine learning (ML) models, and inference.",
-      link: "https://github.com/kserve/kserve",
-      icon: kserve_logo
-    },
-    {
-=======
->>>>>>> 137e27d (UX fixes)
       title: "TrustyAI",
       body: "responsible for storing model inference data and providing fairness metrics.",
       link: "https://kogito.kie.org/trustyai/"
     },
     {
-<<<<<<< HEAD
-      title: "scikit-learn",
-      body: "A set of python modules for machine learning and data mining.",
-      link: "https://scikit-learn.org/stable/",
-      icon: scikit_learn_logo
-    },
-    {
-=======
-      title: "TrustyAI",
-      body: "responsible for storing model inference data and providing fairness metrics.",
-      link: "https://kogito.kie.org/trustyai/"
-    },
-    {
->>>>>>> eb764c9 (UX fixes)
-=======
->>>>>>> 137e27d (UX fixes)
       title: "OpenVINO",
       body: "OpenVINO Toolkit is a comprehensive toolkit for quickly developing applications and solutions that emulate human vision.",
       link: "https://docs.openvinotoolkit.org/latest/index.html",
       icon: intel_logo
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {
-      title: "Triton Server",
-      body: "An open-source deep learning inference server.",
-      link: "https://developer.nvidia.com/nvidia-triton-inference-server",
-      icon: triton_server_logo
-    }
-=======
->>>>>>> eb764c9 (UX fixes)
-=======
->>>>>>> 137e27d (UX fixes)
   ],
   "data-science-pipelines": [
     {
@@ -341,15 +244,7 @@ export const ArchitectureMap = ({ }) => {
       </StackItem>
       <StackItem>
         <Grid hasGutter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <GridItem span={2} rowSpan={6}>
-=======
           <GridItem span={2} rowSpan={5}>
->>>>>>> eb764c9 (UX fixes)
-=======
-          <GridItem span={2} rowSpan={5}>
->>>>>>> 137e27d (UX fixes)
             <ArchitectureComponent color={ArchitectureComponentColors.external} isSelected={selectedComponent === "storage"} title="Storage" onClick={() => setSelectedComponent("storage")} />
           </GridItem>
           <GridItem span={10}>
