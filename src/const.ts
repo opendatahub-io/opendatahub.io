@@ -16,44 +16,6 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-on-data-science-projects/"
     },
     {
-        title: "Administration",
-        slug: "/docs/administration",
-        children: [
-            {
-                title: "Advanced Installation",
-                slug: "/docs/administration/advanced-installation",
-                children: [
-                    {
-                        title: "GPU Enablement",
-                        slug: "/docs/administration/advanced-installation/gpu"
-                    },
-                    {
-                        title: "Installing Object Storage",
-                        slug: "/docs/administration/advanced-installation/object-storage"
-                    },
-                    {
-                        title: "Pre-requisites for Optional Components",
-                        slug: "/docs/administration/advanced-installation/optional"
-                    }
-                ]
-            },
-            {
-                title: "Installation Customization",
-                slug: "/docs/administration/installation-customization",
-                children: [
-                    {
-                        title: "Adding Custom Notebook Images",
-                        slug: "/docs/administration/installation-customization/add-custom-image"
-                    },
-                    {
-                        title: "Customizing the Installation",
-                        slug: "/docs/administration/installation-customization/customization"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         title: "Architecture",
         slug: "/docs/architecture"
     },
