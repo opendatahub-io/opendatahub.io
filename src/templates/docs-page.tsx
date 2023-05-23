@@ -1,7 +1,7 @@
 import { PageProps, graphql } from "gatsby";
 import * as React from "react";
 
-import { Layout, Seo, SideNavigation } from "../components/shared";
+import { Footer, Layout, Seo, SideNavigation } from "../components/shared";
 import { DOCS_NAVIGATION } from "../const";
 import { PageSection, Title } from "@patternfly/react-core";
 import { AsciiDocSection } from "../types";
@@ -46,6 +46,9 @@ const DocsPageTemplate = ({
           className="asciidoc-docs"
           dangerouslySetInnerHTML={{ __html: html ?? "" }}
         />
+      </PageSection>
+      <PageSection isCenterAligned padding={{ default: "noPadding" }}>
+        <Footer />
       </PageSection>
     </Layout>
   );
