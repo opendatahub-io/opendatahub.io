@@ -61,15 +61,22 @@
         display: none
     }
 
-    table.tableblock,
-    th.tableblock,
-    td.tableblock {
+    table,
+    th,
+    td {
         border: 0 solid #dedede;
     }
 
     table.grid-all>*>tr>* {
         border-width: 1px;
     }
+
+    td,th {
+        border-width: 1px;
+
+    }
+
+
 
     table thead tr th,
     table thead tr td,
@@ -91,6 +98,10 @@
         font-weight: bold;
     }
 
+    table {
+        width: 100%
+    }
+
     table tr th,
     table tr td {
         padding: .5625em .625em;
@@ -106,6 +117,14 @@
     table thead,
     table tfoot {
         background: #f7f8f7
+    }
+
+    .admonitionblock {
+        table,
+        th,
+        td {
+            border: 0 solid #dedede !important;
+        }
     }
 
     .admonitionblock>table td.icon .title {

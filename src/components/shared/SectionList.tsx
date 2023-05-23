@@ -10,8 +10,8 @@ type SectionListProps = {
 }
 export const SectionList = ({ sections }: SectionListProps) => (
     <Flex className="pf-u-mt-2xl" spaceItems={{ default: "spaceItems4xl" }} direction={{ default: "column" }}>
-        {sections.map((section) => (
-            <FlexItem>
+        {sections.map((section, i) => (
+            <FlexItem key={`section-list-item-${i}`}>
                 <PageSection
                     isCenterAligned
                     isWidthLimited

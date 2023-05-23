@@ -1,10 +1,9 @@
 import { PageProps, graphql } from "gatsby";
 import * as React from "react";
 
-import { Layout, Seo } from "../components/shared";
-import SideNavigation from "../components/shared/SideNavigation";
+import { Layout, Seo, SideNavigation } from "../components/shared";
 import { DOCS_NAVIGATION } from "../const";
-import { PageSection } from "@patternfly/react-core";
+import { PageSection, Title } from "@patternfly/react-core";
 import { AsciiDocSection } from "../types";
 
 const DocsPageTemplate = ({
@@ -42,6 +41,7 @@ const DocsPageTemplate = ({
         isWidthLimited
         padding={{ default: "padding" }}
       >
+        <Title headingLevel="h1" size="4xl">{asciidoc?.document?.title ?? markdownRemark?.frontmatter?.title}</Title>
         <div
           className="asciidoc-docs"
           dangerouslySetInnerHTML={{ __html: html ?? "" }}

@@ -47,7 +47,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
       safe: "unsafe",
       to_file: false,
       attributes: {
-        showtitle: true,
+        showtitle: false,
         "site-baseurl": "/",
         imagesdir: "/static/docs/",
         upstream: true,

@@ -20,44 +20,28 @@ export const CommunityMeetings: React.FC = () => {
         </Title>
         <Text component={TextVariants.p}>
           Community meetings for Open Data Hub are conducted regularly. Get the
-          meeting information and find out more on the Open Data Hub Community
-          Repo. Meetings are scheduled on Google Calendar
+          meeting information and find out more on the Open Data Hub community
+          Repo. Meetings are scheduled on Google calendar
         </Text>
         <GridItem>
           <Button
             className="pf-u-font-size-sm"
             variant="link"
             isInline
-            component={(props: any) => (
-              <>
-                <ExternalLinkAltIcon size="sm" className="pf-u-link-color" />{" "}
-                <Link
-                  {...props}
-                  to={"https://github.com/opendatahub-io/opendatahub-community"}
-                />
-              </>
-            )}
+            href="https://github.com/opendatahub-io/opendatahub-community"
+            icon={<ExternalLinkAltIcon size="sm" />}
           >
-            {`Open Data Hub Community repo`.toUpperCase()}
+            Open Data Hub community repo
           </Button>
         </GridItem>
         <Button
           className="pf-u-font-size-sm"
           variant="link"
           isInline
-          component={(props: any) => (
-            <>
-              <ExternalLinkAltIcon size="sm" className="pf-u-link-color" />{" "}
-              <Link
-                {...props}
-                to={
-                  "https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York"
-                }
-              />
-            </>
-          )}
+          href="https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York"
+          icon={<ExternalLinkAltIcon size="sm" />}
         >
-          {`google calendar`.toUpperCase()}
+          Google calendar
         </Button>
       </GridItem>
       <GridItem lg={8} sm={6}>

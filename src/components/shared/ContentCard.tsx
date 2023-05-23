@@ -11,13 +11,18 @@ import {
   Title,
   CardFooter,
   Button,
+  CardProps,
 } from "@patternfly/react-core";
 import { navigate } from "gatsby";
 import React from "react";
 import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-icon";
 import "./ContentCard.css";
 
+<<<<<<< HEAD
 type ContentCardProps = {
+=======
+type ContentCardProps = CardProps & {
+>>>>>>> eb764c9 (UX fixes)
   title?: string | null;
   body?: React.ReactNode;
   imageUrl?: string;
@@ -40,7 +45,12 @@ export const ContentCard = ({
   className = "",
   hasMoreButton,
   buttonText,
+<<<<<<< HEAD
   handleChipClick = () => undefined
+=======
+  handleChipClick = () => undefined,
+  ...props
+>>>>>>> eb764c9 (UX fixes)
 }: ContentCardProps) => {
   return (
     <Card
@@ -51,6 +61,7 @@ export const ContentCard = ({
       isRounded
       isFullHeight
       className={`custom-content-card ${className}`}
+      {...props}
     >
       <CardTitle>
         {subTitle && (

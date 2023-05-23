@@ -1,5 +1,5 @@
 ---
-layout: blog
+type: release
 author: lavlas
 title:  Open Data Hub 1.4.0 Release Guide
 preview: Open Data Hub 1.4.0 was just released
@@ -25,8 +25,8 @@ Changes included in the Open Data Hub v1.4.0 release:
 
 The following is a list of components that are available in v1.4.0 release of odh-manifests:
 
-| Technology | Version | Category |
-|--|--|--|
+| | Technology                                                                         | Version | Category           |
+| ---------------------------------------------------------------------------------- | ------- | ------------------ |  |
 | [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-dashboard) | v2.0 | Dashboard |
 | [Open Data Hub notebook-controller](https://github.com/opendatahub-io/kubeflow/tree/master/components/odh-notebook-controller) | N/A | Notebooks |
 | [Model Mesh](https://github.com/opendatahub-io/modelmesh-serving) | v0.9.0 |

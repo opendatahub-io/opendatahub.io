@@ -26,7 +26,8 @@ const CommunityPage: React.FC<PageProps> = () => {
               }
             }
           },
-          { component: <FeaturedVideos /> },
+          // TODO Uncomment when we have videos
+          // { component: <FeaturedVideos /> },
           { component: <FeaturedBlogs /> },
           {
             component: <Footer />,

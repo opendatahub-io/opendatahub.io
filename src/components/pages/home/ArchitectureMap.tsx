@@ -1,10 +1,13 @@
-import { Button, Card, Text, CardBody, CardFooter, CardTitle, Flex, FlexItem, Grid, GridItem, List, ListItem, Split, SplitItem, Stack, StackItem, TextVariants, Title } from "@patternfly/react-core";
+import { Button, Card, Text, CardBody, CardFooter, CardTitle, Flex, FlexItem, Grid, GridItem, List, ListItem, Split, SplitItem, Stack, StackItem, TextVariants, Title, Chip } from "@patternfly/react-core";
 import React from "react";
 import "./ArchitectureMap.css"
 import prometheus_logo from "../../../content/assets/img/logos/prometheus-logo.png"
 import grafana_logo from "../../../content/assets/img/logos/grafana-logo.svg"
 import ceph_logo from "../../../content/assets/img/logos/ceph-logo.png"
+<<<<<<< HEAD
 import r_studio_logo from "../../../content/assets/img/logos/r-studio-logo.png"
+=======
+>>>>>>> eb764c9 (UX fixes)
 import odh_logo from "../../../content/assets/img/logos/datahub_mark_color-blkbg.png"
 import jupyter_logo from "../../../content/assets/img/logos/jupyter-logo.png"
 import pytorch_logo from "../../../content/assets/img/logos/pytorch-logo.png"
@@ -12,6 +15,7 @@ import tensorflow_logo from "../../../content/assets/img/logos/tensorflow-logo.p
 import kubeflow_logo from "../../../content/assets/img/logos/kubeflow-logo.jpg"
 import tekton_logo from "../../../content/assets/img/logos/tekton-logo.png"
 import kserve_logo from "../../../content/assets/img/logos/kserve-logo.png"
+<<<<<<< HEAD
 import vscode_logo from "../../../content/assets/img/logos/vscode-logo.png"
 import elyra_logo from "../../../content/assets/img/logos/elyra-logo.svg"
 import openshift_logo from "../../../content/assets/img/logos/openshift-logo.svg"
@@ -19,6 +23,11 @@ import kubernetes_logo from "../../../content/assets/img/logos/kubernetes-logo.p
 import scikit_learn_logo from "../../../content/assets/img/logos/scikit-learn-logo.png"
 import intel_logo from "../../../content/assets/img/logos/intel-logo.png"
 import triton_server_logo from "../../../content/assets/img/logos/triton-server-logo.png"
+=======
+import openshift_logo from "../../../content/assets/img/logos/openshift-logo.svg"
+import kubernetes_logo from "../../../content/assets/img/logos/kubernetes-logo.png"
+import intel_logo from "../../../content/assets/img/logos/intel-logo.png"
+>>>>>>> eb764c9 (UX fixes)
 
 type ArchitectureComponentProps = {
   title?: string;
@@ -33,6 +42,7 @@ type ProjectCardProps = {
   body: React.ReactNode;
   link: string;
   icon?: string;
+  planned?: boolean
 }
 
 const ArchitectureComponent = ({ title, children, color = "white", onClick, isSelected }: ArchitectureComponentProps) => {
@@ -43,19 +53,24 @@ const ArchitectureComponent = ({ title, children, color = "white", onClick, isSe
     </Card>
   )
 }
-const ProjectCard = ({ title, body, link, icon }: ProjectCardProps) => {
+const ProjectCard = ({ title, body, link, icon, planned }: ProjectCardProps) => {
   return (
     <Card isFullHeight isCompact isFlat isRounded>
       <CardTitle>
         <Split hasGutter style={{ alignItems: "center" }}>
           {icon && (
             <SplitItem>
-              <img style={{ height: "30px" }} src={icon} alt={`${title} icon`} />
+              <img className="project-image" src={icon} alt={`${title} icon`} />
             </SplitItem>
           )}
-          <SplitItem>
+          <SplitItem isFilled>
             {title}
           </SplitItem>
+          {planned && (
+            <SplitItem>
+              <Chip style={{ backgroundColor: "#f0f0f0" }} isReadOnly>PLANNED</Chip>
+            </SplitItem>
+          )}
         </Split>
       </CardTitle>
       <CardBody>{body}</CardBody>
@@ -81,10 +96,17 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       <>
         <p>A dashboard for Open Data Hub components.</p>
         <List>
+<<<<<<< HEAD
           <ListItem>Show's what's installed.</ListItem>
           <ListItem>Show's what's available for installation.</ListItem>
           <ListItem>Links to component UIs.</ListItem>
           <ListItem>Links to component documentation.</ListItem>
+=======
+          <ListItem>Shows what's installed</ListItem>
+          <ListItem>Shows what's available for installation</ListItem>
+          <ListItem>Links to component UIs</ListItem>
+          <ListItem>Links to component documentation</ListItem>
+>>>>>>> eb764c9 (UX fixes)
         </List>
       </>
     ),
@@ -123,6 +145,7 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       link: "https://www.tensorflow.org/",
       icon: tensorflow_logo
     },
+<<<<<<< HEAD
     {
       title: "RStudio",
       body: "RStudio is an integrated development environment for R.",
@@ -141,6 +164,8 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       link: "https://elyra.readthedocs.io/en/latest/",
       icon: elyra_logo
     }
+=======
+>>>>>>> eb764c9 (UX fixes)
   ],
   "model-serving": [
     {
@@ -150,6 +175,7 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       icon: kserve_logo
     },
     {
+<<<<<<< HEAD
       title: "KServe",
       body: "KFServing is a Kubernetes-based server that supports high performance serving of machine learning (ML) models, and inference.",
       link: "https://github.com/kserve/kserve",
@@ -167,17 +193,27 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       icon: scikit_learn_logo
     },
     {
+=======
+      title: "TrustyAI",
+      body: "responsible for storing model inference data and providing fairness metrics.",
+      link: "https://kogito.kie.org/trustyai/"
+    },
+    {
+>>>>>>> eb764c9 (UX fixes)
       title: "OpenVINO",
       body: "OpenVINO Toolkit is a comprehensive toolkit for quickly developing applications and solutions that emulate human vision.",
       link: "https://docs.openvinotoolkit.org/latest/index.html",
       icon: intel_logo
     },
+<<<<<<< HEAD
     {
       title: "Triton Server",
       body: "An open-source deep learning inference server.",
       link: "https://developer.nvidia.com/nvidia-triton-inference-server",
       icon: triton_server_logo
     }
+=======
+>>>>>>> eb764c9 (UX fixes)
   ],
   "data-science-pipelines": [
     {
@@ -267,7 +303,7 @@ export const ArchitectureMap = ({ }) => {
               headingLevel={"h3"}
               size="3xl"
             >
-              Built on Open-Source
+              Built on open-source
             </Title>
           </FlexItem>
           <FlexItem>
@@ -279,7 +315,11 @@ export const ArchitectureMap = ({ }) => {
       </StackItem>
       <StackItem>
         <Grid hasGutter>
+<<<<<<< HEAD
           <GridItem span={2} rowSpan={6}>
+=======
+          <GridItem span={2} rowSpan={5}>
+>>>>>>> eb764c9 (UX fixes)
             <ArchitectureComponent color={ArchitectureComponentColors.external} isSelected={selectedComponent === "storage"} title="Storage" onClick={() => setSelectedComponent("storage")} />
           </GridItem>
           <GridItem span={10}>
@@ -296,7 +336,6 @@ export const ArchitectureMap = ({ }) => {
           <GridItem span={4}>
             <ArchitectureComponent color={ArchitectureComponentColors.service} title="Data Science Pipelines" isSelected={selectedComponent === "data-science-pipelines"} onClick={() => setSelectedComponent("data-science-pipelines")} />
           </GridItem>
-          <GridItem span={2} />
           <GridItem span={10}>
             <ArchitectureComponent color={ArchitectureComponentColors.management} title="Monitoring and Alerting" isSelected={selectedComponent === "monitoring"} onClick={() => setSelectedComponent("monitoring")} />
           </GridItem>

@@ -15,7 +15,7 @@ type SideNavigationProps = {
 }
 
 
-const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => {
+export const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => {
     function nestSections(sections: AsciiDocSection[]): NestedAsciiDocSection[] {
         const nestedSections: NestedAsciiDocSection[] = [];
 
@@ -60,21 +60,21 @@ const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => 
     const renderNavItem = (item: SideNavItemConfig) => {
         if (toc[item.slug]) {
             return (
-                <NavExpandable key={item.slug} title={item.title} isExpanded={location.pathname.includes(item.slug)} isActive={location.pathname.includes(item.slug)}>
+                <NavExpandable key={item.slug + item.title} title={item.title} isExpanded={location.pathname.includes(item.slug)} isActive={location.pathname.includes(item.slug)}>
                     {nestSections(toc[item.slug]).map(section => renderSection(section, item.slug))}
                 </NavExpandable>
             )
         }
         else if (item.children) {
             return (
-                <NavExpandable key={item.slug} title={item.title} isExpanded={location.pathname.includes(item.slug)} isActive={location.pathname.includes(item.slug)}>
+                <NavExpandable key={item.slug + item.title} title={item.title} isExpanded={location.pathname.includes(item.slug)} isActive={location.pathname.includes(item.slug)}>
                     {item.children.map(i => renderNavItem(i))}
                 </NavExpandable>
             )
         }
         else {
             return (
-                <NavItem isActive={location.pathname.includes(item.slug)}>
+                <NavItem key={item.slug + item.title} isActive={location.pathname.includes(item.slug)}>
                     <Link to={item.slug}>
                         {item.title}
                     </Link>
@@ -92,5 +92,3 @@ const SideNavigation = ({ config, location, toc = {} }: SideNavigationProps) => 
     )
 
 }
-
-export default SideNavigation;

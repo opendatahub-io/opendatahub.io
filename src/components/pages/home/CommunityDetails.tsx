@@ -15,7 +15,6 @@ import {
   TextVariants,
   TitleSizes,
 } from "@patternfly/react-core";
-import { Link } from "gatsby";
 import React from "react";
 
 
@@ -61,14 +60,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
-                component={(props: any) => (
-                  <Link
-                    {...props}
-                    to={
-                      "https://join.slack.com/t/odh-io/shared_invite/zt-13hp18gxj-Yb34PfQyP9GDmKMU7AkVYw"
-                    }
-                  />
-                )}
+                href="https://join.slack.com/t/odh-io/shared_invite/zt-13hp18gxj-Yb34PfQyP9GDmKMU7AkVYw"
               >
                 JOIN OUR WORKSPACE ON SLACK
               </Button>
@@ -92,14 +84,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
-                component={(props: any) => (
-                  <Link
-                    {...props}
-                    to={
-                      "https://github.com/opendatahub-io/opendatahub-community"
-                    }
-                  />
-                )}
+                href="https://github.com/opendatahub-io/opendatahub-community"
               >
                 OPEN DATA HUB COMMUNITY REPO
               </Button>
@@ -109,14 +94,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
-                component={(props: any) => (
-                  <Link
-                    {...props}
-                    to={
-                      "https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York"
-                    }
-                  />
-                )}
+                href="https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York"
               >
                 GOOGLE CALENDAR
               </Button>
@@ -141,9 +119,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
-                component={(props: any) => (
-                  <Link {...props} to={"https://github.com/opendatahub-io"} />
-                )}
+                href="https://github.com/opendatahub-io"
               >
                 GITHUB ORGANIZATION
               </Button>
@@ -166,12 +142,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
-                component={(props: any) => (
-                  <Link
-                    {...props}
-                    to={"https://lists.opendatahub.io/admin/lists/"}
-                  />
-                )}
+                href="https://lists.opendatahub.io/admin/lists/"
               >
                 SUBSCRIBE TO THE MAILING LIST
               </Button>

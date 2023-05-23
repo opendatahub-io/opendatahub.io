@@ -1,11 +1,10 @@
 ---
-layout: blog
+type: blog
 author: ezidav
 title:  New documentation for Data Science Projects added
 preview: Added New Data Science Project documentation
 date: 2023-02-06
 categories: features, release, documentation
-featured: true
 ---
 
 New documentation has been added for the new [Data Science Projects](http://opendatahub.io/docs/working-on-data-science-projects.html) feature in the ODH dashboard, the documentation covers the following items:

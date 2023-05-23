@@ -1,5 +1,6 @@
 import type { GatsbyConfig } from "gatsby";
 
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `opendatahub.io`,
@@ -7,7 +8,6 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
-    // "gatsby-plugin-google-gtag", // TODO: set up google analytics
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
@@ -15,60 +15,6 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         icon: "src/content/assets/img/logos/datahub_mark_color.png",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-feed",
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map((node) => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                });
-              });
-            },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  nodes {
-                    excerpt
-                    html
-                    fields { 
-                      slug 
-                    }
-                    frontmatter {
-                      title
-                      date
-                    }
-                  }
-                }
-              }
-            `,
-            output: "/rss.xml",
-            title: "Open Data Hub RSS Feed",
-            match: "^/blog/",
-          },
-        ],
       },
     },
     {
@@ -84,26 +30,12 @@ const config: GatsbyConfig = {
         ]
       }
     },
-    // `gatsby-plugin-catch-links`,
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "videos",
-        path: "src/content/videos/",
-      },
-    },
+    `gatsby-plugin-catch-links`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
-        path: "src/content/posts/",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "releases",
-        path: "src/content/releases/",
+        path: "src/content/blog/",
       },
     },
     {
@@ -127,6 +59,14 @@ const config: GatsbyConfig = {
         remote: `https://github.com/opendatahub-io/opendatahub-documentation.git`,
         branch: `main`,
         local: "public/static/docs",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          process.env.REACT_APP_GA_TRACKING_ID, // Google Analytics / GA
+        ],
       },
     },
   ],
