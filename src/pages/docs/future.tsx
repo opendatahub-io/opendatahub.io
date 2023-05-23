@@ -2,7 +2,7 @@ import React from "react"
 import { DOCS_NAVIGATION, ROADMAP_DATA } from "../../const"
 import { Button, Card, CardActions, CardBody, CardHeader, CardProps, CardTitle, PageSection, Panel, Split, SplitItem, Title } from "@patternfly/react-core";
 import { PageProps } from "gatsby";
-import { Layout, SideNavigation } from "../../components/shared";
+import { Footer, Layout, SideNavigation } from "../../components/shared";
 
 const ProjectCard = ({ title, description, url, moved, ...props }: { title: string, description?: string, url?: string, moved?: string | number } & CardProps) => (
     <Card isCompact {...props}>
@@ -79,6 +79,9 @@ const FutureIndex = ({ location }: PageProps) => {
                         </ Panel>
                     ))}
                 </div>
+            </PageSection>
+            <PageSection isCenterAligned padding={{ default: "noPadding" }}>
+                <Footer />
             </PageSection>
         </Layout>
     )
