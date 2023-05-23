@@ -2,7 +2,6 @@ import { Button, Card, Text, CardBody, CardFooter, CardTitle, Flex, FlexItem, Gr
 import React from "react";
 import "./ArchitectureMap.css"
 import prometheus_logo from "../../../content/assets/img/logos/prometheus-logo.png"
-import grafana_logo from "../../../content/assets/img/logos/grafana-logo.svg"
 import ceph_logo from "../../../content/assets/img/logos/ceph-logo.png"
 import odh_logo from "../../../content/assets/img/logos/datahub_mark_color-blkbg.png"
 import jupyter_logo from "../../../content/assets/img/logos/jupyter-logo.png"
@@ -171,12 +170,6 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
       link: "https://prometheus.io/",
       icon: prometheus_logo
     },
-    {
-      title: "Grafana",
-      body: "An open-source platform for monitoring and observability.",
-      link: "https://grafana.com/",
-      icon: grafana_logo
-    }
   ],
   "open-data-hub-operator": [
     {
