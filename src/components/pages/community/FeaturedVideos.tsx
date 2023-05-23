@@ -34,7 +34,7 @@ export const FeaturedVideos: React.FC = () => {
   `);
   const data = pageQuery.allMarkdownRemark.nodes ?? [];
   const featured = data.filter((d) => d.frontmatter.featured);
-  const posts = [...featured, ...data]
+  const posts = [...featured, ...data.filter((d) => !d.frontmatter.featured)]
 
   return (
     <SectionLayout
