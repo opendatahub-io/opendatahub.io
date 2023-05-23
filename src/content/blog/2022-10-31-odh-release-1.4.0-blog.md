@@ -20,7 +20,7 @@ Changes included in the Open Data Hub v1.4.0 release:
     * Migration to ODH Notebook Controller for lifecycle management of Jupyter notebook servers
   * Model Mesh Serving v0.9.0
   * Data Science Pipelines - Standalone distribution of Kubeflow Pipelines Tekton v1.3.1 customized for Open Data Hub
-* Migration of [Tier 2 components]({{ '/docs/tiered-components.html' | prepend: site.baseurl  }}) to [odh-contrib-manifests](https://github.com/opendatahub-io-contrib/odh-contrib-manifests) in the [opendatahub-io-contrib](https://github.com/opendatahub-io-contrib) organization
+* Migration of [Tier 2 components](/docs/tiered-components) to [odh-contrib-manifests](https://github.com/opendatahub-io-contrib/odh-contrib-manifests) in the [opendatahub-io-contrib](https://github.com/opendatahub-io-contrib) organization
 * Deprecation of JupyterHub component - As of ODH 1.4, ODH has replaced JupyterHub multi-user server with ODH Notebook Controller for lifecycle management of Jupyter Notebook servers. JupyterHub is still available for deployment but there will be no further updates and it will be officially deprecated with the release of ODH 1.5
 
 The following is a list of components that are available in v1.4.0 release of odh-manifests:
