@@ -139,15 +139,14 @@ export const CommunityDetails = ({ }) => {
             </StackItem>
             <StackItem>
               <Text component={TextVariants.p}>
-                Stay up to date with the latest announcements and discussion
-                about the Open Data Hub
+                Stay up to date with the latest announcements about Open Data Hub
               </Text>
               <Button
                 isInline
                 iconPosition="right"
                 variant="link"
                 component="a"
-                href="https://lists.opendatahub.io/admin/lists/"
+                href="https://lists.opendatahub.io/admin/lists/announcements.lists.opendatahub.io/"
               >
                 SUBSCRIBE TO THE MAILING LIST
               </Button>
