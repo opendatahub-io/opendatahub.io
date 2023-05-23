@@ -9,7 +9,7 @@ import {
   Text,
   Chip,
 } from "@patternfly/react-core";
-import { Layout, Seo } from "../components/shared";
+import { Footer, Layout, Seo } from "../components/shared";
 
 const BlogPostTemplate = ({ data: { markdownRemark: post } }: PageProps<Queries.BlogPostTemplateQuery>) => {
   const chips: string[] = (post?.frontmatter?.categories ?? "").split(",")
@@ -31,6 +31,9 @@ const BlogPostTemplate = ({ data: { markdownRemark: post } }: PageProps<Queries.
         <div
           dangerouslySetInnerHTML={{ __html: post?.html ?? "" }}
         />
+      </PageSection>
+      <PageSection isCenterAligned padding={{ default: "noPadding" }}>
+        <Footer />
       </PageSection>
     </Layout>
   );

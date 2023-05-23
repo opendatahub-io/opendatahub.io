@@ -28,6 +28,7 @@ export const CommunityMeetings: React.FC = () => {
             className="pf-u-font-size-sm"
             variant="link"
             isInline
+            component="a"
             href="https://github.com/opendatahub-io/opendatahub-community"
             icon={<ExternalLinkAltIcon size="sm" />}
           >
@@ -38,6 +39,7 @@ export const CommunityMeetings: React.FC = () => {
           className="pf-u-font-size-sm"
           variant="link"
           isInline
+          component="a"
           href="https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York"
           icon={<ExternalLinkAltIcon size="sm" />}
         >

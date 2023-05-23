@@ -1,7 +1,7 @@
 import { PageProps, graphql, navigate } from "gatsby";
 import * as React from "react";
 
-import { ContentCardList, Layout, Seo } from "../components/shared";
+import { ContentCardList, Footer, Layout, Seo } from "../components/shared";
 import {
   Select,
   SelectOption,
@@ -246,7 +246,9 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
           </ToolbarItem>
         </Toolbar>
       </PageSection>
-
+      <PageSection isCenterAligned padding={{ default: "noPadding" }}>
+        <Footer />
+      </PageSection>
     </Layout >
   );
 };

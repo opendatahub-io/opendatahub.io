@@ -60,6 +60,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
+                component="a"
                 href="https://join.slack.com/t/odh-io/shared_invite/zt-13hp18gxj-Yb34PfQyP9GDmKMU7AkVYw"
               >
                 JOIN OUR WORKSPACE ON SLACK
@@ -84,6 +85,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
+                component="a"
                 href="https://github.com/opendatahub-io/opendatahub-community"
               >
                 OPEN DATA HUB COMMUNITY REPO
@@ -94,6 +96,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
+                component="a"
                 href="https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York"
               >
                 GOOGLE CALENDAR
@@ -119,6 +122,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
+                component="a"
                 href="https://github.com/opendatahub-io"
               >
                 GITHUB ORGANIZATION
@@ -142,6 +146,7 @@ export const CommunityDetails = ({ }) => {
                 isInline
                 iconPosition="right"
                 variant="link"
+                component="a"
                 href="https://lists.opendatahub.io/admin/lists/"
               >
                 SUBSCRIBE TO THE MAILING LIST

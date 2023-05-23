@@ -46,6 +46,7 @@ export const FeaturedVideos: React.FC = () => {
           className="pf-u-font-size-sm"
           variant="link"
           isInline
+          component="a"
           icon={<ExternalLinkAltIcon size="sm" />}
           href="https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqcg2znnClv-xbj93Q_wcY8L"
         >
