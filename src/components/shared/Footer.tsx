@@ -49,7 +49,7 @@ export const Footer = () => {
               <a href="https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York" target="_blank" rel="noopener noreferrer">Meetings Calendar</a>
             </StackItem>
             <StackItem>
-              <a href="https://lists.opendatahub.io/admin/lists/" target="_blank" rel="noopener noreferrer">Mailing List</a>
+              <a href="https://lists.opendatahub.io/admin/lists/announcements.lists.opendatahub.io/" target="_blank" rel="noopener noreferrer">Mailing List</a>
             </StackItem>
           </Stack>
         </FlexItem>
