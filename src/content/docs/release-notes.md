@@ -5,7 +5,18 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
-### Open Data Hub version v1.5.0 - April 2023
+### [Open Data Hub version v1.6.0](../../blog/2023-05-15-odh-release-1.6.0-blog) - May 2023
+
+| Technology                                                                         | Version |
+| ---------------------------------------------------------------------------------- | ------- |  |
+| [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-dashboard) | v2.9 |
+| [Open Data Hub Notebook Images](https://github.com/opendatahub-io/notebooks) | v1.4.0 |
+| [Model Mesh Serving](https://github.com/opendatahub-io/modelmesh-serving) | v0.11.0 |
+| [Data Science Pipelines Operator](https://github.com/opendatahub-io/data-science-pipelines-operator) | v0.2.0 |
+| [TrustyAI Explainability](https://github.com/trustyai-explainability/trustyai-explainability) | v0.1.0 |
+
+
+### [Open Data Hub version v1.5.0](../../blog/2023-04-06-odh-release-1.5.0-blog) - April 2023
 
 | Technology                                                                         | Version |
 | ---------------------------------------------------------------------------------- | ------- |  |
@@ -15,7 +26,7 @@ style_class: release-notes
 | [Data Science Pipelines Operator](https://github.com/opendatahub-io/data-science-pipelines-operator) | v0.1.0 |
 | [TrustyAI Explainability](https://github.com/trustyai-explainability/trustyai-explainability) | v0.1.0 |
 
-### Open Data Hub version v1.4.2 - March 2023
+### [Open Data Hub version v1.4.2](../../blog/2023-01-24-odh-release-1.4.1-blog) - March 2023
 
 | Technology                                                                         | Version | Category           |
 | ---------------------------------------------------------------------------------- | ------- | ------------------ |  |
@@ -24,7 +35,7 @@ style_class: release-notes
 | [Model Mesh Serving](https://github.com/opendatahub-io/modelmesh-serving) | v0.9.0 | AI/ML |
 | [Data Science Pipelines](https://github.com/opendatahub-io/data-science-pipelines) | v1.2.1 | Data Science Tools |
 
-### Open Data Hub version v1.4.1 - January 2023
+### [Open Data Hub version v1.4.1](../../blog/2023-01-24-odh-release-1.4.1-blog) - January 2023
 
 | Technology                                                                         | Version | Category           |
 | ---------------------------------------------------------------------------------- | ------- | ------------------ |  |
