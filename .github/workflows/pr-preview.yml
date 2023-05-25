@@ -26,6 +26,6 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           action: auto
-          github-token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           umbrella-dir: pr-preview
           source-dir: public
