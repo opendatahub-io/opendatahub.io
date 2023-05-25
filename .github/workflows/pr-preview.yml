@@ -1,8 +1,5 @@
 # .github/workflows/pr-preview.yml
 name: Deploy PR previews
-description: >
-  Deploy a pull request preview to GitHub Pages
-concurrency: preview-${{ github.ref }}
 on:
   pull_request:
     types:
@@ -10,16 +7,25 @@ on:
       - reopened
       - synchronize
       - closed
+
+concurrency: preview-${{ github.ref }}
+
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: npm i && npm run build
-      - uses: rossjrw/pr-preview-action@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: .
-          preview-branch: gh-pages
-          umbrella-dir: pr-preview
           action: auto
           github-token: ${{ secrets.ACCESS_TOKEN }}
+          umbrella-dir: pr-preview
+          source-dir: public
