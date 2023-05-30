@@ -1,10 +1,21 @@
 .pf-c-masthead {
+  --pf-c-masthead--PaddingRight: 0rem !important;
   --pf-c-masthead--BackgroundColor: #0e0e0e !important;
 }
 
-
 .transparent {
   background-color: transparent !important;
+}
+.pf-c-dropdown__toggle:before {
+  border: 0px;
+}
+.pf-c-dropdown {
+  --pf-c-dropdown__toggle--before--BorderWidth: 0px !important;
+  --pf-c-dropdown__menu--BackgroundColor: transparent !important;
+}
+
+.pf-c-toolbar__group {
+  --pf-c-toolbar--spacer: 0rem !important;
 }
 
 .navbar-links {
@@ -15,7 +26,14 @@
 .navbar-links a {
   color: var(--pf-global--palette--white) !important;
 }
-
+.pf-c-menu__list-item:focus-within {
+  --pf-c-menu__list-item--BackgroundColor: rgb(150, 149, 149) !important;
+}
+.pf-c-menu {
+  --pf-c-menu--BackgroundColor: #0e0e0e !important;
+  --pf-c-menu__item--PaddingLeft: 2rem !important;
+  --pf-c-menu__list-item--hover--BackgroundColor: rgb(150, 149, 149) !important;
+}
 .sticky {
   position: sticky !important;
   top: 0;

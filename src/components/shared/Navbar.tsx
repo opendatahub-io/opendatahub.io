@@ -5,10 +5,18 @@ import {
   MastheadMain,
   MastheadToggle,
   PageToggleButton,
-  Split,
-  SplitItem,
+  ToolbarGroup,
+  Toolbar,
+  ToolbarContent,
+  ToolbarItem,
+  Dropdown,
+  KebabToggle,
+  Menu,
+  MenuContent,
+  MenuList,
+  MenuItem,
 } from "@patternfly/react-core";
-import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
+import BarsIcon from "@patternfly/react-icons/dist/esm/icons/bars-icon";
 import { Link } from "gatsby";
 import React from "react";
 
@@ -20,9 +28,12 @@ type NavbarProps = {
   useSidebarExpand?: boolean;
 };
 
-export const Navbar = ({ isTransparentAtTop, useSidebarExpand }: NavbarProps) => {
+export const Navbar = ({
+  isTransparentAtTop,
+  useSidebarExpand,
+}: NavbarProps) => {
   const [isTransparent, setIsTransparent] = React.useState(true);
-
+  const [isOpen, setIsOpen] = React.useState(false);
   React.useEffect(() => {
     function checkPosition() {
       setIsTransparent(window.scrollY === 0);
@@ -36,82 +47,147 @@ export const Navbar = ({ isTransparentAtTop, useSidebarExpand }: NavbarProps) =>
     };
   }, []);
 
+  const onToggle = (isOpen: boolean) => {
+    setIsOpen(isOpen);
+  };
+
+  const kebabDropdownItems = [
+    <Menu className="pf-u-w-100vw">
+      <MenuContent>
+        <MenuList>
+          <MenuItem to="/docs">DOCS</MenuItem>
+          <MenuItem to="/blog">BLOG</MenuItem>
+          <MenuItem to="/community">COMMUNITY</MenuItem>
+          <MenuItem to="https://github.com/opendatahub-io">GITHUB</MenuItem>
+          <MenuItem to="/docs/getting-started-with-open-data-hub/">
+            Get Started
+          </MenuItem>
+        </MenuList>
+      </MenuContent>
+    </Menu>,
+  ];
   return (
-    <Masthead
-      className={`${isTransparent && isTransparentAtTop ? "transparent" : ""} sticky`}
-    >
-      <MastheadToggle>
-        {useSidebarExpand && (
-          <PageToggleButton
-            variant="plain"
+    <>
+      <Masthead
+        id="masthead"
+        display={{ default: "inline" }}
+        className={`${
+          isTransparent && isTransparentAtTop && !isOpen ? "transparent" : ""
+        } sticky`}
+      >
+        <MastheadToggle>
+          {useSidebarExpand && (
+            <PageToggleButton variant="plain">
+              <BarsIcon />
+            </PageToggleButton>
+          )}
+        </MastheadToggle>
+        <MastheadMain>
+          <Button
+            variant="link"
+            isInline
+            component={(props: any) => <Link {...props} to="/" />}
           >
-            <BarsIcon />
-          </PageToggleButton>
-        )}
-      </MastheadToggle>
-      <MastheadMain>
-        <Button
-          variant="link"
-          isInline
-          component={(props: any) => <Link {...props} to="/" />}
-        >
-          <img
-            src={vert_logo}
-            alt="Open Data Hub logo"
-            style={{ overflow: "hidden", height: 45 }}
-          />
-        </Button>
-      </MastheadMain>
-      <MastheadContent>
-        <Split hasGutter className="navbar-links">
-          <SplitItem>
-            <Button
-              variant="link"
-              isInline
-              component={(props: any) => <Link {...props} to="/docs" />}
-            >
-              DOCS
-            </Button>
-          </SplitItem>
-          <SplitItem>
-            <Button
-              variant="link"
-              isInline
-              component={(props: any) => <Link {...props} to="/blog" />}
-            >
-              BLOG
-            </Button>
-          </SplitItem>
-          <SplitItem>
-            <Button
-              variant="link"
-              isInline
-              component={(props: any) => <Link {...props} to="/community" />}
-            >
-              COMMUNITY
-            </Button>
-          </SplitItem>
-          <SplitItem isFilled />
-          <SplitItem>
-            <Button
-              variant="link"
-              component="a"
-              href="https://github.com/opendatahub-io"
-            >
-              GITHUB
-            </Button>
-          </SplitItem>
-          <SplitItem>
-            <Button
-              variant="tertiary"
-              isInline
-              component={(props: any) => <Link {...props} to="/docs/getting-started-with-open-data-hub/" />}
-            >
-              Get Started
-            </Button>
-          </SplitItem>
-        </Split>
-      </MastheadContent>
-    </Masthead>
+            <img
+              src={vert_logo}
+              alt="Open Data Hub logo"
+              style={{ overflow: "hidden", height: 45 }}
+            />
+          </Button>
+        </MastheadMain>
+        <MastheadContent>
+          <Toolbar className="navbar-links transparent ">
+            <ToolbarContent>
+              <ToolbarGroup
+                visibility={{ default: "hidden", md: "visible", lg: "visible" }}
+              >
+                <ToolbarItem>
+                  <Button
+                    variant="link"
+                    isInline
+                    component={(props: any) => <Link {...props} to="/docs" />}
+                  >
+                    DOCS
+                  </Button>
+                </ToolbarItem>
+                <ToolbarItem>
+                  <Button
+                    variant="link"
+                    isInline
+                    component={(props: any) => <Link {...props} to="/blog" />}
+                  >
+                    BLOG
+                  </Button>
+                </ToolbarItem>
+                <ToolbarItem>
+                  <Button
+                    variant="link"
+                    isInline
+                    component={(props: any) => (
+                      <Link {...props} to="/community" />
+                    )}
+                  >
+                    COMMUNITY
+                  </Button>
+                </ToolbarItem>
+              </ToolbarGroup>
+              <ToolbarGroup alignment={{ default: "alignRight" }}>
+                <ToolbarGroup
+                  style={{ paddingRight: "1rem" }}
+                  visibility={{
+                    default: "hidden",
+                    md: "visible",
+                    lg: "visible",
+                  }}
+                >
+                  <ToolbarItem>
+                    <Button
+                      variant="link"
+                      component="a"
+                      href="https://github.com/opendatahub-io"
+                    >
+                      GITHUB
+                    </Button>
+                  </ToolbarItem>
+                  <ToolbarItem>
+                    <Button
+                      variant="tertiary"
+                      isInline
+                      component={(props: any) => (
+                        <Link
+                          {...props}
+                          to="/docs/getting-started-with-open-data-hub/"
+                        />
+                      )}
+                    >
+                      Get Started
+                    </Button>
+                  </ToolbarItem>
+                </ToolbarGroup>
+                <ToolbarItem
+                  alignment={{ default: "alignRight" }}
+                  visibility={{
+                    default: "visible",
+                    md: "hidden",
+                    lg: "hidden",
+                  }}
+                >
+                  <Dropdown
+                    isPlain
+                    menuAppendTo="inline"
+                    position="right"
+                    toggle={
+                      <KebabToggle id="toggle-kebab" onToggle={onToggle} />
+                    }
+                    dropdownItems={kebabDropdownItems}
+                    isOpen={isOpen}
+                  />
+                </ToolbarItem>
+              </ToolbarGroup>
+            </ToolbarContent>
+          </Toolbar>
+        </MastheadContent>
+      </Masthead>
+    </>
   );
 };
