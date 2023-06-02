@@ -64,7 +64,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [process.env.REACT_APP_GOOGLE_ANALYTICS_TAG_ID]
+        trackingIds: ["G-9KEMPL6SJ3"]
       },
     },
   ],
