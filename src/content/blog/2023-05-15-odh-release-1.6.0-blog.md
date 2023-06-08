@@ -1,5 +1,5 @@
 ---
-layout: blog
+type: release
 author: lavlas
 title:  Open Data Hub 1.6.0 Release Guide
 preview: Open Data Hub 1.6.0 was just released

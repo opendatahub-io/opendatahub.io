@@ -1,5 +1,5 @@
 ---
-layout: type
+type: release
 author: lavlas
 title:  Open Data Hub 1.5.0 Release Guide
 preview: Open Data Hub 1.5.0 was just released

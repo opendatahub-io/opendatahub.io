@@ -144,11 +144,20 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
     const slug = createFilePath({ node, getNode, basePath: "src/content" });
     const sourceInstanceName = getNode(node.parent!)!.sourceInstanceName;
 
-    createNodeField({
-      node,
-      name: "slug",
-      value: `/${sourceInstanceName}${slug}`,
-    });
+    if (sourceInstanceName === "pages") {
+      createNodeField({
+        node,
+        name: "slug",
+        value: slug
+      });
+    }
+    else {
+      createNodeField({
+        node,
+        name: "slug",
+        value: `/${sourceInstanceName}${slug}`,
+      });
+    }
   }
 };
 
@@ -194,6 +203,26 @@ export const createPages: GatsbyNode["createPages"] = async ({
   }
   `);
 
+  const pagesResults = await graphql<QueryResult>(`
+  query pageFiles {
+    allFile(filter: {sourceInstanceName: {eq: "pages"}}) {
+      edges {
+        node {
+          childMarkdownRemark {
+            fields {
+              slug
+            }
+            id
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  }
+  `);
+
   const blogResult = await graphql<QueryResult>(`
     query blogFiles {
       allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
@@ -221,6 +250,21 @@ export const createPages: GatsbyNode["createPages"] = async ({
   if (blogResult.errors) {
     throw blogResult.errors;
   }
+  if (pagesResults.errors) {
+    throw pagesResults.errors;
+  }
+
+  // create pages
+  const pages = pagesResults.data?.allFile.edges ?? [];
+  pages.forEach(({ node }) => {
+    createPage({
+      path: node.childMarkdownRemark.fields.slug,
+      component: path.resolve("./src/templates/page.tsx"),
+      context: {
+        id: node.childMarkdownRemark.id,
+      },
+    });
+  });
 
   // create docs pages
   const docs = docsResult.data?.allFile.edges ?? [];
