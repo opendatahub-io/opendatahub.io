@@ -4,7 +4,7 @@ author: lavlas
 title:  Open Data Hub 1.5.0 Release Guide
 preview: Open Data Hub 1.5.0 was just released
 date: 2023-04-11
-categories: features, road map, release
+categories: features, road-map, release
 ---
 
 What is new?
