@@ -257,13 +257,15 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // create pages
   const pages = pagesResults.data?.allFile.edges ?? [];
   pages.forEach(({ node }) => {
-    createPage({
-      path: node.childMarkdownRemark.fields.slug,
-      component: path.resolve("./src/templates/page.tsx"),
-      context: {
-        id: node.childMarkdownRemark.id,
-      },
-    });
+    if (node?.childMarkdownRemark?.fields?.slug) {
+      createPage({
+        path: node.childMarkdownRemark.fields.slug,
+        component: path.resolve("./src/templates/page.tsx"),
+        context: {
+          id: node.childMarkdownRemark.id,
+        },
+      });
+    }
   });
 
   // create docs pages
