@@ -1,7 +1,7 @@
 import { PageProps, graphql, navigate } from "gatsby";
 import * as React from "react";
 
-import { ContentCardList, Footer, Layout, Seo } from "../components/shared";
+import { ContentCardList, Footer, Layout, SectionList, Seo } from "../components/shared";
 import {
   Select,
   SelectOption,
@@ -105,150 +105,157 @@ const BlogIndex = ({ data, location }: PageProps<Queries.AllContentQueryQuery>) 
 
   return (
     <Layout>
-      <PageSection
-        className="pf-u-h-100vh"
-        isCenterAligned
-        isWidthLimited
-        padding={{ default: "padding" }}
-      >
-        <Toolbar
-          collapseListedFiltersBreakpoint="md"
-          clearAllFilters={() => {
-            setCategoryFilter([])
-            setContentTypeFilter(null)
-            setSearchValue("")
-          }}>
-          <ToolbarContent>
-            <ToolbarToggleGroup toggleIcon={<FilterIcon />} breakpoint="md">
-              <ToolbarItem variant="search-filter">
-                <SearchInput
-                  aria-label="With filters example search input"
-                  onChange={(_event, value) => setSearchValue(value)}
-                  value={searchValue}
-                  onClear={() => {
-                    setSearchValue('');
-                  }}
-                />
-              </ToolbarItem>
-              <ToolbarGroup variant="filter-group">
-                <ToolbarFilter
-                  chips={categoryFilter}
-                  deleteChip={(_category, chip) => setCategoryFilter(categoryFilter.filter(c => c !== chip))}
-                  categoryName="Category"
-                >
-                  <Select
-                    variant={SelectVariant.checkbox}
-                    aria-label="Category"
-                    onToggle={() => setIsCategoryFilterOpen(!isCategoryFilterOpen)}
-                    onSelect={(_, value) => {
-                      if (typeof value === "string" && categoryFilter.includes(value)) {
-                        setCategoryFilter(categoryFilter.filter((category) => category !== value))
-                      } else {
-                        setCategoryFilter([...categoryFilter, value as string])
-                      }
-                    }}
-                    selections={categoryFilter}
-                    isOpen={isCategoryFilterOpen}
-                    placeholderText="Category"
-                  >
-                    {categorySelectOptions}
-                  </Select>
-                </ToolbarFilter>
-                <ToolbarFilter
-                  chips={contentTypeFilter !== null ? [contentTypeFilter] : undefined}
-                  deleteChip={(_category, chip) => setContentTypeFilter(null)}
-                  categoryName="Content Type"
-                >
-                  <Select
-                    variant={SelectVariant.single}
-                    aria-label="Content Type"
-                    onToggle={() => setIsContentTypeFilterOpen(!isContentTypeFilterOpen)}
-                    onSelect={(_, value) => {
-                      if (typeof value === "string" && contentTypeFilter === value) {
+      <SectionList
+        sections={[
+          {
+            component: (
+              <>
+                <Toolbar
+                  collapseListedFiltersBreakpoint="md"
+                  clearAllFilters={() => {
+                    setCategoryFilter([])
+                    setContentTypeFilter(null)
+                    setSearchValue("")
+                  }}>
+                  <ToolbarContent>
+                    <ToolbarToggleGroup toggleIcon={<FilterIcon />} breakpoint="md">
+                      <ToolbarItem variant="search-filter">
+                        <SearchInput
+                          aria-label="With filters example search input"
+                          onChange={(_event, value) => setSearchValue(value)}
+                          value={searchValue}
+                          onClear={() => {
+                            setSearchValue('');
+                          }}
+                        />
+                      </ToolbarItem>
+                      <ToolbarGroup variant="filter-group">
+                        <ToolbarFilter
+                          chips={categoryFilter}
+                          deleteChip={(_category, chip) => setCategoryFilter(categoryFilter.filter(c => c !== chip))}
+                          categoryName="Category"
+                        >
+                          <Select
+                            variant={SelectVariant.checkbox}
+                            aria-label="Category"
+                            onToggle={() => setIsCategoryFilterOpen(!isCategoryFilterOpen)}
+                            onSelect={(_, value) => {
+                              if (typeof value === "string" && categoryFilter.includes(value)) {
+                                setCategoryFilter(categoryFilter.filter((category) => category !== value))
+                              } else {
+                                setCategoryFilter([...categoryFilter, value as string])
+                              }
+                            }}
+                            selections={categoryFilter}
+                            isOpen={isCategoryFilterOpen}
+                            placeholderText="Category"
+                          >
+                            {categorySelectOptions}
+                          </Select>
+                        </ToolbarFilter>
+                        <ToolbarFilter
+                          chips={contentTypeFilter !== null ? [contentTypeFilter] : undefined}
+                          deleteChip={(_category, chip) => setContentTypeFilter(null)}
+                          categoryName="Content Type"
+                        >
+                          <Select
+                            variant={SelectVariant.single}
+                            aria-label="Content Type"
+                            onToggle={() => setIsContentTypeFilterOpen(!isContentTypeFilterOpen)}
+                            onSelect={(_, value) => {
+                              if (typeof value === "string" && contentTypeFilter === value) {
+                                setContentTypeFilter(null)
+                              } else {
+                                setContentTypeFilter(value as string)
+                              }
+                            }}
+                            selections={contentTypeFilter ?? ""}
+                            isOpen={isContentTypeFilterOpen}
+                            placeholderText="Content Type"
+                          >
+                            {contentTypeSelectOptions}
+                          </Select>
+                        </ToolbarFilter>
+                      </ToolbarGroup>
+                    </ToolbarToggleGroup>
+                  </ToolbarContent>
+                </Toolbar>
+
+                {selectedContent.length === 0 && (
+                  <EmptyState>
+                    <EmptyStateIcon icon={SearchIcon} />
+                    <Title headingLevel="h2" size="lg">
+                      No content found
+                    </Title>
+                    <EmptyStateBody>No results match this filter criteria. Clear all filters and try again.</EmptyStateBody>
+                    <EmptyStateSecondaryActions>
+                      <Button variant="link" onClick={() => {
+                        setCategoryFilter([])
                         setContentTypeFilter(null)
-                      } else {
-                        setContentTypeFilter(value as string)
-                      }
-                    }}
-                    selections={contentTypeFilter ?? ""}
-                    isOpen={isContentTypeFilterOpen}
-                    placeholderText="Content Type"
-                  >
-                    {contentTypeSelectOptions}
-                  </Select>
-                </ToolbarFilter>
-              </ToolbarGroup>
-            </ToolbarToggleGroup>
-          </ToolbarContent>
-        </Toolbar>
+                        setSearchValue("")
+                      }}>
+                        Clear all filters
+                      </Button>
+                    </EmptyStateSecondaryActions>
+                  </EmptyState>
+                )}
+                <ContentCardList rowSpan={6}>
+                  {selectedContent
+                    .slice((page - 1) * perPage, page * perPage)
+                    .map(({ node: { childMarkdownRemark: markdown } }, i) => {
+                      return (
+                        <ContentCard
+                          key={(markdown?.fields?.slug ?? "") + i}
+                          title={markdown?.frontmatter?.title ?? ""}
+                          subTitle={contentTypeFilter ?? markdown?.frontmatter?.type ?? "blog"}
+                          link={markdown?.frontmatter?.permalink ?? markdown?.fields?.slug}
+                          body={(
+                            <Stack>
+                              <StackItem>
+                                <i style={{ color: "grey" }}>{markdown?.frontmatter?.date}</i>
+                              </StackItem>
+                              <StackItem>{markdown?.frontmatter?.preview}</StackItem>
 
-        {selectedContent.length === 0 && (
-          <EmptyState>
-            <EmptyStateIcon icon={SearchIcon} />
-            <Title headingLevel="h2" size="lg">
-              No content found
-            </Title>
-            <EmptyStateBody>No results match this filter criteria. Clear all filters and try again.</EmptyStateBody>
-            <EmptyStateSecondaryActions>
-              <Button variant="link" onClick={() => {
-                setCategoryFilter([])
-                setContentTypeFilter("")
-                setSearchValue("")
-              }}>
-                Clear all filters
-              </Button>
-            </EmptyStateSecondaryActions>
-          </EmptyState>
-        )}
-        <ContentCardList rowSpan={6}>
-          {selectedContent
-            .slice((page - 1) * perPage, page * perPage)
-            .map(({ node: { childMarkdownRemark: markdown } }, i) => {
-              return (
-                <ContentCard
-                  key={(markdown?.fields?.slug ?? "") + i}
-                  title={markdown?.frontmatter?.title ?? ""}
-                  subTitle={contentTypeFilter ?? markdown?.frontmatter?.type ?? "blog"}
-                  link={markdown?.frontmatter?.permalink ?? markdown?.fields?.slug}
-                  body={(
-                    <Stack>
-                      <StackItem>
-                        <i style={{ color: "grey" }}>{markdown?.frontmatter?.date}</i>
-                      </StackItem>
-                      <StackItem>{markdown?.frontmatter?.preview}</StackItem>
-
-                    </Stack>
-                  )}
-                  chips={(markdown?.frontmatter?.categories ?? "").split(",").map(c => c.trim())}
-                  handleChipClick={chip => {
-                    if (!categoryFilter.includes(chip)) {
-                      setCategoryFilter([...categoryFilter, chip])
-                    }
-                  }}
-                />
-              );
-            })}
-        </ContentCardList>
-        <Toolbar>
-          <ToolbarItem variant="pagination">
-            <Pagination
-              titles={{ paginationTitle: "Search filter pagination" }}
-              perPageComponent="button"
-              variant={PaginationVariant.bottom}
-              itemCount={selectedContent.length}
-              perPage={perPage}
-              page={page}
-              onPerPageSelect={onPerPageSelect}
-              onSetPage={onSetPage}
-              widgetId="search-input-mock-pagination"
-              isCompact
-            />
-          </ToolbarItem>
-        </Toolbar>
-      </PageSection>
-      <PageSection isCenterAligned padding={{ default: "noPadding" }}>
-        <Footer />
-      </PageSection>
+                            </Stack>
+                          )}
+                          chips={(markdown?.frontmatter?.categories ?? "").split(",").map(c => c.trim())}
+                          handleChipClick={chip => {
+                            if (!categoryFilter.includes(chip)) {
+                              setCategoryFilter([...categoryFilter, chip])
+                            }
+                          }}
+                        />
+                      );
+                    })}
+                </ContentCardList>
+                <Toolbar>
+                  <ToolbarItem variant="pagination">
+                    <Pagination
+                      titles={{ paginationTitle: "Search filter pagination" }}
+                      perPageComponent="button"
+                      variant={PaginationVariant.bottom}
+                      itemCount={selectedContent.length}
+                      perPage={perPage}
+                      page={page}
+                      onPerPageSelect={onPerPageSelect}
+                      onSetPage={onSetPage}
+                      widgetId="search-input-mock-pagination"
+                      isCompact
+                    />
+                  </ToolbarItem>
+                </Toolbar>
+              </>
+            )
+          },
+          {
+            component: <Footer />,
+            props: {
+              isWidthLimited: false,
+              padding: { default: "noPadding" }
+            },
+          },
+        ]}
+      />
     </Layout >
   );
 };
