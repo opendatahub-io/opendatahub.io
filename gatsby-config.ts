@@ -1,6 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
 
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `opendatahub.io`,
@@ -27,8 +26,8 @@ const config: GatsbyConfig = {
               maxWidth: 800,
             },
           },
-        ]
-      }
+        ],
+      },
     },
     `gatsby-plugin-catch-links`,
     {
@@ -48,14 +47,14 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "docs",
-        "path": "src/content/docs/"
+        name: "docs",
+        path: "src/content/docs/",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        "path": "src/content/assets/"
+        path: "src/content/assets/",
       },
     },
     `gatsby-plugin-sass`,
