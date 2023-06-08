@@ -47,6 +47,13 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: "pages",
+        path: "src/content/pages/",
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: "docs",
         path: "src/content/docs/",
       },
