@@ -21,6 +21,9 @@ export const Footer = () => {
               <b>QUICK LINKS</b>
             </StackItem>
             <StackItem>
+              <Link to="/docs/quick-installation/">Installation</Link>
+            </StackItem>
+            <StackItem>
               <Link to="/docs/getting-started-with-open-data-hub">Get Started</Link>
             </StackItem>
             <StackItem>
