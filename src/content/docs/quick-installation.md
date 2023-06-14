@@ -42,11 +42,11 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
 1. Click on the Open Data Hub Operator to bring up the details for the version that is currently installed.
 ![Open Data Hub Operator](../assets/img/pages/docs/quick-installation/odh-operator.png "Open Data Hub Operator")
 
-1. Click `Create Instance` to create a new deployment.  The default `kfdef` provided will deploy the latest release of the [ODH Core components](../docs/tiered-components.html). If you accepted the default name, this will trigger the creation of an Open Data Hub kfdef object named `opendatahub` and start the rollout of the [ODH Core components]({{site.baseurl}}/docs/tiered-components.html).
+1. Click `Create Instance` to create a new deployment.  The default `kfdef` provided will deploy the latest release of the [ODH Core components](../tiered-components). If you accepted the default name, this will trigger the creation of an Open Data Hub kfdef object named `opendatahub` and start the rollout of the [ODH Core components](../tiered-components).
 ![Create New ODH](../assets/img/pages/docs/quick-installation/new-deployment.png "Create New ODH")
 
 1. Verify the installation by viewing the Open Data Hub tab within the operator details.  You Should see `opendatahub` listed.
 ![ODH List](../assets/img/pages/docs/quick-installation/odh-list.png "ODH List")
 
-1. Verify the installation by viewing the project workload.  The [ODH Core components](../docs/tiered-components.html) should be running.
+1. Verify the installation by viewing the project workload.  The [ODH Core components](../tiered-components) should be running.
 ![Verify Status](../assets/img/pages/docs/quick-installation/verify-install.png "Verify Status")
