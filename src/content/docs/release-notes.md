@@ -5,6 +5,18 @@ permalink: /docs/roadmap/release-notes
 style_class: release-notes
 ---
 
+### [Open Data Hub version v1.7.0](../../blog/2023-06-28-odh-release-1.7.0-blog) - June 2023
+
+| Technology                                                                         | Version |
+| ---------------------------------------------------------------------------------- | ------- |  |
+| [Open Data Hub Dashboard](https://github.com/opendatahub-io/odh-dashboard) | v2.11 |
+| [Open Data Hub Notebook Images](https://github.com/opendatahub-io/notebooks) |  |
+| [Model Mesh Serving](https://github.com/opendatahub-io/modelmesh-serving) | v0.11.0 |
+| [Data Science Pipelines Operator](https://github.com/opendatahub-io/data-science-pipelines-operator) | v1.0.0 |
+| [TrustyAI Explainability](https://github.com/trustyai-explainability/trustyai-explainability) | v0.1.0 |
+| [Distributed Workloads](https://github.com/opendatahub-io/distributed-workloads)<br /> * CodeFlare Operator v0.0.4 <br /> * Multi-Cluster App Dispatcher v1.31.0 <br /> * CodeFlare-SDK v0.4.4 <br /> * InstaScale v0.0.4 <br /> * KubeRay	v0.5.0 | v0.0.4 |
+
+
 ### [Open Data Hub version v1.6.0](../../blog/2023-05-15-odh-release-1.6.0-blog) - May 2023
 
 | Technology                                                                         | Version |
