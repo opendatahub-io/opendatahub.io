@@ -367,8 +367,8 @@ export const PERSONAS: PersonaBenefits = [
 export const ROADMAP_DATA: RoadmapDataType = {
     "future": [
         {
-            "title": "Open Data Hub 1.6 (May 2023)",
-            "version": 1.6,
+            "title": "Open Data Hub 1.8 (July 2023)",
+            "version": 1.8,
             "children": [
                 {
                     "title": "ODH Operator"
@@ -392,6 +392,65 @@ export const ROADMAP_DATA: RoadmapDataType = {
         }
     ],
     "past": [
+        {
+            "title": "Open Data Hub 1.7 (June 2023)",
+            "version": 1.7,
+            "children": [
+                {
+                    "title": "ODH Operator",
+                    "description": "ODH Operator image now includes a local copy of the release version of the ODH Core deployment manifests that can be referenced from any supported kfdef"
+                },
+                {
+                    "title": "ODH Dashboard",
+                    "description": "Update to version v2.11"
+                },
+                {
+                    "title": "Model Mesh"
+                },
+                {
+                    "title": "TrustyAI Explainability"
+                },
+                {
+                    "title": "Data Science Pipelines operator",
+                    "description": "Update to version v1.0.0"
+                },
+                {
+                    "title": "Distributed Workloads",
+                    "description": "Upgrade to Project CodeFlare v0.0.4"
+                }
+            ]
+        },
+        {
+            "title": "Open Data Hub 1.6 (May 2023)",
+            "version": 1.6,
+            "children": [
+                {
+                    "title": "ODH Operator",
+                    "description": "Default to the `rolling` OLM release channel and deprecate `stable`"
+
+                },
+                {
+                    "title": "ODH Dashboard",
+                    "description": "Upgrade to v2.9"
+
+                },
+                {
+                    "title": "Model Mesh"
+                },
+                {
+                    "title": "TrustyAI Explainability"
+                },
+                {
+                    "title": "Data Science Pipelines operator",
+                    "description": "Upgrade to v0.2.0"
+
+                },
+                {
+                    "title": "Distributed Workloads",
+                    "description": "Incubation of the Distributed Workloads stack supporting the CodeFlare SDK"
+                }
+            ]
+        },
         {
             "title": "Open Data Hub 1.5 (April 2023)",
             "version": 1.5,
