@@ -11,7 +11,7 @@ What is new?
 ------
 Changes included in the Open Data Hub v1.7.0 release:
 * ODH Dashboard [v2.10](https://github.com/opendatahub-io/odh-dashboard/releases/tag/v2.10.0) & [v2.11](https://github.com/opendatahub-io/odh-dashboard/releases/tag/v2.11.0) 
-* [New Notebooks available for incubation in ODH](2023-06-23-vscode-rstudio-incubation-blog/) - Code Server Notebook, R Studio Notebook (CPU & CUDA) 
+* [New Notebooks available for incubation in ODH](../../blog/2023-06-23-vscode-rstudio-incubation-blog/) - Code Server Notebook, R Studio Notebook (CPU & CUDA) 
 * Data Science Pipelines Operator [v1.0.0](https://github.com/opendatahub-io/data-science-pipelines-operator/releases/tag/v1.0.0)
 * [Model Mesh](https://github.com/opendatahub-io/modelmesh-serving)
 * [TrustyAI Explainability](https://github.com/trustyai-explainability/trustyai-explainability)
