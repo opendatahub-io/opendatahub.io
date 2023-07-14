@@ -39,7 +39,9 @@ keep the `rolling` channel selected. Click `Install` to deploy the opendatahub o
 1. Click `View Operator` to navigate to the OpenShift OperatorHub page for the newly install ODH operator.
    ![View Operator](../assets/img/pages/docs/quick-installation/installed-operator-ready-for-use.png "View Installed ODH Operator")
 
-1. It is important to switch to the namespace you created earlier. Installing in the "OpenShift Operators" namespace will result in a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically".
+1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under Operators -> Installed Operators. Be aware to select `odh` namespace in the console UI. Once the STATUS field displays InstallSucceeded, you can proceed to create a new Open Data Hub deployment.
+
+   If you Create an Instance that is not under`odh` a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically" will be raised.
    ![Change Namespace to 'odh'](../assets/img/pages/docs/quick-installation/installed-operators-change-namespace.png "Change Namespace to 'odh'")
 
 1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators` (inside the namespace you created earlier). Once the STATUS field displays `Succeeded`, you can proceed to create a new Open Data Hub deployment.
@@ -55,7 +57,7 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
 1. Click on the Open Data Hub Operator to bring up the details for the version that is currently installed.
    ![Open Data Hub Operator](../assets/img/pages/docs/quick-installation/odh-operator.png "Open Data Hub Operator")
 
-1. Click `Create Instance` to create a new deployment.  The default `kfdef` provided will deploy the latest release of the [ODH Core components](../tiered-components). If you accepted the default name, this will trigger the creation of an Open Data Hub kfdef object named `opendatahub` and start the rollout of the [ODH Core components](../tiered-components).
+1. Click `Create Instance` for `KfDef` to create a new deployment.  The default `kfdef` provided will deploy the latest release of the [ODH Core components](../tiered-components). If you accepted the default name, this will trigger the creation of an Open Data Hub kfdef object named `opendatahub` and start the rollout of the [ODH Core components](../tiered-components).
    ![Create New ODH](../assets/img/pages/docs/quick-installation/new-deployment.png "Create New ODH")
 
 1. Verify the installation by viewing the Open Data Hub tab within the operator details.  You Should see `opendatahub` listed.
@@ -88,4 +90,4 @@ Subsequent releases will transition to the "rolling" channel once the new operat
 
 Users will need to create a DataScienceCluster instance and enable specific components based on their requirements.
 
-3. If the current application namespace for v1.X is not "opendatahub" , users must scale down the components first.
+3. If the current application namespace for v1.X is not "opendatahub", users must scale down the components first.
