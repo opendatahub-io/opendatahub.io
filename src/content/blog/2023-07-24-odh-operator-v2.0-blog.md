@@ -84,7 +84,7 @@ contextual information, while enhanced eventing will help you monitor the state 
 
 ## Getting Involved and Additional Resources
 
-- **Try it out** : Try out the new operator installation using the steps give in our [installation Guide]([https://opendatahub.io/docs/quick-installation-new-operator/#installing-the-new-open-data-hub-operator). 
+- **Try it out** : Try out the new operator installation using the steps give in our [installation Guide](https://opendatahub.io/docs/quick-installation-new-operator/#installing-the-new-open-data-hub-operator). 
 If you want to upgrade from existing installation, use our [Upgrade Guide](https://opendatahub.io/docs/quick-installation/) 
 under section **Upgrade to new operator(version 2.X)**.
 - **Contribution Guide:** If you're interested in contributing to the development of DataScienceCluster, please review
