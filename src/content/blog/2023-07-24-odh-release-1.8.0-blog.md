@@ -20,7 +20,7 @@ Changes included in the Open Data Hub v1.8.0 release:
 Notable Changes
 ------
 
-* Introducing new version of [ODH Operator(alpha release)](https://opendatahub.io/docs/quick-installation-new-operator/#installing-the-new-open-data-hub-operator)
+* Introducing new version of [ODH Operator(alpha release)](https://opendatahub.io/blog/2023-07-24-odh-operator-v2.0-blog/)
 * ODH Notebook controller updated to version 1.7 to be in sync with KF 1.7
 * ODH Dashboard updated to v2.12.0
 * Data Science Pipelines updated to v1.1.0
