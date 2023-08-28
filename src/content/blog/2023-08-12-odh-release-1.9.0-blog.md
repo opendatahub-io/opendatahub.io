@@ -20,7 +20,7 @@ Changes included in the Open Data Hub v1.9.0 release:
 * Distributed Workloads [v0.1.0](https://github.com/opendatahub-io/distributed-workloads/releases/tag/v0.1.0)
 * New [TrustyAI Operator](../2023-08-18-trustyai-operator-blog) to deploy and manage TrustyAI services
 
-**NOTE:** Please review the [odh-operator v2.0 blog](../2023-07-24-odh-operator-v2.0-blog) to learn more about the new `DataScienceCluster` CustomResourceDefinition that will be replacing the `KfDef` deployment method in an future release
+**NOTE:** Please review the [odh-operator v2.0 blog](../2023-07-24-odh-operator-v2.0-blog) to learn more about the new `DataScienceCluster` CustomResourceDefinition that will be replacing the `KfDef` deployment method in a future release
 
 The following is a list of components that are available in [v1.9.0](https://github.com/opendatahub-io/odh-manifests/releases/tag/v1.9.0) release of odh-manifests:
 
