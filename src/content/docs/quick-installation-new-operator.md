@@ -6,7 +6,7 @@ style_class: quick-installation
 ---
 ## disclaimer
 
-Version 2.0.0 represents an alpha release, exclusively accessible via the "fast" channel.
+Version 2.X represents an alpha release, exclusively accessible via the "fast" channel.
 Subsequent releases will transition to the "fast" channel once the new operator attains greater stability.
 
 ### Pre-requisites

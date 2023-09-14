@@ -82,7 +82,7 @@ If you are currently having version 1.X installed and prefer upgrading to new op
 
 #### disclaimer
 
-1. Version 2.0.0 represents an alpha release, exclusively accessible via the "fast" channel.
+1. Version 2.X represents an alpha release, exclusively accessible via the "fast" channel.
 
 Subsequent releases will transition to the "rolling" channel once the new operator attains greater stability.
 
