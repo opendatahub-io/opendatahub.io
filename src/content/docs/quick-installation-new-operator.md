@@ -11,7 +11,7 @@ Subsequent releases will transition to the "fast" channel once the new operator 
 
 ### Pre-requisites
 
-Blow information is only appliable for Open Data Hub Operator v2.0.0 and forth release.
+Below information is only appliable for Open Data Hub Operator v2.0.0 and forth release.
 
 Installing Open Data Hub requires OpenShift Container Platform version 4.10+.
 All screenshots and instructions are from OpenShift 4.12.
