@@ -21,7 +21,7 @@ Tutorials will require an OpenShift cluster with a minimum of 16 CPUS and 32GB o
 
 ### Installing the New Open Data Hub Operator
 
-The Open Data Hub operator is available for deployment in the OpenShift OperatorHub as a Community Operators. You can install it from the OpenShift web console by following the steps below:
+The Open Data Hub operator is available for deployment in the OpenShift OperatorHub as a Community Operator. You can install it from the OpenShift web console by following the steps below:
 
 1. From the OpenShift web console, log in as a user with `cluster-admin` privileges.  For a developer installation from [try.openshift.com](https://try.openshift.com/), the `kubeadmin` user will work.
    ![Log in to OpenShift](../assets/img/pages/docs/quick-installation/login.png)
