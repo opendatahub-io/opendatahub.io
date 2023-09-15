@@ -56,7 +56,8 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 4. In the view of "Create DataScienceCluster", user can create DataScienceCluster instance in two ways with `components` fields.
    - Configure via "Form view":
       1. fill in `Name` field
-      2. in the `components` section, by clicking `>` it expands currently supported core components. To enable any component, specifically tick the box in each component section. By default, it will not enable any component.  ![Create DSC2](../assets/img/pages/docs/quick-installation-new-operator/create-dsc-component1.png "Create DSC2")
+      2. in the `components` section, by clicking `>` it expands currently supported core components. Check the set of components enabled by default and tick/untick the box in each component section to tailor the selection.
+      ![Create DSC2](../assets/img/pages/docs/quick-installation-new-operator/create-dsc-component1.png "Create DSC2")
 
    - Configure via "YAML view":
       1. write config in YAML format
