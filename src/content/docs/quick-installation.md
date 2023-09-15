@@ -4,6 +4,11 @@ title: Quick Installation(v1)
 permalink: /docs/getting-started/quick-installation
 style_class: quick-installation
 ---
+
+This document describes installation steps for the version 1.X (old) operator.
+For installation steps of the new (version 2.X, alpha),
+see [quick installation of the new operator](../quick-installation-new-operator).
+
 ### Pre-requisites
 
 Installing Open Data Hub requires OpenShift Container Platform version 4.10+. All screenshots and instructions are from OpenShift 4.10.  For the purposes of this quick start, we used [try.openshift.com](https://try.openshift.com/) on AWS.  Tutorials will require an OpenShift cluster with a minimum of 16 CPUS and 32GB of memory across all OpenShift worker nodes.
@@ -28,11 +33,7 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
    ![Install](../assets/img/pages/docs/quick-installation/install.png "Install")
 
 1. The subscription creation view will offer a few options including *Update Channel*, 
-
-**For those who wants to upgrade to new operator(version 2.X)**, please switch to continue reading [here from step 4](../quick-installation-new-operator#installing-the-new-open-data-hub-operator)
-
-**For those who wants to keep using old operator(version 1.X)**, please continue reading: 
-keep the `rolling` channel selected. Click `Install` to deploy the opendatahub operator into the `openshift-operators` namespace.
+   keep the `rolling` channel selected. Click `Install` to deploy the opendatahub operator into the `openshift-operators` namespace.
    ![Select Channel](../assets/img/pages/docs/quick-installation/channels.png "Install")
 
 

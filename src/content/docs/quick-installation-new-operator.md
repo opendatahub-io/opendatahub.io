@@ -9,6 +9,9 @@ style_class: quick-installation
 Version 2.0.0 represents an alpha release, exclusively accessible via the "fast" channel.
 Subsequent releases will transition to the "fast" channel once the new operator attains greater stability.
 
+For installation steps of the old (version 1.X, stable),
+see [quick installation of the 1.X version](../quick-installation).
+
 ### Pre-requisites
 
 Blow information is only appliable for Open Data Hub Operator v2.0.0 and forth release.
