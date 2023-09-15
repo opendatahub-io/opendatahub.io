@@ -42,18 +42,16 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 
 ### Create a DataScienceCluster instance
 
-1. Please ensure to go through [Dependencies](#dependencies) before create new DataScienceCluster instance
-
-2. Click on the `Open Data Hub Operator` from `Installed Operators` page to bring up the details for the version that is currently installed.
+1. Click on the `Open Data Hub Operator` from `Installed Operators` page to bring up the details for the version that is currently installed.
    ![Open Data Hub Operator](../assets/img/pages/docs/quick-installation-new-operator/odh-operator.png "Open Data Hub Operator")
 
-3. Two ways to create DataScienceCluster instance:
+2. Two ways to create DataScienceCluster instance:
    - Click `Create DataScienceCluster` button from the top warning dialog `DataScienceCluster required(Create a DataScienceCluster instance to use this Operator.)`
    - Click tab `Data Science Cluster` then click `Create DataScienceCluster` button
 
    They both lead to a new view called "Create DataScienceCluster". By default, namespace/project `opendatahub` is used to host all applications.
 
-4. In the view of "Create DataScienceCluster", user can create DataScienceCluster instance in two ways with `components` fields.
+3. In the view of "Create DataScienceCluster", user can create DataScienceCluster instance in two ways with `components` fields.
    - Configure via "Form view":
       1. fill in `Name` field
       2. in the `components` section, by clicking `>` it expands currently supported core components. To enable any component, specifically tick the box in each component section. By default, it will not enable any component.  ![Create DSC2](../assets/img/pages/docs/quick-installation-new-operator/create-dsc-component1.png "Create DSC2")
@@ -63,10 +61,10 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
       2. get detail schema by expanding righthand sidebar ![Create DSC1](../assets/img/pages/docs/quick-installation-new-operator/create-dsc-component2.png "Create DSC1")
       3. read [ODH Core components](../tiered-components) to get the full list of supported components
 
-5. Click `Create` button to finalize creation process in seconds.
+4. Click `Create` button to finalize creation process in seconds.
    ![DSC Status](../assets/img/pages/docs/quick-installation-new-operator/dsc-installed.png "DSC Status")
 
-6. Verify the installation by viewing the project workload.
+5. Verify the installation by viewing the project workload.
    Click `Home` then `Projects`, select "opendatahub-system" project, in the `Workloads` tab to view enabled compoenents. These should be running.
    ![Verify Status](../assets/img/pages/docs/quick-installation-new-operator/verify-install.png "Verify Status")
 
