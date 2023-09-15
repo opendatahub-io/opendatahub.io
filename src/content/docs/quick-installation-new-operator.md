@@ -34,7 +34,7 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 3. Click `Continue` in the "Show community Operator" dialog if it pops out. Click the `Install` button to install the Open Data Hub operator.
    ![Install](../assets/img/pages/docs/quick-installation-new-operator/installation1.png "Install")
 
-4. The subscription creation view will offer a few options including `Update Channel`, keep the `fast` channel selected. Click `Install` to deploy the opendatahub operator into the `openshift-operators` namespace.
+4. The subscription creation view will offer a few options including `Update Channel`, make sure the `fast` channel is selected. Click `Install` to deploy the opendatahub operator into the `openshift-operators` namespace.
    ![Select Channel](../assets/img/pages/docs/quick-installation-new-operator/channels.png "Select Channel")
 
 5. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators`. It might take a couple of minutes to show, but once the `Status` field displays `Succeeded`, you can proceed to create a DataScienceCluster instance
