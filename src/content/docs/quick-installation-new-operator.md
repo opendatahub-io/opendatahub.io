@@ -72,6 +72,13 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
    Click `Home` then `Projects`, select "opendatahub" project, in the `Workloads` tab to view enabled compoenents. These should be running.
    ![Verify Status](../assets/img/pages/docs/quick-installation-new-operator/verify-install.png "Verify Status")
 
+### Open Data Hub Dashboard
+
+The data scientists and other users will most likely use the
+Open Data Hub features through Open Data Hub Dashboard. Its URL can be
+found in Menu > Networking > Routes, Project `opendatahub`,
+the Location colum of the `odh-dashboard` route.
+
 ### Dependencies
 
 - to use "kserve" component, users are required to install two operators via OperatorHub before enable it in DataScienceCluster CR

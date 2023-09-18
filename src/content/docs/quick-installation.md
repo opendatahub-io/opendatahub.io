@@ -65,6 +65,13 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
    If you Create an Instance that is not under`odh` a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically" will be raised.
    ![Change Namespace to 'odh'](../assets/img/pages/docs/quick-installation/installed-operators-change-namespace.png "Change Namespace to 'odh'")
 
+### Open Data Hub Dashboard
+
+The data scientists and other users will most likely use the
+Open Data Hub features through Open Data Hub Dashboard. Its URL can be
+found in Menu > Networking > Routes, Project `odh`,
+the Location colum of the `odh-dashboard` route.
+
 ### Upgrade to new operator(version 2.X)
 
 If you are currently having version 1.X installed and prefer upgrading to new operator 2.X, please follow below instruction:
