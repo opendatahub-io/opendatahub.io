@@ -20,11 +20,7 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 1. From the OpenShift web console, log in as a user with `cluster-admin` privileges.  For a developer installation from [try.openshift.com](https://try.openshift.com/), the `kubeadmin` user will work.
    ![Log in to OpenShift](../assets/img/pages/docs/quick-installation/login.png)
 
-1. Create a new namespace named 'odh' for your installation of Open Data Hub.
-   ![Create Namespace 'odh'](../assets/img/pages/docs/quick-installation/create-namespace.png "Create Namespace 'odh'")
-
 1. Find `Open Data Hub` in the `OperatorHub` catalog.
-   1. Select the new namespace if not already selected.
    1. Under `Operators`, select `OperatorHub` for a list of operators available for deployment.
    1. Filter for `Open Data Hub` or look under `AI/Machine Learning` for the icon for `Open Data Hub`.
    ![OperatorHub](../assets/img/pages/docs/quick-installation/operator-hub.png "OperatorHub")
@@ -36,17 +32,16 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
    keep the `rolling` channel selected. Click `Install` to deploy the opendatahub operator into the `openshift-operators` namespace.
    ![Select Channel](../assets/img/pages/docs/quick-installation/channels.png "Install")
 
-
 1. Click `View Operator` to navigate to the OpenShift OperatorHub page for the newly install ODH operator.
    ![View Operator](../assets/img/pages/docs/quick-installation/installed-operator-ready-for-use.png "View Installed ODH Operator")
 
-1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under Operators -> Installed Operators. Be aware to select `odh` namespace in the console UI. Once the STATUS field displays InstallSucceeded, you can proceed to create a new Open Data Hub deployment.
-
-   If you Create an Instance that is not under`odh` a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically" will be raised.
-   ![Change Namespace to 'odh'](../assets/img/pages/docs/quick-installation/installed-operators-change-namespace.png "Change Namespace to 'odh'")
-
-1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators` (inside the namespace you created earlier). Once the STATUS field displays `Succeeded`, you can proceed to create a new Open Data Hub deployment.
+1. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators`. Once the STATUS field displays `Succeeded`, you can proceed to create a new Open Data Hub deployment.
    ![Installed Operators](../assets/img/pages/docs/quick-installation/installed-operators.png "Installed Operators")
+
+1. Create a new namespace named `odh` for your installation of Open Data Hub.
+   ![Create Namespace 'odh'](../assets/img/pages/docs/quick-installation/create-namespace.png "Create Namespace 'odh'")
+
+1. Select the new `odh` namespace if not already selected.
 
 ### Create a New Open Data Hub Deployment
 
@@ -66,6 +61,9 @@ The Open Data Hub operator will create new Open Data Hub deployments and manage 
 
 1. Verify the installation by viewing the project workload.  The [ODH Core components](../tiered-components) should be running.
    ![Verify Status](../assets/img/pages/docs/quick-installation/verify-install.png "Verify Status")
+
+   If you Create an Instance that is not under`odh` a fatal error similar to "csv created in namespace with multiple operatorgroups, can't pick one automatically" will be raised.
+   ![Change Namespace to 'odh'](../assets/img/pages/docs/quick-installation/installed-operators-change-namespace.png "Change Namespace to 'odh'")
 
 ### Upgrade to new operator(version 2.X)
 
