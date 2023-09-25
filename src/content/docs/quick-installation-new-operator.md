@@ -69,7 +69,7 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
    ![DSC Status](../assets/img/pages/docs/quick-installation-new-operator/dsc-installed.png "DSC Status")
 
 5. Verify the installation by viewing the project workload.
-   Click `Home` then `Projects`, select "opendatahub-system" project, in the `Workloads` tab to view enabled compoenents. These should be running.
+   Click `Home` then `Projects`, select "opendatahub" project, in the `Workloads` tab to view enabled compoenents. These should be running.
    ![Verify Status](../assets/img/pages/docs/quick-installation-new-operator/verify-install.png "Verify Status")
 
 ### Dependencies
