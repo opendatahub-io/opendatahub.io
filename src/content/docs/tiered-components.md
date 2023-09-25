@@ -32,7 +32,7 @@ All components/projects will be required to designate dedicated maintainers/owne
 
 #### ODH Incubating (Tier 1) - opendatahub-io
 * Available under [https://github.com/opendatahub-io](https://github.com/opendatahub-io)
-* These components have the same requirements as ODH Core components but they will not be included as part of the default core deployment.  The focus of Tier 1 is to incubate projects/features that will be owned by the Open Data Hub community and a candidate for ODH Core OR provide advanced functionality that is of strong interest to the community at large. These incubated features could
+* These components have the same requirements as ODH Core components but they will not be included as part of the default core deployment.  The focus of Tier 1 is to incubate projects/features that will be owned by the Open Data Hub community and a candidate for ODH Core OR provide advanced functionality that is of strong interest to the community at large.
 * Requirements:
   * Same requirements as ODH Core components so that upon promotion no additional changes are required.
 
