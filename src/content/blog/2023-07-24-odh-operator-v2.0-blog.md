@@ -1,8 +1,8 @@
 ---
 type: blog
 author: VaishnaviHire
-title: "Exploring the DataScienceCluster: A New Custom Resource in OpenDataHub(beta release)"
-preview: ODH is now incubating a new version(v2.0.0) of Operator
+title: "Exploring the DataScienceCluster: A New Custom Resource in OpenDataHub"
+preview: ODH is now incubating a new version(v2.x) of Operator
 date: 2023-09-27
 categories: features, release, documentation
 featured: true
