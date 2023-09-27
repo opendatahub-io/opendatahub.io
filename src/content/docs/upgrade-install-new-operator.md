@@ -44,7 +44,10 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
    ![Select Channel](../assets/img/pages/docs/quick-installation-new-operator/channels.png "Select Channel")
 
 5. To view the status of the Open Data Hub operator installation, find the Open Data Hub Operator under `Operators` -> `Installed Operators`. It might take a couple of minutes to show, but once the `Status` field displays `Succeeded`, you can proceed to create a DataScienceCluster instance
-   ![Installed Operators](../assets/img/pages/docs/quick-installation-new-operator/operator-installed.png "Installed Operators")
+   ![Installed Operators](../assets/img/pages/docs/quick-installation-new-operator/operator-installed-2.2.png "Installed Operators")
+
+6. [Optional] To customize the "applications namespace", update the "default" `DSCInitialization` instance from either "Form view" or "YAML view", see screenshot for example:
+   ![Select NS](../assets/img/pages/docs/quick-installation-new-operator/application_namespace.png "Select NS")
 
 ### Create a DataScienceCluster instance
 
