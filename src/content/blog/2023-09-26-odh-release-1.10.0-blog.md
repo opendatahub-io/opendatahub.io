@@ -27,7 +27,7 @@ Changes included in the Open Data Hub v1.10.0 release:
 Notable Changes
 ------
 
-* With the release of ODH Operator version 2.2.0 on the fast channel, the API version has been updated from v1alpha1 to v1. We strongly recommend that you carefully review the [upgrade instructions](../docs/upgrade-install-new-operator.md) before proceeding with an upgrade from v2.0.0 or v2.1.0 to v2.2.0
+* With the release of ODH Operator version 2.2.0 on the fast channel, the API version has been updated from v1alpha1 to v1. We strongly recommend that you carefully review the [upgrade instructions](https://opendatahub.io/docs/upgrade-install-new-operator/) before proceeding with an upgrade from v2.0.0 or v2.1.0 to v2.2.0
 
 The following is a list of components that are available in [v1.10.0](https://github.com/opendatahub-io/opendatahub-operator/releases/tag/v1.10.0) release of from operator:
 
