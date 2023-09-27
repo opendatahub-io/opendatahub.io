@@ -1,22 +1,22 @@
 ---
 type: blog
 author: VaishnaviHire
-title: "Exploring the DataScienceCluster: A New Custom Resource in OpenDataHub(incubation)"
+title: "Exploring the DataScienceCluster: A New Custom Resource in OpenDataHub(beta release)"
 preview: ODH is now incubating a new version(v2.0.0) of Operator
-date: 2023-07-24
+date: 2023-09-27
 categories: features, release, documentation
 featured: true
 ---
 
-Starting with ODH 1.8, we are excited to announce a new version of our OpenDataHub operator(v2.0.0) that introduces a 
-custom resource called **DataScienceCluster**.  This is an **alpha release** exclusively available on the “fast” channel
+Starting with ODH 1.8, we are excited to announce a new version of our OpenDataHub operator(v2.x) that introduces a 
+custom resource called **DataScienceCluster**.  This is a **beta release** exclusively available on the “fast” channel
 and subject to evolve continuously.
 
 ## Introducing DataScienceCluster
 
 The DataScienceCluster custom resource allows fine-grained control over various data science components deployed within
 your ODH Deployment. It encapsulates various data science applications managed through Kustomize deployments. With this 
-custom resource, you can **enable** and **disable** any of the integrated components at any time, thereby giving you 
+custom resource, you can set a **managementState** any of the integrated components at any time, thereby giving you 
 control over your data science environment. Every core component provided by ODH is currently exposed by the
 DataScienceCluster.
 
@@ -29,18 +29,30 @@ metadata:
 spec:
   components:
     dashboard:
-      enabled: true
+      managementState: Managed
     datasciencepipelines:
-      enabled: false
-    distributedworkloads:
-      enabled: true
+      managementState: Managed
+    codeflare:
+      managementState: Removed
+    ray:
+      managementState: Removed
     kserve:
-      enabled: false
+      managementState: Removed
     modelmeshserving:
-      enabled: false
+      managementState: Managed
     workbenches:
-      enabled: true
+      managementState: Managed
 ```
+
+Following section goes through common fields exposed by DataScienceCluster components:
+
+- **managementState**: Defines value for a component's status. It is set to one of the following values: 
+  - "Managed" : the operator is actively managing the component and trying to keep it active. It will only upgrade the component if it is safe to do so 
+  - "Removed" : the operator is actively managing the component and will not install it, or if it is installed, the operator will try to remove it
+- **devFlags**: Fields under this struct if set, let user run the operator in [Dev Mode](https://github.com/opendatahub-io/opendatahub-operator/wiki/3.-Using-Operator-in-Dev-Mode).
+  - Note this field is meant for testing and experimental purposes and not recommended being used for production deployments.
+
+
 ## Understanding the Components
 
 Each component in the **DataScienceCluster** spec represents a data science application also provided through ODH
@@ -48,13 +60,13 @@ manifests. Let's take a quick look at what each of these components does:
 
 - **dashboard**: A web dashboard that displays installed Open Data Hub components with easy access to component APIs
 - **datasciencepipelines**: Pipeline solution for end to end MLOps workflows that support the Kubeflow Pipelines SDK and Tekton.
-- **distributedworkloads(incubation)**: This enables you to distribute your computational workloads across different nodes in your cluster, enhancing performance and efficiency.
+- **codeflare and ray(incubation)**: This enables you to distribute your computational workloads across different nodes in your cluster, enhancing performance and efficiency.
 - **kserve(incubation):** This is for serving your models. KServe provides a serverless framework to deploy machine learning models with the potential to scale based on demand.
 - **modelmeshserving:** This enables you to serve your models using ModelMesh, which is designed to facilitate high-scale, high-density, and frequently changing model use cases.
 - **workbenches:** This component enables you to set up your data science workbenches or Jupyter notebooks for interactive data analysis.
 
 
-Each of these components can be **enabled** or **disabled** at will by simply changing the enabled field to true or false. 
+Each of these components can be set to **Managed** or **Removed** state at will by simply changing the managementState field.
 This gives you the flexibility to customize your data science environment according to the specific needs of your project.
 
 ## Upcoming Features in DataScienceCluster
