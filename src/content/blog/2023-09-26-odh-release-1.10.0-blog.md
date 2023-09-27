@@ -8,7 +8,6 @@ categories: features, roadmap, release
 ---
 
 What is new?
-
 ------
 Changes included in the Open Data Hub v1.10.0 release:
 
@@ -26,7 +25,6 @@ Changes included in the Open Data Hub v1.10.0 release:
 **NOTE:** Please review the [odh-operator v2.0 blog](../2023-07-24-odh-operator-v2.0-blog) to learn more about the new `DataScienceCluster` CustomResourceDefinition that will be replacing the `KfDef` deployment method in a future release
 
 Notable Changes
-
 ------
 
 * With the release of ODH Operator version 2.2.0 on the fast channel, the API version has been updated from v1alpha1 to v1. We strongly recommend that you carefully review the [upgrade instructions](../docs/upgrade-install-new-operator.md) before proceeding with an upgrade from v2.0.0 or v2.1.0 to v2.2.0
