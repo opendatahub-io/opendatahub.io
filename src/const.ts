@@ -17,11 +17,11 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
     },
     {
         title: "Managing users",
-        slug: "/docs/managing-users"
+        slug: "/docs/managing-users/"
     },
     {
         title: "Managing resources",
-        slug: "/docs/managing-resources"
+        slug: "/docs/managing-resource/"
     },
     {
         title: "Architecture",
