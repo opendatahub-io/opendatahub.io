@@ -13,6 +13,7 @@ import kserve_logo from "../../../content/assets/img/logos/kserve-logo.png"
 import openshift_logo from "../../../content/assets/img/logos/openshift-logo.svg"
 import kubernetes_logo from "../../../content/assets/img/logos/kubernetes-logo.png"
 import intel_logo from "../../../content/assets/img/logos/intel-logo.png"
+import trustyai_logo from "../../../content/assets/img/logos/trustyai-logo.svg"
 
 type ArchitectureComponentProps = {
   title?: string;
@@ -133,8 +134,9 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
     },
     {
       title: "TrustyAI",
-      body: "responsible for storing model inference data and providing fairness metrics.",
-      link: "https://kogito.kie.org/trustyai/"
+      body: "TrustyAI is an open source AI Explainability (XAI) toolkit responsible for storing model inference data and providing fairness metrics.",
+      link: "https://github.com/trustyai-explainability",
+      icon: trustyai_logo
     },
     {
       title: "OpenVINO",
