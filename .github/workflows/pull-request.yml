@@ -1,9 +1,19 @@
-name: Test Build
+name: Deploy PR previews
 on: pull_request
+concurrency: preview-${{ github.ref }}
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy-preview:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
-      - run: npm ci
-      - run: npm run build
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./public/
