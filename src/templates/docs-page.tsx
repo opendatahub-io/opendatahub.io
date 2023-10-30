@@ -17,7 +17,7 @@ const DocsPageTemplate = ({
         return {
           ...prev,
           [curr.fields.slug]: curr.sections.filter(
-            (section) => section?.level && section.level <= 1
+            (section) => section?.level && section.level <= 2
           ),
         };
       } else {
