@@ -28,10 +28,6 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/managing-resources/"
     },
     {
-        title: "Monitoring performance metrics",
-        slug: "/docs/monitoring-performance-metrics/"
-    },
-    {
         title: "Architecture",
         slug: "/docs/architecture"
     },
