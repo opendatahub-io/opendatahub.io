@@ -8,19 +8,19 @@ permalink: /docs/tiered-components
 
 The Open Data Hub Operator lets you install and manage components of Open Data Hub. You can mix and match tools from each project to fulfill the needs of your use case. Each of the projects share some components, but can be mostly seen as an extension of each other to provide a complete solution for both novice and skilled enterprise users.
 
-*Open Data Hub Dashboard* 
+**Open Data Hub Dashboard** -
 A web dashboard that displays installed Open Data Hub components with easy access to component UIs and documentation
 
-*ODH Notebook Controller*
+**ODH Notebook Controller** -
 Secure management of Jupyter Notebook in Kubernetes environments built on top of Kubeflow Notebook Controller with support for OAuth
 
-*Jupyter Notebooks* - JupyterLab notebooks that provide Python support for GPU workloads.
+**Jupyter Notebooks** - JupyterLab notebooks that provide Python support for GPU workloads.
 
-*Data Science Pipelines* - Pipeline solution for end to end MLOps workflows that support the Kubeflow Pipelines SDK and Tekton.
+**Data Science Pipelines** - Pipeline solution for end to end MLOps workflows that support the Kubeflow Pipelines SDK and Tekton.
 
-*Model Mesh* - ModelMesh Serving is the Controller for managing ModelMesh, a general-purpose model serving management/routing layer.
+**Model Mesh** - ModelMesh Serving is the Controller for managing ModelMesh, a general-purpose model serving management/routing layer.
 
-*TrustyAI* - TrustyAI is an open source AI Explainability (XAI) Toolkit.
+**TrustyAI** - TrustyAI is an open source AI Explainability (XAI) Toolkit.
 
 To install one or more of these components, use the default KfDef provided with the Operator.
 
