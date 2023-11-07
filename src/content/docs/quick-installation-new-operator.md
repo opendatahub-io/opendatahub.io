@@ -56,13 +56,13 @@ The Open Data Hub operator is available for deployment in the OpenShift Operator
 
 3. In the view of "Create DataScienceCluster", user can create DataScienceCluster instance in two ways with `components` fields.
    - Form view:
-      1. Fill in `Name` field
-      2. In the `components` section, click `>` to expand the list of currently supported core components. Check the set of components enabled by default and tick/untick the box in each component section to tailor the selection.
+      a. Fill in `Name` field
+      b. In the `components` section, click `>` to expand the list of currently supported core components. Check the set of components enabled by default and tick/untick the box in each component section to tailor the selection.
       ![Create DSC2](../assets/img/pages/docs/quick-installation-new-operator/create-dsc-component1.png "Create DSC2")
 
    - YAML view:
-      21. View the detail schema by expanding the right-hand sidebar ![Create DSC1](../assets/img/pages/docs/quick-installation-new-operator/create-dsc-component2.png "Create DSC1")
-      3. Read [ODH Core components](../tiered-components) to get the full list of supported components.
+      a. View the detail schema by expanding the right-hand sidebar ![Create DSC1](../assets/img/pages/docs/quick-installation-new-operator/create-dsc-component2.png "Create DSC1")
+      b. Read [ODH Core components](../tiered-components) to get the full list of supported components.
 
 4. Click `Create` button to finalize creation process in seconds.
    ![DSC Status](../assets/img/pages/docs/quick-installation-new-operator/dsc-installed.png "DSC Status")
