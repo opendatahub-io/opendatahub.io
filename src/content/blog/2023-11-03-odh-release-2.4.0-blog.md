@@ -13,7 +13,7 @@ Changes included in the Open Data Hub v2.4.0 release:
 
 * ODH Operator
 
-  * **fast channel**(alpha): [v2.4.0](https://github.com/opendatahub-io/opendatahub-operator/releases/tag/v2.4.0)
+  * **fast channel**(default): [v2.4.0](https://github.com/opendatahub-io/opendatahub-operator/releases/tag/v2.4.0)
 * ODH Dashboard [v2.17.0-incubation](https://github.com/opendatahub-io/odh-dashboard/releases/tag/v2.17.0-incubation)
 * Data Science Pipelines Operator [v1.6.0](https://github.com/opendatahub-io/data-science-pipelines/releases/tag/v1.6.0)
 * ODH Notebook Controller [v1.7.0-5](https://github.com/opendatahub-io/kubeflow/releases/tag/v1.7.0-5)
@@ -25,7 +25,9 @@ Changes included in the Open Data Hub v2.4.0 release:
 
 **NOTE:** Please review the [odh-operator v2.0 blog](../2023-07-24-odh-operator-v2.0-blog) to learn more about the new `DataScienceCluster` CustomResourceDefinition that is replacing the `KfDef` deployment method.
 
+
 **NOTE2:** Rolling channel will keep v1.11.0 as the last release for a while.
+
 Notable Changes
 ------
 
