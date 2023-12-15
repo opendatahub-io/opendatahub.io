@@ -4,8 +4,12 @@ import placeholderImage from "./content/assets/img/placeholder.svg";
 
 export const DOCS_NAVIGATION: SideNavItemConfig[] = [
     {
-        title: "Installation",
-        slug: "/docs/quick-installation",
+        title: "Installing Open Data Hub",
+        slug: "/docs/installing-open-data-hub/",
+    },
+    {
+        title: "Upgrading Open Data Hub",
+        slug: "/docs/upgrading-open-data-hub/",
     },
     {
         title: "Getting started with Open Data Hub",
