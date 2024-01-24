@@ -20,7 +20,11 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-on-data-science-projects/"
     },
     {
-        title: "Monitoring data science models ",
+        title: "Serving models",
+        slug: "/docs/serving-models/"
+    }, 
+    {
+        title: "Monitoring data science models",
         slug: "/docs/monitoring-data-science-models/"
     },
     {
