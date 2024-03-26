@@ -70,7 +70,7 @@ const config: GatsbyConfig = {
       options: {
         name: `docs`,
         remote: `https://github.com/opendatahub-io/opendatahub-documentation.git`,
-        branch: `v2.7`,
+        branch: `v2.8`,
         local: "public/static/docs",
       },
     },
