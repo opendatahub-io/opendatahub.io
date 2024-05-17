@@ -5,39 +5,39 @@ import placeholderImage from "./content/assets/img/placeholder.svg";
 export const DOCS_NAVIGATION: SideNavItemConfig[] = [
     {
         title: "Installing Open Data Hub",
-        slug: "/docs/installing_open_data_hub/",
+        slug: "/docs/installing-open-data-hub/",
     },
     {
         title: "Upgrading Open Data Hub",
-        slug: "/docs/upgrading_open_data_hub/",
+        slug: "/docs/upgrading-open-data-hub/",
     },
     {
         title: "Getting started with Open Data Hub",
-        slug: "/docs/getting_started_with_open_data_hub/"
+        slug: "/docs/getting-started-with-open-data-hub/"
     },
     {
         title: "Working on data science projects",
-        slug: "/docs/working_on_data_science_projects/"
+        slug: "/docs/working-on-data-science-projects/"
     },
     {
         title: "Working with distributed workloads",
-        slug: "/docs/working_with_distributed_workloads"
+        slug: "/docs/working-with-distributed-workloads"
     },
     {
         title: "Serving models",
-        slug: "/docs/serving_models/"
+        slug: "/docs/serving-models/"
     }, 
     {
         title: "Monitoring data science models",
-        slug: "/docs/monitoring_data_science_models/"
+        slug: "/docs/monitoring-data-science-models/"
     },
     {
         title: "Managing users",
-        slug: "/docs/managing_users/"
+        slug: "/docs/managing-users/"
     },
     {
         title: "Managing resources",
-        slug: "/docs/managing_resources/"
+        slug: "/docs/managing-resources/"
     },
     {
         title: "Architecture",
