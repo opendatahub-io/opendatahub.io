@@ -20,6 +20,10 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-on-data-science-projects/"
     },
     {
+        title: "Working with accelerators",
+        slug: "/docs/working-with-accelerators/"
+    },
+    {
         title: "Working with distributed workloads",
         slug: "/docs/working-with-distributed-workloads"
     },
