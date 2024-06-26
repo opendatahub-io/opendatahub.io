@@ -21,7 +21,15 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
     },
     {
         title: "Working with distributed workloads",
-        slug: "/docs/working-with-distributed-workloads"
+        slug: "/docs/working-with-distributed-workloads/"
+    },
+    {
+        title: "Working with accelerators",
+        slug: "/docs/working-with-accelerators/"
+    },
+    {
+        title: "Working with connected applications",
+        slug: "/docs/working-with-connected-applications/"
     },
     {
         title: "Serving models",
