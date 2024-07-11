@@ -1,148 +1,155 @@
 .asciidoc-docs {
-  .toc {
-    display: none;
-  }
+    .toc {
+        display: none;
+    }
 
-  ul {
-    list-style: revert;
-  }
+    ul {
+        list-style: revert;
+    }
 
-  h1 {
-    font-size: 2em !important;
-  }
+    h1 {
+        font-size: 2em !important;
+    }
 
-  .subheader,
-  .admonitionblock td.content > .title,
-  .audioblock > .title,
-  .exampleblock > .title,
-  .imageblock > .title,
-  .listingblock > .title,
-  .literalblock > .title,
-  .stemblock > .title,
-  .openblock > .title,
-  .paragraph > .title,
-  .quoteblock > .title,
-  table.tableblock > .title,
-  .verseblock > .title,
-  .videoblock > .title,
-  .dlist > .title,
-  .olist > .title,
-  .ulist > .title,
-  .qlist > .title,
-  .hdlist > .title {
-    color: var(--pf-global--Color--100);
-  }
 
-  .admonitionblock td.content > .title,
-  .audioblock > .title,
-  .exampleblock > .title,
-  .imageblock > .title,
-  .listingblock > .title,
-  .literalblock > .title,
-  .stemblock > .title,
-  .openblock > .title,
-  .paragraph > .title,
-  .quoteblock > .title,
-  table.tableblock > .title,
-  .verseblock > .title,
-  .videoblock > .title,
-  .dlist > .title,
-  .olist > .title,
-  .ulist > .title,
-  .qlist > .title,
-  .hdlist > .title {
-    text-align: left;
-    font-style: italic;
-  }
+    .subheader,
+    .admonitionblock td.content>.title,
+    .audioblock>.title,
+    .exampleblock>.title,
+    .imageblock>.title,
+    .listingblock>.title,
+    .literalblock>.title,
+    .stemblock>.title,
+    .openblock>.title,
+    .paragraph>.title,
+    .quoteblock>.title,
+    table.tableblock>.title,
+    .verseblock>.title,
+    .videoblock>.title,
+    .dlist>.title,
+    .olist>.title,
+    .ulist>.title,
+    .qlist>.title,
+    .hdlist>.title {
+        color: var(--pf-global--Color--100);
+    }
 
-  .hide {
-    display: none;
-  }
+    .admonitionblock td.content>.title,
+    .audioblock>.title,
+    .exampleblock>.title,
+    .imageblock>.title,
+    .listingblock>.title,
+    .literalblock>.title,
+    .stemblock>.title,
+    .openblock>.title,
+    .paragraph>.title,
+    .quoteblock>.title,
+    table.tableblock>.title,
+    .verseblock>.title,
+    .videoblock>.title,
+    .dlist>.title,
+    .olist>.title,
+    .ulist>.title,
+    .qlist>.title,
+    .hdlist>.title {
+        text-align: left;
+        font-style: italic;
+    }
 
-  table,
-  th,
-  td {
-    border: 0 solid #dedede;
-  }
 
-  table.grid-all > * > tr > * {
-    border-width: 1px;
-  }
+    .hide {
+        display: none
+    }
 
-  td,
-  th {
-    border-width: 1px;
-  }
-
-  table thead tr th,
-  table thead tr td,
-  table tfoot tr th,
-  table tfoot tr td {
-    padding: 0.5em 0.625em 0.625em;
-    font-size: inherit;
-    color: rgba(0, 0, 0, 0.8);
-    text-align: left;
-  }
-
-  th.valign-top,
-  td.valign-top {
-    vertical-align: top;
-  }
-
-  dl dt {
-    margin-bottom: 0.3125em;
-    font-weight: bold;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  table tr th,
-  table tr td {
-    padding: 0.5625em 0.625em;
-    font-size: inherit;
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  p.tableblock {
-    margin: 0;
-  }
-
-  table thead,
-  table tfoot {
-    background: #f7f8f7;
-  }
-
-  .admonitionblock {
     table,
     th,
     td {
-      border: 0 solid #dedede !important;
+        border: 0 solid #dedede;
     }
-  }
 
-  .admonitionblock > table td.icon .title {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+    table.grid-all>*>tr>* {
+        border-width: 1px;
+    }
 
-  .admonitionblock > table td.content {
-    padding-left: 1.125em;
-    padding-right: 1.25em;
-    border-left: 1px solid #dddddf;
-    color: rgba(0, 0, 0, 0.6);
-    word-wrap: anywhere;
-  }
+    td,th {
+        border-width: 1px;
 
-  .admonitionblock > table {
-    border-collapse: separate;
-    border: 0;
-    background: none;
-    width: 100%;
-  }
+    }
 
-  .admonitionblock > table td.content > :last-child > :last-child {
-    margin-bottom: 0;
-  }
+
+
+    table thead tr th,
+    table thead tr td,
+    table tfoot tr th,
+    table tfoot tr td {
+        padding: .5em .625em .625em;
+        font-size: inherit;
+        color: rgba(0, 0, 0, .8);
+        text-align: left;
+    }
+
+    th.valign-top,
+    td.valign-top {
+        vertical-align: top;
+    }
+
+    dl dt {
+        margin-bottom: .3125em;
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%
+    }
+
+    table tr th,
+    table tr td {
+        padding: .5625em .625em;
+        font-size: inherit;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    p.tableblock {
+        margin: 0;
+    }
+
+
+    table thead,
+    table tfoot {
+        background: #f7f8f7
+    }
+
+    .admonitionblock {
+        table,
+        th,
+        td {
+            border: 0 solid #dedede !important;
+        }
+    }
+
+    .admonitionblock>table td.icon .title {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .admonitionblock>table td.content {
+        padding-left: 1.125em;
+        padding-right: 1.25em;
+        border-left: 1px solid #dddddf;
+        color: rgba(0, 0, 0, .6);
+        word-wrap: anywhere
+    }
+
+    .admonitionblock>table {
+        border-collapse: separate;
+        border: 0;
+        background: none;
+        width: 100%;
+    }
+
+    .admonitionblock>table td.content>:last-child>:last-child {
+        margin-bottom: 0
+    }
+
+
 }

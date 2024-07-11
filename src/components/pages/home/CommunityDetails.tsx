@@ -17,7 +17,8 @@ import {
 } from "@patternfly/react-core";
 import React from "react";
 
-export const CommunityDetails = ({}) => {
+
+export const CommunityDetails = ({ }) => {
   return (
     <>
       <Flex
@@ -138,8 +139,7 @@ export const CommunityDetails = ({}) => {
             </StackItem>
             <StackItem>
               <Text component={TextVariants.p}>
-                Stay up to date with the latest announcements about Open Data
-                Hub
+                Stay up to date with the latest announcements about Open Data Hub
               </Text>
               <Button
                 isInline

@@ -12,13 +12,12 @@
 }
 
 .markdown {
-  td,
-  th {
-    border: 1px solid #dee2e6;
-  }
+ td, th {
+  border: 1px solid #dee2e6;
+ }
 
-  tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
+ tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.05);
   }
 
   thead th {
@@ -30,18 +29,17 @@
     border-bottom: 2px solid #dee2e6;
   }
 
-  table td,
-  table th {
+  table td, table th {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
   }
 
-  ul,
-  ol {
+  ul, ol {
     list-style: initial;
   }
 }
+
 
 blockquote,
 dd,
@@ -68,6 +66,7 @@ ul {
   padding: revert;
   margin: revert;
 }
+
 
 h1,
 h2,
@@ -108,7 +107,7 @@ button.pf-c-nav__link {
 }
 
 .pf-c-page__sidebar.pf-m-expanded {
-  min-width: 350px;
+  min-width: 350px
 }
 
 .strong-text {

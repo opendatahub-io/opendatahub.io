@@ -23,8 +23,8 @@ const CommunityPage: React.FC<PageProps> = () => {
               className: "pf-u-py-xl",
               style: {
                 backgroundImage: `url("https://4682592.fs1.hubspotusercontent-na1.net/hubfs/4682592/images/hp%200922/join-the-community-bg.svg")`,
-              },
-            },
+              }
+            }
           },
           // TODO Uncomment when we have videos
           // { component: <FeaturedVideos /> },
@@ -33,7 +33,7 @@ const CommunityPage: React.FC<PageProps> = () => {
             component: <Footer />,
             props: {
               isWidthLimited: false,
-              padding: { default: "noPadding" },
+              padding: { default: "noPadding" }
             },
           },
         ]}

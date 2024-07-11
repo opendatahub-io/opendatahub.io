@@ -11,29 +11,26 @@ import {
 } from "@patternfly/react-core";
 import { Footer, Layout, Seo } from "../components/shared";
 
-const BlogPostTemplate = ({
-  data: { markdownRemark: post },
-}: PageProps<Queries.BlogPostTemplateQuery>) => {
-  const chips: string[] = (post?.frontmatter?.categories ?? "").split(",");
+const BlogPostTemplate = ({ data: { markdownRemark: post } }: PageProps<Queries.BlogPostTemplateQuery>) => {
+  const chips: string[] = (post?.frontmatter?.categories ?? "").split(",")
   return (
     <Layout>
-      <PageSection
-        variant="light"
-        className="markdown"
-        style={{ minHeight: "100vh" }}
-      >
+      <PageSection variant="light" className="markdown" style={{ minHeight: "100vh" }}>
         <Title size={TitleSizes["4xl"]} headingLevel="h2">
           {post?.frontmatter?.title}
         </Title>
         <Text>{post?.frontmatter?.date}</Text>
         <Flex>
-          {chips.map((chip) => (
-            <FlexItem key={chip}>
-              <Chip isReadOnly>{chip}</Chip>
-            </FlexItem>
-          ))}
+          {
+            chips.map((chip) => (
+              <FlexItem key={chip}>
+                <Chip isReadOnly>{chip}</Chip>
+              </FlexItem>
+            ))}
         </Flex>
-        <div dangerouslySetInnerHTML={{ __html: post?.html ?? "" }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: post?.html ?? "" }}
+        />
       </PageSection>
       <Footer />
     </Layout>
@@ -53,9 +50,9 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostTemplate($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 160)
+    markdownRemark(id: {eq: $id }) {
+    id
+    excerpt(pruneLength: 160)
       html
       frontmatter {
         title

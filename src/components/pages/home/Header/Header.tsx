@@ -38,7 +38,10 @@ export const Header = () => {
             isLarge
             variant="primary"
             component={(props: any) => (
-              <Link {...props} to="/docs/getting-started-with-open-data-hub" />
+              <Link
+                {...props}
+                to="/docs/getting-started-with-open-data-hub"
+              />
             )}
           >
             Get Started

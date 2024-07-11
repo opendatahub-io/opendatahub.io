@@ -7,5 +7,5 @@ export * from "./ContentCard";
 export * from "./SectionLayout";
 export * from "./SectionList";
 export * from "./ContentCardList";
-export * from "./PlainImageCard";
-export * from "./SideNavigation";
+export * from "./PlainImageCard"
+export * from "./SideNavigation"

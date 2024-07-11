@@ -6,9 +6,9 @@ export const FeaturedBlogs: React.FC = () => {
   const pageQuery = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { type: { eq: "blog" } } }
-        sort: { frontmatter: { date: DESC } }
-      ) {
+        filter: {frontmatter: {type: {eq: "blog"}}}
+        sort: {frontmatter: {date: DESC}}
+    ) {
         nodes {
           excerpt(truncate: true, pruneLength: 100)
           fields {
@@ -29,7 +29,7 @@ export const FeaturedBlogs: React.FC = () => {
 
   const data = pageQuery.allMarkdownRemark.nodes ?? [];
   const featured = data.filter((d) => d.frontmatter.featured);
-  const posts = [...featured, ...data.filter((d) => !d.frontmatter.featured)];
+  const posts = [...featured, ...data.filter((d) => !d.frontmatter.featured)]
 
   return (
     <SectionLayout

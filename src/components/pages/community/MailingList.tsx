@@ -10,5 +10,5 @@ export const MailingList: React.FC = () => {
       actionLink="https://lists.opendatahub.io/admin/lists/announcements.lists.opendatahub.io/"
       buttonProps={{ type: "button", variant: "primary", isLarge: true }}
     />
-  );
-};
+  )
+}

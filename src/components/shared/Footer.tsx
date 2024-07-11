@@ -1,14 +1,8 @@
-import {
-  Flex,
-  FlexItem,
-  PageSection,
-  PageSectionVariants,
-  Stack,
-  StackItem,
-} from "@patternfly/react-core";
+import { Flex, FlexItem, PageSection, PageSectionVariants, Stack, StackItem } from "@patternfly/react-core";
 import { Link } from "gatsby";
 import React from "react";
 import "./Footer.css";
+
 
 export const Footer = () => {
   return (
@@ -20,13 +14,7 @@ export const Footer = () => {
       variant={PageSectionVariants.dark}
       style={{ backgroundColor: "transparent" }}
     >
-      <Flex
-        className="pf-u-my-lg"
-        direction={{ default: "column", sm: "row" }}
-        justifyContent={{ default: "justifyContentCenter" }}
-        alignItems={{ default: "alignItemsFlexStart" }}
-        spaceItems={{ sm: "spaceItems4xl", default: "spaceItemsLg" }}
-      >
+      <Flex className="pf-u-my-lg" direction={{ default: "column", sm: "row" }} justifyContent={{ default: "justifyContentCenter" }} alignItems={{ default: "alignItemsFlexStart" }} spaceItems={{ sm: "spaceItems4xl", default: "spaceItemsLg" }}>
         <FlexItem>
           <Stack>
             <StackItem className="pf-u-mb-sm">
@@ -36,9 +24,7 @@ export const Footer = () => {
               <Link to="/docs/quick-installation/">Installation</Link>
             </StackItem>
             <StackItem>
-              <Link to="/docs/getting-started-with-open-data-hub">
-                Get Started
-              </Link>
+              <Link to="/docs/getting-started-with-open-data-hub">Get Started</Link>
             </StackItem>
             <StackItem>
               <Link to="/docs/release-notes">Release Notes</Link>
@@ -57,44 +43,21 @@ export const Footer = () => {
               <b>STAY IN TOUCH</b>
             </StackItem>
             <StackItem>
-              <a
-                href="https://github.com/opendatahub-io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+              <a href="https://github.com/opendatahub-io" target="_blank" rel="noopener noreferrer">GitHub</a>
             </StackItem>
             <StackItem>
-              <a
-                href="https://odh-io.slack.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Slack
-              </a>
+              <a href="https://odh-io.slack.com/" target="_blank" rel="noopener noreferrer">Slack</a>
             </StackItem>
             <StackItem>
-              <a
-                href="https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Meetings Calendar
-              </a>
+              <a href="https://calendar.google.com/calendar/u/0/embed?src=opendatahub.community@gmail.com&ctz=America/New_York" target="_blank" rel="noopener noreferrer">Meetings Calendar</a>
             </StackItem>
             <StackItem>
-              <a
-                href="https://lists.opendatahub.io/admin/lists/announcements.lists.opendatahub.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mailing List
-              </a>
+              <a href="https://lists.opendatahub.io/admin/lists/announcements.lists.opendatahub.io/" target="_blank" rel="noopener noreferrer">Mailing List</a>
             </StackItem>
           </Stack>
         </FlexItem>
       </Flex>
     </PageSection>
-  );
+
+  )
 };

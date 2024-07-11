@@ -12,7 +12,7 @@ import placeholderImage from "../../../content/assets/img/placeholder.svg";
 import { GeometryBackground } from "../../shared/GeometryBackground";
 import { ImageSizeEnum, PlainImageCard } from "../../shared/PlainImageCard";
 
-export const CaseStudies = ({}) => {
+export const CaseStudies = ({ }) => {
   return (
     <GeometryBackground color="#343B52">
       <PageSection

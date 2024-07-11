@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "prettier": "prettier -w src"
+    "prettier": "prettier -w"
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",

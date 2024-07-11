@@ -80,7 +80,11 @@ export const ContentCard = ({
                     </Title>
                   </StackItem>
                 )}
-                {body && <StackItem>{body}</StackItem>}
+                {body && (
+                  <StackItem>
+                    {body}
+                  </StackItem>
+                )}
               </Stack>
             </FlexItem>
           )}
@@ -100,16 +104,10 @@ export const ContentCard = ({
                   {chips &&
                     chips.map((chip) => (
                       <FlexItem key={chip}>
-                        <Chip
-                          component="button"
-                          isOverflowChip
-                          onClick={(event) => {
-                            handleChipClick(chip);
-                            event.stopPropagation();
-                          }}
-                        >
-                          {chip}
-                        </Chip>
+                        <Chip component="button" isOverflowChip onClick={(event) => {
+                          handleChipClick(chip)
+                          event.stopPropagation()
+                        }}>{chip}</Chip>
                       </FlexItem>
                     ))}
                 </Flex>
