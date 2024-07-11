@@ -24,7 +24,7 @@ const DocsPageTemplate = ({
         return prev;
       }
     }, {});
-  const html = markdownRemark?.html ?? asciidoc?.html
+  const html = markdownRemark?.html ?? asciidoc?.html;
 
   return (
     <Layout
@@ -41,7 +41,9 @@ const DocsPageTemplate = ({
         isWidthLimited
         padding={{ default: "padding" }}
       >
-        <Title headingLevel="h1" size="4xl">{asciidoc?.document?.title ?? markdownRemark?.frontmatter?.title}</Title>
+        <Title headingLevel="h1" size="4xl">
+          {asciidoc?.document?.title ?? markdownRemark?.frontmatter?.title}
+        </Title>
         <div
           className="asciidoc-docs"
           dangerouslySetInnerHTML={{ __html: html ?? "" }}
@@ -57,50 +59,53 @@ const DocsPageTemplate = ({
 export const Head = ({
   data: { asciidoc, markdownRemark },
 }: PageProps<Queries.DocsPageTemplateQuery>) => {
-  const title = asciidoc?.document?.title ?? markdownRemark?.frontmatter?.title ?? "Documentation"
+  const title =
+    asciidoc?.document?.title ??
+    markdownRemark?.frontmatter?.title ??
+    "Documentation";
   return <Seo title={title} />;
 };
 
 export default DocsPageTemplate;
 
 export const pageQuery = graphql`
-query DocsPageTemplate($id: String!) {
-  allFile(
-    filter: {
+  query DocsPageTemplate($id: String!) {
+    allFile(
+      filter: {
         sourceInstanceName: { eq: "docs" }
         childrenAsciidoc: { elemMatch: { id: { ne: null } } }
       }
-  ) {
-    edges {
-      node {
-        childAsciidoc {
-          fields {
-            slug
-          }
-          sections {
-            parentId
-            name
-            level
-            index
-            id
+    ) {
+      edges {
+        node {
+          childAsciidoc {
+            fields {
+              slug
+            }
+            sections {
+              parentId
+              name
+              level
+              index
+              id
+            }
           }
         }
       }
     }
-  }
-  asciidoc(id: {eq: $id}) {
-    html
-    id
-    document {
-      title
+    asciidoc(id: { eq: $id }) {
+      html
+      id
+      document {
+        title
+      }
+    }
+    markdownRemark(id: { eq: $id }) {
+      html
+      id
+      frontmatter {
+        title
+      }
     }
   }
-  markdownRemark(id: {eq: $id}) {
-    html
-    id
-    frontmatter {
-      title
-    }
-  }
-}
 `;

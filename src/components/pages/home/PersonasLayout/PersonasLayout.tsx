@@ -14,7 +14,6 @@ import { FeatureCard } from "./FeatureCard";
 import "./PersonasLayout.css";
 import { PERSONAS } from "../../../../const";
 
-
 export const PersonasLayout = () => {
   const [isSelected, setIsSelected] = React.useState(PERSONAS[0].name);
   const handleItemClick = (

@@ -59,9 +59,7 @@ export const Navbar = ({
           <MenuItem to="/blog">BLOG</MenuItem>
           <MenuItem to="/community">COMMUNITY</MenuItem>
           <MenuItem to="https://github.com/opendatahub-io">GITHUB</MenuItem>
-          <MenuItem to="/docs/quick-installation/">
-            GET STARTED
-          </MenuItem>
+          <MenuItem to="/docs/quick-installation/">GET STARTED</MenuItem>
         </MenuList>
       </MenuContent>
     </Menu>,
@@ -71,8 +69,9 @@ export const Navbar = ({
       <Masthead
         id="masthead"
         display={{ default: "inline" }}
-        className={`${isTransparent && isTransparentAtTop && !isOpen ? "transparent" : ""
-          } sticky`}
+        className={`${
+          isTransparent && isTransparentAtTop && !isOpen ? "transparent" : ""
+        } sticky`}
       >
         <MastheadToggle>
           {useSidebarExpand && (
@@ -153,10 +152,7 @@ export const Navbar = ({
                       variant="tertiary"
                       isInline
                       component={(props: any) => (
-                        <Link
-                          {...props}
-                          to="/docs/quick-installation/"
-                        />
+                        <Link {...props} to="/docs/quick-installation/" />
                       )}
                     >
                       GET STARTED

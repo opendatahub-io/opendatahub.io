@@ -11,13 +11,19 @@ type GeometryBackgroundProps = {
 export const GeometryBackground = ({
   children,
   color,
-  invert
+  invert,
 }: GeometryBackgroundProps) => {
   return (
     <div className="triangle-geometry-background">
-      <div className={`triangle top ${invert ? "inverted" : ""}`} style={{ backgroundColor: color }} />
+      <div
+        className={`triangle top ${invert ? "inverted" : ""}`}
+        style={{ backgroundColor: color }}
+      />
       <div style={{ backgroundColor: color }}>{children}</div>
-      <div className={`triangle bottom ${invert ? "inverted" : ""}`} style={{ backgroundColor: color }} />
+      <div
+        className={`triangle bottom ${invert ? "inverted" : ""}`}
+        style={{ backgroundColor: color }}
+      />
     </div>
   );
 };

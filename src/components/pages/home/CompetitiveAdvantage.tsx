@@ -58,11 +58,12 @@ export const CompetitiveAdvantage = (
               </FlexItem>
               <FlexItem>
                 <Text component={TextVariants.p}>
-                  Open Data Hub is an open source AI platform designed for the hybrid cloud.
-                  The community seeks to bridge the gap between application developers,
-                  data stewards and data scientists by blending the leading open source AI
-                  tools with a unifying and intuitive user experience. Open Data Hub reduces
-                  the time it takes to infuse applications, services or business operations
+                  Open Data Hub is an open source AI platform designed for the
+                  hybrid cloud. The community seeks to bridge the gap between
+                  application developers, data stewards and data scientists by
+                  blending the leading open source AI tools with a unifying and
+                  intuitive user experience. Open Data Hub reduces the time it
+                  takes to infuse applications, services or business operations
                   with AI. With{" "}
                   <Button
                     className="inline-link-underline"
@@ -92,10 +93,10 @@ export const CompetitiveAdvantage = (
                     isInline
                   >
                     operators
-                  </Button>
-                  {" "}at its core, Open Data Hub
-                  also simplifies AI application deployments at scale to private data centers,
-                  cloud providers, edge devices and anywhere in between.
+                  </Button>{" "}
+                  at its core, Open Data Hub also simplifies AI application
+                  deployments at scale to private data centers, cloud providers,
+                  edge devices and anywhere in between.
                 </Text>
               </FlexItem>
             </Flex>
@@ -103,13 +104,15 @@ export const CompetitiveAdvantage = (
         </Flex>
       </StackItem>
       <StackItem className="pf-u-mx-auto">
-        <Grid
-          hasGutter
-        >
+        <Grid hasGutter>
           <GridItem span={4} className="pf-u-text-align-center">
             <Stack>
               <StackItem>
-                <img src={hybridCloud} alt="hybrid cloud icon" className="icon" />
+                <img
+                  src={hybridCloud}
+                  alt="hybrid cloud icon"
+                  className="icon"
+                />
               </StackItem>
               <StackItem>
                 <Title size={TitleSizes["xl"]} headingLevel="h3">
@@ -118,8 +121,10 @@ export const CompetitiveAdvantage = (
               </StackItem>
               <StackItem>
                 <Text component={TextVariants.p}>
-                  Simplify the lifecycle management of your <span className="strong-text">machine learning models</span> and AI
-                  applications across private data centers, public cloud providers, edge devices and more.
+                  Simplify the lifecycle management of your{" "}
+                  <span className="strong-text">machine learning models</span>{" "}
+                  and AI applications across private data centers, public cloud
+                  providers, edge devices and more.
                 </Text>
               </StackItem>
             </Stack>
@@ -127,7 +132,11 @@ export const CompetitiveAdvantage = (
           <GridItem span={4} className="pf-u-text-align-center">
             <Stack>
               <StackItem>
-                <img src={cloudUploadIcon} alt="cloud upload icon" className="icon" />
+                <img
+                  src={cloudUploadIcon}
+                  alt="cloud upload icon"
+                  className="icon"
+                />
               </StackItem>
               <StackItem>
                 <Title size={TitleSizes["xl"]} headingLevel="h3">
@@ -136,9 +145,11 @@ export const CompetitiveAdvantage = (
               </StackItem>
               <StackItem>
                 <Text component={TextVariants.p}>
-                  With the power of Kubernetes operators, get up and running in minutes on any OpenShift cluster
-                  running in the <span className="strong-text">hybrid cloud</span>. Customize your deployment with additional tools using the extensible plug-and-play framework.
-
+                  With the power of Kubernetes operators, get up and running in
+                  minutes on any OpenShift cluster running in the{" "}
+                  <span className="strong-text">hybrid cloud</span>. Customize
+                  your deployment with additional tools using the extensible
+                  plug-and-play framework.
                 </Text>
               </StackItem>
             </Stack>
@@ -155,9 +166,10 @@ export const CompetitiveAdvantage = (
               </StackItem>
               <StackItem>
                 <Text component={TextVariants.p}>
-                  An improved user experience allows application developers and data scientists
-                  to orchestrate workflows, <span className="strong-text">train and serve models</span>, and
-                  build AI-infused applications faster than ever.
+                  An improved user experience allows application developers and
+                  data scientists to orchestrate workflows,{" "}
+                  <span className="strong-text">train and serve models</span>,
+                  and build AI-infused applications faster than ever.
                 </Text>
               </StackItem>
             </Stack>

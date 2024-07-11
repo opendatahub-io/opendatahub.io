@@ -12,7 +12,6 @@
   clip-path: polygon(100% -1%, 0 -1%, 0 100%);
 }
 
-
 .triangle.top.inverted {
   clip-path: polygon(0 101%, 100% 101%, 0 0);
 }

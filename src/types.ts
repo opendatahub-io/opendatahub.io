@@ -2,55 +2,57 @@ import { FeatureCardProps } from "./components/pages/home/PersonasLayout/Feature
 import { PlainImageCardProps } from "./components/shared";
 
 export type SideNavItemConfig = {
-    title: string;
-    slug: string;
-    children?: SideNavItemConfig[];
-}
+  title: string;
+  slug: string;
+  children?: SideNavItemConfig[];
+};
 
 export type AsciiDocSection = {
-    id: string,
-    index: number
-    level: number
-    name: string
-    parentId: string | null
-}
+  id: string;
+  index: number;
+  level: number;
+  name: string;
+  parentId: string | null;
+};
 
-export type NestedAsciiDocSection = (AsciiDocSection & { sections: NestedAsciiDocSection[] })
+export type NestedAsciiDocSection = AsciiDocSection & {
+  sections: NestedAsciiDocSection[];
+};
 
-export type ContentType = "video" | "audio" | "file"
+export type ContentType = "video" | "audio" | "file";
 
 export type LinkedContent = {
-    title: string,
-    url: string,
-    type: ContentType
-    description?: string
-    categories?: string[]
-}
+  title: string;
+  url: string;
+  type: ContentType;
+  description?: string;
+  categories?: string[];
+};
 
 export type PersonaBenefits = {
-    name: string;
-    benefits: (PlainImageCardProps & {
-        features: FeatureCardProps[];
-    })[];
+  name: string;
+  benefits: (PlainImageCardProps & {
+    features: FeatureCardProps[];
+  })[];
 }[];
 
 export type RoadmapDataType = {
-    future: {
-        title: string;
-        version: string | number
-        children: {
-            title: string;
-        }[]
-    }[],
-    past: {
-        title: string;
-        version: string | number
-        url?: string
-        children: {
-            title: string;
-            description?: string;
-            url?: string;
-            moved?: string | number
-        }[]
-    }[]
-}
+  future: {
+    title: string;
+    version: string | number;
+    children: {
+      title: string;
+    }[];
+  }[];
+  past: {
+    title: string;
+    version: string | number;
+    url?: string;
+    children: {
+      title: string;
+      description?: string;
+      url?: string;
+      moved?: string | number;
+    }[];
+  }[];
+};

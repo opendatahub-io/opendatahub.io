@@ -32,20 +32,20 @@ const IndexPage: React.FC<PageProps> = () => {
               className: "pf-u-py-xl",
               style: {
                 backgroundColor: "#eeeeee",
-              }
-            }
+              },
+            },
           },
           { component: <FeaturedContent /> },
           {
             component: <Footer />,
             props: {
               isWidthLimited: false,
-              padding: { default: "noPadding" }
+              padding: { default: "noPadding" },
             },
-          }
+          },
         ]}
       />
-    </Layout >
+    </Layout>
   );
 };
 
