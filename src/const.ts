@@ -20,6 +20,22 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-on-data-science-projects/"
     },
     {
+        title: "Working in your data science IDE",
+        slug: "/docs/working-in-your-data-science-ide/"
+    },
+    {
+        title: "Working with data science pipelines",
+        slug: "/docs/working-with-data-science-pipelines/"
+    },
+    {
+        title: "Serving models",
+        slug: "/docs/serving-models/"
+    }, 
+    {
+        title: "Monitoring data science models",
+        slug: "/docs/monitoring-data-science-models/"
+    },
+    {
         title: "Working with distributed workloads",
         slug: "/docs/working-with-distributed-workloads/"
     },
@@ -30,14 +46,6 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
     {
         title: "Working with connected applications",
         slug: "/docs/working-with-connected-applications/"
-    },
-    {
-        title: "Serving models",
-        slug: "/docs/serving-models/"
-    }, 
-    {
-        title: "Monitoring data science models",
-        slug: "/docs/monitoring-data-science-models/"
     },
     {
         title: "Managing users",
