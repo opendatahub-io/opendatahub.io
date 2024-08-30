@@ -20,7 +20,7 @@ export const Layout = ({
       className={!!sidebar ? "pf-u-h-100vh" : undefined}
       isManagedSidebar
       sidebar={
-        sidebar ? <PageSidebar style={{minWidth: "400px"}} nav={sidebar} theme="light" /> : undefined
+        sidebar ? <PageSidebar style={{minWidth: "450px"}} nav={sidebar} theme="light" /> : undefined
       }
       header={
         <Navbar
