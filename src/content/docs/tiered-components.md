@@ -6,11 +6,30 @@ permalink: /docs/tiered-components
 
 ## Open Data Hub Components
 
-As the AI/ML landscape has matured, Open Data Hub is refocusing on providing an opinionated deployment of components to focus on providing a core part of the AI/ML workflow while also supporting an open community model where ODH maintainers will officially support a well defined integrated ODH Core functionality with integration points for additional components that have a designated maintainers and clearly defined levels of support.
+The Open Data Hub Operator lets you install and manage components of Open Data Hub. You can mix and match tools from each project to fulfill the needs of your use case. Each of the projects share some components, but can be mostly seen as an extension of each other to provide a complete solution for both novice and skilled enterprise users.
 
-Under the new model ODH will support a Tiered component structure that clearly defines the requirements for a component integrating with Open Data Hub.
+**Open Data Hub Dashboard** -
+A web dashboard that displays installed Open Data Hub components with easy access to component UIs and documentation
+
+**ODH Notebook Controller** -
+Secure management of Jupyter Notebook in Kubernetes environments built on top of Kubeflow Notebook Controller with support for OAuth
+
+**Jupyter Notebooks** - JupyterLab notebooks that provide Python support for GPU workloads.
+
+**Data Science Pipelines** - Pipeline solution for end to end MLOps workflows that support the Kubeflow Pipelines SDK and Tekton.
+
+**Model Mesh** - ModelMesh Serving is the Controller for managing ModelMesh, a general-purpose model serving management/routing layer.
+
+**TrustyAI** - TrustyAI is an open source AI Explainability (XAI) Toolkit.
+
+To install one or more of these components, use the default KfDef provided with the Operator.
 
 ### Tiered Architecture
+
+As the AI/ML landscape has matured, Open Data Hub is refocusing on providing an opinionated deployment of components to focus on providing a core part of the AI/ML workflow while also supporting an open community model where ODH maintainers will officially support a well-defined integrated ODH Core functionality with integration points for additional components that have a designated maintainers and clearly defined levels of support.
+
+ODH supports a Tiered component structure that clearly defines the requirements for a component integrating with Open Data Hub.
+
 All components/projects will be required to designate dedicated maintainers/owners that will be responsible for meeting the requirements or support of the respective tiers
 
 #### ODH Core (Tier 0) - opendatahub-io
@@ -32,7 +51,7 @@ All components/projects will be required to designate dedicated maintainers/owne
 
 #### ODH Incubating (Tier 1) - opendatahub-io
 * Available under [https://github.com/opendatahub-io](https://github.com/opendatahub-io)
-* These components have the same requirements as ODH Core components but they will not be included as part of the default core deployment.  The focus of Tier 1 is to incubate projects/features that will be owned by the Open Data Hub community and a candidate for ODH Core OR provide advanced functionality that is of strong interest to the community at large. These incubated features could
+* These components have the same requirements as ODH Core components but they will not be included as part of the default core deployment.  The focus of Tier 1 is to incubate projects/features that will be owned by the Open Data Hub community and a candidate for ODH Core OR provide advanced functionality that is of strong interest to the community at large.
 * Requirements:
   * Same requirements as ODH Core components so that upon promotion no additional changes are required.
 

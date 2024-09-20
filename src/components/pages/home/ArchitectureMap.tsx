@@ -13,6 +13,7 @@ import kserve_logo from "../../../content/assets/img/logos/kserve-logo.png"
 import openshift_logo from "../../../content/assets/img/logos/openshift-logo.svg"
 import kubernetes_logo from "../../../content/assets/img/logos/kubernetes-logo.png"
 import intel_logo from "../../../content/assets/img/logos/intel-logo.png"
+import trustyai_logo from "../../../content/assets/img/logos/trustyai-logo.svg"
 
 type ArchitectureComponentProps = {
   title?: string;
@@ -96,7 +97,7 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
     {
       title: "ODH Notebook Controller",
       body: "The controller will watch the Kubeflow Notebook custom resource events to extend the Kubeflow notebook controller behavior.",
-      link: "https://github.com/opendatahub-io/kubeflow/tree/master/components/odh-notebook-controller",
+      link: "https://github.com/opendatahub-io/kubeflow/tree/v1.7-branch/components/odh-notebook-controller",
       icon: odh_logo
     },
     {
@@ -108,7 +109,7 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
     {
       title: "Kubeflow Notebook Controller",
       body: "The Kubeflow Notebook Controller is a Kubernetes custom controller that manages the lifecycle of Jupyter notebooks.",
-      link: "https://github.com/opendatahub-io/kubeflow/tree/v1.6-branch/components/notebook-controller",
+      link: "https://github.com/opendatahub-io/kubeflow/tree/v1.7-branch/components/notebook-controller",
       icon: kubeflow_logo
     },
     {
@@ -133,8 +134,9 @@ const architectureComponents: { [key: string]: ProjectCardProps[] } = {
     },
     {
       title: "TrustyAI",
-      body: "responsible for storing model inference data and providing fairness metrics.",
-      link: "https://kogito.kie.org/trustyai/"
+      body: "TrustyAI is an open source AI Explainability (XAI) toolkit responsible for storing model inference data and providing fairness metrics.",
+      link: "https://github.com/trustyai-explainability",
+      icon: trustyai_logo
     },
     {
       title: "OpenVINO",

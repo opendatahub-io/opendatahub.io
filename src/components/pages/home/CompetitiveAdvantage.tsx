@@ -155,8 +155,9 @@ export const CompetitiveAdvantage = (
               </StackItem>
               <StackItem>
                 <Text component={TextVariants.p}>
-                  An improved user experience allows application developers and data scientists to orchestrate workflows,
-                  <span className="strong-text">train and serve models</span>, and build AI-infused applications faster than ever.
+                  An improved user experience allows application developers and data scientists
+                  to orchestrate workflows, <span className="strong-text">train and serve models</span>, and
+                  build AI-infused applications faster than ever.
                 </Text>
               </StackItem>
             </Stack>
