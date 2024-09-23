@@ -48,6 +48,10 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-with-connected-applications/"
     },
     {
+        title: "Working with data in an S3-compatible object store",
+        slug: "/docs/working-with-data-in-s3-compatible-object-store/"
+    },
+    {
         title: "Managing users",
         slug: "/docs/managing-users/"
     },
