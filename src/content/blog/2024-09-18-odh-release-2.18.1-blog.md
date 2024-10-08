@@ -38,11 +38,9 @@ The following is a list of components that are changed in [v2.18.1](https://gith
 | Open Data Hub Notebook Images |
 | Data Science Pipelines Operator|
 | Codeflare Operator|
-| KubeRay|
 | Kueue |
 | TrustyAI Operator|
 | Model Mesh Serving|
 | Kserve|
 | Model Mesh Serving |
 | Model Registry|
-

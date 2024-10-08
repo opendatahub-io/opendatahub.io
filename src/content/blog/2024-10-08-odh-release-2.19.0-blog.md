@@ -39,7 +39,6 @@ The following is a list of components that are changed in [v2.19.0](https://gith
 | Open Data Hub Notebook Images |
 | Data Science Pipelines Operator|
 | Codeflare Operator|
-| KubeRay|
 | Kueue |
 | TrustyAI Operator|
 | Model Mesh Serving|
