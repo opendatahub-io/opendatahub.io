@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { Footer, Layout, Seo, SideNavigation } from "../components/shared";
 import { DOCS_NAVIGATION } from "../const";
-import { PageSection, Title } from "@patternfly/react-core";
+import { PageSection, Title, Alert } from "@patternfly/react-core";
 import { AsciiDocSection } from "../types";
 
 const DocsPageTemplate = ({
@@ -41,6 +41,12 @@ const DocsPageTemplate = ({
         isWidthLimited
         padding={{ default: "padding" }}
       >
+        <Alert variant="info" title="Important Notice" isInline className="pf-u-mb-xl">
+          <p>
+            Please note that more information about the previous v2 releases can be found <a href="https://github.com/opendatahub-io/opendatahub-operator/releases" target="_blank" rel="noopener noreferrer">here</a>.
+            You can use "Find a release" search bar to search for a particular release.
+          </p>
+        </Alert>
         <Title headingLevel="h1" size="4xl">{asciidoc?.document?.title ?? markdownRemark?.frontmatter?.title}</Title>
         <div
           className="asciidoc-docs"
