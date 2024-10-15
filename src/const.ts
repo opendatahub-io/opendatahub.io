@@ -52,8 +52,8 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-with-data-in-s3-compatible-object-store/"
     },
     {
-        title: "Working with model registry",
-        slug: "/docs/working-with-model-registry/"
+        title: "Working with model registries",
+        slug: "/docs/working-with-model-registries/"
     },
     {
         title: "Managing users",
