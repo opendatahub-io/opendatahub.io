@@ -167,12 +167,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
 }) => {
   const { createPage, createRedirect } = actions;
 
-  createRedirect({
-    fromPath: "/docs/",
-    isPermanent: false,
-    redirectInBrowser: true,
-    toPath: "/docs/getting-started-with-open-data-hub",
-  });
 
   const docsResult = await graphql<QueryResult>(`
   query docFiles {
