@@ -99,7 +99,7 @@ We offer a feature that allows users to configure the namespace for their applic
 There are two scenarios in which this feature can be utilized:
 
 - Assigning a New Namespace: Users can set a new namespace using `DSCInitialization` instance before creating the `DataScienceCluster` instance.
-- Switching to a New Namespace: Users have the option to switch to a new namespace after resources have already been established in the application's current namespace. It's important to note that in this scenario, only specific resources (such as deployments, configmaps, networkpolicies, roles, rolebindings, secrets etc) will be removed from the old application namespace during cleanup. For namespace-scoped CRD instances, users will be responsible to cleanup themselves.
+- Switching to a New Namespace: Users have the option to switch to a new namespace after resources have already been established in the application's current namespace. It's important to note that in this scenario, users will be responsible to cleanup resources themselves (such as namespace-scoped CRD instances, deployments, configmaps, networkpolicies, roles, rolebindings, secrets etc) from the old application namespace.
 
 ### Upgrade from v2.0/v2.1 to v2.2 and forth release
 
