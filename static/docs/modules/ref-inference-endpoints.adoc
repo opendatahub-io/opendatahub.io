@@ -9,7 +9,7 @@ These examples show how to use inference endpoints to query the model.
 
 [NOTE]
 --
-If you enabled token authorization when deploying the model, add the `Authorization` header and specify a token value.
+If you enabled token authentication when deploying the model, add the `Authorization` header and specify a token value.
 --
 
 == Caikit TGIS ServingRuntime for KServe
@@ -196,6 +196,15 @@ curl -v https://<inference_endpoint_url>:443/v1/chat/completions -H "Content-Typ
 endif::[]
 
 == vLLM ServingRuntime with Gaudi accelerators support for KServe 
+
+ifndef::upstream[]
+See link:{rhoaidocshome}{default-format-url}/serving_models/serving-large-models_serving-large-models#vllm_servingruntime_for_kserve[vLLM ServingRuntime for KServe^].
+endif::[]
+ifdef::upstream[]
+See link:{odhdocshome}/serving_models/serving-large-models_serving-large-models#vllm_servingruntime_for_kserve[vLLM ServingRuntime for KServe^].
+endif::[]
+
+== vLLM ROCm ServingRuntime for KServe
 
 ifndef::upstream[]
 See link:{rhoaidocshome}{default-format-url}/serving_models/serving-large-models_serving-large-models#vllm_servingruntime_for_kserve[vLLM ServingRuntime for KServe^].

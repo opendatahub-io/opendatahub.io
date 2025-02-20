@@ -4,7 +4,7 @@
 = Deploying models on the single-model serving platform
 
 [role='_abstract']
-When you have enabled the single-model serving platform, you can enable a pre-installed or custom model-serving runtime and start to deploy models on the platform.
+When you have enabled the single-model serving platform, you can enable a preinstalled or custom model-serving runtime and start to deploy models on the platform.
 
 ifdef::upstream[]
 NOTE: link:https://github.com/IBM/text-generation-inference[Text Generation Inference Server (TGIS)^] is based on an early fork of link:https://github.com/huggingface/text-generation-inference[Hugging Face TGI^]. Red Hat will continue to develop the standalone TGIS runtime to support TGI models. If a model does not work in the current version of {productname-short}, support might be added in a future version. In the meantime, you can also add your own, custom runtime to support a TGI model. For more information, see link:{odhdocshome}/serving-models/#adding-a-custom-model-serving-runtime-for-the-single-model-serving-platform_serving-large-models[Adding a custom model-serving runtime for the single-model serving platform].
@@ -26,47 +26,53 @@ endif::[]
 * You have enabled the single-model serving platform.
 ifdef::self-managed[]
 ifndef::disconnected[]
-* To enable token authorization and external model routes for deployed models, you have added Authorino as an authorization provider. For more information, see link:{rhoaidocshome}{default-format-url}/installing_and_uninstalling_{url-productname-short}/installing-the-single-model-serving-platform_component-install#adding-an-authorization-provider_component-install[Adding an authorization provider for the single-model serving platform].
+* To enable token authentication and external model routes for deployed models, you have added Authorino as an authorization provider. For more information, see link:{rhoaidocshome}{default-format-url}/installing_and_uninstalling_{url-productname-short}/installing-the-single-model-serving-platform_component-install#adding-an-authorization-provider_component-install[Adding an authorization provider for the single-model serving platform].
 endif::[]
 ifdef::disconnected[]
-* To enable token authorization and external model routes for deployed models, you have added Authorino as an authorization provider. For more information, see link:{rhoaidocshome}{default-format-url}/installing_and_uninstalling_{url-productname-short}_in_a_disconnected_environment/installing-the-single-model-serving-platform_component-install#adding-an-authorization-provider_component-install[Adding an authorization provider for the single-model serving platform].
+* To enable token authentication and external model routes for deployed models, you have added Authorino as an authorization provider. For more information, see link:{rhoaidocshome}{default-format-url}/installing_and_uninstalling_{url-productname-short}_in_a_disconnected_environment/installing-the-single-model-serving-platform_component-install#adding-an-authorization-provider_component-install[Adding an authorization provider for the single-model serving platform].
 endif::[]
 endif::[]
 ifdef::cloud-service[]
-* To enable token authorization and external model routes for deployed models, you have added Authorino as an authorization provider. For more information, see link:{rhoaidocshome}{default-format-url}/installing_and_uninstalling_{url-productname-short}/installing-the-single-model-serving-platform_component-install#adding-an-authorization-provider_component-install[Adding an authorization provider for the single-model serving platform].
+* To enable token authentication and external model routes for deployed models, you have added Authorino as an authorization provider. For more information, see link:{rhoaidocshome}{default-format-url}/installing_and_uninstalling_{url-productname-short}/installing-the-single-model-serving-platform_component-install#adding-an-authorization-provider_component-install[Adding an authorization provider for the single-model serving platform].
 endif::[]
 ifdef::upstream[]
-* To enable token authorization and external model routes for deployed models, you have added Authorino as an authorization provider.
+* To enable token authentication and external model routes for deployed models, you have added Authorino as an authorization provider.
 endif::[]
 * You have created a data science project.
 * You have access to S3-compatible object storage.
 * For the model that you want to deploy, you know the associated folder path in your S3-compatible object storage bucket.
 * To use the Caikit-TGIS runtime, you have converted your model to Caikit format. For an example, see link:https://github.com/opendatahub-io/caikit-tgis-serving/blob/main/demo/kserve/built-tip.md#bootstrap-process[Converting Hugging Face Hub models to Caikit format^] in the link:https://github.com/opendatahub-io/caikit-tgis-serving/tree/main[caikit-tgis-serving^] repository.
 ifndef::upstream[]
-* If you want to use graphics processing units (GPUs) with your model server, you have enabled GPU support in {productname-short}. See link:{rhoaidocshome}{default-format-url}/managing_openshift_ai/enabling_accelerators#enabling-nvidia-gpus_managing-rhoai[Enabling NVIDIA GPUs^].
-* To use the *vLLM ServingRuntime for KServe* runtime, you have enabled GPU support in {productname-short} and have installed and configured the Node Feature Discovery operator on your cluster. For more information, see link:https://docs.redhat.com/en/documentation/openshift_container_platform/{ocp-latest-version}/html/specialized_hardware_and_driver_enablement/psap-node-feature-discovery-operator#installing-the-node-feature-discovery-operator_psap-node-feature-discovery-operator[Installing the Node Feature Discovery operator] and link:{rhoaidocshome}{default-format-url}/managing_openshift_ai/enabling_accelerators#enabling-nvidia-gpus_managing-rhoai[Enabling NVIDIA GPUs^]
+* If you want to use graphics processing units (GPUs) with your model server, you have enabled GPU support in {productname-short}. If you use NVIDIA GPUs, see link:{rhoaidocshome}{default-format-url}/managing_openshift_ai/enabling_accelerators#enabling-nvidia-gpus_managing-rhoai[Enabling NVIDIA GPUs^]. If you use AMD GPUs, see link:{rhoaidocshome}{default-format-url}/managing_openshift_ai/enabling_accelerators#amd-gpu-integration_managing-rhoai[AMD GPU integration^].
+* To use the vLLM runtime, you have enabled GPU support in {productname-short} and have installed and configured the Node Feature Discovery operator on your cluster. For more information, see link:https://docs.redhat.com/en/documentation/openshift_container_platform/{ocp-latest-version}/html/specialized_hardware_and_driver_enablement/psap-node-feature-discovery-operator#installing-the-node-feature-discovery-operator_psap-node-feature-discovery-operator[Installing the Node Feature Discovery operator] and link:{rhoaidocshome}{default-format-url}/managing_openshift_ai/enabling_accelerators#enabling-nvidia-gpus_managing-rhoai[Enabling NVIDIA GPUs^]
 endif::[]
 ifdef::upstream[]
 * To use the *vLLM ServingRuntime for KServe* runtime or use graphics processing units (GPUs) with your model server, you have enabled GPU support. This includes installing the Node Feature Discovery and NVIDIA GPU Operators. For more information, see https://docs.nvidia.com/datacenter/cloud-native/openshift/latest/index.html[NVIDIA GPU Operator on {org-name} OpenShift Container Platform^] in the NVIDIA documentation.
 endif::[]
 ifndef::upstream[]
-* To use the *vLLM ServingRuntime with Gaudi accelerators support for KServe* runtime, you have enabled support for hybrid processing units (HPUs) in {productname-short}. This includes installing the Intel Gaudi AI accelerator operator and configuring an accelerator profile. For more information, see link:https://docs.habana.ai/en/latest/Installation_Guide/Additional_Installation/Intel_Gaudi_Base_Operator/Environment_Setup.html[Setting up Gaudi for OpenShift^] and link:{rhoaidocshome}{default-format-url}/working_with_accelerators/working-with-accelerator-profiles_accelerators#working-with-accelerator-profiles_accelerators[Working with accelerators^].
+* To use the *vLLM ServingRuntime with Gaudi accelerators support for KServe* runtime, you have enabled support for hybrid processing units (HPUs) in {productname-short}. This includes installing the Intel Gaudi AI accelerator operator and configuring an accelerator profile. For more information, see link:https://docs.habana.ai/en/latest/Installation_Guide/Additional_Installation/OpenShift_Installation/index.html#openshift-installation[Setting up Gaudi for OpenShift^] and link:{rhoaidocshome}{default-format-url}/working_with_accelerators/working-with-accelerator-profiles_accelerators#working-with-accelerator-profiles_accelerators[Working with accelerators^].
 endif::[]
 ifdef::upstream[]
-* To use the *vLLM ServingRuntime with Gaudi accelerators support for KServe* runtime, you have enabled support for hybrid processing units (HPUs) in {productname-short}. This includes installing the Intel Gaudi Base Operator and configuring an accelerator profile. For more information, see link:https://docs.habana.ai/en/latest/Installation_Guide/Additional_Installation/Intel_Gaudi_Base_Operator/Environment_Setup.html[Setting up Gaudi for OpenShift^] and link:{odhdocshome}/working_with_accelerators/working-with-accelerator-profiles_accelerators#working-with-accelerator-profiles_accelerators[Working with accelerators^].
+* To use the *vLLM ServingRuntime with Gaudi accelerators support for KServe* runtime, you have enabled support for hybrid processing units (HPUs) in {productname-short}. This includes installing the Intel Gaudi Base Operator and configuring an accelerator profile. For more information, see link:https://docs.habana.ai/en/latest/Installation_Guide/Additional_Installation/OpenShift_Installation/index.html#openshift-installation[Setting up Gaudi for OpenShift^] and link:{odhdocshome}/working_with_accelerators/working-with-accelerator-profiles_accelerators#working-with-accelerator-profiles_accelerators[Working with accelerators^].
+endif::[]
+ifndef::upstream[]
+* To use the *vLLM ROCm ServingRuntime for KServe* runtime, you have enabled support for AMD graphic processing units (GPUs) in {productname-short}. This includes installing the AMD GPU operator and configuring an accelerator profile. For more information, see link:https://dcgpu.docs.amd.com/projects/gpu-operator/en/latest/installation/openshift-olm.html[Deploying the AMD GPU operator on OpenShift^] and link:{rhoaidocshome}{default-format-url}/working_with_accelerators/working-with-accelerator-profiles_accelerators#working-with-accelerator-profiles_accelerators[Working with accelerators^].
+endif::[]
+ifdef::upstream[]
+* To use the *vLLM ROCm ServingRuntime for KServe* runtime, you have enabled support for AMD graphic processing units (GPUs) in {productname-short}. This includes installing the AMD GPU Operator and configuring an accelerator profile. For more information, see link:https://dcgpu.docs.amd.com/projects/gpu-operator/en/latest/installation/openshift-olm.html[Deploying the AMD GPU operator on OpenShift^] and link:{odhdocshome}/working_with_accelerators/working-with-accelerator-profiles_accelerators#working-with-accelerator-profiles_accelerators[Working with accelerators^].
 endif::[]
 ifdef::self-managed[]
 +
 [NOTE]
 ====
-In {productname-short} {vernum}, {org-name} supports NVIDIA GPU and Intel Gaudi accelerators for model serving.
+In {productname-short} {vernum}, {org-name} supports NVIDIA GPU, Intel Gaudi, and AMD GPU accelerators for model serving.
 ====
 endif::[]
 ifdef::cloud-service[]
 +
 [NOTE]
 ====
-In {productname-short}, {org-name} supports NVIDIA GPU and Intel Gaudi accelerators for model serving.
+In {productname-short}, {org-name} supports NVIDIA GPU, Intel Gaudi, and AMD GPU accelerators for model serving.
 ====
 endif::[]
 *  To deploy {rhelai-productname-short} models:
@@ -99,9 +105,10 @@ The *Deploy model* dialog opens.
 .. From the *Accelerator* list, select an accelerator.
 .. If you selected an accelerator in the preceding step, specify the number of accelerators to use in the *Number of accelerators* field.
 . Optional: In the *Model route* section, select the *Make deployed models available through an external route* checkbox to make your deployed models available to external clients.
-. To require token authorization for inference requests to the deployed model, perform the following actions:
-.. Select *Require token authorization*.
+. To require token authentication for inference requests to the deployed model, perform the following actions:
+.. Select *Require token authentication*.
 .. In the *Service account name* field, enter the service account name that the token will be generated for.
+.. To add an additional service account, click *Add a service account* and enter another service account name.
 . To specify the location of your model, perform one of the following sets of actions:
 +
 --
@@ -114,18 +121,16 @@ ifdef::self-managed,cloud-service[]
 IMPORTANT: The OpenVINO Model Server runtime has specific requirements for how you specify the model path. For more information, see known issue link:{rhoaidocshome}html-single/release_notes/index#known-issues_RHOAIENG-3025_relnotes[RHOAIENG-3025] in the {productname-short} release notes.
 endif::[]
 
-* *To use a new connection*
-.. To define a new connection that your model can access, select *New connection*.
-.. In the *Name* field, enter a unique name for the connection.
-.. In the *Access key* field, enter the access key ID for your S3-compatible object storage provider.
-.. In the *Secret key* field, enter the secret access key for the S3-compatible object storage account that you specified.
-.. In the *Endpoint* field, enter the endpoint of your S3-compatible object storage bucket.
-.. In the *Region* field, enter the default region of your S3-compatible object storage account.
-.. In the *Bucket* field, enter the name of your S3-compatible object storage bucket.
-.. In the *Path* field, enter the folder path in your S3-compatible object storage that contains your data file.
+* *To use a new connection* 
+... To define a new connection that your model can access, select *New connection*.
++
+. In the *Add connection* modal, select a *Connection type*. The *S3 compatible object storage* and *URI* options are pre-installed connection types. Additional options might be available if your {productname-short} administrator added them.
++
+The *Add connection* form opens with fields specific to the connection type that you selected.
+... Fill in the connection detail fields.
 ifdef::self-managed,cloud-service[]
 +
-IMPORTANT: The OpenVINO Model Server runtime has specific requirements for how you specify the model path. For more information, see known issue link:{rhoaidocshome}html-single/release_notes/index#known-issues_RHOAIENG-3025_relnotes[RHOAIENG-3025] in the {productname-short} release notes.
+IMPORTANT: If your connection type is an S3-compatible object storage, you must provide the folder path that contains your data file. The OpenVINO Model Server runtime has specific requirements for how you specify the model path. For more information, see known issue link:{rhoaidocshome}html-single/release_notes/index#known-issues_RHOAIENG-3025_relnotes[RHOAIENG-3025] in the {productname-short} release notes.
 endif::[]
 --
 . (Optional) Customize the runtime parameters in the *Configuration parameters* section:

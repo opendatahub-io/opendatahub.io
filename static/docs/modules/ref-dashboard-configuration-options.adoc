@@ -17,12 +17,6 @@ disableBYONImageStream` | `false` | Shows the *Settings → Notebook images* opt
 | `dashboardConfig:
 disableClusterManager` | `false` | Shows the *Settings → Cluster settings* option in the dashboard navigation menu. To hide this menu option, set the value to `true`.
 | `dashboardConfig:
-disableConnectionTypes` | `true` | 
-*Note:* Do not edit the default value; this feature is not available in this version of {productname-short}.
-// When the feature is supported, uncomment the following two lines, and delete the above line and this line. 
-//Hides the *Settings → Connection types* option in the dashboard navigation menu. 
-//To show this menu option, set the value to `false`.
-| `dashboardConfig:
 disableCustomServingRuntimes` | `false` | Shows the *Settings → Serving runtimes* option in the dashboard navigation menu. To hide this menu option, set the value to `true`. 
 | `dashboardConfig:
 disableDistributedWorkloads` | `false` | Shows the *Distributed Workload Metrics* option in the dashboard navigation menu. To hide this menu option, set the value to `true`.
@@ -43,6 +37,8 @@ disableModelMesh` | `false` | Enables the ability to select ModelMesh as a model
 | `dashboardConfig:
 disableModelRegistry` | `false` | Shows the *Model Registry* option and the *Settings → Model registry settings* option in the dashboard navigation menu. To hide these menu options, set the value to `true`.
 | `dashboardConfig:
+disableModelRegistrySecureDB` | `false` | Shows the *Add CA certificate to secure database connection* section in the *Create model registry* dialog and the *Edit model registry* dialog. To hide this section, set the value to `true`.
+| `dashboardConfig:
 disableModelServing` | `false` | Shows the *Model Serving* option in the dashboard navigation menu and in the list of components for the data science projects. To hide *Model Serving* from the dashboard navigation menu and from the list of components for data science projects, set the value to `true`. 
 | `dashboardConfig:
 disableNIMModelServing` | `true` | Disables the ability to select NVIDIA NIM as a model-serving platform. To enable this ability, set the value to `false`.
@@ -55,11 +51,19 @@ disableProjects` | `false` | Shows the *Data Science Projects* option in the das
 | `dashboardConfig:
 disableProjectSharing` | `false` | Allows users to share access to their data science projects with other users. To prevent users from sharing data science projects, set the value to `true`.
 | `dashboardConfig:
+disableServingRuntimeParams` | `false` | Shows the *Configuration parameters* section in the *Deploy model* dialog and the *Edit model* dialog when using the single-model serving platform. To hide this section, set the value to `true`.
+| `dashboardConfig:
 disableStorageClasses` | `false` | Shows the *Settings → Storage classes* option in the dashboard navigation menu. To hide this menu option, set the value to `true`.
 | `dashboardConfig:
 disableSupport` | `false` | Shows the *Support* menu option when a user clicks the Help icon in the dashboard toolbar. To hide this menu option, set the value to `true`.
+ifdef::upstream[]
 | `dashboardConfig:
-disableTracking` | `true` | Allows {org-name} to collect data about {productname-short} usage in your cluster. To enable data collection, set the value to `false`. You can also set this option in the {productname-short} dashboard interface from the *Settings → Cluster settings* navigation menu.	
+disableTracking` | `true` | Disables the collection of data about {productname-short} usage in your cluster. To enable data collection, set the value to `false`. You can also set this option in the {productname-short} dashboard interface from the *Settings → Cluster settings* navigation menu.	
+endif::[]
+ifndef::upstream[]
+| `dashboardConfig:
+disableTracking` | `false` | Allows {org-name} to collect data about {productname-short} usage in your cluster. To disable data collection, set the value to `true`. You can also set this option in the {productname-short} dashboard interface from the *Settings → Cluster settings* navigation menu.	
+endif::[]
 | `dashboardConfig:
 disableTrustyBiasMetrics` | `false` | Shows the *Model Bias* tab on the *Model Serving* page. To hide this tab, set the value to `true`. 
 | `dashboardConfig:
@@ -69,8 +73,8 @@ enablement` | `true` | Enables {productname-short} administrators to add applica
 | `notebookController:
 enabled` | `true` | Controls the Notebook Controller options, such as whether it is enabled in the dashboard and which parts are visible.
 | `notebookSizes` | | Allows you to customize names and resources for notebooks. The Kubernetes-style sizes are shown in the drop-down menu that appears when launching a workbench with the Notebook Controller. Note: These sizes must follow conventions. For example, requests must be smaller than limits.
-| `ModelServerSizes` | | Allows you to customize names and resources for model servers.
-| `groupsConfig` | | Controls access to dashboard features, such as the *Notebook server control panel* for allowed users and the cluster settings user interface for {productname-short} administrators.
+| `modelServerSizes` | | Allows you to customize names and resources for model servers.
+| `groupsConfig` | | Read-only. To configure access to the {productname-short} dashboard, use the `spec.adminGroups` and `spec.allowedGroups` options in the {openshift-platform} `Auth` resource in the `services.platform.opendatahub.io` API group.
 | `templateOrder` | | Specifies the order of custom Serving Runtime templates. When the user creates a new template, it is added to this list.
 |===
 
