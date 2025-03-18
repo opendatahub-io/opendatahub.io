@@ -22,6 +22,7 @@ include::modules/deploying-models-using-multiple-gpu-nodes.adoc[leveloffset=+2]
 include::modules/setting-timeout-for-kserve.adoc[leveloffset=+2]
 include::modules/customizing-parameters-serving-runtime.adoc[leveloffset=+2]
 include::modules/customizable-model-serving-runtime-parameters.adoc[leveloffset=+2]
+include::modules/using-accelerators-with-vllm.adoc[leveloffset=+2]
 include::modules/using-oci-containers-for-model-storage.adoc[leveloffset=+2]
 include::modules/storing-a-model-in-oci-image.adoc[leveloffset=+3]
 include::modules/deploying-model-stored-in-oci-image.adoc[leveloffset=+3]
@@ -42,6 +43,7 @@ include::modules/viewing-metrics-for-the-single-model-serving-platform.adoc[leve
 In the single-model serving platform, you can view performance metrics for a specific model that is deployed on the platform.
 
 include::modules/viewing-performance-metrics-for-deployed-model.adoc[leveloffset=+2]
+include::modules/deploying-a-grafana-metrics-dashboard.adoc[leveloffset=+2]
 
 == Optimizing model-serving runtimes
 
