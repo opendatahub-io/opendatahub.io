@@ -30,6 +30,10 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
     {
         title: "Serving models",
         slug: "/docs/serving-models/"
+    },
+    {
+        title: "Customizing models with LAB-tuning",
+        slug: "/docs/customizing-models-with-lab-tuning/"
     }, 
     {
         title: "Monitoring data science models",
