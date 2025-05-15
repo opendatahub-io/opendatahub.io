@@ -68,6 +68,10 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/managing-resources/"
     },
     {
+        title: "Configuring Feature Store",
+        slug: "/docs/configuring-feature-store/"
+    },
+    {
         title: "Architecture",
         slug: "/docs/architecture"
     },
