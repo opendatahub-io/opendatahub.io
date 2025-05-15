@@ -8,20 +8,21 @@ The TrustyAI Guardrails Orchestrator service is a tool to invoke detections on t
 
 It is underpinned by the open-source project link:https://github.com/foundation-model-stack/fms-guardrails-orchestrator[FMS-Guardrails Orchestrator] from IBM. You can deploy the Guardrails Orchestrator service through a Custom Resource Definition (CRD) that is managed by the TrustyAI Operator.
 
-The following sections describe how to do the following tasks:
+The following sections outline how to deploy Guardrails Orchestrator and outline its use cases:
 
 * Deploy a Guardrails Orchestrator instance
 * Monitor user-inputs to your LLM
-* *Optional* Configure and use the regex detector and vLLM guardrails gateway
+* *Optional* Configure and use the regex detector
+* *Optional* Configure and use the guardrails gateway
 * *Optional* Enable the OpenTelemetry exporter for observing metrics and tracing
 
 
 include::modules/deploying-the-guardrails-orchestrator-service.adoc[leveloffset=+1]
 include::modules/guardrails-orchestrator-parameters.adoc[leveloffset=+1]
 include::modules/guardrails-orchestrator-hap-scenario.adoc[leveloffset=+1]
-include::modules/guardrails-orchestrator-configuring-regex-vllm-gateway.adoc[leveloffset=+1]
+include::modules/guardrails-orchestrator-configuring-regex-guardrails-gateway.adoc[leveloffset=+1]
 include::modules/guardrails-orchestrator-regex-using.adoc[leveloffset=+2]
-include::modules/guardrails-orchestrator-vllm-gateway-using.adoc[leveloffset=+2]
+include::modules/guardrails-orchestrator-querying-using-guardrails-gateway.adoc[leveloffset=+2]
 include::modules/configuring-the-opentelemetry-exporter.adoc[leveloffset=+1]
 
 ifdef::parent-context[:context: {parent-context}]
