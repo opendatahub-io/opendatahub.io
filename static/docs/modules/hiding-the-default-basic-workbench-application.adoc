@@ -1,0 +1,34 @@
+:_module-type: PROCEDURE
+
+[id="hiding-the-default-basic-workbench-application_{context}"]
+= Hiding the default basic workbench application
+
+[role='_abstract']
+The {productname-short} dashboard includes *Start basic workbench* as an enabled application by default.
+
+To hide the *Start basic workbench* tile so that it is no longer included in the list of applications on the *Applications* → *Enabled* page, edit the dashboard configuration file.
+
+.Prerequisite
+
+* You have cluster administrator privileges for your {openshift-platform} cluster.
+
+
+.Procedure
+
+. Log in to the {openshift-platform} console as a cluster administrator.
+. Open the dashboard configuration file:
+.. In the *Administrator* perspective, click *Home* -> *API Explorer*.
+.. In the search bar, enter `OdhDashboardConfig` to filter by kind.
+.. Click the `OdhDashboardConfig` custom resource (CR) to open the resource details page.
+.. Select the `redhat-ods-applications` project from the *Project* list.
+.. Click the *Instances* tab.
+.. Click the `odh-dashboard-config` instance to open the details page.
+.. Click the *YAML* tab. 
+. In the `spec:notebookController` section, set the value of `enabled` to `false` to remove the *Start basic workbench* tile from the list of applications on the *Applications* → *Enabled* page.
+. Click *Save* to apply your changes and then click *Reload* to make sure that your changes are synced to the cluster.
+
+.Verification
+
+In the {productname-short} dashboard, click *Applications* → *Enabled*. 
+The list of applications no longer includes the *Start basic workbench* tile.
+

@@ -1,0 +1,19 @@
+:_module-type: PROCEDURE
+
+[id="running-distributed-data-science-workloads-from-jupyter-notebooks_{context}"]
+= Running distributed data science workloads from Jupyter notebooks
+
+[role='_abstract']
+To run a distributed workload from a Jupyter notebook, you must configure a Ray cluster.
+You must also provide environment-specific information such as cluster authentication details.
+
+The examples in this section refer to the JupyterLab integrated development environment (IDE).
+
+////
+[role='_additional-resources']
+.Additional resources
+<Do we want to link to additional resources?>
+
+
+* link:https://url[link text]
+////

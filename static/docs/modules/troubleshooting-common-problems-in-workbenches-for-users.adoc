@@ -1,0 +1,47 @@
+:_module-type: REFERENCE
+
+[id="troubleshooting-common-problems-in-workbenches-for-users_{context}"]
+= Troubleshooting common problems in workbenches for users
+
+[role='_abstract']
+If you are seeing errors in {productname-long} related to Jupyter, your Jupyter notebooks, or your workbench, read this section to understand what could be causing the problem.
+
+ifndef::upstream[]
+If you cannot see your problem here or in the release notes, contact {org-name} Support.
+endif::[]
+
+
+I see a *403: Forbidden* error when I log in to Jupyter::
++
+.Problem
+If your cluster administrator has configured {productname-short} user groups, your username might not be added to the default user group or the default administrator group for {productname-short}.
++
+.Resolution
+ Contact your cluster administrator so that they can add you to the correct group/s.
+
+
+My workbench does not start::
++
+.Problem
+The {openshift-platform} cluster that hosts your workbench might not have access to enough resources, or the workbench pod may have failed.
++
+.Resolution
+Check the logs in the *Events* section in OpenShift for error messages associated with the problem. For example:
++
+----
+Server requested
+2021-10-28T13:31:29.830991Z [Warning] 0/7 nodes are available: 2 Insufficient memory,
+2 node(s) had taint {node-role.kubernetes.io/infra: }, that the pod didn't tolerate, 3 node(s) had taint {node-role.kubernetes.io/master: },
+that the pod didn't tolerate.
+----
++
+Contact your cluster administrator with details of any relevant error messages so that they can perform further checks.
+
+I see a *database or disk is full* error or a *no space left on device* error when I run my notebook cells::
++
+.Problem
+You might have run out of storage space on your workbench.
++
+.Resolution
+Contact your cluster administrator so that they can perform further checks.
+
