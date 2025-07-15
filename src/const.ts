@@ -59,6 +59,10 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         title: "Working with model registries",
         slug: "/docs/working-with-model-registries/"
     },
+     {
+        title: "Working with RAG",
+        slug: "/docs/working-with-rag/"
+    },
     {
         title: "Managing Open Data Hub",
         slug: "/docs/managing-odh/"
