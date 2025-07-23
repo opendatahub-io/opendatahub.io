@@ -25,7 +25,7 @@ If you are using a workbench in a data science project, see link:{odhdocshome}/w
 endif::[]
 
 ifndef::upstream[]
-If you are using a basic workbench, see link:{rhoaidocshome}{default-format-url}/working_with_connected_applications/using_basic_workbenches#updating-workbench-settings-by-restarting-your-workbench_connected-apps[Updating workbench settings by restarting your workbench].
+If you are using a basic workbench, see link:{rhoaidocshome}{default-format-url}/working_with_connected_applications/using-basic-workbenches_connected-apps#updating-workbench-settings-by-restarting-your-workbench_connected-apps[Updating workbench settings by restarting your workbench].
 If you are using a workbench in a data science project, see link:{rhoaidocshome}{default-format-url}/working_on_data_science_projects/using-project-workbenches_projects#starting-a-workbench_projects[Starting a workbench].
 endif::[]
 
@@ -36,7 +36,7 @@ ifdef::self-managed[]
 For more information, see link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/{rosa-latest-version}/html/cluster_administration/manage-nodes-using-machine-pools#rosa-adding-taints_rosa-managing-worker-nodes[Adding taints to a machine pool].
 endif::[]
 ifdef::cloud-service[]
-For more information, see link:https://docs.redhat.com/en/documentation/openshift_dedicated/{osd-latest-version}/html/cluster_administration/nodes#rosa-adding-taints_osd-managing-worker-nodes[Adding taints to a machine pool].
+For more information, see link:https://docs.redhat.com/en/documentation/openshift_dedicated/{osd-latest-version}/html/cluster_administration/managing-compute-nodes-using-machine-pools#rosa-adding-taints_osd-managing-worker-nodes[Adding taints to a machine pool].
 endif::[]
 
 .Verification

@@ -9,14 +9,28 @@ When you have installed KServe, you can use the {productname-long} dashboard to 
 .Prerequisites
 * You have logged in to {productname-short} as a user with {productname-short} administrator privileges.
 * You have installed KServe.
-* Your cluster administrator has _not_ edited the {productname-short} dashboard configuration to disable the ability to select the single-model serving platform, which uses the KServe component. For more information, see link:{rhoaidocshome}/html/managing_openshift_ai/customizing-the-dashboard#ref-dashboard-configuration-options_dashboard[Dashboard configuration options].
-
+* The `spec.dashboardConfig.disableKServe` dashboard configuration option is set to `false` (the default).
++
+ifdef::upstream[]
+For more information about setting dashboard configuration options, see link:{odhdocshome}/managing-resources/#customizing-the-dashboard[Customizing the dashboard].
+endif::[]
+ifndef::upstream[]
+For more information about setting dashboard configuration options, see link:{rhoaidocshome}{default-format-url}/managing_resources/customizing-the-dashboard[Customizing the dashboard].
+endif::[]
  
 .Procedure
 . Enable the single-model serving platform as follows:
 .. In the left menu, click *Settings* -> *Cluster settings*.
 .. Locate the *Model serving platforms* section.
 .. To enable the single-model serving platform for projects, select the *Single-model serving platform* checkbox.
+.. Select *Standard (No additional dependencies)* or *Advanced (Serverless and Service Mesh)* deployment mode. 
++
+ifdef::upstream[]
+For more information about these deployment mode options, see link:{odhdocshome}/serving-models/#about-kserve-deployment-modes_serving-large-models[About KServe deployment modes].
+endif::[]
+ifndef::upstream[]
+For more information about these deployment mode options, see link:{rhoaidocshome}{default-format-url}/serving_models/serving-large-models_serving-large-models#about-kserve-deployment-modes_serving-large-models[About KServe deployment modes].
+endif::[]
 .. Click *Save changes*.
 . Enable preinstalled runtimes for the single-model serving platform as follows:
 .. In the left menu of the {productname-short} dashboard, click *Settings* -> *Serving runtimes*. 
