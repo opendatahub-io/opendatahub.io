@@ -28,16 +28,16 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-with-data-science-pipelines/"
     },
     {
-    title: "Deploying models",
-    slug: "/docs/deploying-models/"
+        title: "Deploying models",
+        slug: "/docs/deploying-models/"
     },
     {
-    title: "Configuring your model-serving platform",
-    slug: "/docs/configuring-your-model-serving-platform/"
+        title: "Configuring your model-serving platform",
+        slug: "/docs/configuring-your-model-serving-platform/"
     },
     {
-    title: "Managing and monitoring models",
-    slug: "/docs/managing-and-monitoring-models/"
+        title: "Managing and monitoring models",
+        slug: "/docs/managing-and-monitoring-models/"
     },
     {
         title: "Customizing models with LAB-tuning",
