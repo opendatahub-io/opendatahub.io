@@ -24,6 +24,10 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-in-your-data-science-ide/"
     },
     {
+        title: "Creating a workbench",
+        slug: "/docs/api-workbench/"
+    },    
+    {
         title: "Working with data science pipelines",
         slug: "/docs/working-with-data-science-pipelines/"
     },
@@ -39,10 +43,6 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         title: "Managing and monitoring models",
         slug: "/docs/managing-and-monitoring-models/"
     },
-    {
-        title: "Customizing models with LAB-tuning",
-        slug: "/docs/customizing-models-with-lab-tuning/"
-    }, 
     {
         title: "Monitoring data science models",
         slug: "/docs/monitoring-data-science-models/"
@@ -64,12 +64,12 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/working-with-data-in-s3-compatible-object-store/"
     },
     {
-        title: "Working with model registries",
+        title: "Working with model registries and model catalog",
         slug: "/docs/working-with-model-registries/"
     },
-     {
-        title: "Working with RAG",
-        slug: "/docs/working-with-rag/"
+    {
+        title: "Working with Llama Stack",
+        slug: "/docs/working-with-llama-stack/"
     },
     {
         title: "Managing Open Data Hub",
@@ -80,8 +80,8 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/managing-resources/"
     },
     {
-        title: "Configuring Feature Store",
-        slug: "/docs/configuring-feature-store/"
+        title: "Working with machine learning features",
+        slug: "/docs/working-with-machine-learning-features/"
     },
     {
         title: "Architecture",
