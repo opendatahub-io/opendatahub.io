@@ -48,8 +48,16 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/customize-models-to-build-gen-ai-applications/"
     },
     {
-        title: "Monitoring data science models",
-        slug: "/docs/monitoring-data-science-models/"
+        title: "Enabling AI Safety",
+        slug: "/docs/enabling-ai-safety/"
+    },
+    {
+        title: "Evaluating AI systems",
+        slug:"/docs/evaluating-ai-systems/"
+    },
+    {
+        title: "Monitoring your AI systems",
+        slug:"/docs/monitoring-your-ai-systems/"
     },
     {
         title: "Working with distributed workloads",
