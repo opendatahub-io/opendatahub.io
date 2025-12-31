@@ -17,6 +17,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          github-token: ${{ secrets.ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           folder: public/
           clean-exclude: pr-preview/
+          git-config-name: ${{ github.event.pusher.name }}
+          git-config-email: ${{ github.event.pusher.email }}
