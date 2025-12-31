@@ -17,8 +17,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           folder: public/
           clean-exclude: pr-preview/
-          git-config-name: ${{ github.event.pusher.name }}
-          git-config-email: ${{ github.event.pusher.email }}
+          git-config-name: ${{ github.event.pusher.name || github.actor }}
+          git-config-email: ${{ github.event.pusher.email || format('{0}@users.noreply.github.com', github.actor) }}
