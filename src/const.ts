@@ -16,7 +16,7 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/getting-started-with-open-data-hub/"
     },
     {
-        title: "Working on projects", 
+        title: "Working on projects",
         slug: "/docs/working-on-projects/"
     },
     {
@@ -28,7 +28,7 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/api-workbench/"
     },    
     {
-        title: "Working with AI pipelines", 
+        title: "Working with AI pipelines",
         slug: "/docs/working-with-ai-pipelines/"
     },
     {
