@@ -16,8 +16,8 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/getting-started-with-open-data-hub/"
     },
     {
-        title: "Working on data science projects",
-        slug: "/docs/working-on-data-science-projects/"
+        title: "Working on projects",
+        slug: "/docs/working-on-projects/"
     },
     {
         title: "Working in your data science IDE",
@@ -28,8 +28,8 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/api-workbench/"
     },    
     {
-        title: "Working with data science pipelines",
-        slug: "/docs/working-with-data-science-pipelines/"
+        title: "Working with AI pipelines",
+        slug: "/docs/working-with-ai-pipelines/"
     },
     {
         title: "Deploying models",
@@ -44,8 +44,20 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/managing-and-monitoring-models/"
     },
     {
-        title: "Monitoring data science models",
-        slug: "/docs/monitoring-data-science-models/"
+        title: "Customize models to build gen AI applications",
+        slug: "/docs/customize-models-to-build-gen-ai-applications/"
+    },
+    {
+        title: "Enabling AI Safety",
+        slug: "/docs/enabling-ai-safety/"
+    },
+    {
+        title: "Evaluating AI systems",
+        slug:"/docs/evaluating-ai-systems/"
+    },
+    {
+        title: "Monitoring your AI systems",
+        slug:"/docs/monitoring-your-ai-systems/"
     },
     {
         title: "Working with distributed workloads",
