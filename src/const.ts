@@ -36,8 +36,8 @@ export const DOCS_NAVIGATION: SideNavItemConfig[] = [
         slug: "/docs/deploying-models/"
     },
     {
-    	title: "Experimenting with models in the gen AI playground",
-    	slug: "/docs/experimenting-with-models-in-the-gen-ai-playground/"
+        title: "Experimenting with models in the gen AI playground",
+        slug: "/docs/experimenting-with-models-in-the-gen-ai-playground/"
     },
     {
         title: "Configuring your model-serving platform",
