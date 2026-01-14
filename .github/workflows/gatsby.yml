@@ -62,6 +62,9 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       
+      - name: Clear cached git-sourced docs
+        run: rm -rf public/static/docs
+      
       - name: Build with Gatsby
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       
